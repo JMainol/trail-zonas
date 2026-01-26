@@ -1,8 +1,10 @@
 @use '@angular/material' as mat;
 
-// Variables locales
+// Variables locales (Sincronizadas con styles.scss tema Avatar)
 $hero-bg: #020617;
-$text-color: #E0E0E0;
+$avatar-blue-deep: #0a0e14;
+$avatar-cyan: #00f2ff;
+$avatar-magenta: #bc13fe;
 $cyan-accent: #00f2ff;
 $font-heading: "Outfit", sans-serif;
 $font-body: "Inter", sans-serif;
@@ -13,7 +15,7 @@ $font-body: "Inter", sans-serif;
 
 .hero-section {
     position: relative;
-    min-height: 90vh; // High-end hero usually takes up most of the screen
+    min-height: 90vh;
     background-color: $hero-bg;
     overflow: hidden;
     display: flex;
@@ -21,10 +23,9 @@ $font-body: "Inter", sans-serif;
     justify-content: center;
     padding: 2rem;
 
-    // Asymmetric grid layout
     @media (min-width: 768px) {
         display: grid;
-        grid-template-columns: 33% 66%; // 1/3 image, 2/3 text
+        grid-template-columns: 33% 66%;
         gap: 0;
     }
 }
@@ -35,8 +36,6 @@ $font-body: "Inter", sans-serif;
     justify-content: flex-start;
     align-items: center;
     z-index: 10;
-
-    // Cut image on the left - fine-tuning position
     margin-left: -22vw;
 
     @media (max-width: 768px) {
@@ -51,12 +50,10 @@ $font-body: "Inter", sans-serif;
 
 .toucan-image {
     max-width: none;
-    width: 60vw; // Ensure it's large enough to overflow
+    width: 60vw;
     height: auto;
     max-height: 85vh;
     object-fit: contain;
-
-    // Subtle drop shadow
     filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.6));
 }
 
@@ -67,16 +64,16 @@ $font-body: "Inter", sans-serif;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    margin-left: -5vw; // Move text a bit to the left
+    margin-left: -5vw;
 
     @media (max-width: 1024px) {
-        margin-left: 0; // Reset for smaller screens
+        margin-left: 0;
     }
 }
 
 .hero-title {
     font-family: $font-heading;
-    font-size: 3.0625rem; // Equivalent to 49px
+    font-size: 3.0625rem;
     font-weight: 700;
     color: #fff;
     line-height: 0.9;
@@ -103,7 +100,7 @@ $font-body: "Inter", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    max-width: 1200px; // Larger container for dual columns
+    max-width: 1200px;
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
@@ -113,27 +110,243 @@ $font-body: "Inter", sans-serif;
     .hero-column {
         font-family: $font-body;
         font-size: 1.05rem;
-        line-height: 1.7;
-        color: rgba($text-color, 0.9);
+        flex: 1;
+        min-width: 300px;
 
         p {
             margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
-        strong {
-            color: #fff;
-            font-weight: 600;
+        .poetic-touch {
+            display: block;
+            margin-top: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #ffd700;
+            font-style: italic;
+            color: #ffd700;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2rem;
         }
     }
+}
 
-    .poetic-touch {
-        display: block;
-        margin-top: 2rem;
-        font-style: italic;
-        color: rgba($text-color, 0.7);
-        font-family: $font-heading;
-        font-size: 1.25rem;
-        border-left: 1px solid rgba($cyan-accent, 0.5);
-        padding-left: 1rem;
+.multimedia-section {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+
+    .multimedia-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h3 {
+            font-family: $font-heading;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: $cyan-accent;
+                box-shadow: 0 0 8px $cyan-accent;
+            }
+        }
+
+        .map-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .habitat-map {
+            width: 350px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .map-legend {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            max-width: 300px;
+            text-align: left;
+            backdrop-filter: blur(5px);
+
+            .legend-title {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: rgba(255, 255, 255, 0.5);
+                margin-bottom: 0.8rem;
+                font-weight: 600;
+            }
+
+            .legend-item {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                color: rgba(255, 255, 255, 0.8);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .color-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                flex-shrink: 0;
+
+                &.high {
+                    background-color: #ff8c00;
+                    box-shadow: 0 0 8px #ff8c00;
+                }
+
+                &.medium {
+                    background-color: #007bff;
+                    box-shadow: 0 0 8px #007bff;
+                }
+
+                &.jungle {
+                    background-color: #28a745;
+                    box-shadow: 0 0 8px #28a745;
+                }
+            }
+        }
+
+        /* Avatar Minimalist Audio Player */
+        .avatar-audio-player {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: rgba($avatar-blue-deep, 0.4);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba($avatar-cyan, 0.2);
+            backdrop-filter: blur(15px);
+            width: 380px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 0 15px rgba($avatar-cyan, 0.05);
+            transition: all 0.4s ease;
+
+            &:hover {
+                border-color: rgba($avatar-cyan, 0.4);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+                    0 0 15px rgba($avatar-cyan, 0.1);
+            }
+
+            .play-btn {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, $avatar-cyan, $avatar-magenta);
+                border: none;
+                color: white;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+                flex-shrink: 0;
+                box-shadow: 0 0 15px rgba($avatar-cyan, 0.3);
+
+                .icon {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px rgba($avatar-cyan, 0.5);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+
+            .player-controls {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .progress-container {
+                    height: 6px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 3px;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+
+                    .progress-bar {
+                        height: 100%;
+                        background: linear-gradient(to right, $avatar-cyan, $avatar-magenta);
+                        border-radius: 3px;
+                        position: relative;
+                        transition: width 0.1s linear;
+
+                        .progress-glow {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 10px;
+                            height: 10px;
+                            background: white;
+                            border-radius: 50%;
+                            box-shadow: 0 0 10px white, 0 0 20px $avatar-cyan;
+                        }
+                    }
+                }
+
+                .time-info {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.75rem;
+                    font-family: $font-body;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
     }
 }

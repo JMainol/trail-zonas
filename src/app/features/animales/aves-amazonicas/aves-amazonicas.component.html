@@ -37,5 +37,67 @@
                 </p>
             </div>
         </div>
+
+        <div class="multimedia-section">
+            <div class="multimedia-item">
+                <h3>Santuario Amazónico</h3>
+                <div class="map-container">
+                    <img src="assets/mapa-toucan-vitelado.png" alt="Mapa de probabilidad de Ramphastos vitellinus"
+                        class="habitat-map">
+                    <div class="map-legend">
+                        <div class="legend-title">Probabilidad de Avistamiento</div>
+                        <div class="legend-item">
+                            <span class="color-dot high"></span>
+                            <span>Alta Probabilidad</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-dot medium"></span>
+                            <span>Media Probabilidad</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-dot jungle"></span>
+                            <span>Bosque Tropical / Ríos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="multimedia-item">
+                <h3>Eco de la Selva</h3>
+
+                <!-- Avatar Style Custom Audio Player -->
+                <div class="avatar-audio-player">
+                    <audio #audioPlayer src="assets/sounds/toucan-call.mp3" (timeupdate)="onTimeUpdate()"
+                        (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
+                    </audio>
+
+                    <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
+                        <div class="icon">
+                            @if (!isPlaying()) {
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                            </svg>
+                            } @else {
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+                            </svg>
+                            }
+                        </div>
+                    </button>
+
+                    <div class="player-controls">
+                        <div class="progress-container" (click)="seek($event)">
+                            <div class="progress-bar" [style.width.%]="progress()">
+                                <div class="progress-glow"></div>
+                            </div>
+                        </div>
+                        <div class="time-info">
+                            <span>{{ formatTime(currentTime()) }}</span>
+                            <span>{{ formatTime(duration()) }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </section>
