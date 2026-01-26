@@ -1,0 +1,89 @@
+@use '@angular/material' as mat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Paletas de colores Avatar (Pandora)
+// Colores profundos y bioluminiscentes.
+
+$avatar-blue-dark: #020617; // Fondo primordial
+$avatar-blue-glow: #00f2ff; // Cyan bioluminiscente
+$avatar-magenta-glow: #bc13fe; // Púrpura/Magenta neón
+$avatar-green-glow: #39ff14; // Verde neón (Naturaleza viva)
+$avatar-teal-glow: #2dd4bf; // Teal místico
+
+$dark-theme: mat.define-theme((color: (theme-type: dark,
+        primary: mat.$cyan-palette,
+        tertiary: mat.$violet-palette,
+      ),
+      typography: (brand-family: 'Outfit',
+        plain-family: 'Inter',
+      ),
+      density: (scale: 0)));
+
+// Aplicar tema globalmente
+html {
+  @include mat.all-component-themes($dark-theme);
+
+  // Variables CSS para el ecosistema bioluminiscente de Pandora
+  --avatar-bg: #020617;
+  --avatar-cyan: #00f2ff;
+  --avatar-magenta: #bc13fe;
+  --avatar-green: #39ff14;
+  --avatar-teal: #2dd4bf;
+  --avatar-blue-deep: #0a0e14;
+
+  background-color: var(--avatar-bg);
+  color: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--avatar-bg);
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Utilidades para efectos Fluorescentes/Bioluminiscentes
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.7), 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+.glow-magenta {
+  text-shadow: 0 0 10px rgba(188, 19, 254, 0.7), 0 0 20px rgba(188, 19, 254, 0.3);
+}
+
+.glow-green {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7), 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.border-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+  border-color: rgba(0, 242, 255, 0.6);
+}
+
+.border-glow-magenta {
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
+  border-color: rgba(188, 19, 254, 0.6);
+}
+
+// Scrollbar Avatar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--avatar-blue-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--avatar-cyan), var(--avatar-magenta));
+  border-radius: 5px;
+  border: 2px solid var(--avatar-blue-deep);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--avatar-cyan);
+  box-shadow: 0 0 10px var(--avatar-cyan);
+}

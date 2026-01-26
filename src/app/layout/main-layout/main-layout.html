@@ -1,0 +1,18 @@
+<div class="app-layout">
+
+  <!-- Menú de Navegación Principal (Header) -->
+  <app-nav-menu></app-nav-menu>
+
+  <!-- Contenido Principal (Proyección) -->
+  <main class="content-container">
+    <ng-content></ng-content>
+  </main>
+
+  <!-- Pie de Página (oculto en páginas de slider fullscreen) -->
+  @if (!hideFooter()) {
+  <footer class="main-footer">
+    <p>&copy; 2025 <span class="footer-highlight">Amazonas Jungle</span>. Todos los derechos reservados.</p>
+    <p>Bio-diseñado para la inmersión total en la naturaleza.</p>
+  </footer>
+  }
+</div>

@@ -1,0 +1,88 @@
+// Estilos del Layout Principal
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--avatar-bg);
+}
+
+.main-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, 0.8) !important; // Transparencia sutil
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--jungle-neon-green);
+    color: var(--jungle-neon-green) !important;
+
+    .logo-text {
+        font-weight: 700;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-shadow: 0 0 5px var(--jungle-neon-green);
+        letter-spacing: 1px;
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    .nav-links {
+        display: none; // Ocultar en móviles por defecto
+
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            color: #fff;
+
+            &:hover {
+                color: var(--jungle-neon-cyan);
+            }
+        }
+    }
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer {
+    padding: 6rem 2rem;
+    background-color: var(--avatar-blue-deep);
+    color: #64748b;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--avatar-cyan), transparent);
+        box-shadow: 0 0 15px var(--avatar-cyan);
+    }
+
+    p {
+        margin: 0.75rem 0;
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+    }
+
+    .footer-highlight {
+        color: var(--avatar-teal);
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(45, 212, 191, 0.3);
+    }
+}

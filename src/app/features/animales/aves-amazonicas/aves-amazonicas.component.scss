@@ -1,0 +1,139 @@
+@use '@angular/material' as mat;
+
+// Variables locales
+$hero-bg: #020617;
+$text-color: #E0E0E0;
+$cyan-accent: #00f2ff;
+$font-heading: "Outfit", sans-serif;
+$font-body: "Inter", sans-serif;
+
+:host {
+    display: block;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 90vh; // High-end hero usually takes up most of the screen
+    background-color: $hero-bg;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    // Asymmetric grid layout
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 33% 66%; // 1/3 image, 2/3 text
+        gap: 0;
+    }
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+
+    // Cut image on the left - fine-tuning position
+    margin-left: -22vw;
+
+    @media (max-width: 768px) {
+        margin-left: -12vw;
+    }
+}
+
+.parallax-container {
+    will-change: transform;
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toucan-image {
+    max-width: none;
+    width: 60vw; // Ensure it's large enough to overflow
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+
+    // Subtle drop shadow
+    filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.6));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    margin-left: -5vw; // Move text a bit to the left
+
+    @media (max-width: 1024px) {
+        margin-left: 0; // Reset for smaller screens
+    }
+}
+
+.hero-title {
+    font-family: $font-heading;
+    font-size: 3.0625rem; // Equivalent to 49px
+    font-weight: 700;
+    color: #fff;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: $cyan-accent;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 10px $cyan-accent;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+.hero-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px; // Larger container for dual columns
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-column {
+        font-family: $font-body;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba($text-color, 0.9);
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    .poetic-touch {
+        display: block;
+        margin-top: 2rem;
+        font-style: italic;
+        color: rgba($text-color, 0.7);
+        font-family: $font-heading;
+        font-size: 1.25rem;
+        border-left: 1px solid rgba($cyan-accent, 0.5);
+        padding-left: 1rem;
+    }
+}

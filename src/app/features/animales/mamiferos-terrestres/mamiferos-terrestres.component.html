@@ -1,0 +1,45 @@
+<div class="ps-container" id="ps-container">
+    <!-- El título ahora vive aquí para ganar espacio -->
+    <div class="ps-main-title">
+        <h1>Mamíferos Terrestres Amazónicos</h1>
+    </div>
+
+    <!-- Content Wrapper (Left Side) -->
+    <div class="ps-contentwrapper">
+        @for (slide of slides; track slide.title; let i = $index) {
+        <div class="ps-content" [class.ps-move]="isAnimating()" [style.top]="getSlidePosition(i, 'item')"
+            [style.z-index]="getZIndex(i)">
+
+            <h2>{{ slide.title }}</h2>
+            <span class="ps-price">{{ slide.weight }}</span>
+            <p>
+                <em class="scientific-name">{{ slide.scientificName }}</em><br><br>
+                {{ slide.description }}
+            </p>
+            @if (slide.link) {
+            <a [href]="slide.link" target="_blank" rel="noopener noreferrer" class="ps-button">Más información</a>
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Slide Wrapper (Right Side) -->
+    <div class="ps-slidewrapper">
+        <!-- Slides Container -->
+        <div class="ps-slides">
+            @for (slide of slides; track slide.title; let i = $index) {
+            <div [class.ps-move]="isAnimating()" [style.background-image]="'url(' + slide.image + ')'"
+                [style.top]="getSlidePosition(i, 'slide')" [style.z-index]="getZIndex(i)">
+            </div>
+            }
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a class="ps-prev" (click)="navigatePrev()" [style.background-image]="'url(' + prevImage() + ')'">
+            </a>
+            <a class="ps-next" (click)="navigateNext()" [style.background-image]="'url(' + nextImage() + ')'">
+            </a>
+        </nav>
+    </div>
+</div>
