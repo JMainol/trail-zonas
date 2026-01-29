@@ -1,3 +1,25 @@
+.home-fixed-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; // Por encima del background global para aparecer en el Home
+    pointer-events: none;
+    background-image:
+        linear-gradient(to bottom, rgba(4, 13, 4, 0.5), rgba(4, 13, 4, 0.3)),
+        url('/assets/amazon_jungle_bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-main-content {
+    position: relative;
+    z-index: 1; // Por encima de la imagen de la selva
+}
+
 .hero-section {
     height: 90vh;
     display: flex;
@@ -36,47 +58,15 @@
 
     .hero-subtitle {
         font-size: 1.4rem;
-        color: #94a3b8;
+        color: #cbd5e1; // Gris claro para contraste suave
         margin-bottom: 3rem;
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         font-weight: 300;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
-    .hero-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
-        z-index: 1;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(188, 19, 254, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(45, 212, 191, 0.05) 0%, transparent 50%);
-            mix-blend-mode: screen;
-        }
-
-        // Efecto de partículas/estrellas suaves
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-            background-size: 40px 40px;
-            opacity: 0.3;
-        }
-    }
 }
 
 @keyframes fadeIn {
@@ -98,9 +88,26 @@
     --color-highlight-end-alt: var(--avatar-magenta);
 }
 
+.content__title {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20vh;
+    color: #f0fff4;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.4), 0 0 40px rgba(57, 255, 20, 0.2);
+    padding: 0 1.5rem;
+}
+
 .content {
     position: relative;
-    margin: 15vh 0;
     padding: 0 1.5rem;
     max-width: 1000px;
     margin-left: auto;
@@ -109,14 +116,21 @@
 
 .content__text {
     font-family: "Outfit", sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    overflow-wrap: normal;
     line-height: 1.1;
     font-weight: 400;
     margin-bottom: 40vh;
-    color: #444;
+    color: #f0fff4; // Blanco fluorescente
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 10px rgba(57, 255, 20, 0.1);
     will-change: transform, opacity;
 
     // Aseguramos que split-type funcione visualmente
+    .word {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
     .char {
         opacity: 0.2;
         transition: opacity 0.1s linear;
@@ -142,17 +156,8 @@
 }
 
 
-// Efecto 1: 3D Flip (Estilos manejados principalmente por GSAP, pero necesitamos perspectiva)
-.hx-1 {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
 
 
-// Efecto 3: Cambio de Color (Neon Green)
-.hx-3 {
-    --color-highlight-end: #39ff14;
-}
 
 
 // Efecto 4: Doble Color
@@ -161,48 +166,7 @@
     --color-highlight-end-alt: #4252af;
 }
 
-// Efecto 5: Background Scale
-.hx-5 {
-    --color-bg-highlight: #5b4c44; // Color de fondo marrón oscuro/tierra para el Amazonas
-    --after-scale: 0; // Estado inicial
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: -2.5%;
-        top: 10%;
-        bottom: -7.5%;
-        z-index: -1;
-        width: 105%;
-        transform: scale3d(var(--after-scale), var(--after-scale), var(--after-scale));
-        background: var(--color-bg-highlight);
-        border-radius: 8px;
-        transform-origin: 50% 50%;
-        transition: transform 0.2s; // Opcional, pero GSAP controlará esto
-        will-change: transform;
-    }
-}
-
-// Efecto 6: Rotation & Width Scale
-.hx-6 {
-    display: inline-flex; // Necesario para la animación correcta
-    --after-width: 0%;
-    --after-width-final: 105%;
-    --color-bg-highlight: #dc764c; // Usamos el color original (Terra Cotta)
-
-    &::after {
-        content: '';
-        left: -2.5%;
-        top: 15%;
-        bottom: -10.5%;
-        position: absolute;
-        z-index: -1;
-        width: var(--after-width);
-        background: var(--color-bg-highlight);
-        border-radius: 8px;
-        will-change: width;
-    }
-}
 
 // Efecto 7: Height Scale
 .hx-7 {
@@ -234,126 +198,13 @@
     --color-highlight-end: #c3c58c; // Beige amarillento
 }
 
-// Efecto 9: Ghost Clone
-.hx-9 {
-    --color-highlight-start: rgba(84, 77, 73, 0.61);
-    --color-highlight-end: var(--color-text, #b8afaa); // Fallback si var no existe localmente
 
 
-    // El primer hijo (original) tomará posición absoluta (el "fantasma" que vuela?)
-    // O viceversa según la lógica de JS y CSS
-    .word:first-child {
-        position: absolute;
-        --color-highlight-end: #a86088; // Morado
-        color: var(--color-highlight-end);
-    }
-}
 
 
-// Efecto 10: Red Flash (Alarm)
-.hx-10 {
-    // No requiere estilos estructurales complejos, los filtros se encargan del efecto
-    --color-highlight-end: #ff0000;
-}
-
-// Efecto 11: Flip / Zoom
-.hx-flip {
-    font-size: clamp(2rem, 15vw, 12rem); // Ajustado para que no sea TOO big
-    margin: 0;
-    position: relative;
-    line-height: 1;
-    font-weight: 200;
-    color: #333; // Color oscuro para el título grande
-}
-
-.hx-flip__inner,
-.hx-flip__placeholder {
-    background: none;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.hx-flip__placeholder {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden; // Para que ocupe espacio pero no se vea
-}
-
-.hx-flip__inner {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform-origin: 0 0; // Importante para el FLIP
-}
 
 
-// Efecto 12: Image/Word Trail
-.hx-12 {
-    --color-highlight-end: #e0ac2b; // Dorado/Naranja
-}
 
-// Wrapper generado dinámicamente para el Efecto 12
-.hx-12-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-right: 0.25em; // Espacio entre palabras
-
-    .word {
-        display: inline-block;
-        line-height: 1;
-    }
-
-
-    // Los clones tendrán posición absoluta sobre el original
-    .word:not(:first-child) {
-        position: absolute;
-        left: 0;
-        top: 0;
-        pointer-events: none;
-        user-select: none;
-    }
-}
-
-
-// Efecto 13: Glow & Underline/Select
-.hx-13 {
-    position: relative;
-    --select-width: 0%;
-    --select-width-final: 103%;
-    --color-highlight-start: var(--color-text, #b8afaa);
-}
-
-.hx__select {
-    position: absolute;
-    width: var(--select-width);
-    height: 100%;
-    left: -1%;
-    top: 10%;
-    background: rgb(109 215 230 / 14%); // Cyan translúcido
-    mix-blend-mode: plus-lighter;
-
-    // Nota: Los pseudo-elementos ::before y ::after del CSS original usan una imagen SVG (select.svg)
-    // Como no tenemos acceso a esa imagen, vamos a simular el efecto con bordes o elementos visuales
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: -0.125em;
-        left: -0.075em;
-        width: 0.155em;
-        height: calc(100% + 0.1275em);
-        background: #6dd7e6; // Color cyan sólido como fallback
-        opacity: 0.5;
-    }
-
-    &::after {
-        transform: scaleY(-1);
-        left: auto;
-        right: -0.075em;
-        top: auto;
-        bottom: -0.125em;
-    }
-}
 
 
 
@@ -420,6 +271,60 @@
         pointer-events: none;
         background: radial-gradient(circle, var(--avatar-cyan) 0%, transparent 70%);
         transition: all 0.8s ease;
+    }
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+
+    .scroll-text {
+        writing-mode: vertical-rl;
+        font-family: "Outfit", sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+        color: var(--avatar-cyan);
+        text-transform: uppercase;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    }
+
+    .scroll-line {
+        width: 1.1px;
+        height: 50px;
+        background: rgba(0, 242, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+
+        .scroll-dot {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(to bottom, transparent, var(--avatar-cyan), transparent);
+            box-shadow: 0 0 12px var(--avatar-cyan);
+            animation: scrollLineAnim 2.5s infinite cubic-bezier(0.15, 0, 0.85, 1);
+        }
+    }
+}
+
+@keyframes scrollLineAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(50px);
     }
 }
 
