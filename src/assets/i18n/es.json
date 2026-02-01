@@ -1,0 +1,52 @@
+{
+    "HOME": {
+        "TITLE": "Amazonas Jungle",
+        "SUBTITLE": "Descubre la fauna más salvaje",
+        "DISCOVER_AMAZON": {
+            "TITLE": "El Amazonas no es solo una selva, es un organismo vivo que respira y late.",
+            "TEXT_1": "Imagina un lugar donde la vida no solo existe, sino que se desborda. La Amazonía es mucho más que un bosque: es el <span class=\"hx hx-7\">pulmón del planeta</span> y uno de los grandes motores que mantienen vivo nuestro clima. Cada vez que respiras, parte de ese aire nace aquí, entre millones de árboles que regulan la temperatura de la Tierra y almacenan enormes cantidades de carbono.",
+            "TEXT_2": "Con más de 7 millones de km², este es el mayor <span class=\"hx hx-7\">paraíso natural</span> continuo del planeta. Un territorio donde la biodiversidad alcanza cifras asombrosas: cerca de <span class=\"hx hx-7\">una de cada diez especies conocidas</span> vive en estas tierras. Para entender su magnitud basta un dato sorprendente: en una sola hectárea de selva amazónica pueden encontrarse más especies de árboles que en toda Europa.",
+            "TEXT_3": "El río Amazonas, el más caudaloso del mundo, transporta alrededor del <span class=\"hx hx-7\">20 % del agua dulce que llega a los océanos</span>, conectando selvas, animales y culturas desde hace miles de años. Todo en este ecosistema está unido por un equilibrio tan poderoso como delicado.",
+            "TEXT_4": "Este es un auténtico <span class=\"hx hx-7\">santuario natural</span>. Cada insecto, cada planta medicinal y cada especie aún desconocida guarda secretos que la ciencia moderna sigue intentando comprender. Aquí, la naturaleza no se muestra: se manifiesta.",
+            "TEXT_5": "Caminar por la selva es encontrarse con la <span class=\"hx hx-7\">naturaleza virgen</span> en su estado más puro. Desde el rugido del jaguar hasta el susurro de los ríos, desde las copas de los árboles hasta el suelo que late bajo los pies, todo recuerda una verdad esencial: no estamos separados de la naturaleza, somos parte de ella.",
+            "TEXT_6": "Proteger el Amazonas es proteger el equilibrio del planeta. Y también, nuestro propio <span class=\"hx hx-7\">futuro</span>."
+        },
+        "SCROLL": "DESPLAZAR"
+    },
+    "COMMON": {
+        "CLOSE": "Cerrar",
+        "BACK": "Volver",
+        "HOME": "Inicio",
+        "ANIMALS": "Animales",
+        "MAMMALS": "Mamíferos",
+        "BIRDS": "Aves",
+        "REPTILES": "Reptiles",
+        "AQUATIC_FAUNA": "Fauna Acuática",
+        "PLANTS": "Plantas",
+        "VERTICAL_FOREST": "Bosque Vertical",
+        "FLORA_TYPES": "Tipos de Flora",
+        "ETHNOBOTANY": "Etnobotánica",
+        "MEDICINAL": "Medicinales",
+        "INSECTS": "Insectos",
+        "SOCIAL_BIOLOGY": "Biología Social",
+        "BUTTERFLIES": "Mariposas",
+        "SPIDERS": "Arañas",
+        "FOOD_CHAIN": "Cadena Trófica",
+        "TRIBES": "Tribus",
+        "ETHNIC_REGIONS": "Etnias",
+        "CULTURE_SOCIETY": "Cultura",
+        "ANCESTRAL_KNOWLEDGE": "Saber Ancestral",
+        "CHALLENGES": "Desafíos",
+        "GEOGRAPHY": "Geografía",
+        "RIVER": "Río",
+        "CLIMATE": "Clima",
+        "GEOLOGY": "Geología",
+        "AQUATIC_ECOSYSTEMS": "Acuáticos",
+        "VARZEA": "Várzea",
+        "LAKES": "Lagos",
+        "CONSERVATION": "Conservación",
+        "DEFORESTATION": "Deforestación",
+        "CLIMATE_CHANGE": "Cambio Climático",
+        "PROJECTS": "Proyectos"
+    }
+}

@@ -16,62 +16,17 @@
     <!-- Sección de Texto con Efecto Scroll (Discover Amazon) -->
     <section class="content">
 
-        <div class="content__title">
-            El Amazonas no es solo una selva, es un organismo vivo que respira y late.
+        <div class="content__title" [innerHTML]="contentTitle">
         </div>
 
-        <div class="content__text">
-            Imagina un lugar donde la vida no solo existe, sino que se desborda. La Amazonía es mucho más que un bosque:
-            es
-            el <span class="hx hx-7">pulmón del planeta</span> y uno de los grandes motores que mantienen vivo nuestro
-            clima. Cada vez que respiras, parte de ese aire nace aquí, entre millones de árboles que regulan la
-            temperatura
-            de la Tierra y almacenan enormes cantidades de carbono.
-        </div>
-
-        <div class="content__text">
-            Con más de 7 millones de km², este es el mayor <span class="hx hx-7">paraíso natural</span> continuo del
-            planeta. Un territorio donde la biodiversidad alcanza cifras asombrosas: cerca de <span class="hx hx-7">una
-                de
-                cada diez especies conocidas</span> vive en estas tierras. Para entender su magnitud basta un dato
-            sorprendente: en una sola hectárea de selva amazónica pueden encontrarse más especies de árboles que en toda
-            Europa.
-        </div>
-
-        <div class="content__text">
-            El río Amazonas, el más caudaloso del mundo, transporta alrededor del <span class="hx hx-7">20 % del agua
-                dulce
-                que llega a los océanos</span>, conectando selvas, animales y culturas desde hace miles de años. Todo en
-            este ecosistema está unido por un equilibrio tan poderoso como delicado.
-        </div>
-
-        <div class="content__text">
-            Este es un auténtico <span class="hx hx-7">santuario natural</span>. Cada insecto, cada planta medicinal y
-            cada
-            especie aún desconocida guarda secretos que la ciencia moderna sigue intentando comprender. Aquí, la
-            naturaleza
-            no se muestra: se manifiesta.
-        </div>
-
-        <div class="content__text">
-            Caminar por la selva es encontrarse con la <span class="hx hx-7">naturaleza virgen</span> en su estado más
-            puro.
-            Desde el rugido del jaguar hasta el susurro de los ríos, desde las copas de los árboles hasta el suelo que
-            late
-            bajo los pies, todo recuerda una verdad esencial: no estamos separados de la naturaleza, somos parte de
-            ella.
-        </div>
-
-        <div class="content__text">
-            Proteger el Amazonas es proteger el equilibrio del planeta.
-            Y también, nuestro propio <span class="hx hx-7">futuro</span>.
+        <div *ngFor="let text of contentTexts" class="content__text" [innerHTML]="text">
         </div>
 
     </section>
 
     <!-- Indicador de Scroll Minimalista -->
     <div class="scroll-indicator">
-        <span class="scroll-text">SCROLL</span>
+        <span class="scroll-text">{{ 'HOME.SCROLL' | translate }}</span>
         <div class="scroll-line">
             <div class="scroll-dot"></div>
         </div>

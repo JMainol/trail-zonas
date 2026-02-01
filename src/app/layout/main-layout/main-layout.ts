@@ -7,6 +7,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { filter, map, startWith } from 'rxjs/operators';
 import { toSignal } from '@angular/core/rxjs-interop';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 /**
  * Componente de Layout Principal.
  * Envuelve el contenido de la aplicación proporcionando una barra de navegación común y un pie de página.
