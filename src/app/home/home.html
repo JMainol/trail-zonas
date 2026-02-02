@@ -1,127 +1,34 @@
-<!-- Sección Hero (Carga Inmediata - LCP) -->
-<section class="hero-section">
-    <div class="hero-content">
-        <h1 class="hero-title">Descubre el <span class="highlight">Amazonas</span></h1>
-        <p class="hero-subtitle">Una experiencia inmersiva en el corazón de la jungla.</p>
-        <button mat-raised-button color="primary" routerLink="/explorer">Explorar Ahora</button>
-    </div>
+<div class="home-fixed-bg"></div>
 
-    <!-- Fondo decorativo abstracto (CSS puro por rendimiento) -->
-    <div class="hero-background"></div>
-</section>
+<div class="home-main-content">
+    <!-- Sección Hero (Carga Inmediata - LCP) -->
+    <!-- <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Descubre el <span class="highlight">Amazonas</span></h1>
+            <p class="hero-subtitle">Una experiencia inmersiva en el corazón de la jungla.</p>
+            <button mat-raised-button color="primary" routerLink="/explorer">Explorar Ahora</button>
+        </div>
 
-<!-- Sección del Mapa Interactivo -->
+    </section> -->
 
-<!-- Sección de Texto con Efecto Scroll (Discover Amazon) -->
-<section class="content">
+    <!-- Sección del Mapa Interactivo -->
 
+    <!-- Sección de Texto con Efecto Scroll (Discover Amazon) -->
+    <section class="content">
 
+        <div class="content__title" [innerHTML]="contentTitle">
+        </div>
 
+        <div *ngFor="let text of contentTexts" class="content__text" [innerHTML]="text">
+        </div>
 
-    <div class="content__text">
-        El Amazonas no es solo una selva, es un <span class="hx hx-1">organismo vivo</span> que respira y late bajo el
-        manto de la noche. Aquí, la vida ha desarrollado
-        formas de comunicación que desafían nuestra <span class="hx hx-2">percepción consciente</span>, transformando la
-        oscuridad en un lienzo de luz
-        fluorescente que guía el camino de los elegidos.
-    </div>
-    <div class="content__text">
-        Las claves de este ecosistema residen en la <span class="hx hx-3">bio-interconexión total</span>, el flujo de la
-        energía vital y la sutil conversión de los secretos de la tierra en destellos de <span class="hx hx-4">cyan y
-            violeta</span>.
-    </div>
+    </section>
 
-    <div class="content__text">
-        Nadie es un extraño aquí, sino una pieza de un <span class="hx hx-5">rompecabezas eterno</span> que nunca deja
-        de
-        evolucionar.
-    </div>
-
-
-    <div class="content__text">
-        En el epicentro de la jungla profunda, los sentidos se agudizan ante la <span class="hx hx-6">fuerza
-            abrumadora</span> de la luz mística. Una vez sumergido en este río de estrellas terrestres, el viajero
-        pierde sus miedos y se funde con el espíritu de la naturaleza silvestre.
-    </div>
-
-
-    <div class="content__text">
-        Como parte de esta gran red, somos arrastrados por una <span class="hx hx-7">corriente colectiva</span> de vida
-        que pulsa en cada hoja y cada gota de lluvia.
-    </div>
-
-
-    <div class="content__text">
-        En este estado de trance, el alma experimenta una conexión pura donde la bioluminiscencia actúa como un <span
-            class="hx hx-8">escudo protector</span>.
-    </div>
-
-
-    <div class="content__text">
-        La ecología profunda facilita una <span class="hx hx-9">extraña</span> unidad, uniendo lo mineral con lo
-        espiritual en una sola entidad. Esta unidad es dirigida por la propia selva, que custodia sus misterios con una
-        <span class="hx hx-10">calma inquietante</span>.
-    </div>
-
-
-    <div class="hx-flip-container" style="position: relative; margin-bottom: 2rem;">
-        <h2 class="hx-flip">
-            <span class="hx-flip__inner">bosques de luz</span>
-            <span class="hx-flip__placeholder">bosques de luz</span>
-        </h2>
-        <div class="content__text">
-            En este <span class="hx hx-11" style="display: inline-block; min-width: 100px;"></span>, la naturaleza se
-            vuelve reveladora. Sin el ancla de nuestras vidas urbanas, nos dejamos llevar por la voluntad de la selva
-            eterna.
+    <!-- Indicador de Scroll Minimalista -->
+    <div class="scroll-indicator">
+        <span class="scroll-text">{{ 'HOME.SCROLL' | translate }}</span>
+        <div class="scroll-line">
+            <div class="scroll-dot"></div>
         </div>
     </div>
-
-
-
-    <div class="content__text">
-        La magia de la Amazonía se extiende más allá de la <span class="hx hx-12">simple observación</span>. Dentro de
-        la
-        conciencia colectiva de las especies, la <span class="hx hx-13">responsabilidad vital<span
-                class="hx__select"></span></span> se vuelve compartida entre todos los seres que habitan este paraíso.
-    </div>
-
-
-    <div class="content__text">
-        Acciones que parecerían insignificantes cobran un significado cósmico bajo el dosel bioluminiscente de este
-        bosque ancestral.
-    </div>
-
-
-
-
-</section>
-
-
-<!-- Sección Diferida (Carga cuando entra en el viewport) -->
-@defer (on viewport) {
-<section class="featured-section">
-    <h2>Maravillas Luminiscentes</h2>
-    <div class="grid-container">
-        @for (item of featuredAnimals; track item.title) {
-        <mat-card class="neon-card" [style.border-color]="item.color">
-            <div class="card-glow" [style.background-color]="item.color"></div>
-            <mat-card-header>
-                <mat-card-title [style.color]="item.color">{{item.title}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p>{{item.description}}</p>
-            </mat-card-content>
-        </mat-card>
-        }
-    </div>
-</section>
-} @placeholder {
-<!-- Placeholder liviano mientras carga el contenido diferido -->
-<div class="placeholder-section">
-    <p>Cargando maravillas...</p>
 </div>
-} @loading (minimum 1s) {
-<div class="loading-section">
-    <p>Descifrando secretos de la selva...</p>
-</div>
-}

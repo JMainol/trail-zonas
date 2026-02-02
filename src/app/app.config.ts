@@ -2,6 +2,9 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { provideTranslateHttpLoader, TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
 
@@ -24,6 +27,19 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
 
     // Animaciones cargadas de forma asíncrona para no bloquear el renderizado inicial
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+
+    // Configuración de i18n (ngx-translate)
+    provideHttpClient(),
+    provideTranslateService({
+      loader: {
+        provide: TranslateLoader,
+        useClass: TranslateHttpLoader
+      }
+    }),
+    provideTranslateHttpLoader({
+      prefix: './assets/i18n/',
+      suffix: '.json'
+    })
   ]
 };

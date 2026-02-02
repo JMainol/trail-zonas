@@ -1,0 +1,52 @@
+{
+    "HOME": {
+        "TITLE": "Amazonas Jungle",
+        "SUBTITLE": "Discover the wildest wildlife",
+        "DISCOVER_AMAZON": {
+            "TITLE": "The Amazon is not just a rainforest; it is a living organism that breathes and beats.",
+            "TEXT_1": "Imagine a place where life doesn't just exist—it overflows. The Amazon is far more than a forest: it is the <span class=\"hx hx-7\">planet's lungs</span> and one of the great engines that sustain our climate. Every breath you take, part of that air is born here, among millions of trees that regulate the Earth's temperature and store vast amounts of carbon.",
+            "TEXT_2": "Spanning over 7 million square kilometers, this is the largest continuous <span class=\"hx hx-7\">natural paradise</span> on Earth. A territory where biodiversity reaches staggering numbers: nearly <span class=\"hx hx-7\">one in every ten known species</span> calls these lands home. To grasp its magnitude, consider this surprising fact: a single hectare of the Amazon rainforest can harbor more tree species than the entirety of Europe.",
+            "TEXT_3": "The Amazon River, the mightiest in the world, carries roughly <span class=\"hx hx-7\">20% of the fresh water reaching the oceans</span>, weaving together jungles, wildlife, and cultures for millennia. Everything in this ecosystem is bound by a balance as powerful as it is delicate.",
+            "TEXT_4": "This is a true <span class=\"hx hx-7\">natural sanctuary</span>. Every insect, every medicinal plant, and every species yet to be discovered holds secrets that modern science is still striving to understand. Here, nature does not simply reveal itself: it manifests.",
+            "TEXT_5": "To walk through the jungle is to encounter <span class=\"hx hx-7\">untouched wilderness</span> in its purest state. From the jaguar's roar to the whisper of the rivers, from the treetops to the pulsing ground beneath your feet, everything serves as a reminder of one essential truth: we are not separate from nature; we are part of it.",
+            "TEXT_6": "Protecting the Amazon means protecting the balance of our planet. And ultimately, our own <span class=\"hx hx-7\">future</span>."
+        },
+        "SCROLL": "SCROLL"
+    },
+    "COMMON": {
+        "CLOSE": "Close",
+        "BACK": "Back",
+        "HOME": "Home",
+        "ANIMALS": "Animals",
+        "MAMMALS": "Mammals",
+        "BIRDS": "Birds",
+        "REPTILES": "Reptiles",
+        "AQUATIC_FAUNA": "Aquatic Fauna",
+        "PLANTS": "Plants",
+        "VERTICAL_FOREST": "Vertical Forest",
+        "FLORA_TYPES": "Flora Types",
+        "ETHNOBOTANY": "Ethnobotany",
+        "MEDICINAL": "Medicinal",
+        "INSECTS": "Insects",
+        "SOCIAL_BIOLOGY": "Social Biology",
+        "BUTTERFLIES": "Butterflies",
+        "SPIDERS": "Spiders",
+        "FOOD_CHAIN": "Food Chain",
+        "TRIBES": "Tribes",
+        "ETHNIC_REGIONS": "Ethnic Regions",
+        "CULTURE_SOCIETY": "Culture",
+        "ANCESTRAL_KNOWLEDGE": "Ancestral Knowledge",
+        "CHALLENGES": "Challenges",
+        "GEOGRAPHY": "Geography",
+        "RIVER": "River",
+        "CLIMATE": "Climate",
+        "GEOLOGY": "Geology",
+        "AQUATIC_ECOSYSTEMS": "Aquatic Ecosystems",
+        "VARZEA": "Várzea",
+        "LAKES": "Lakes",
+        "CONSERVATION": "Conservation",
+        "DEFORESTATION": "Deforestation",
+        "CLIMATE_CHANGE": "Climate Change",
+        "PROJECTS": "Projects"
+    }
+}

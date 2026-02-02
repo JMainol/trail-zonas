@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainLayoutComponent } from './layout/main-layout/main-layout';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,9 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout';
 })
 export class AppComponent {
   title = 'amazonas-jungle';
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
+  }
 }

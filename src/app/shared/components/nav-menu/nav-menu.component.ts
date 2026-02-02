@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
    selector: 'app-nav-menu',
    standalone: true,
-   imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule],
+   imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule],
    template: `
     <nav class="sticky top-0 z-[100] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
           
           <!-- Desktop Menu -->
-          <div class="hidden md:block w-full">
+          <div class="hidden md:flex items-center justify-between flex-grow ml-10">
             <ul class="flex items-center justify-center space-x-2">
               
               <!-- Inicio -->
@@ -31,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
                    [routerLinkActiveOptions]="{exact: true}"
                    class="nav-item">
                    <mat-icon class="icon">home</mat-icon>
-                   Inicio
+                   {{ 'COMMON.HOME' | translate }}
                 </a>
               </li>
 
@@ -41,7 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
                     
                     <button class="nav-item group-hover:glow-cyan focus:outline-none"
                             [attr.aria-expanded]="activeDropdown === section.id">
-                        {{ section.label }}
+                        {{ section.label | translate }}
                         <mat-icon class="icon transition-transform duration-300 group-hover:rotate-180">expand_more</mat-icon>
                     </button>
 
@@ -53,7 +54,7 @@ import { MatIconModule } from '@angular/material/icon';
                                    [routerLink]="item.link"
                                    routerLinkActive="dropdown-active"
                                    class="dropdown-item">
-                                    {{ item.label }}
+                                    {{ item.label | translate }}
                                 </a>
                             </div>
                         </div>
@@ -62,10 +63,22 @@ import { MatIconModule } from '@angular/material/icon';
               </ng-container>
 
             </ul>
+
+            <!-- Language Switcher Desktop -->
+            <div class="language-switcher">
+               <button (click)="switchLanguage('es')" [class.active]="currentLang === 'es'" class="lang-btn">ES</button>
+               <div class="divider"></div>
+               <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'" class="lang-btn">EN</button>
+            </div>
           </div>
 
           <!-- Mobile Menu Button (Hamburger) -->
-          <div class="-mr-2 flex md:hidden">
+          <div class="-mr-2 flex md:hidden items-center gap-2">
+             <!-- Language Switcher Mobile -->
+             <button (click)="toggleLanguage()" class="mobile-lang-btn">
+                {{ currentLang | uppercase }}
+             </button>
+
             <button (click)="toggleMobileMenu()" type="button" class="inline-flex items-center justify-center p-3 rounded-full text-cyan-400 hover:bg-cyan-900/40 transition-colors" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen">
               <span class="sr-only">Abrir menú principal</span>
               <mat-icon>{{ isMobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
@@ -77,11 +90,11 @@ import { MatIconModule } from '@angular/material/icon';
       <!-- Mobile Menu Panel -->
       <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen" [class.max-h-screen]="isMobileMenuOpen" [class.opacity-0]="!isMobileMenuOpen" [class.overflow-hidden]="!isMobileMenuOpen" id="mobile-menu">
         <div class="px-4 pt-4 pb-8 space-y-2">
-            <a routerLink="/" (click)="closeMobileMenu()" class="nav-item-mobile">Inicio</a>
+            <a routerLink="/" (click)="closeMobileMenu()" class="nav-item-mobile">{{ 'COMMON.HOME' | translate }}</a>
             
             <div *ngFor="let section of menuItems" class="space-y-1">
                 <button (click)="toggleMobileSection(section.id)" class="w-full text-left flex justify-between nav-item-mobile">
-                    {{ section.label }}
+                    {{ section.label | translate }}
                     <mat-icon>{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
                 </button>
                 
@@ -90,7 +103,7 @@ import { MatIconModule } from '@angular/material/icon';
                        [routerLink]="item.link" 
                        (click)="closeMobileMenu()"
                        class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
-                       {{ item.label }}
+                       {{ item.label | translate }}
                     </a>
                 </div>
             </div>
@@ -100,13 +113,13 @@ import { MatIconModule } from '@angular/material/icon';
   `,
    styles: [`
     .nav-item {
-        @apply px-4 py-2 rounded-full text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
+        @apply px-4 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
         &.active-link {
             @apply text-cyan-400 bg-cyan-500/10 shadow-[0_0_15px_rgba(34,211,238,0.2)];
         }
     }
     .icon {
-        @apply text-lg w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all;
+        @apply text-lg w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all;
     }
     .dropdown-panel {
         @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[100] pt-3;
@@ -124,8 +137,61 @@ import { MatIconModule } from '@angular/material/icon';
         @apply px-3 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-3;
     }
     .glow-cyan {
-        text-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
+        text-shadow: 0 0- 10px rgba(34, 211, 238, 0.8);
         @apply text-cyan-400;
+    }
+
+    /* Language Switcher Avatar Style */
+    .language-switcher {
+       display: flex;
+       align-items: center;
+       background: rgba(10, 14, 20, 0.4);
+       padding: 0.25rem 0.5rem;
+       border-radius: 50px;
+       border: 1px solid rgba(0, 242, 255, 0.2);
+       backdrop-filter: blur(15px);
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+       margin-left: 2rem;
+    }
+
+    .lang-btn {
+       background: transparent;
+       border: none;
+       color: rgba(255, 255, 255, 0.5);
+       padding: 0.25rem 0.75rem;
+       font-size: 0.75rem;
+       font-weight: 700;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       border-radius: 50px;
+
+       &.active {
+          color: #00f2ff;
+          text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+          background: rgba(0, 242, 255, 0.1);
+       }
+
+       &:hover:not(.active) {
+          color: rgba(255, 255, 255, 0.9);
+       }
+    }
+
+    .divider {
+       width: 1px;
+       height: 12px;
+       background: rgba(255, 255, 255, 0.1);
+       margin: 0 0.25rem;
+    }
+
+    .mobile-lang-btn {
+       background: rgba(0, 242, 255, 0.1);
+       border: 1px solid rgba(0, 242, 255, 0.3);
+       color: #00f2ff;
+       padding: 0.5rem 1rem;
+       border-radius: 50px;
+       font-size: 0.8rem;
+       font-weight: 800;
+       backdrop-filter: blur(10px);
     }
   `]
 })
@@ -134,74 +200,89 @@ export class NavMenuComponent {
    activeDropdown: string | null = null;
    activeMobileSection: string | null = null;
 
+   get currentLang() {
+      return this.translate.currentLang || 'es';
+   }
+
    menuItems = [
       {
          id: 'animales',
-         label: 'Animales',
+         label: 'COMMON.ANIMALS',
          items: [
-            { label: 'Mamíferos Terrestres', link: '/amazonia/animales/mamiferos-terrestres' },
-            { label: 'Aves Amazónicas', link: '/amazonia/animales/aves-amazonicas' },
-            { label: 'Reptiles y Anfibios', link: '/amazonia/animales/reptiles-anfibios' },
-            { label: 'Fauna Acuática', link: '/amazonia/animales/fauna-acuatica' }
+            { label: 'COMMON.MAMMALS', link: '/amazonia/animales/mamiferos-terrestres' },
+            { label: 'COMMON.BIRDS', link: '/amazonia/animales/aves-amazonicas' },
+            { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios' },
+            { label: 'COMMON.AQUATIC_FAUNA', link: '/amazonia/animales/fauna-acuatica' }
          ]
       },
       {
          id: 'plantas',
-         label: 'Plantas',
+         label: 'COMMON.PLANTS',
          items: [
-            { label: 'El Bosque Vertical', link: '/amazonia/plantas/bosque-vertical' },
-            { label: 'Tipos de Flora', link: '/amazonia/plantas/tipos-flora' },
-            { label: 'Etnobotánica', link: '/amazonia/plantas/etnobotanica-usos' },
-            { label: 'Medicinales', link: '/amazonia/plantas/medicinales' }
+            { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical' },
+            { label: 'COMMON.FLORA_TYPES', link: '/amazonia/plantas/tipos-flora' },
+            { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos' },
+            { label: 'COMMON.MEDICINAL', link: '/amazonia/plantas/medicinales' }
          ]
       },
       {
          id: 'insectos',
-         label: 'Insectos',
+         label: 'COMMON.INSECTS',
          items: [
-            { label: 'Biología Social', link: '/amazonia/insectos/biologia-social' },
-            { label: 'Mariposas y Polillas', link: '/amazonia/insectos/mariposas-polillas' },
-            { label: 'Arañas e Invertebrados', link: '/amazonia/insectos/aranas-invertebrados' },
-            { label: 'Cadena Trófica', link: '/amazonia/insectos/cadena-trofica' }
+            { label: 'COMMON.SOCIAL_BIOLOGY', link: '/amazonia/insectos/biologia-social' },
+            { label: 'COMMON.BUTTERFLIES', link: '/amazonia/insectos/mariposas-polillas' },
+            { label: 'COMMON.SPIDERS', link: '/amazonia/insectos/aranas-invertebrados' },
+            { label: 'COMMON.FOOD_CHAIN', link: '/amazonia/insectos/cadena-trofica' }
          ]
       },
       {
          id: 'tribus',
-         label: 'Tribus',
+         label: 'COMMON.TRIBES',
          items: [
-            { label: 'Etnias y Regiones', link: '/amazonia/tribus/etnias-regiones' },
-            { label: 'Cultura y Sociedad', link: '/amazonia/tribus/cultura-sociedad' },
-            { label: 'Conocimiento Ancestral', link: '/amazonia/tribus/conocimiento-ancestral' },
-            { label: 'Desafíos', link: '/amazonia/tribus/desafios-supervivencia' }
+            { label: 'COMMON.ETHNIC_REGIONS', link: '/amazonia/tribus/etnias-regiones' },
+            { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad' },
+            { label: 'COMMON.ANCESTRAL_KNOWLEDGE', link: '/amazonia/tribus/conocimiento-ancestral' },
+            { label: 'COMMON.CHALLENGES', link: '/amazonia/tribus/desafios-supervivencia' }
          ]
       },
       {
          id: 'geografia',
-         label: 'Geografía',
+         label: 'COMMON.GEOGRAPHY',
          items: [
-            { label: 'Río y Afluentes', link: '/amazonia/geografia/rio-afluentes' },
-            { label: 'Clima', link: '/amazonia/geografia/clima-estacionalidad' },
-            { label: 'Geología', link: '/amazonia/geografia/geologia-suelos' }
+            { label: 'COMMON.RIVER', link: '/amazonia/geografia/rio-afluentes' },
+            { label: 'COMMON.CLIMATE', link: '/amazonia/geografia/clima-estacionalidad' },
+            { label: 'COMMON.GEOLOGY', link: '/amazonia/geografia/geologia-suelos' }
          ]
       },
       {
          id: 'ecosistemas',
-         label: 'Acuáticos',
+         label: 'COMMON.AQUATIC_ECOSYSTEMS',
          items: [
-            { label: 'Várzea e Igapó', link: '/amazonia/ecosistemas-acuaticos/varzea-igapo' },
-            { label: 'Lagos y Cochas', link: '/amazonia/ecosistemas-acuaticos/lagos-cochas' }
+            { label: 'COMMON.VARZEA', link: '/amazonia/ecosistemas-acuaticos/varzea-igapo' },
+            { label: 'COMMON.LAKES', link: '/amazonia/ecosistemas-acuaticos/lagos-cochas' }
          ]
       },
       {
          id: 'conservacion',
-         label: 'Conservación',
+         label: 'COMMON.CONSERVATION',
          items: [
-            { label: 'Deforestación', link: '/amazonia/conservacion/deforestacion-mineria' },
-            { label: 'Cambio Climático', link: '/amazonia/conservacion/cambio-climatico' },
-            { label: 'Proyectos y Soluciones', link: '/amazonia/conservacion/proyectos-soluciones' }
+            { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria' },
+            { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico' },
+            { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones' }
          ]
       }
    ];
+
+   constructor(private translate: TranslateService) { }
+
+   switchLanguage(lang: string) {
+      this.translate.use(lang);
+   }
+
+   toggleLanguage() {
+      const newLang = this.currentLang === 'es' ? 'en' : 'es';
+      this.translate.use(newLang);
+   }
 
    onMouseEnter(id: string) {
       this.activeDropdown = id;

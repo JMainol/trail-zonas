@@ -1,6 +1,7 @@
 
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-aves-amazonicas',
@@ -11,7 +12,13 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AvesAmazonicasComponent {
+  private sanitizer = inject(DomSanitizer);
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
+
+  // Video URL
+  protected videoUrl = signal<SafeResourceUrl>(
+    this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XLOw4zHWIXM')
+  );
 
   // Signal for parallax
   protected parallaxTransform = signal('');
@@ -21,12 +28,17 @@ export class AvesAmazonicasComponent {
   protected currentTime = signal(0);
   protected duration = signal(0);
   protected progress = signal(0);
+  protected activeTab = signal('video'); // 'video', 'sound', 'map'
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     const x = (event.clientX - window.innerWidth / 2) * -0.02;
     const y = (event.clientY - window.innerHeight / 2) * -0.02;
     this.parallaxTransform.set(`translate(${x}px, ${y}px)`);
+  }
+
+  setTab(tab: string) {
+    this.activeTab.set(tab);
   }
 
   togglePlay() {
