@@ -4,7 +4,26 @@
         <h1>Mamíferos Terrestres Amazónicos</h1>
     </div>
 
-    <!-- Content Wrapper (Left Side) -->
+    <!-- Animal Title (Mobile Only) -->
+    <div class="ps-animal-title-mobile">
+        @for (slide of slides; track slide.title; let i = $index) {
+        <h2 [style.z-index]="getZIndex(i)">{{ slide.title }}</h2>
+        }
+    </div>
+
+    <!-- Slide Wrapper (Right Side on Desktop, Hero Image on Mobile) -->
+    <div class="ps-slidewrapper">
+        <!-- Slides Container -->
+        <div class="ps-slides">
+            @for (slide of slides; track slide.title; let i = $index) {
+            <div [class.ps-move]="isAnimating()" [style.background-image]="'url(' + slide.image + ')'"
+                [style.top]="getSlidePosition(i, 'slide')" [style.z-index]="getZIndex(i)">
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- Content Wrapper (Left Side on Desktop, Description on Mobile) -->
     <div class="ps-contentwrapper">
         @for (slide of slides; track slide.title; let i = $index) {
         <div class="ps-content" [class.ps-move]="isAnimating()" [style.top]="getSlidePosition(i, 'item')"
@@ -23,23 +42,11 @@
         }
     </div>
 
-    <!-- Slide Wrapper (Right Side) -->
-    <div class="ps-slidewrapper">
-        <!-- Slides Container -->
-        <div class="ps-slides">
-            @for (slide of slides; track slide.title; let i = $index) {
-            <div [class.ps-move]="isAnimating()" [style.background-image]="'url(' + slide.image + ')'"
-                [style.top]="getSlidePosition(i, 'slide')" [style.z-index]="getZIndex(i)">
-            </div>
-            }
-        </div>
-
-        <!-- Navigation -->
-        <nav>
-            <a class="ps-prev" (click)="navigatePrev()" [style.background-image]="'url(' + prevImage() + ')'">
-            </a>
-            <a class="ps-next" (click)="navigateNext()" [style.background-image]="'url(' + nextImage() + ')'">
-            </a>
-        </nav>
-    </div>
+    <!-- Navigation (Mobile: Bottom, Desktop: Bottom Right Overlaid) -->
+    <nav class="ps-nav-container">
+        <a class="ps-prev" (click)="navigatePrev()" [style.background-image]="'url(' + prevImage() + ')'">
+        </a>
+        <a class="ps-next" (click)="navigateNext()" [style.background-image]="'url(' + nextImage() + ')'">
+        </a>
+    </nav>
 </div>
