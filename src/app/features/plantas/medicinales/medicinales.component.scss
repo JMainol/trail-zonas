@@ -1,0 +1,489 @@
+// Vertical Showcase Slider Styles - Avatar Redesign
+// Deep Bioluminescent Aesthetic
+
+:host {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.ps-container {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 81px);
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #94a3b8;
+    background: #020617;
+}
+
+.ps-container>div,
+.ps-nav-container {
+    position: absolute;
+    width: 50%;
+}
+
+.ps-container>div>div,
+.ps-nav-container,
+.ps-slides>div {
+    position: absolute;
+}
+
+// Main Title Overlaid (Desktop)
+.ps-main-title {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 10;
+    pointer-events: none;
+
+    h1 {
+        color: #fff;
+        margin: 0;
+        font-weight: 900;
+        font-size: 14px;
+        letter-spacing: 12px;
+        text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+        font-family: 'Outfit', sans-serif;
+        text-transform: uppercase;
+    }
+}
+
+// Animal Title Mobile (only visible on mobile, hidden on desktop)
+.ps-animal-title-mobile {
+    display: none; // Hidden by default (desktop)
+}
+
+// Content Wrapper
+.ps-contentwrapper {
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 5;
+    left: 0;
+}
+
+.ps-content {
+    background: radial-gradient(circle at 0% 50%, #0f172a 0%, #020617 100%);
+    width: 100%;
+    height: 100%;
+    padding: 100px 50px 50px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(2, 6, 23, 0.5);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, var(--avatar-cyan), var(--avatar-magenta));
+        border-radius: 5px;
+        border: 2px solid #020617;
+    }
+}
+
+.ps-content h2 {
+    padding: 20px 0;
+    letter-spacing: 4px;
+    margin: 0 0 40px;
+    text-align: right;
+    font-weight: 900;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 6px;
+        background: linear-gradient(90deg, transparent, var(--avatar-cyan));
+        border-radius: 3px;
+    }
+}
+
+.ps-content p {
+    line-height: 32px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    font-weight: 300;
+    text-align: justify;
+    color: #cbd5e1;
+    text-transform: none;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+
+    .scientific-name {
+        font-style: italic;
+        color: var(--avatar-cyan);
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+    }
+}
+
+.ps-content span.ps-price {
+    float: left;
+    margin: 0 40px 40px 0;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    color: #fff;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.1), inset 0 0 20px rgba(0, 242, 255, 0.1);
+    border: 2px solid rgba(0, 242, 255, 0.3);
+    border-radius: 50% 30% 70% 40% / 40% 60% 30% 70%;
+    letter-spacing: 1px;
+    animation: blob-pulse 8s infinite ease-in-out;
+}
+
+@keyframes blob-pulse {
+
+    0%,
+    100% {
+        border-radius: 50% 30% 70% 40% / 40% 60% 30% 70%;
+    }
+
+    50% {
+        border-radius: 70% 40% 50% 30% / 30% 70% 40% 60%;
+    }
+}
+
+.ps-content .ps-button {
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 4px;
+    float: right;
+    padding: 16px 32px;
+    text-indent: 4px;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    background: linear-gradient(135deg, var(--avatar-cyan) 0%, var(--avatar-magenta) 100%);
+    border-radius: 100px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    margin-top: 20px;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 242, 255, 0.5), 0 0 60px rgba(188, 19, 254, 0.3);
+        filter: brightness(1.2);
+    }
+
+    &:before {
+        content: '✦';
+        padding-right: 12px;
+        font-size: 16px;
+    }
+}
+
+// Slide Wrapper
+.ps-slidewrapper {
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ps-slides {
+    top: 0;
+    bottom: 240px;
+    width: 100%;
+}
+
+.ps-slides>div {
+    width: 100%;
+    height: 100%;
+    background-color: #020617;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: inset 0 0 100px rgba(2, 6, 23, 0.8);
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(2, 6, 23, 0.9) 0%, transparent 40%);
+    }
+}
+
+// Navigation
+.ps-nav-container {
+    width: 50%;
+    height: 240px;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.ps-nav-container>a {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+    background-color: #020617;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    &.ps-prev {
+        background-position: center right;
+
+        &:after {
+            transform: rotate(-135deg);
+            left: auto;
+            right: 120px;
+            margin: -50px -50px 0 0;
+        }
+    }
+
+    &.ps-next {
+        background-position: center left;
+
+        &:after {
+            transform: rotate(45deg);
+            left: 120px;
+            margin: -50px 0 0 -50px;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        border-left: 2px solid #fff;
+        border-top: 2px solid #fff;
+        transition: all 0.3s ease;
+    }
+
+    &:hover:after {
+        border-color: #fff;
+        box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5);
+    }
+}
+
+// Animation class
+.ps-move {
+    transition: top 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+// ==========================================
+// MOBILE RESPONSIVE - DEFINITIVE FIX
+// ==========================================
+
+@media screen and (max-width: 860px) {
+    :host {
+        height: auto !important;
+        overflow-y: auto !important;
+        position: relative !important;
+        display: block !important;
+    }
+
+    .ps-container {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow: visible !important;
+        top: auto !important;
+        left: auto !important;
+        background: #020617 !important;
+    }
+
+    // Explicitly reset all top-level elements for vertical stacking
+    .ps-main-title,
+    .ps-animal-title-mobile,
+    .ps-slidewrapper,
+    .ps-contentwrapper,
+    .ps-nav-container {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    // 1. Category Title
+    .ps-main-title {
+        order: 1 !important;
+        padding: 40px 20px 10px !important;
+        text-align: center !important;
+        pointer-events: auto !important;
+
+        h1 {
+            font-size: 11px !important;
+            letter-spacing: 6px !important;
+            margin: 0 !important;
+        }
+    }
+
+    // 2. Animal Title
+    .ps-animal-title-mobile {
+        order: 2 !important;
+        padding: 0 20px 15px !important;
+        display: block !important;
+
+        h2 {
+            display: none !important;
+            margin: 0 !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 32px !important;
+            font-weight: 900 !important;
+            color: #fff !important;
+            text-align: center !important;
+
+            &[style*="999"] {
+                display: block !important;
+            }
+        }
+    }
+
+    // 3. Hero Image
+    .ps-slidewrapper {
+        order: 3 !important;
+        height: 40vh !important;
+        min-height: 300px !important;
+        overflow: visible !important;
+        margin-bottom: 20px !important;
+    }
+
+    .ps-slides {
+        position: relative !important;
+        height: 100% !important;
+        width: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        overflow: visible !important;
+
+        >div {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: none !important;
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+
+            &[style*="999"] {
+                display: block !important;
+            }
+
+            &::after {
+                display: none !important;
+            }
+        }
+    }
+
+    // 4. Description Content
+    .ps-contentwrapper {
+        order: 4 !important;
+        padding: 20px !important;
+        overflow: visible !important;
+    }
+
+    .ps-content {
+        position: relative !important;
+        display: none !important;
+        background: transparent !important;
+        padding: 0 0 30px 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+        top: auto !important;
+        left: auto !important;
+
+        &[style*="999"] {
+            display: block !important;
+        }
+
+        h2 {
+            display: none !important;
+        }
+
+        p {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            text-align: left !important;
+            margin-bottom: 25px !important;
+            color: #cbd5e1 !important;
+        }
+
+        span.ps-price {
+            float: none !important;
+            margin: 0 auto 25px !important;
+            display: block !important;
+            width: 100px !important;
+            height: 100px !important;
+            line-height: 100px !important;
+            font-size: 18px !important;
+        }
+
+        .ps-button {
+            float: none !important;
+            margin: 20px auto !important;
+            display: block !important;
+            width: fit-content !important;
+        }
+    }
+
+    // 5. Navigation at Bottom
+    .ps-nav-container {
+        order: 5 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 15px !important;
+        padding: 20px 20px 50px !important;
+        height: auto !important;
+
+        >a {
+            position: relative !important;
+            flex: 1 !important;
+            height: 160px !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            float: none !important;
+            background-size: cover !important;
+
+            &:after {
+                width: 40px !important;
+                height: 40px !important;
+                margin: -20px 0 0 -20px !important;
+                top: 50% !important;
+                left: 50% !important;
+            }
+        }
+    }
+}
