@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal, computed, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router'; import { TranslateModule } from '@ngx-translate/core';
 
 
 interface Slide {
@@ -16,7 +16,7 @@ interface Slide {
 @Component({
   selector: 'app-mamiferos-terrestres',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
 
 
   templateUrl: './mamiferos-terrestres.component.html',
@@ -27,26 +27,26 @@ export class MamiferosTerrestresComponent implements AfterViewInit {
   // Slide data
   readonly slides: Slide[] = [
     {
-      title: 'Jaguar',
+      title: 'MAMMALS.JAGUAR.TITLE',
       scientificName: 'Panthera onca',
-      description: 'El depredador supremo del Amazonas, el jaguar es el felino más grande de América y el tercero del mundo. Con su distintivo pelaje dorado decorado con rosetas negras, este cazador nocturno domina su territorio con mordidas poderosas capaces de perforar cráneos y caparazones. Excelente nadador, caza tanto en tierra como en agua, siendo fundamental para el equilibrio del ecosistema amazónico.',
-      weight: '96 kg',
+      description: 'MAMMALS.SLIDER.JAGUAR.DESCRIPTION',
+      weight: 'MAMMALS.SLIDER.JAGUAR.WEIGHT',
       image: 'assets/mammals/jaguar.png',
       link: 'jaguar'
     },
     {
-      title: 'Tapir Brasileño',
+      title: 'MAMMALS.TAPIR.TITLE',
       scientificName: 'Tapirus terrestris',
-      description: 'El jardinero del bosque, el tapir brasileño es uno de los mamíferos herbívoros más grandes de Sudamérica. Con su distintiva trompa flexible y cuerpo robusto, este pariente lejano de los rinocerontes y caballos dispersa semillas a través del bosque, siendo crucial para la regeneración forestal. Animal tímido y principalmente nocturno, prefiere áreas cercanas al agua donde puede sumergirse para escapar de depredadores.',
-      weight: '250 kg',
+      description: 'MAMMALS.SLIDER.TAPIR.DESCRIPTION',
+      weight: 'MAMMALS.SLIDER.TAPIR.WEIGHT',
       image: 'assets/mammals/tapir.png',
       link: 'tapir'
     },
     {
-      title: 'Pecarí Labiado',
+      title: 'MAMMALS.PECARI.TITLE',
       scientificName: 'Tayassu pecari',
-      description: 'El arquitecto social de la selva, el pecarí labiado vive en manadas de hasta 300 individuos que se desplazan ruidosamente por el bosque. Reconocible por su característico labio blanco, este omnívoro juega un rol esencial en la dispersión de semillas y el control de invertebrados. Sus grandes grupos pueden modificar significativamente el sotobosque, creando claros que benefician a otras especies.',
-      weight: '40 kg',
+      description: 'MAMMALS.SLIDER.PECARI.DESCRIPTION',
+      weight: 'MAMMALS.SLIDER.PECARI.WEIGHT',
       image: 'assets/mammals/peccary.png',
       link: 'pecari'
     }
