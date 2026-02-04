@@ -24,8 +24,28 @@ export const PLANTAS_ROUTES: Routes = [
             },
             {
                 path: 'medicinales',
-                loadComponent: () => import('./medicinales/medicinales.component').then(m => m.MedicinalesComponent),
-                title: 'Plantas Medicinales'
+                title: 'Plantas Medicinales',
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./medicinales/medicinales.component').then(m => m.MedicinalesComponent),
+                    },
+                    {
+                        path: 'una-de-gato',
+                        loadComponent: () => import('./medicinales/una-de-gato/una-de-gato.component').then(m => m.UnaDeGatoComponent),
+                        title: 'Uña de Gato'
+                    },
+                    {
+                        path: 'sangre-de-grado',
+                        loadComponent: () => import('./medicinales/sangre-de-grado/sangre-de-grado.component').then(m => m.SangreDeGradoComponent),
+                        title: 'Sangre de Grado'
+                    },
+                    {
+                        path: 'ayahuasca',
+                        loadComponent: () => import('./medicinales/ayahuasca/ayahuasca.component').then(m => m.AyahuascaComponent),
+                        title: 'Ayahuasca'
+                    }
+                ]
             },
             {
                 path: '',

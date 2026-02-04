@@ -1,0 +1,147 @@
+<section class="hero-section">
+    <div class="back-nav-container">
+        <button class="back-btn" (click)="goBack()">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+    </div>
+    <h1 class="hero-title">Ayahuasca</h1>
+
+    <div class="hero-visual">
+        <div class="parallax-container" [style.transform]="parallaxTransform()">
+            <img src="assets/plants/ayahuasca.png" alt="Banisteriopsis caapi - Ayahuasca" class="plant-image">
+        </div>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-body">
+            <div class="hero-column">
+                <p>
+                    La <strong>Banisteriopsis caapi</strong>, conocida como ayahuasca o "liana del alma", es la planta
+                    maestra por excelencia del Amazonas. Esta liana gigante es la base de un brebaje sagrado que ha sido
+                    utilizado durante milenios por los pueblos indígenas para la sanación espiritual y la conexión con
+                    el cosmos.
+                </p>
+                <p>
+                    Su farmacología es fascinante: rica en beta-carbolinas como la harmina y la tetrahidroharmina, actúa
+                    permitiendo que otros compuestos visionarios sean procesados por el organismo. Es, en esencia, la
+                    llave que abre las puertas de la percepción y la introspección profunda.
+                </p>
+            </div>
+            <div class="hero-column">
+                <p>
+                    Más que un fármaco, la ayahuasca es considerada un ser sintiente, un espíritu guía que facilita la
+                    purga de toxinas físicas y emocionales. Las ceremonias dirigidas por los maestros curanderos buscan
+                    restaurar el equilibrio entre el ser humano, la naturaleza y lo invisible.
+                </p>
+                <p>
+                    Su presencia en la selva estructura el mapa espiritual de la Amazonía. Es un puente viviente que nos
+                    recuerda nuestra interconexión con todo lo que respira, un espejo que refleja la inmensidad del
+                    universo dentro de nosotros mismos.
+                    <span class="poetic-touch">"La cuerda que une el cielo y la tierra, descorriendo el velo de lo
+                        invisible para revelar la sinfonía eterna de la selva."</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="multimedia-section">
+        <!-- Tabs Header (Desktop Only) -->
+        <div class="multimedia-tabs-header">
+            <button [class.active]="activeTab() === 'video'" (click)="setTab('video')">
+                <svg viewBox="0 0 24 24" class="yt-icon">
+                    <path fill="currentColor"
+                        d="M21.58,7.19C21.35,6.33,20.67,5.65,19.81,5.42C18.25,5,12,5,12,5s-6.25,0-7.81,0.42c-0.86,0.23-1.54,0.91-1.77,1.77C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z M10,15.5v-7l6,3.5L10,15.5z" />
+                </svg>
+                Video
+            </button>
+            <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
+                <svg viewBox="0 0 24 24" class="sound-icon">
+                    <path fill="currentColor"
+                        d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
+                </svg>
+                Sonido
+            </button>
+            <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                </svg>
+                Mapa
+            </button>
+        </div>
+
+        <div class="multimedia-content-wrapper">
+            <!-- Video Tab -->
+            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+                <h3>Video de la Especie</h3>
+                <div class="video-container-iframe">
+                    <iframe [src]="videoUrl()" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Sound Tab -->
+            <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
+                <h3>Icaros y Selva</h3>
+                <div class="avatar-audio-player">
+                    <audio #audioPlayer src="assets/sounds/ambiente-selva.mp3" (timeupdate)="onTimeUpdate()"
+                        (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
+                    </audio>
+
+                    <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
+                        <div class="icon">
+                            @if (!isPlaying()) {
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                            </svg>
+                            } @else {
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+                            </svg>
+                            }
+                        </div>
+                    </button>
+
+                    <div class="player-controls">
+                        <div class="progress-container" (click)="seek($event)">
+                            <div class="progress-bar" [style.width.%]="progress()">
+                                <div class="progress-glow"></div>
+                            </div>
+                        </div>
+                        <div class="time-info">
+                            <span>{{ formatTime(currentTime()) }}</span>
+                            <span>{{ formatTime(duration()) }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Tab -->
+            <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
+                <h3>Hábitat Sagrado</h3>
+                <div class="map-container">
+                    <img src="assets/images/mapa-amazonia.png" alt="Mapa de distribución de Ayahuasca"
+                        class="habitat-map">
+                    <div class="map-legend">
+                        <div class="legend-title">Presencia de la Liana</div>
+                        <div class="legend-item">
+                            <span class="color-dot high"></span>
+                            <span>Alta Densidad</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-dot medium"></span>
+                            <span>Presencia Moderada</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-dot jungle"></span>
+                            <span>Selva Virgen Profunda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

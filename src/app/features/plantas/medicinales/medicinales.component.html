@@ -36,7 +36,11 @@
                 {{ slide.description }}
             </p>
             @if (slide.link) {
+            @if (slide.link.startsWith('http')) {
             <a [href]="slide.link" target="_blank" rel="noopener noreferrer" class="ps-button">Más información</a>
+            } @else {
+            <a [routerLink]="[slide.link]" class="ps-button">Más información</a>
+            }
             }
         </div>
         }

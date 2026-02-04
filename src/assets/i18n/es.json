@@ -47,6 +47,74 @@
         "CONSERVATION": "Conservación",
         "DEFORESTATION": "Deforestación",
         "CLIMATE_CHANGE": "Cambio Climático",
-        "PROJECTS": "Proyectos"
+        "PROJECTS": "Proyectos",
+        "MORE_INFO": "Más información"
+    },
+    "MAMMALS": {
+        "SLIDER": {
+            "TITLE": "Mamíferos Terrestres Amazónicos",
+            "JAGUAR": {
+                "DESCRIPTION": "El depredador supremo del Amazonas, el jaguar es el felino más grande de América y el tercero del mundo. Con su distintivo pelaje dorado decorado con rosetas negras, este cazador nocturno domina su territorio con mordidas poderosas capaces de perforar cráneos y caparazones. Excelente nadador, caza tanto en tierra como en agua, siendo fundamental para el equilibrio del ecosistema amazónico.",
+                "WEIGHT": "96 kg"
+            },
+            "TAPIR": {
+                "DESCRIPTION": "El jardinero del bosque, el tapir brasileño es uno de los mamíferos herbívoros más grandes de Sudamérica. Con su distintiva trompa flexible y cuerpo robusto, este pariente lejano de los rinocerontes y caballos dispersa semillas a través del bosque, siendo crucial para la regeneración forestal. Animal tímido y principalmente nocturno, prefiere áreas cercanas al agua donde puede sumergirse para escapar de depredadores.",
+                "WEIGHT": "250 kg"
+            },
+            "PECARI": {
+                "DESCRIPTION": "El arquitecto social de la selva, el pecarí labiado vive en manadas de hasta 300 individuos que se desplazan ruidosamente por el bosque. Reconocible por su característico labio blanco, este omnívoro juega un rol esencial en la dispersión de semillas y el control de invertebrados. Sus grandes grupos pueden modificar significativamente el sotobosque, creando claros que benefician a otras especies.",
+                "WEIGHT": "40 kg"
+            }
+        },
+        "JAGUAR": {
+            "TITLE": "Jaguar",
+            "POEM": "\"Ojos de obsidiana que ven en la oscuridad, un aliento dorado que recorre la espesura, el latido indomable del corazón de la selva.\"",
+            "BODY_1": "El <strong>Panthera onca</strong>, soberano absoluto de las sombras amazónicas, es el felino más grande del continente americano. Su pelaje, una obra maestra de camuflaje con rosetas que imitan el juego de luces y sombras del bosque primario, envuelve un cuerpo de pura potencia y agilidad.",
+            "BODY_2": "Como depredador alfa, el jaguar cumple un rol vital en la regulación de las poblaciones de otras especies, manteniendo el equilibrio de la biodiversidad. Su mordida, la más fuerte entre todos los grandes felinos, es capaz de perforar incluso los caparazones más resistentes.",
+            "BODY_3": "A diferencia de otros felinos, el jaguar es un nadador excepcional que patrulla las riberas de los ríos en busca de caimanes y capibaras. Su presencia es un indicativo de la salud del ecosistema; donde el jaguar ruge, la selva palpita con fuerza ancestral.",
+            "BODY_4": "En la cosmovisión de los pueblos amazónicos, el jaguar es un guardián de la sabiduría y el poder nocturno. Es el espíritu que protege los secretos de la tierra, moviéndose con la misma elegancia y silencio que el tiempo mismo a través de la Alfombra Esmeralda.",
+            "VIDEO_TITLE": "Video de la Especie",
+            "SOUND_TITLE": "Rugido del Amazonas",
+            "MAP_TITLE": "Territorio de Caza",
+            "MAP_LEGEND_TITLE": "Presencia del Jaguar",
+            "MAP_HIGH": "Alta Densidad",
+            "MAP_MEDIUM": "Zona de Transición",
+            "MAP_TYPE": "Selva Inundable / Tierra Firme",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sonido",
+                "MAP": "Mapa"
+            }
+        },
+        "TAPIR": {
+            "TITLE": "Tapir Brasileño",
+            "POEM": "\"Un rastro de vida en el lodo fértil, una trompa que acaricia la hoja verde, el paso tranquilo que siembra el bosque eterno.\"",
+            "BODY_1": "El <strong>Tapirus terrestris</strong>, cariñosamente conocido como el \"jardinero de la selva\", es el mamífero terrestre más grande de Sudamérica. Con su característica trompa moscilar, un apéndice flexible que utiliza para alcanzar hojas frescas y frutos, el tapir es un pariente lejano de los rinocerontes y los caballos.",
+            "BODY_2": "Su rol en el ecosistema es insustituible: al consumir una vasta diversidad de frutos, dispersa semillas a través de grandes distancias, garantizando la regeneración y la vitalidad del bosque. Es un arquitecto silencioso que planta el futuro de la selva con cada paso.",
+            "BODY_3": "De hábitos principalmente crepusculares y nocturnos, el tapir es un animal tímido que busca la frescura del agua, donde es un excelente nadador y buceador. Su piel gruesa y su robusta contextura le permiten moverse a través de la densa vegetación con sorprendente agilidad.",
+            "BODY_4": "Para los guardianes de la selva, el tapir simboliza la perseverancia y la conexión con la tierra profunda. Su presencia es un recordatorio de la importancia de los procesos lentos y constantes que sostienen la vida en el corazón del Amazonas, lejos del bullicio del dosel superior.",
+            "VIDEO_TITLE": "Video de la Especie",
+            "SOUND_TITLE": "Susurros de la Ribera",
+            "MAP_TITLE": "Senda del Jardinero",
+            "MAP_LEGEND_TITLE": "Presencia del Tapir",
+            "MAP_HIGH": "Alta Probabilidad",
+            "MAP_MEDIUM": "Zonas de Forrajeo",
+            "MAP_TYPE": "Cuerpos de Agua / Bosque"
+        },
+        "PECARI": {
+            "TITLE": "Pecarí Labiado",
+            "POEM": "\"Un estruendo de pezuñas en la hojarasca, una marea de vida que fluye entre los troncos, el pulso colectivo de la selva en movimiento.\"",
+            "BODY_1": "El <strong>Tayassu pecari</strong>, o pecarí labiado, es el arquitecto social de la selva amazónica. Estos parientes de los cerdos, reconocibles por su pelaje oscuro y su característico labio blanco, viven en manadas masivas que pueden superar los 300 individuos, creando una fuerza colectiva que modela el paisaje forestal.",
+            "BODY_2": "Su movimiento a través del bosque es un evento sísmico de biodiversidad: su pisoteo y búsqueda de alimento en el suelo abren claros en el sotobosque, permitiendo que la luz llegue a nuevas plántulas y regulando las poblaciones de invertebrados y pequeños vertebrados.",
+            "BODY_3": "Dotados de un fuerte sentido de la jerarquía y la comunicación, los pecaríes utilizan señales táctiles y olfativas para mantener la cohesión del grupo. Son animales valientes que, en conjunto, pueden enfrentarse incluso a grandes depredadores como el jaguar para proteger a sus crías.",
+            "BODY_4": "En la ecología del Amazonas, el pecarí representa la fuerza del colectivo. Su presencia es vital para mantener la estructura y la composición del bosque primario, recordándonos que incluso los animales más pequeños, cuando actúan en armonía, pueden transformar el mundo que habitan.",
+            "VIDEO_TITLE": "Video de la Especie",
+            "SOUND_TITLE": "Eco de la Manada",
+            "MAP_TITLE": "Rutas Migratorias",
+            "MAP_LEGEND_TITLE": "Presencia del Pecarí",
+            "MAP_HIGH": "Pasos de Manada",
+            "MAP_MEDIUM": "Zonas de Forrajeo",
+            "MAP_TYPE": "Bosque Tropical Primario"
+        }
     }
 }
