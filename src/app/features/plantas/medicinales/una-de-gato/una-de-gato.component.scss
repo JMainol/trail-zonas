@@ -34,6 +34,53 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+.back-nav-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 100;
+
+    .back-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba($avatar-blue-deep, 0.4);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid rgba($avatar-cyan, 0.2);
+        backdrop-filter: blur(15px);
+        color: white;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
+
+        svg {
+            width: 24px;
+            height: 24px;
+            color: $avatar-cyan;
+            filter: drop-shadow(0 0 5px $avatar-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            border-color: rgba($avatar-cyan, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba($avatar-cyan, 0.1);
+            transform: scale(1.1);
+
+            svg {
+                transform: translateX(-2px);
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+
 .hero-title {
     font-family: $font-heading;
     font-size: 3rem;
@@ -82,8 +129,8 @@ $font-body: "Inter", sans-serif;
     @media (min-width: 768px) {
         grid-column: 1;
         grid-row: 1 / span 2;
-        margin-left: -8vw;
-        justify-content: flex-start;
+        margin-left: -2vw;
+        justify-content: center;
         align-items: center;
         width: auto;
         position: sticky;
@@ -96,20 +143,18 @@ $font-body: "Inter", sans-serif;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.toucan-image {
+.plant-image {
     max-width: 100%;
     width: 90vw;
     height: auto;
     max-height: 50vh;
     object-fit: contain;
-    filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.6));
-    transform: translateY(-5%);
+    filter: drop-shadow(0 0 30px rgba($avatar-cyan, 0.2));
     transition: all 0.5s ease;
 
     @media (min-width: 768px) {
-        width: 60vw;
-        max-height: 87vh;
-        transform: translateX(-13%);
+        width: 45vw;
+        max-height: 80vh;
     }
 }
 
@@ -156,17 +201,23 @@ $font-body: "Inter", sans-serif;
             &:last-child {
                 margin-bottom: 0;
             }
+
+            strong {
+                color: $avatar-cyan;
+                text-shadow: 0 0 10px rgba($avatar-cyan, 0.3);
+            }
         }
 
         .poetic-touch {
             display: block;
             margin-top: 2rem;
             padding-left: 1.5rem;
-            border-left: 3px solid #ffd700;
+            border-left: 3px solid $avatar-magenta;
             font-style: italic;
-            color: #ffd700;
+            color: $avatar-magenta;
             font-family: 'Times New Roman', serif;
             font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba($avatar-magenta, 0.3);
         }
     }
 }
@@ -186,7 +237,6 @@ $font-body: "Inter", sans-serif;
         grid-row: 3;
         margin-left: 0;
         align-items: center;
-        /* Centered horizontally */
     }
 }
 
@@ -277,7 +327,6 @@ $font-body: "Inter", sans-serif;
         pointer-events: none;
     }
 
-    // When visible in tab mode
     animation: tabFadeIn 0.5s ease-out forwards;
 
     h3 {
@@ -358,9 +407,7 @@ $font-body: "Inter", sans-serif;
     @media (min-width: 768px) {
         flex-direction: row;
         align-items: center;
-        /* Center items vertically within the row */
         justify-content: center;
-        /* Center the whole row content */
         gap: 3rem;
     }
 }

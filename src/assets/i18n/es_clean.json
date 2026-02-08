@@ -1,4 +1,4 @@
-{
+﻿{
     "HOME": {
         "TITLE": "Amazonas Jungle",
         "SUBTITLE": "Descubre la fauna más salvaje",
@@ -18,6 +18,7 @@
         "BACK": "Volver",
         "HOME": "Inicio",
         "ANIMALS": "Animales",
+        "MAMMALS": "Mamíferos",
         "BIRDS": "Aves",
         "REPTILES": "Reptiles",
         "AQUATIC_FAUNA": "Fauna Acuática",

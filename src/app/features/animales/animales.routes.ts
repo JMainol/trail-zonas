@@ -9,8 +9,16 @@ export const ANIMALES_ROUTES: Routes = [
         children: [
             {
                 path: 'mamiferos-terrestres',
-                loadComponent: () => import('./mamiferos-terrestres/mamiferos-terrestres.component').then(m => m.MamiferosTerrestresComponent),
-                title: 'Mamíferos Terrestres'
+                title: 'Mamíferos Terrestres',
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./mamiferos-terrestres/mamiferos-terrestres.component').then(m => m.MamiferosTerrestresComponent),
+                    },
+                    { path: 'jaguar', loadComponent: () => import('./mamiferos-terrestres/jaguar/jaguar.component').then(m => m.JaguarComponent), title: 'Jaguar' },
+                    { path: 'tapir', loadComponent: () => import('./mamiferos-terrestres/tapir/tapir.component').then(m => m.TapirComponent), title: 'Tapir Brasileño' },
+                    { path: 'pecari', loadComponent: () => import('./mamiferos-terrestres/pecari/pecari.component').then(m => m.PecariComponent), title: 'Pecarí Labiado' }
+                ]
             },
             {
                 path: 'aves-amazonicas',

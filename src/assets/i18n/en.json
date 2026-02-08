@@ -18,7 +18,6 @@
         "BACK": "Back",
         "HOME": "Home",
         "ANIMALS": "Animals",
-        "MAMMALS": "Mammals",
         "BIRDS": "Birds",
         "REPTILES": "Reptiles",
         "AQUATIC_FAUNA": "Aquatic Fauna",
@@ -47,6 +46,74 @@
         "CONSERVATION": "Conservation",
         "DEFORESTATION": "Deforestation",
         "CLIMATE_CHANGE": "Climate Change",
-        "PROJECTS": "Projects"
+        "PROJECTS": "Projects",
+        "MORE_INFO": "More information"
+    },
+    "MAMMALS": {
+        "SLIDER": {
+            "TITLE": "Amazonian Terrestrial Mammals",
+            "JAGUAR": {
+                "DESCRIPTION": "The supreme predator of the Amazon, the jaguar is the largest feline in the Americas and the third largest in the world. With its distinctive golden coat decorated with black rosettes, this nocturnal hunter dominates its territory with powerful bites capable of piercing skulls and shells. An excellent swimmer, it hunts on both land and in water, being fundamental to the balance of the Amazonian ecosystem.",
+                "WEIGHT": "96 kg"
+            },
+            "TAPIR": {
+                "DESCRIPTION": "The gardener of the forest, the Brazilian tapir is one of the largest herbivorous mammals in South America. With its distinctive flexible trunk and robust body, this distant relative of rhinoceroses and horses disperses seeds through the forest, being crucial for forest regeneration. A shy and mainly nocturnal animal, it prefers areas near water where it can submerge to escape predators.",
+                "WEIGHT": "250 kg"
+            },
+            "PECARI": {
+                "DESCRIPTION": "The social architect of the jungle, the white-lipped peccary lives in massive herds of up to 300 individuals that move noisily through the forest. Recognizable by its characteristic white lip, this omnivore plays an essential role in seed dispersal and invertebrate control. Their large groups can significantly modify the understory, creating gaps that benefit other species.",
+                "WEIGHT": "40 kg"
+            }
+        },
+        "JAGUAR": {
+            "TITLE": "Jaguar",
+            "POEM": "\"Obsidian eyes that see in the dark, a golden breath that roams the thicket, the indomitable heartbeat of the jungle's core.\"",
+            "BODY_1": "The <strong>Panthera onca</strong>, absolute sovereign of the Amazonian shadows, is the largest feline in the Americas. Its coat, a masterpiece of camouflage with rosettes that mimic the play of light and shadow in the primary forest, envelops a body of pure power and agility.",
+            "BODY_2": "As an alpha predator, the jaguar plays a vital role in regulating the populations of other species, maintaining the balance of biodiversity. Its bite, the strongest among all large felines, is capable of piercing even the toughest shells.",
+            "BODY_3": "Unlike other felines, the jaguar is an exceptional swimmer that patrols riverbanks in search of caimans and capybaras. Its presence is an indicator of the ecosystem's health; where the jaguar roars, the jungle pulses with ancestral strength.",
+            "BODY_4": "In the worldview of Amazonian peoples, the jaguar is a guardian of wisdom and nocturnal power. It is the spirit that protects the earth's secrets, moving with the same elegance and silence as time itself through the Emerald Carpet.",
+            "VIDEO_TITLE": "Species Video",
+            "SOUND_TITLE": "Roar of the Amazon",
+            "MAP_TITLE": "Hunting Territory",
+            "MAP_LEGEND_TITLE": "Jaguar Presence",
+            "MAP_HIGH": "High Density",
+            "MAP_MEDIUM": "Transition Zone",
+            "MAP_TYPE": "Flooded Forest / Terra Firme",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sound",
+                "MAP": "Map"
+            }
+        },
+        "TAPIR": {
+            "TITLE": "Brazilian Tapir",
+            "POEM": "\"A trail of life in the fertile mud, a trunk that caresses the green leaf, the quiet step that sows the eternal forest.\"",
+            "BODY_1": "The <strong>Tapirus terrestris</strong>, affectionately known as the \"gardener of the jungle,\" is the largest land mammal in South America. With its characteristic flexible trunk, an appendage it uses to reach fresh leaves and fruits, the tapir is a distant relative of rhinoceroses and horses.",
+            "BODY_2": "Its role in the ecosystem is irreplaceable: by consuming a vast diversity of fruits, it disperses seeds over great distances, ensuring the regeneration and vitality of the forest. It is a silent architect that plants the future of the jungle with every step.",
+            "BODY_3": "Mainly crepuscular and nocturnal in its habits, the tapir is a shy animal that seeks the coolness of water, where it is an excellent swimmer and diver. Its thick skin and robust build allow it to move through dense vegetation with surprising agility.",
+            "BODY_4": "For the guardians of the jungle, the tapir symbolizes perseverance and connection with the deep earth. Its presence is a reminder of the importance of the slow and steady processes that sustain life in the heart of the Amazon, far from the bustle of the upper canopy.",
+            "VIDEO_TITLE": "Species Video",
+            "SOUND_TITLE": "Riverbank Whispers",
+            "MAP_TITLE": "Gardener's Path",
+            "MAP_LEGEND_TITLE": "Tapir Presence",
+            "MAP_HIGH": "High Probability",
+            "MAP_MEDIUM": "Foraging Zones",
+            "MAP_TYPE": "Water Bodies / Forest"
+        },
+        "PECARI": {
+            "TITLE": "White-lipped Peccary",
+            "POEM": "\"A thunder of hooves in the leaf litter, a tide of life flowing between the trunks, the collective pulse of the jungle in motion.\"",
+            "BODY_1": "The <strong>Tayassu pecari</strong>, or white-lipped peccary, is the social architect of the Amazon rainforest. These relatives of pigs, recognizable by their dark fur and characteristic white lip, live in massive herds that can exceed 300 individuals, creating a collective force that shapes the forest landscape.",
+            "BODY_2": "Their movement through the forest is a seismic event for biodiversity: their trampling and foraging on the ground open gaps in the understory, allowing light to reach new seedlings and regulating populations of invertebrates and small vertebrates.",
+            "BODY_3": "Endowed with a strong sense of hierarchy and communication, peccaries use tactile and olfactory signals to maintain group cohesion. They are brave animals that, together, can face even large predators like the jaguar to protect their young.",
+            "BODY_4": "In the ecology of the Amazon, the peccary represents the power of the collective. Its presence is vital for maintaining the structure and composition of the primary forest, reminding us that even the smallest animals, when acting in harmony, can transform the world they inhabit.",
+            "VIDEO_TITLE": "Species Video",
+            "SOUND_TITLE": "Echo of the Herd",
+            "MAP_TITLE": "Migratory Routes",
+            "MAP_LEGEND_TITLE": "Peccary Presence",
+            "MAP_HIGH": "Herd Paths",
+            "MAP_MEDIUM": "Foraging Zones",
+            "MAP_TYPE": "Primary Tropical Forest"
+        }
     }
 }
