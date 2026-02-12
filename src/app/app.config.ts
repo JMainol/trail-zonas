@@ -33,6 +33,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideTranslateService({
       loader: {
+
         provide: TranslateLoader,
         useClass: TranslateHttpLoader
       }

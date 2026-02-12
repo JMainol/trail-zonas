@@ -1,0 +1,121 @@
+/* Importamos estilos base */
+@import 'leaflet/dist/leaflet.css';
+
+:host {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#app-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #0d1a13;
+
+    header {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 1000;
+        background: rgba(13, 26, 19, 0.8);
+        backdrop-filter: blur(12px);
+        padding: 1.2rem;
+        border-radius: 12px;
+        border-left: 4px solid #00e676;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+        h1 {
+            margin: 0;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        p {
+            margin: 4px 0 0;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    }
+
+    .info-card {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 250px;
+        animation: slideUp 0.3s ease-out;
+
+        .country-tag {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #fff;
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    z-index: 900;
+}
+
+::ng-deep {
+    .leaflet-tile-pane {
+        filter: saturate(1.2) contrast(1.1) brightness(0.8);
+    }
+
+    .reserva-tooltip {
+        background: #000;
+        border: 1px solid #00e676;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

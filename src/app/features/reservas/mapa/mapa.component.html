@@ -1,0 +1,20 @@
+<div id="app-container">
+    <div class="vignette"></div>
+
+    <header>
+        <h1>Amazonas</h1>
+        <p>Explorador de Reservas Naturales</p>
+    </header>
+
+    @if (selectedReserve()) {
+    <div class="info-card">
+        <span class="country-tag" [style.background-color]="getFeatureStyle({properties: selectedReserve()}).color">
+            {{ selectedReserve().country }}
+        </span>
+        <h2>{{ selectedReserve().name }}</h2>
+        <button class="btn-close" (click)="selectedReserve.set(null)">×</button>
+    </div>
+    }
+
+    <div id="map"></div>
+</div>
