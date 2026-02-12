@@ -12,10 +12,12 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
 
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
     selector: 'app-mapa',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, MatIconModule],
     templateUrl: './mapa.component.html',
     styleUrls: ['./mapa.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
