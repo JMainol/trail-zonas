@@ -70,10 +70,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "amazonas-jungle:build:production"
+              "buildTarget": "trail-zonas:build:production"
             },
             "development": {
-              "buildTarget": "amazonas-jungle:build:development"
+              "buildTarget": "trail-zonas:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,5 @@
 {
-  "name": "amazonas-jungle",
+  "name": "trail-zonas",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:amazonas-jungle": "node dist/amazonas-jungle/server/server.mjs"
+    "serve:ssr:trail-zonas": "node dist/trail-zonas/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
