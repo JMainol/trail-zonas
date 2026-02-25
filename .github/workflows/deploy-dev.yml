@@ -3,7 +3,7 @@ name: Deploy DEV (Angular SPA)
 on:
   push:
     branches:
-      - develop   # cambia si tu rama DEV es otra
+      - develop
 
 permissions:
   contents: write
@@ -27,10 +27,14 @@ jobs:
 
       - name: Build Angular
         run: |
-          npm run build:prod -- --base-href "/amazonas/"
+          npm run build -- --configuration production --base-href "/trail-zonas/"
+
+      # 👇 MUY IMPORTANTE para Angular routing
+      - name: SPA fallback
+        run: cp dist/trail-zonas/browser/index.html dist/trail-zonas/browser/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/amazonas-jungle/browser
+          publish_dir: ./dist/trail-zonas/browser
