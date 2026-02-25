@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "amazonas-jungle": {
+    "trail-zonas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -33,6 +33,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
               "src/styles.scss"
             ],
             "server": "src/main.server.ts",
@@ -69,10 +70,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "amazonas-jungle:build:production"
+              "buildTarget": "trail-zonas:build:production"
             },
             "development": {
-              "buildTarget": "amazonas-jungle:build:development"
+              "buildTarget": "trail-zonas:build:development"
             }
           },
           "defaultConfiguration": "development"

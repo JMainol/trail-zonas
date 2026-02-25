@@ -1,0 +1,187 @@
+/* Importamos estilos base */
+@import 'leaflet/dist/leaflet.css';
+
+:host {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+// Variables estéticas estilo Avatar
+$avatar-blue-deep: #0a0e14;
+$avatar-cyan: #00f2ff;
+$avatar-magenta: #bc13fe;
+
+#app-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #020617; // Fondo más profundo
+
+    .map-header-pill {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        background: rgba($avatar-blue-deep, 0.4);
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        border: 1px solid rgba($avatar-cyan, 0.2);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
+        transition: all 0.4s ease;
+
+        &:hover {
+            border-color: rgba($avatar-cyan, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba($avatar-cyan, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .icon-container {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, $avatar-cyan, $avatar-magenta);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba($avatar-cyan, 0.3);
+            flex-shrink: 0;
+
+            mat-icon {
+                color: white;
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            }
+        }
+
+        .header-text {
+            h1 {
+                margin: 0;
+                font-size: 1.2rem;
+                font-weight: 800;
+                color: #fff;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                line-height: 1;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            }
+
+            p {
+                margin: 4px 0 0;
+                font-size: 0.75rem;
+                color: rgba($avatar-cyan, 0.7);
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+    .info-card {
+        position: absolute;
+        bottom: 32px;
+        right: 32px;
+        z-index: 1000;
+        background: rgba($avatar-blue-deep, 0.6);
+        backdrop-filter: blur(20px);
+        padding: 1.5rem;
+        border-radius: 24px;
+        border: 1px solid rgba($avatar-cyan, 0.2);
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba($avatar-cyan, 0.05);
+        min-width: 280px;
+        animation: slideUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        .country-tag {
+            align-self: flex-start;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 800;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: rgba($avatar-cyan, 0.2);
+                color: $avatar-cyan;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    z-index: 900;
+}
+
+::ng-deep {
+    .leaflet-tile-pane {
+        filter: saturate(1.2) contrast(1.1) brightness(0.8);
+    }
+
+    .reserva-tooltip {
+        background: #000;
+        border: 1px solid #00e676;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -2,7 +2,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { provideTranslateHttpLoader, TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -30,9 +30,10 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
 
     // Configuración de i18n (ngx-translate)
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     provideTranslateService({
       loader: {
+
         provide: TranslateLoader,
         useClass: TranslateHttpLoader
       }

@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
    standalone: true,
    imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule],
    template: `
-    <nav class="sticky top-0 z-[100] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
+    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           
@@ -122,7 +122,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         @apply text-lg w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all;
     }
     .dropdown-panel {
-        @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[100] pt-3;
+        @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[1000] pt-3;
     }
     .dropdown-content {
         @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] overflow-hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10;
@@ -219,10 +219,10 @@ export class NavMenuComponent {
          id: 'plantas',
          label: 'COMMON.PLANTS',
          items: [
+            { label: 'COMMON.MEDICINAL', link: '/amazonia/plantas/medicinales' },
             { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical' },
             { label: 'COMMON.FLORA_TYPES', link: '/amazonia/plantas/tipos-flora' },
-            { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos' },
-            { label: 'COMMON.MEDICINAL', link: '/amazonia/plantas/medicinales' }
+            { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos' }
          ]
       },
       {
@@ -236,6 +236,18 @@ export class NavMenuComponent {
          ]
       },
       {
+         id: 'reservas',
+         label: 'COMMON.GEOGRAPHY',
+         items: [
+            { label: 'COMMON.MAP', link: '/amazonia/reservas/mapa' },
+            { label: 'COMMON.MANU', link: '/amazonia/geografia/manu' },
+            { label: 'COMMON.YASUNI', link: '/amazonia/geografia/yasuni' },
+            { label: 'COMMON.JAU', link: '/amazonia/geografia/jau' },
+            { label: 'COMMON.PACAYA', link: '/amazonia/geografia/pacaya' },
+            { label: 'COMMON.CHIRIBIQUETE', link: '/amazonia/geografia/chiribiquete' }
+         ]
+      },
+      {
          id: 'tribus',
          label: 'COMMON.TRIBES',
          items: [
@@ -243,23 +255,6 @@ export class NavMenuComponent {
             { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad' },
             { label: 'COMMON.ANCESTRAL_KNOWLEDGE', link: '/amazonia/tribus/conocimiento-ancestral' },
             { label: 'COMMON.CHALLENGES', link: '/amazonia/tribus/desafios-supervivencia' }
-         ]
-      },
-      {
-         id: 'geografia',
-         label: 'COMMON.GEOGRAPHY',
-         items: [
-            { label: 'COMMON.RIVER', link: '/amazonia/geografia/rio-afluentes' },
-            { label: 'COMMON.CLIMATE', link: '/amazonia/geografia/clima-estacionalidad' },
-            { label: 'COMMON.GEOLOGY', link: '/amazonia/geografia/geologia-suelos' }
-         ]
-      },
-      {
-         id: 'ecosistemas',
-         label: 'COMMON.AQUATIC_ECOSYSTEMS',
-         items: [
-            { label: 'COMMON.VARZEA', link: '/amazonia/ecosistemas-acuaticos/varzea-igapo' },
-            { label: 'COMMON.LAKES', link: '/amazonia/ecosistemas-acuaticos/lagos-cochas' }
          ]
       },
       {
