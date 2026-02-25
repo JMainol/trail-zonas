@@ -1,19 +1,33 @@
-
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { YouTubePlayer } from '@angular/youtube-player';
 
 @Component({
   selector: 'app-aves-amazonicas',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, YouTubePlayer],
   templateUrl: './aves-amazonicas.component.html',
   styleUrl: './aves-amazonicas.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AvesAmazonicasComponent {
+export class AvesAmazonicasComponent implements OnInit {
   private sanitizer = inject(DomSanitizer);
+  private platformId = inject(PLATFORM_ID);
+  protected isBrowser = signal(false);
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isBrowser.set(true);
+      if (!(window as any).YT) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.body.appendChild(tag);
+      }
+    }
+  }
 
   // Video URL
   protected videoUrl = signal<SafeResourceUrl>(
@@ -32,6 +46,7 @@ export class AvesAmazonicasComponent {
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
+    if (!isPlatformBrowser(this.platformId)) return;
     const x = (event.clientX - window.innerWidth / 2) * -0.02;
     const y = (event.clientY - window.innerHeight / 2) * -0.02;
     this.parallaxTransform.set(`translate(${x}px, ${y}px)`);

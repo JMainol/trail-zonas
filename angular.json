@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "amazonas-jungle": {
+    "trail-zonas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {

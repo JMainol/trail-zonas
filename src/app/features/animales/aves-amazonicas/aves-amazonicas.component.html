@@ -2,9 +2,27 @@
     <h1 class="hero-title">Tucán Vitelado</h1>
 
     <div class="hero-visual">
-        <div class="parallax-container">
+        <div class="parallax-container" [style.transform]="parallaxTransform()">
+            <!-- Mobile: Static Image -->
             <img src="assets/images/toucan-vitelado.png" alt="Ramphastos vitellinus - Tucán Vitelado"
-                class="toucan-image">
+                class="toucan-image mobile-only">
+
+            <!-- Desktop: Youtube Short -->
+            @if (isBrowser()) {
+            @defer (on viewport) {
+            <div class="youtube-wrapper desktop-only">
+                <youtube-player videoId="1Q0uPWeTyWA" [width]="810" [height]="1440"
+                    [playerVars]="{ autoplay: 1, mute: 1, controls: 0, rel: 0, loop: 1, playlist: '1Q0uPWeTyWA', playsinline: 1, showinfo: 0, modestbranding: 1 }"
+                    class="youtube-short">
+                </youtube-player>
+            </div>
+            } @placeholder {
+            <img src="assets/images/toucan-vitelado.png" alt="Cargando..." class="toucan-image desktop-only">
+            }
+            } @else {
+            <img src="assets/images/toucan-vitelado.png" alt="Ramphastos vitellinus - Tucán Vitelado"
+                class="toucan-image desktop-only">
+            }
         </div>
     </div>
 
