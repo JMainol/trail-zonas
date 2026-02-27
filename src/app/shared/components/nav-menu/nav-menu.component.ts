@@ -50,12 +50,33 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                     <div class="dropdown-panel">
                         <div class="dropdown-content">
                             <div class="py-2">
-                                <a *ngFor="let item of section.items" 
-                                   [routerLink]="item.link"
-                                   routerLinkActive="dropdown-active"
-                                   class="dropdown-item">
-                                    {{ item.label | translate }}
-                                </a>
+                                <ng-container *ngFor="let item of section.items">
+                                    <!-- Regular Item -->
+                                    <a *ngIf="!item.items" 
+                                       [routerLink]="item.link"
+                                       routerLinkActive="dropdown-active"
+                                       class="dropdown-item">
+                                        {{ item.label | translate }}
+                                    </a>
+
+                                    <!-- Nested Dropdown Item -->
+                                    <div *ngIf="item.items" class="relative has-nested-dropdown">
+                                        <div class="dropdown-item flex items-center gap-[10px] cursor-pointer group/nested">
+                                            <span>{{ item.label | translate }}</span>
+                                            <mat-icon class="text-xs opacity-50 transition-transform duration-300 group-hover/nested:translate-x-1 group-hover/nested:text-blue-400 !h-auto !w-auto translate-y-[1.5px]">chevron_right</mat-icon>
+                                        </div>
+                                        <div class="nested-dropdown">
+                                            <div class="dropdown-content-premium py-2">
+                                                <a *ngFor="let subItem of item.items" 
+                                                   [routerLink]="subItem.link"
+                                                   routerLinkActive="dropdown-active"
+                                                   class="dropdown-item-premium">
+                                                    {{ subItem.label | translate }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
                             </div>
                         </div>
                     </div>
@@ -99,12 +120,34 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                 </button>
                 
                 <div *ngIf="activeMobileSection === section.id" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
-                    <a *ngFor="let item of section.items" 
-                       [routerLink]="item.link" 
-                       (click)="closeMobileMenu()"
-                       class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
-                       {{ item.label | translate }}
-                    </a>
+                    <ng-container *ngFor="let item of section.items">
+                        <!-- Regular Mobile Item -->
+                        <a *ngIf="!item.items"
+                           [routerLink]="item.link" 
+                           (click)="closeMobileMenu()"
+                           class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                           {{ item.label | translate }}
+                        </a>
+                        
+                        <!-- Nested Mobile Item -->
+                        <div *ngIf="item.items" class="space-y-1">
+                            <button (click)="toggleMobileSubSection(item.label)" 
+                                    class="w-full text-left flex justify-between px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                                {{ item.label | translate }}
+                                <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
+                            </button>
+                            
+                            <div *ngIf="activeMobileSubSection === item.label" 
+                                 class="pl-4 border-l-2 border-cyan-800/30 space-y-1 mt-1">
+                                <a *ngFor="let subItem of item.items" 
+                                   [routerLink]="subItem.link" 
+                                   (click)="closeMobileMenu()"
+                                   class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                                   {{ subItem.label | translate }}
+                                </a>
+                            </div>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
         </div>
@@ -125,12 +168,31 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[1000] pt-3;
     }
     .dropdown-content {
-        @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] overflow-hidden bg-[#020617]/95 backdrop-blur-2xl border border-white/10;
+        @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] bg-[#020617]/95 backdrop-blur-2xl border border-white/10;
+    }
+    .dropdown-content-premium {
+        @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] bg-gradient-to-br from-[#020617]/95 via-[#0f172a]/95 to-[#1e1b4b]/95 backdrop-blur-2xl border border-blue-500/30;
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), 0 10px 40px rgba(0,0,0,0.8);
+    }
+    .nested-dropdown {
+        @apply absolute left-full top-0 w-56 opacity-0 invisible transition-all duration-300 z-[1001] pl-2;
+    }
+    .has-nested-dropdown:hover .nested-dropdown {
+        @apply opacity-100 visible translate-x-1;
     }
     .dropdown-item {
         @apply block px-4 py-3 text-sm text-gray-400 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-200 border-l-4 border-transparent hover:border-cyan-500 hover:pl-6;
         &.dropdown-active {
             @apply bg-cyan-500/5 text-cyan-400 border-l-cyan-500 pl-6;
+        }
+    }
+    .dropdown-item-premium {
+        @apply block px-4 py-3 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 hover:pl-6;
+        &:hover {
+           text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+        }
+        &.dropdown-active {
+            @apply bg-blue-500/10 text-white border-l-purple-500 pl-6;
         }
     }
     .nav-item-mobile {
@@ -199,6 +261,7 @@ export class NavMenuComponent {
    isMobileMenuOpen = false;
    activeDropdown: string | null = null;
    activeMobileSection: string | null = null;
+   activeMobileSubSection: string | null = null;
 
    get currentLang() {
       return this.translate.currentLang || 'es';
@@ -210,7 +273,12 @@ export class NavMenuComponent {
          label: 'COMMON.ANIMALS',
          items: [
             { label: 'COMMON.MAMMALS', link: '/amazonia/animales/mamiferos-terrestres' },
-            { label: 'COMMON.BIRDS', link: '/amazonia/animales/aves-amazonicas' },
+            {
+               label: 'COMMON.BIRDS',
+               items: [
+                  { label: 'Tucán', link: '/amazonia/animales/aves/tucan' }
+               ]
+            },
             { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios' },
             { label: 'COMMON.AQUATIC_FAUNA', link: '/amazonia/animales/fauna-acuatica' }
          ]
@@ -296,11 +364,21 @@ export class NavMenuComponent {
          this.activeMobileSection = null;
       } else {
          this.activeMobileSection = id;
+         this.activeMobileSubSection = null; // Reset sub-section when switching main sections
+      }
+   }
+
+   toggleMobileSubSection(label: string) {
+      if (this.activeMobileSubSection === label) {
+         this.activeMobileSubSection = null;
+      } else {
+         this.activeMobileSubSection = label;
       }
    }
 
    closeMobileMenu() {
       this.isMobileMenuOpen = false;
       this.activeMobileSection = null;
+      this.activeMobileSubSection = null;
    }
 }

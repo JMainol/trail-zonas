@@ -5,14 +5,14 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
 
 @Component({
-  selector: 'app-aves-amazonicas',
+  selector: 'app-tucan',
   standalone: true,
   imports: [CommonModule, YouTubePlayer],
-  templateUrl: './aves-amazonicas.component.html',
-  styleUrl: './aves-amazonicas.component.scss',
+  templateUrl: './tucan.component.html',
+  styleUrl: './tucan.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AvesAmazonicasComponent implements OnInit {
+export class TucanComponent implements OnInit {
   private sanitizer = inject(DomSanitizer);
   private platformId = inject(PLATFORM_ID);
   protected isBrowser = signal(false);

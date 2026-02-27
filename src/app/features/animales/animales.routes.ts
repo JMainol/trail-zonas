@@ -21,9 +21,12 @@ export const ANIMALES_ROUTES: Routes = [
                 ]
             },
             {
-                path: 'aves-amazonicas',
-                loadComponent: () => import('./aves-amazonicas/aves-amazonicas.component').then(m => m.AvesAmazonicasComponent),
-                title: 'Aves Amazónicas'
+                path: 'aves',
+                title: 'Aves',
+                children: [
+                    { path: 'tucan', loadComponent: () => import('./aves/tucan/tucan.component').then(m => m.TucanComponent), title: 'Tucán' },
+                    { path: '', redirectTo: 'tucan', pathMatch: 'full' }
+                ]
             },
             {
                 path: 'reptiles-anfibios',
