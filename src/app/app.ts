@@ -11,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.scss'
 })
 export class AppComponent {
-  title = 'amazonas-jungle';
+  title = 'selva-amazonas';
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('es');
