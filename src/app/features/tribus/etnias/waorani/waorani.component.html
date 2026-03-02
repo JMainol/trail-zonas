@@ -6,35 +6,52 @@
             </svg>
         </button>
     </div>
-
-    <h1 class="hero-title">{{ 'MAMMALS.JAGUAR.TITLE' | translate }}</h1>
+    <h1 class="hero-title">Waorani</h1>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/mammals/jaguar.png" alt="Panthera onca - Jaguar" class="animal-image">
+            <img src="assets/images/tribes/miembros_tribu_waorani.jpg" alt="Miembros de la tribu Waorani"
+                class="plant-image">
         </div>
     </div>
 
     <div class="hero-content">
         <div class="hero-body">
             <div class="hero-column">
-                <p [innerHTML]="'MAMMALS.JAGUAR.BODY_1' | translate"></p>
-
-                <!-- Read more button - Mobile Only -->
-                <button class="read-more-btn" (click)="toggleExpanded()">
-                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
-                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
-                        expand_more
-                    </mat-icon>
-                </button>
-
-                <p [innerHTML]="'MAMMALS.JAGUAR.BODY_2' | translate" [class.mobile-hidden]="!isExpanded()"></p>
-            </div>
-            <div class="hero-column" [class.mobile-hidden]="!isExpanded()">
-                <p [innerHTML]="'MAMMALS.JAGUAR.BODY_3' | translate"></p>
                 <p>
-                    {{ 'MAMMALS.JAGUAR.BODY_4' | translate }}
-                    <span class="poetic-touch">{{ 'MAMMALS.JAGUAR.POEM' | translate }}</span>
+                    En el corazón indómito del <strong>Yasuní</strong>, los <strong>Waorani</strong> se erigen como uno
+                    de los últimos bastiones de resistencia cultural en la cuenca amazónica. Aunque la historia oficial
+                    los sitúa como el último pueblo contactado del Ecuador tras el complejo encuentro misionero de 1958,
+                    su linaje guarda un secreto aún más profundo: la existencia de los Tagaeri y Taromenane, parientes
+                    que hasta el día de hoy han decidido permanecer en aislamiento voluntario, protegiendo su libertad
+                    en la espesura.
+                </p>
+                <p>
+                    En la penumbra del bosque, los Waorani se desplazan con una agilidad casi espectral, consolidándose
+                    como maestros cazadores que dominan el arte del sigilo. Utilizan la cerbatana y el curare para
+                    alcanzar con precisión quirúrgica a presas como el mono aullador en lo alto del dosel, mientras que
+                    sus lanzas de madera de pambil se reservan para el rastreo en tierra de animales mayores como el <a
+                        routerLink="/amazonia/animales/mamiferos-terrestres/pecari" class="highlight-link">pecarí de
+                        collar</a>, simbolizando la fuerza de un pueblo que respeta profundamente el espíritu de cada
+                    ser que habita su territorio.
+                </p>
+            </div>
+            <div class="hero-column">
+                <p>
+                    Su vestimenta tradicional es una declaración de sencillez y dignidad que desafía la mirada externa.
+                    El hombre Waorani viste únicamente el <strong>komi</strong>, un cordón de fibra vegetal atado a la
+                    cintura que sujeta su miembro, una prenda que para ellos simboliza madurez, protección y el paso a
+                    la vida adulta. En un mundo que hoy los presiona con la explotación petrolera y la deforestación,
+                    los Waorani luchan por preservar este estilo de vida, recordándonos que la verdadera riqueza no
+                    reside en lo que poseemos, sino en el equilibrio que mantenemos con la tierra que pisamos.
+                </p>
+                <p>
+                    Finalmente, la verdadera esencia de los Waorani reside en su lengua, el <strong>Wao Terero</strong>,
+                    un idioma «aislado» sin parientes conocidos en el mundo, que actúa como el cofre de una cosmovisión
+                    donde el hombre y la naturaleza son uno solo. Se consideran herederos espirituales del jaguar y el
+                    águila harpía, figuras que pueblan sus cantos y relatos.
+                    <span class="poetic-touch">"Herederos espirituales del jaguar y el águila harpía, donde el hombre y
+                        la naturaleza son uno solo."</span>
                 </p>
             </div>
         </div>
@@ -48,27 +65,27 @@
                     <path fill="currentColor"
                         d="M21.58,7.19C21.35,6.33,20.67,5.65,19.81,5.42C18.25,5,12,5,12,5s-6.25,0-7.81,0.42c-0.86,0.23-1.54,0.91-1.77,1.77C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z M10,15.5v-7l6,3.5L10,15.5z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.VIDEO' | translate }}
+                Video
             </button>
             <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
                 <svg viewBox="0 0 24 24" class="sound-icon">
                     <path fill="currentColor"
                         d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.SOUND' | translate }}
+                Sonido
             </button>
             <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
                 <svg viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.MAP' | translate }}
+                Mapa
             </button>
         </div>
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>{{ 'MAMMALS.JAGUAR.VIDEO_TITLE' | translate }}</h3>
+                <h3>Territorio Waorani, en el corazón de Amazonas</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -79,7 +96,7 @@
 
             <!-- Sound Tab -->
             <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>{{ 'MAMMALS.JAGUAR.SOUND_TITLE' | translate }}</h3>
+                <h3>Cantos y Selva</h3>
                 <div class="avatar-audio-player">
                     <audio #audioPlayer src="assets/sounds/ambiente-selva.mp3" (timeupdate)="onTimeUpdate()"
                         (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
@@ -115,28 +132,26 @@
 
             <!-- Map Tab -->
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>{{ 'MAMMALS.JAGUAR.MAP_TITLE' | translate }}</h3>
+                <h3>Territorio Ancestral</h3>
                 <div class="map-container">
-                    <img src="assets/images/mapa-amazonia.png" alt="Mapa de distribución del Jaguar"
-                        class="habitat-map">
+                    <img src="assets/images/mapa-amazonia.png" alt="Mapa del territorio Waorani" class="habitat-map">
                     <div class="map-legend">
-                        <div class="legend-title">{{ 'MAMMALS.JAGUAR.MAP_LEGEND_TITLE' | translate }}</div>
+                        <div class="legend-title">Territorio Waorani</div>
                         <div class="legend-item">
                             <span class="color-dot high"></span>
-                            <span>{{ 'MAMMALS.JAGUAR.MAP_HIGH' | translate }}</span>
+                            <span>Asentamientos Principales</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot medium"></span>
-                            <span>{{ 'MAMMALS.JAGUAR.MAP_MEDIUM' | translate }}</span>
+                            <span>Zonas de Caza</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot jungle"></span>
-                            <span>{{ 'MAMMALS.JAGUAR.MAP_TYPE' | translate }}</span>
+                            <span>Selva Virgen Protegida</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>

@@ -51,7 +51,10 @@
         "DEFORESTATION": "Deforestación",
         "CLIMATE_CHANGE": "Cambio Climático",
         "PROJECTS": "Proyectos",
-        "MORE_INFO": "Más información"
+        "MORE_INFO": "Más información",
+        "READ_MORE": "Leer más",
+        "READ_LESS": "Leer menos",
+        "WAORANI": "Waorani"
     },
     "MAMMALS": {
         "SLIDER": {

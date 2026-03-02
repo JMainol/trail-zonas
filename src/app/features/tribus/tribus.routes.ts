@@ -8,6 +8,21 @@ export const TRIBUS_ROUTES: Routes = [
         component: TribusComponent,
         children: [
             {
+                path: 'etnias',
+                title: 'Etnias de la Amazonía',
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./etnias/etnias.component').then(m => m.EtniasComponent),
+                    },
+                    {
+                        path: 'waorani',
+                        loadComponent: () => import('./etnias/waorani/waorani.component').then(m => m.WaoraniComponent),
+                        title: 'Tribu Waorani'
+                    }
+                ]
+            },
+            {
                 path: 'etnias-regiones',
                 loadComponent: () => import('./etnias-regiones/etnias-regiones.component').then(m => m.EtniasRegionesComponent),
                 title: 'Etnias Principales y Regiones'

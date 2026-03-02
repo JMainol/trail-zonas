@@ -1,0 +1,57 @@
+<div class="ps-container" id="ps-container">
+    <!-- El título ahora vive aquí para ganar espacio -->
+    <div class="ps-main-title">
+        <h1>{{ 'BIRDS.SLIDER.TITLE' | translate }}</h1>
+    </div>
+
+    <!-- Animal Title (Mobile Only) -->
+    <div class="ps-animal-title-mobile">
+        @for (slide of slides; track slide.title; let i = $index) {
+        <h2 [style.z-index]="getZIndex(i)">{{ slide.title | translate }}</h2>
+        }
+    </div>
+
+    <!-- Slide Wrapper (Right Side on Desktop, Hero Image on Mobile) -->
+    <div class="ps-slidewrapper">
+        <!-- Slides Container -->
+        <div class="ps-slides">
+            @for (slide of slides; track slide.title; let i = $index) {
+            <div [class.ps-move]="isAnimating()" [style.background-image]="'url(' + slide.image + ')'"
+                [style.top]="getSlidePosition(i, 'slide')" [style.z-index]="getZIndex(i)">
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- Content Wrapper (Left Side on Desktop, Description on Mobile) -->
+    <div class="ps-contentwrapper">
+        @for (slide of slides; track slide.title; let i = $index) {
+        <div class="ps-content" [class.ps-move]="isAnimating()" [style.top]="getSlidePosition(i, 'item')"
+            [style.z-index]="getZIndex(i)">
+
+            <h2>{{ slide.title | translate }}</h2>
+            <span class="ps-price">{{ slide.weight | translate }}</span>
+            <p>
+                <em class="scientific-name">{{ slide.scientificName }}</em><br><br>
+                {{ slide.description | translate }}
+            </p>
+            @if (slide.link) {
+            @if (slide.link.startsWith('http')) {
+            <a [href]="slide.link" target="_blank" rel="noopener noreferrer" class="ps-button">{{ 'COMMON.MORE_INFO' |
+                translate }}</a>
+            } @else {
+            <a [routerLink]="[slide.link]" class="ps-button">{{ 'COMMON.MORE_INFO' | translate }}</a>
+            }
+            }
+        </div>
+        }
+    </div>
+
+    <!-- Navigation (Mobile: Top, Desktop: Bottom Right Overlaid) -->
+    <nav class="ps-nav-container">
+        <a class="ps-prev" (click)="navigatePrev()" [style.background-image]="'url(' + prevImage() + ')'">
+        </a>
+        <a class="ps-next" (click)="navigateNext()" [style.background-image]="'url(' + nextImage() + ')'">
+        </a>
+    </nav>
+</div>
