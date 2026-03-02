@@ -1,0 +1,1 @@
+import"./chunk-C6Q5SG76.js";var a=[{path:"mapa",loadComponent:()=>import("./chunk-HAUNLDEW.js").then(e=>e.MapaComponent),title:"Mapa de la Reserva"},{path:"",redirectTo:"mapa",pathMatch:"full"}];export{a as RESERVAS_ROUTES};
