@@ -89,7 +89,7 @@
 }
 
 .content__title {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,12 +98,15 @@
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 20vh;
     color: #f0fff4;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     text-shadow: 0 0 20px rgba(57, 255, 20, 0.4), 0 0 40px rgba(57, 255, 20, 0.2);
     padding: 0 1.5rem;
+
+    @media (max-width: 768px) {
+        height: 70vh;
+    }
 }
 
 .content {
@@ -112,6 +115,12 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
 }
 
 .content__text {
@@ -120,7 +129,7 @@
     overflow-wrap: normal;
     line-height: 1.1;
     font-weight: 400;
-    margin-bottom: 40vh;
+    margin-bottom: 20vh;
     color: #f0fff4; // Blanco fluorescente
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 10px rgba(57, 255, 20, 0.1);
     will-change: transform, opacity;
@@ -137,7 +146,17 @@
     }
 
     &:last-child {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
+    }
+
+    @media (max-width: 768px) {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+        overflow-wrap: break-word;
+        word-break: break-word;
+
+        .word {
+            white-space: normal;
+        }
     }
 }
 
@@ -152,6 +171,11 @@
     .char {
         display: inline-block;
         backface-visibility: hidden;
+    }
+
+    @media (max-width: 768px) {
+        white-space: normal;
+        text-wrap: wrap;
     }
 }
 
@@ -275,6 +299,7 @@
 }
 
 .scroll-indicator {
+    // Desktop: fixed en esquina inferior derecha
     position: fixed;
     bottom: 2.5rem;
     right: 2.5rem;
@@ -286,6 +311,44 @@
     opacity: 0.7;
     transition: opacity 0.3s ease;
     pointer-events: none;
+
+    // Mobile: estático, en el flujo de la página, alineado a la derecha
+    @media (max-width: 768px) {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        opacity: 0.9;
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 8vh;
+    }
+
+    // Estado: Volver Arriba
+    &.is-back-to-top {
+        pointer-events: auto;
+        cursor: pointer;
+        opacity: 0.9;
+        flex-direction: column-reverse;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .scroll-dot {
+            animation: scrollLineAnimReverse 2.5s infinite cubic-bezier(0.15, 0, 0.85, 1);
+        }
+
+        // En móvil, cuando es back-to-top, volver a fixed para que sea siempre visible
+        @media (max-width: 768px) {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            margin: 0;
+        }
+    }
 
     .scroll-text {
         writing-mode: vertical-rl;
@@ -325,6 +388,16 @@
 
     100% {
         transform: translateY(50px);
+    }
+}
+
+@keyframes scrollLineAnimReverse {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(-100%);
     }
 }
 

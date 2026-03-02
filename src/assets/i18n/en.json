@@ -11,7 +11,8 @@
             "TEXT_5": "To walk through the jungle is to encounter <span class=\"hx hx-7\">untouched wilderness</span> in its purest state. From the jaguar's roar to the whisper of the rivers, from the treetops to the pulsing ground beneath your feet, everything serves as a reminder of one essential truth: we are not separate from nature; we are part of it.",
             "TEXT_6": "Protecting the Amazon means protecting the balance of our planet. And ultimately, our own <span class=\"hx hx-7\">future</span>."
         },
-        "SCROLL": "SCROLL"
+        "SCROLL": "SCROLL",
+        "BACK_TO_TOP": "TOP"
     },
     "COMMON": {
         "CLOSE": "Close",

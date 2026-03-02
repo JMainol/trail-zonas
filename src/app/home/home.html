@@ -19,16 +19,17 @@
         <div class="content__title" [innerHTML]="contentTitle">
         </div>
 
+        <!-- Indicador de Scroll / Botón Volver Arriba -->
+        <div class="scroll-indicator" [class.is-back-to-top]="showBackToTop" (click)="showBackToTop && scrollToTop()">
+            <span class="scroll-text">{{ (showBackToTop ? 'HOME.BACK_TO_TOP' : 'HOME.SCROLL') | translate }}</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+
         <div *ngFor="let text of contentTexts" class="content__text" [innerHTML]="text">
         </div>
 
     </section>
 
-    <!-- Indicador de Scroll Minimalista -->
-    <div class="scroll-indicator">
-        <span class="scroll-text">{{ 'HOME.SCROLL' | translate }}</span>
-        <div class="scroll-line">
-            <div class="scroll-dot"></div>
-        </div>
-    </div>
 </div>
