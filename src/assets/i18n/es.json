@@ -11,7 +11,8 @@
             "TEXT_5": "Caminar por la selva es encontrarse con la <span class=\"hx hx-7\">naturaleza virgen</span> en su estado más puro. Desde el rugido del jaguar hasta el susurro de los ríos, desde las copas de los árboles hasta el suelo que late bajo los pies, todo recuerda una verdad esencial: no estamos separados de la naturaleza, somos parte de ella.",
             "TEXT_6": "Proteger el Amazonas es proteger el equilibrio del planeta. Y también, nuestro propio <span class=\"hx hx-7\">futuro</span>."
         },
-        "SCROLL": "DESPLAZAR"
+        "SCROLL": "DESPLAZAR",
+        "BACK_TO_TOP": "SUBIR"
     },
     "COMMON": {
         "CLOSE": "Cerrar",

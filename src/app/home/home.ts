@@ -34,6 +34,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   contentTitle: string = '';
   contentTexts: string[] = [];
+  showBackToTop = false;
   private splitInstances: SplitType[] = [];
 
   featuredAnimals = [
@@ -129,10 +130,21 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       smoothWheel: true
     });
     this.lenis.on('scroll', ScrollTrigger.update);
+    this.lenis.on('scroll', (scroll: any) => {
+      const shouldShowBackToTop = scroll.progress >= 0.5;
+      if (shouldShowBackToTop !== this.showBackToTop) {
+        this.showBackToTop = shouldShowBackToTop;
+        this.cdr.detectChanges();
+      }
+    });
     gsap.ticker.add((time) => {
       this.lenis?.raf(time * 1000);
     });
     gsap.ticker.lagSmoothing(0);
+  }
+
+  scrollToTop(): void {
+    this.lenis?.scrollTo(0, { duration: 1.5 });
   }
 
   private initTextRevealAnimation(): void {
