@@ -28,8 +28,24 @@ export class EtniasComponent implements AfterViewInit {
             scientificName: 'Tribu Waorani',
             description: 'En el corazón indómito del Yasuní, los Waorani se erigen como uno de los últimos bastiones de resistencia cultural. Conocidos por su linaje de maestros cazadores y su lengua única, el Wao Terero, luchan por preservar su equilibrio con la tierra frente a las presiones externas, protegiendo la libertad de sus parientes en aislamiento voluntario.',
             weight: 'Yasuní',
-            image: 'assets/images/tribes/miembros_tribu_waorani.jpg',
+            image: 'assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.jpg',
             link: 'waorani'
+        },
+        {
+            title: 'Shuar',
+            scientificName: 'Pueblo de las Cascadas Sagradas',
+            description: 'Los Shuar son conocidos históricamente por ser uno de los pocos pueblos que ni el Imperio Inca ni los conquistadores lograron someter, liderando una de las rebeliones más exitosas contra la corona española. Su místico ritual de las cabezas reducidas o "Tzantza" no era un simple trofeo, sino una ceremonia para capturar el espíritu del enemigo y restablecer el equilibrio espiritual.',
+            weight: 'Amazonía',
+            image: 'assets/images/tribes/shuar/shuar_dos_hombre_una_mujer.png',
+            link: 'shuar'
+        },
+        {
+            title: 'Cofán',
+            scientificName: 'Hombres Jaguar',
+            description: 'Los Cofán son un pueblo ancestral del norte de la Amazonía ecuatoriana, conocidos como los "hombres jaguar" y hablantes del A\'ingae, una lengua única en el mundo. Su cultura se centra en la conexión espiritual con la selva a través del Yagé y en una histórica defensa de su territorio frente a la explotación petrolera. Como guardianes de la biodiversidad, han logrado victorias legales clave para proteger sus tierras sagradas, manteniendo un equilibrio vital entre sus tradiciones milenarias y la resistencia moderna.',
+            weight: 'Norte Amazonía',
+            image: 'assets/images/tribes/cofan/hombre_tribu_cofan.png',
+            link: 'cofan'
         }
     ];
 

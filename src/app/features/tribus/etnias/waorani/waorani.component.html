@@ -10,8 +10,8 @@
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/images/tribes/miembros_tribu_waorani.jpg" alt="Miembros de la tribu Waorani"
-                class="plant-image">
+            <img src="assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.jpg"
+                alt="Miembros de la tribu Waorani" class="plant-image">
         </div>
     </div>
 
@@ -26,7 +26,16 @@
                     que hasta el día de hoy han decidido permanecer en aislamiento voluntario, protegiendo su libertad
                     en la espesura.
                 </p>
-                <p>
+
+                <!-- Read more button - Mobile Only -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content">
                     En la penumbra del bosque, los Waorani se desplazan con una agilidad casi espectral, consolidándose
                     como maestros cazadores que dominan el arte del sigilo. Utilizan la cerbatana y el curare para
                     alcanzar con precisión quirúrgica a presas como el mono aullador en lo alto del dosel, mientras que
@@ -36,7 +45,7 @@
                     ser que habita su territorio.
                 </p>
             </div>
-            <div class="hero-column">
+            <div class="hero-column" [class.mobile-hidden]="!isExpanded()" class="expandable-content">
                 <p>
                     Su vestimenta tradicional es una declaración de sencillez y dignidad que desafía la mirada externa.
                     El hombre Waorani viste únicamente el <strong>komi</strong>, un cordón de fibra vegetal atado a la
@@ -67,18 +76,19 @@
                 </svg>
                 Video
             </button>
-            <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
-                <svg viewBox="0 0 24 24" class="sound-icon">
+            <button [class.active]="activeTab() === 'info'" (click)="setTab('info')">
+                <svg viewBox="0 0 24 24" class="info-icon">
                     <path fill="currentColor"
-                        d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
+                        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
                 </svg>
-                Sonido
+                Características
             </button>
-            <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
+            <button [class.active]="activeTab() === 'photos'" (click)="setTab('photos')">
                 <svg viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    <path fill="currentColor"
+                        d="M20,5H4V19H20V5M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M5,16L8,12L10,15L13,11L17,17H5Z" />
                 </svg>
-                Mapa
+                Fotos
             </button>
         </div>
 
@@ -94,62 +104,74 @@
                 </div>
             </div>
 
-            <!-- Sound Tab -->
-            <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>Cantos y Selva</h3>
-                <div class="avatar-audio-player">
-                    <audio #audioPlayer src="assets/sounds/ambiente-selva.mp3" (timeupdate)="onTimeUpdate()"
-                        (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
-                    </audio>
-
-                    <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
-                        <div class="icon">
-                            @if (!isPlaying()) {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                            </svg>
-                            } @else {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
-                            </svg>
-                            }
-                        </div>
-                    </button>
-
-                    <div class="player-controls">
-                        <div class="progress-container" (click)="seek($event)">
-                            <div class="progress-bar" [style.width.%]="progress()">
-                                <div class="progress-glow"></div>
-                            </div>
-                        </div>
-                        <div class="time-info">
-                            <span>{{ formatTime(currentTime()) }}</span>
-                            <span>{{ formatTime(duration()) }}</span>
-                        </div>
+            <!-- Characteristics Tab -->
+            <div class="multimedia-item info-container" [class.tab-hidden]="activeTab() !== 'info'">
+                <h3>Rasgos de la Cultura Waorani</h3>
+                <div class="traits-list">
+                    <div class="trait-item">
+                        <span class="trait-title">Idioma Único</span>
+                        <p class="trait-desc">Hablan Wao Terero, una lengua aislada que no tiene parentesco con ningún
+                            otro idioma del mundo.</p>
+                    </div>
+                    <div class="trait-item">
+                        <span class="trait-title">Maestros de la Selva</span>
+                        <p class="trait-desc">Poseen un conocimiento botánico y zoológico excepcional, identificando
+                            cientos de plantas y animales.</p>
+                    </div>
+                    <div class="trait-item">
+                        <span class="trait-title">Cazadores Silenciosos</span>
+                        <p class="trait-desc">Expertos en el uso de cerbatanas con dardos bañados en curare para cazar
+                            sin alertar al entorno.</p>
+                    </div>
+                    <div class="trait-item">
+                        <span class="trait-title">Vivienda Colectiva</span>
+                        <p class="trait-desc">Viven en casas comunales llamadas "nanicabo", donde conviven varias
+                            generaciones de una familia.</p>
+                    </div>
+                    <div class="trait-item">
+                        <span class="trait-title">Resistencia y Territorio</span>
+                        <p class="trait-desc">Mantienen una defensa histórica de su territorio contra amenazas externas
+                            y presiones mineras.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Map Tab -->
-            <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>Territorio Ancestral</h3>
-                <div class="map-container">
-                    <img src="assets/images/mapa-amazonia.png" alt="Mapa del territorio Waorani" class="habitat-map">
-                    <div class="map-legend">
-                        <div class="legend-title">Territorio Waorani</div>
-                        <div class="legend-item">
-                            <span class="color-dot high"></span>
-                            <span>Asentamientos Principales</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="color-dot medium"></span>
-                            <span>Zonas de Caza</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="color-dot jungle"></span>
-                            <span>Selva Virgen Protegida</span>
-                        </div>
+            <!-- Photos Tab -->
+            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'photos'">
+                <h3>Galería de Imágenes</h3>
+                <div class="gallery-wrapper">
+                    <button class="nav-btn prev" (click)="prevPhoto()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+
+                    <div class="main-photo-view">
+                        @if (currentPhotoIndex() === 4) {
+                        <div class="getty-embed-container" #gettyContainer></div>
+                        } @else {
+                        <img [src]="galleryImages[currentPhotoIndex()]" alt="Waorani Culture" class="gallery-img">
+                        }
+                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
                     </div>
+
+                    <button class="nav-btn next" (click)="nextPhoto()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+
+                <div class="thumbnails-track">
+                    @for (img of galleryImages; track img; let i = $index) {
+                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                        @if (i < 4) { <img [src]="img" alt="Thumbnail">
+                            } @else {
+                            <div class="thumb-getty">
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M20,5H4V19H20V5M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M5,16L8,12L10,15L13,11L17,17H5Z" />
+                                </svg>
+                            </div>
+                            }
+                    </div>
+                    }
                 </div>
             </div>
         </div>
