@@ -24,8 +24,11 @@ export const ANIMALES_ROUTES: Routes = [
                 path: 'aves',
                 title: 'Aves',
                 children: [
-                    { path: 'tucan', loadComponent: () => import('./aves/tucan/tucan.component').then(m => m.TucanComponent), title: 'Tucán' },
-                    { path: '', redirectTo: 'tucan', pathMatch: 'full' }
+                    {
+                        path: '',
+                        loadComponent: () => import('./aves/aves.component').then(m => m.AvesComponent),
+                    },
+                    { path: 'tucan', loadComponent: () => import('./aves/tucan/tucan.component').then(m => m.TucanComponent), title: 'Tucán' }
                 ]
             },
             {

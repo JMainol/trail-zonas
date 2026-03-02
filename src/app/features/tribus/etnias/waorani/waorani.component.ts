@@ -1,31 +1,25 @@
-
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
-
-
-import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
-    selector: 'app-jaguar',
+    selector: 'app-waorani',
     standalone: true,
-    imports: [CommonModule, RouterModule, TranslateModule, MatIconModule],
-
-    templateUrl: './jaguar.component.html',
-    styleUrl: './jaguar.component.scss',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './waorani.component.html',
+    styleUrl: './waorani.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class JaguarComponent {
+export class WaoraniComponent {
     private sanitizer = inject(DomSanitizer);
     private location = inject(Location);
     @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
 
-    // Video URL
+    // Video URL (Updated)
     protected videoUrl = signal<SafeResourceUrl>(
-        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XLOw4zHWIXM')
+        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/xen2Drp47iI?si=W-n-v8EpB5am6VZ0')
     );
 
     // Signal for parallax
@@ -37,11 +31,6 @@ export class JaguarComponent {
     protected duration = signal(0);
     protected progress = signal(0);
     protected activeTab = signal('video'); // 'video', 'sound', 'map'
-    protected isExpanded = signal(false);
-
-    toggleExpanded() {
-        this.isExpanded.set(!this.isExpanded());
-    }
 
     @HostListener('mousemove', ['$event'])
     onMouseMove(event: MouseEvent) {

@@ -1,12 +1,11 @@
 @use '@angular/material' as mat;
 
-// Variables locales
+// Variables locales (Sincronizadas con styles.scss tema Avatar)
 $hero-bg: #020617;
 $avatar-blue-deep: #0a0e14;
 $avatar-cyan: #00f2ff;
 $avatar-magenta: #bc13fe;
 $cyan-accent: #00f2ff;
-$jaguar-gold: #ffb300;
 $font-heading: "Outfit", sans-serif;
 $font-body: "Inter", sans-serif;
 
@@ -81,6 +80,7 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+
 .hero-title {
     font-family: $font-heading;
     font-size: 3rem;
@@ -99,9 +99,9 @@ $font-body: "Inter", sans-serif;
         display: block;
         width: 60px;
         height: 4px;
-        background-color: $jaguar-gold;
+        background-color: $cyan-accent;
         margin: 0 auto 1rem;
-        box-shadow: 0 0 10px $jaguar-gold;
+        box-shadow: 0 0 10px $cyan-accent;
     }
 
     @media (min-width: 768px) {
@@ -143,13 +143,13 @@ $font-body: "Inter", sans-serif;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.animal-image {
+.plant-image {
     max-width: 100%;
     width: 90vw;
     height: auto;
     max-height: 50vh;
     object-fit: contain;
-    filter: drop-shadow(0 0 30px rgba($jaguar-gold, 0.2));
+    filter: drop-shadow(0 0 30px rgba($avatar-cyan, 0.2));
     transition: all 0.5s ease;
 
     @media (min-width: 768px) {
@@ -203,8 +203,28 @@ $font-body: "Inter", sans-serif;
             }
 
             strong {
-                color: $jaguar-gold;
-                text-shadow: 0 0 10px rgba($jaguar-gold, 0.3);
+                color: #00ffaa;
+                /* Emerald for Ayahuasca */
+                text-shadow: 0 0 10px rgba(#00ffaa, 0.3);
+            }
+
+            .highlight-link {
+                background-color: #00ffaa;
+                color: #020617;
+                padding: 0 6px;
+                border-radius: 4px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+                display: inline-block;
+                box-shadow: 0 0 15px rgba(#00ffaa, 0.2);
+
+                &:hover {
+                    transform: translateY(-2px) scale(1.05);
+                    background-color: #fff;
+                    box-shadow: 0 5px 20px rgba(#00ffaa, 0.4);
+                    color: #020617;
+                }
             }
         }
 
@@ -212,83 +232,13 @@ $font-body: "Inter", sans-serif;
             display: block;
             margin-top: 2rem;
             padding-left: 1.5rem;
-            border-left: 3px solid $jaguar-gold;
+            border-left: 3px solid #00ffaa;
             font-style: italic;
-            color: $jaguar-gold;
+            color: #00ffaa;
             font-family: 'Times New Roman', serif;
             font-size: 1.2rem;
-            text-shadow: 0 0 10px rgba($jaguar-gold, 0.3);
+            text-shadow: 0 0 10px rgba(#00ffaa, 0.3);
         }
-
-        .read-more-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            background: rgba($avatar-blue-deep, 0.4);
-            color: $avatar-cyan;
-            border: 1px solid rgba($avatar-cyan, 0.2);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-family: $font-heading;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.6rem;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            margin-top: 1rem;
-            backdrop-filter: blur(10px);
-
-            .icon {
-                font-size: 0.8rem;
-                width: 0.8rem;
-                height: 0.8rem;
-            }
-
-            &:hover {
-                background: rgba($avatar-cyan, 0.1);
-                border-color: rgba($avatar-cyan, 0.5);
-                box-shadow: 0 0 20px rgba($avatar-cyan, 0.2);
-                transform: translateY(-2px);
-            }
-
-            @media (min-width: 768px) {
-                display: none;
-            }
-        }
-    }
-}
-
-.expandable-content {
-    @media (max-width: 767px) {
-        animation: slideDown 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-        overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
-        display: block !important;
-        opacity: 1 !important;
-        max-height: none !important;
-        transform: none !important;
-    }
-}
-
-.mobile-hidden {
-    @media (max-width: 767px) {
-        display: none !important;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-        max-height: 0;
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        max-height: 1000px;
     }
 }
 
@@ -314,10 +264,10 @@ $font-body: "Inter", sans-serif;
 .multimedia-tabs-header {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    gap: 0.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     background: rgba($avatar-blue-deep, 0.6);
-    padding: 0.4rem;
+    padding: 0.5rem;
     border-radius: 12px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -331,17 +281,17 @@ $font-body: "Inter", sans-serif;
         background: transparent;
         border: none;
         color: rgba(255, 255, 255, 0.6);
-        padding: 0.5rem 0.75rem;
+        padding: 0.6rem 1rem;
         border-radius: 8px;
         cursor: pointer;
         font-family: $font-heading;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: 0.75rem;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
         display: flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.5rem;
         transition: all 0.3s ease;
 
         svg {
@@ -544,8 +494,8 @@ $font-body: "Inter", sans-serif;
         }
 
         &.jungle {
-            background-color: $jaguar-gold;
-            box-shadow: 0 0 8px $jaguar-gold;
+            background-color: #00ffaa;
+            box-shadow: 0 0 8px #00ffaa;
         }
     }
 }

@@ -335,38 +335,10 @@
         display: block !important;
     }
 
-    // 1. Navigation at Top (formerly at bottom)
-    .ps-nav-container {
-        order: 1 !important;
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 15px !important;
-        padding: 10px 20px 20px !important;
-        height: auto !important;
-
-        >a {
-            position: relative !important;
-            flex: 1 !important;
-            height: 120px !important; // Reduced height slightly for top placement
-            border-radius: 12px !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            float: none !important;
-            background-size: cover !important;
-
-            &:after {
-                width: 30px !important; // Smaller arrows for top placement
-                height: 30px !important;
-                margin: -15px 0 0 -15px !important;
-                top: 50% !important;
-                left: 50% !important;
-            }
-        }
-    }
-
-    // 2. Category Title
+    // 1. Category Title
     .ps-main-title {
-        order: 2 !important;
-        padding: 20px 20px 10px !important;
+        order: 1 !important;
+        padding: 40px 20px 10px !important;
         text-align: center !important;
         pointer-events: auto !important;
 
@@ -377,9 +349,9 @@
         }
     }
 
-    // 3. Animal Title
+    // 2. Animal Title
     .ps-animal-title-mobile {
-        order: 3 !important;
+        order: 2 !important;
         padding: 0 20px 15px !important;
         display: block !important;
 
@@ -398,9 +370,9 @@
         }
     }
 
-    // 4. Hero Image
+    // 3. Hero Image
     .ps-slidewrapper {
-        order: 4 !important;
+        order: 3 !important;
         height: 40vh !important;
         min-height: 300px !important;
         overflow: visible !important;
@@ -436,9 +408,9 @@
         }
     }
 
-    // 5. Description Content
+    // 4. Description Content
     .ps-contentwrapper {
-        order: 5 !important;
+        order: 4 !important;
         padding: 20px !important;
         overflow: visible !important;
     }
@@ -487,5 +459,31 @@
         }
     }
 
-    // Navigation was here (order 5), removed or shifted
+    // 5. Navigation at Bottom
+    .ps-nav-container {
+        order: 5 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 15px !important;
+        padding: 20px 20px 50px !important;
+        height: auto !important;
+
+        >a {
+            position: relative !important;
+            flex: 1 !important;
+            height: 160px !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            float: none !important;
+            background-size: cover !important;
+
+            &:after {
+                width: 40px !important;
+                height: 40px !important;
+                margin: -20px 0 0 -20px !important;
+                top: 50% !important;
+                left: 50% !important;
+            }
+        }
+    }
 }

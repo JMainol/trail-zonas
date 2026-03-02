@@ -62,7 +62,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                                     <!-- Nested Dropdown Item -->
                                     <div *ngIf="item.items" class="relative has-nested-dropdown">
                                         <div class="dropdown-item flex items-center gap-[10px] cursor-pointer group/nested">
-                                            <span>{{ item.label | translate }}</span>
+                                            <a *ngIf="item.link" [routerLink]="item.link" routerLinkActive="dropdown-active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-cyan-400 transition-colors">
+                                                {{ item.label | translate }}
+                                            </a>
+                                            <span *ngIf="!item.link">{{ item.label | translate }}</span>
                                             <mat-icon class="text-xs opacity-50 transition-transform duration-300 group-hover/nested:translate-x-1 group-hover/nested:text-blue-400 !h-auto !w-auto translate-y-[1.5px]">chevron_right</mat-icon>
                                         </div>
                                         <div class="nested-dropdown">
@@ -131,11 +134,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                         
                         <!-- Nested Mobile Item -->
                         <div *ngIf="item.items" class="space-y-1">
-                            <button (click)="toggleMobileSubSection(item.label)" 
-                                    class="w-full text-left flex justify-between px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
-                                {{ item.label | translate }}
-                                <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
-                            </button>
+                            <div class="flex items-center justify-between nav-item-mobile pr-2">
+                                <a *ngIf="item.link" [routerLink]="item.link" (click)="closeMobileMenu()" class="flex-grow">
+                                    {{ item.label | translate }}
+                                </a>
+                                <span *ngIf="!item.link" class="flex-grow">
+                                    {{ item.label | translate }}
+                                </span>
+                                <button (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
+                                    <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
+                                </button>
+                            </div>
                             
                             <div *ngIf="activeMobileSubSection === item.label" 
                                  class="pl-4 border-l-2 border-cyan-800/30 space-y-1 mt-1">
@@ -272,9 +281,18 @@ export class NavMenuComponent {
          id: 'animales',
          label: 'COMMON.ANIMALS',
          items: [
-            { label: 'COMMON.MAMMALS', link: '/amazonia/animales/mamiferos-terrestres' },
+            {
+               label: 'COMMON.MAMMALS',
+               link: '/amazonia/animales/mamiferos-terrestres',
+               items: [
+                  { label: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
+                  { label: 'Pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
+                  { label: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' }
+               ]
+            },
             {
                label: 'COMMON.BIRDS',
+               link: '/amazonia/animales/aves',
                items: [
                   { label: 'Tucán', link: '/amazonia/animales/aves/tucan' }
                ]
@@ -287,7 +305,15 @@ export class NavMenuComponent {
          id: 'plantas',
          label: 'COMMON.PLANTS',
          items: [
-            { label: 'COMMON.MEDICINAL', link: '/amazonia/plantas/medicinales' },
+            {
+               label: 'COMMON.MEDICINAL',
+               link: '/amazonia/plantas/medicinales',
+               items: [
+                  { label: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
+                  { label: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
+                  { label: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
+               ]
+            },
             { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical' },
             { label: 'COMMON.FLORA_TYPES', link: '/amazonia/plantas/tipos-flora' },
             { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos' }
@@ -319,7 +345,13 @@ export class NavMenuComponent {
          id: 'tribus',
          label: 'COMMON.TRIBES',
          items: [
-            { label: 'COMMON.ETHNIC_REGIONS', link: '/amazonia/tribus/etnias-regiones' },
+            {
+               label: 'COMMON.ETHNIC_REGIONS',
+               link: '/amazonia/tribus/etnias',
+               items: [
+                  { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' }
+               ]
+            },
             { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad' },
             { label: 'COMMON.ANCESTRAL_KNOWLEDGE', link: '/amazonia/tribus/conocimiento-ancestral' },
             { label: 'COMMON.CHALLENGES', link: '/amazonia/tribus/desafios-supervivencia' }
