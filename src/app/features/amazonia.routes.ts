@@ -35,6 +35,14 @@ export const AMAZONIA_ROUTES: Routes = [
         loadChildren: () => import('./reservas/reservas.routes').then(m => m.RESERVAS_ROUTES)
     },
     {
+        path: 'exploracion',
+        loadChildren: () => import('./exploracion/exploracion.routes').then(m => m.EXPLORACION_ROUTES)
+    },
+    {
+        path: 'contacto',
+        loadChildren: () => import('./contacto/contacto.routes').then(m => m.CONTACTO_ROUTES)
+    },
+    {
         path: '',
         redirectTo: 'animales',
         pathMatch: 'full'

@@ -55,7 +55,16 @@
         "MORE_INFO": "More information",
         "READ_MORE": "Read more",
         "READ_LESS": "Read less",
-        "WAORANI": "Waorani"
+        "WAORANI": "Waorani",
+        "RESOURCES": "Resources",
+        "BOOKS": "Books",
+        "DOCUMENTARIES": "Documentaries",
+        "MOVIES": "Movies",
+        "RESEARCH": "Research Papers",
+        "EXPLORATION": "Exploration",
+        "HISTORY": "History",
+        "SURVIVAL": "Survival",
+        "CONTACT": "Contact"
     },
     "MAMMALS": {
         "SLIDER": {
@@ -122,6 +131,29 @@
             "MAP_HIGH": "Herd Paths",
             "MAP_MEDIUM": "Foraging Zones",
             "MAP_TYPE": "Primary Tropical Forest"
+        }
+    },
+    "EXPLORATION": {
+        "HISTORY": {
+            "TITLE": "Francisco de Orellana:<br><span class=\"subtitle-text\">The Odyssey of the \"Freshwater Sea\"</span>",
+            "ALT_BOOK": "Account of the Recent Discovery",
+            "CAPTION_BOOK": "Manuscript page from the book Account of the Recent Discovery of the Famous Great River",
+            "ORELLANA_STORY_1": "In February 1542, what began as a desperate search for sustenance transformed into the most extraordinary journey ever undertaken in the New World. <strong>Francisco de Orellana</strong>, accompanied by 57 men and the friar <strong>Gaspar de Carvajal</strong>, separated from Gonzalo Pizarro’s main expedition to venture into the depths of a jungle that no one had yet charted. They were not seeking glory; they were seeking survival. Yet, destiny had reserved for them a place in eternity.",
+            "SUBTITLE_HUNGER": "Hunger and Timber: The Birth of the \"Victoria\"",
+            "CARVAJAL_CHRONICLE": "Carvajal’s chronicle, <em>Relación del nuevo descubrimiento del famoso río Grande</em> (Account of the Recent Discovery of the Famous Great River), recounts the sheer brutality of those early days. Weakened by famine, the men resorted to consuming the leather of their shoes and the soles of their scabbards, boiled with unknown herbs.",
+            "INGENUITY_VICTORIA": "In a remarkable feat of ingenuity and willpower, in the heart of the wilderness, they constructed a brigantine: the <strong>San Pedro</strong>, and later, the <strong>Victoria</strong>. Without forges, without nails, and working with the damp timber of the rainforest, Orellana led an impossible engineering endeavor that would allow them to navigate the currents of a river that seemed to have no end.",
+            "SUBTITLE_WARRIORS": "The Encounter with the Warriors: The Myth of the Amazon",
+            "WARRIORS_STORY": "The river’s name was not born in a Spanish office, but in the heat of battle. On June 24, 1542, Carvajal recorded an encounter that would change history. The expeditionaries were attacked by a tribe led by women of great stature, fair skin, and long, braided hair, who fought with a ferocity surpassing that of any man they had ever encountered.",
+            "QUOTATION_WOMEN": "\"They fought with such intensity that it seemed each one of them was worth ten Indians,\" Carvajal noted.",
+            "NAME_BAPTISM": "Inspired by the Greek myth of the Amazons, Orellana bestowed this name upon the waters he had initially called the \"Rio de Orellana.\" Those women were real, and their resistance etched the river's name onto the map of the world forever.",
+            "SUBTITLE_ROUTE": "From the Jungle to the Ocean: The Route",
+            "ALT_MAP": "Map of Orellana's Expedition",
+            "CAPTION_MAP": "Route of nearly 5,000 kilometers followed by Francisco de Orellana through the Amazon waterway.",
+            "JOURNEY_DISTANCE": "Over the course of seven and a half months, they traversed nearly 5,000 kilometers of waterway. They navigated through a \"Freshwater Sea\" where the banks would at times vanish from sight due to the sheer immensity of the flow. They endured poisoned arrows, tropical tempests, and absolute isolation.",
+            "END_OF_JOURNEY": "Finally, on August 26, 1542, the fresh water merged with the salt of the Atlantic. Orellana and his men had crossed the continent via its wildest artery, proving that the Amazon was not merely a river, but a colossal life system connecting the Andes to the ocean.",
+            "SUBTITLE_WHY_ALIVE": "Why does this story endure?",
+            "LEGACY": "Orellana’s expedition was not merely a territorial conquest; it was the first documented encounter with the complexity of Amazonian civilizations. Through Carvajal’s eyes, we now know that the Amazon they witnessed was not an empty wilderness, but a land inhabited by great chiefdoms and vibrant cultures that we strive to protect today.",
+            "FINAL_QUOTE": "Orellana was not seeking the Amazon, but he had the courage not to turn his back when the river decided to claim him."
         }
     }
 }

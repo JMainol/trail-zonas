@@ -1,0 +1,181 @@
+<section class="contact-section">
+    <div class="contact-header">
+        <h1 class="contact-title">Conecta con la <span class="highlight">Selva</span></h1>
+        <p class="contact-subtitle">
+            Esta es una plataforma open source, sin ánimo de lucro. Una wiki 2.0 creada para compartir conocimiento,
+            inspirar, concienciar y disfrutar de uno de los lugares más mágicos del mundo.
+        </p>
+    </div>
+
+    <div class="form-container">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <!-- Nombre y Email -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" formControlName="nombre" placeholder="Ej: Maria Silva"
+                        [class.is-invalid]="f['nombre'].invalid && f['nombre'].touched">
+                    <div class="error-msg" *ngIf="f['nombre'].invalid && f['nombre'].touched">
+                        <span *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio.</span>
+                        <span *ngIf="f['nombre'].errors?.['pattern']">Sólo se permiten letras y espacios.</span>
+                        <span *ngIf="f['nombre'].errors?.['minlength']">Mínimo 2 caracteres.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" formControlName="email" placeholder="ejemplo@correo.com"
+                        [class.is-invalid]="f['email'].invalid && f['email'].touched">
+                    <div class="error-msg" *ngIf="f['email'].invalid && f['email'].touched">
+                        <span *ngIf="f['email'].errors?.['required']">El email es obligatorio.</span>
+                        <span *ngIf="f['email'].errors?.['email']">Debes introducir un email válido.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profesion y Plataforma -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="profesion">Profesión / Especialidad *</label>
+                    <input type="text" id="profesion" formControlName="profesion"
+                        placeholder="Ej: Bióloga, Estudiante..."
+                        [class.is-invalid]="f['profesion'].invalid && f['profesion'].touched">
+                    <div class="error-msg" *ngIf="f['profesion'].invalid && f['profesion'].touched">
+                        <span *ngIf="f['profesion'].errors?.['required']">La profesión es obligatoria.</span>
+                        <span *ngIf="f['profesion'].errors?.['pattern']">Formato no válido.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="plataforma">Web, Instagram o Plataforma</label>
+                    <input type="text" id="plataforma" formControlName="plataforma" placeholder="Link o @usuario"
+                        [class.is-invalid]="f['plataforma'].invalid && f['plataforma'].touched">
+                    <div class="error-msg" *ngIf="f['plataforma'].invalid && f['plataforma'].touched">
+                        <span *ngIf="f['plataforma'].errors?.['pattern']">Caracteres no válidos para una URL o
+                            usuario.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interes y Como nos conociste -->
+            <div class="form-row">
+                <div class="form-group custom-dropdown-group">
+                    <label for="interes">Interés principal en el Amazonas *</label>
+
+                    <div class="custom-select" [class.is-invalid]="f['interes'].invalid && f['interes'].touched">
+                        <div class="select-selected" (click)="toggleDropdown()" [class.has-value]="f['interes'].value">
+                            {{ selectedInteresText }}
+                            <mat-icon>{{ isDropdownOpen() ? 'expand_less' : 'expand_more' }}</mat-icon>
+                        </div>
+                        <div class="dropdown-backdrop" *ngIf="isDropdownOpen()" (click)="isDropdownOpen.set(false)">
+                        </div>
+                        <div class="select-items" *ngIf="isDropdownOpen()">
+                            <div (click)="selectInteres('conservacion')"
+                                [class.selected]="f['interes'].value === 'conservacion'">Conservación y Medio Ambiente
+                            </div>
+                            <div (click)="selectInteres('investigacion')"
+                                [class.selected]="f['interes'].value === 'investigacion'">Investigación Científica</div>
+                            <div (click)="selectInteres('tribus')" [class.selected]="f['interes'].value === 'tribus'">
+                                Cultura y Tribus Indígenas</div>
+                            <div (click)="selectInteres('fotografia')"
+                                [class.selected]="f['interes'].value === 'fotografia'">Fotografía / Documental</div>
+                            <div (click)="selectInteres('turismo')" [class.selected]="f['interes'].value === 'turismo'">
+                                Viaje y Exploración</div>
+                            <div (click)="selectInteres('otro')" [class.selected]="f['interes'].value === 'otro'">Otro
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="error-msg" *ngIf="f['interes'].invalid && f['interes'].touched">
+                        <span>Por favor selecciona tu interés.</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="conociste">¿Cómo nos conociste? *</label>
+                    <input type="text" id="conociste" formControlName="conociste"
+                        placeholder="Ej: Google, Recomendación..."
+                        [class.is-invalid]="f['conociste'].invalid && f['conociste'].touched">
+                    <div class="error-msg" *ngIf="f['conociste'].invalid && f['conociste'].touched">
+                        <span>Este campo es obligatorio.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="mensaje">Tu Mensaje o Aporte *</label>
+                <textarea id="mensaje" formControlName="mensaje" rows="5"
+                    placeholder="Escribe aquí tu mensaje, links a documentales, propuestas..."
+                    [class.is-invalid]="f['mensaje'].invalid && f['mensaje'].touched"></textarea>
+                <div class="error-msg" *ngIf="f['mensaje'].invalid && f['mensaje'].touched">
+                    <span *ngIf="f['mensaje'].errors?.['required']">El mensaje es obligatorio.</span>
+                    <span *ngIf="f['mensaje'].errors?.['minlength']">Mensaje demasiado corto (mín. 10
+                        caracteres).</span>
+                    <span *ngIf="f['mensaje'].errors?.['pattern']">El uso de corchetes angulares o llaves no está
+                        permitido por seguridad.</span>
+                </div>
+            </div>
+
+            <!-- Seccion Archivos -->
+            <div class="form-section upload-section">
+                <h3>Aportar Material a la Wiki</h3>
+                <p class="upload-desc">
+                    Compártenos fotos en <strong>alta calidad (Máx. 25MB por foto)</strong> para incluirlas en la web.
+                    Añadiremos la correspondiente declaración de autoría y el link a tu web o plataforma elegida.
+                    ¡Ayúdanos a
+                    mostrar la belleza del Amazonas!
+                </p>
+                <div class="file-drop-area">
+                    <mat-icon class="upload-icon">cloud_upload</mat-icon>
+                    <span class="fake-btn">Elegir fotos (JPG, PNG, WEBP)</span>
+                    <span class="file-msg">{{ selectedFiles().length > 0 ? selectedFiles().length + ' archivos
+                        seleccionados' : 'o arrastra y suelta aquí' }}</span>
+                    <input class="file-input" type="file" multiple accept="image/jpeg, image/png, image/webp"
+                        (change)="onFileChange($event)">
+                </div>
+
+                <div class="selected-files" *ngIf="selectedFiles().length > 0">
+                    <div class="file-item" *ngFor="let file of selectedFiles(); let i = index">
+                        <span class="file-name">{{ file.name }}</span>
+                        <button type="button" class="remove-btn" (click)="removeFile(i)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-box mt-4">
+                    <mat-icon>info</mat-icon>
+                    <p>También estamos abiertos a recibir otro tipo de documentos. Puedes incluir links a vídeos, textos
+                        largos o trabajos de investigación en el campo de mensaje superior.</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="cancel-btn" (click)="clearForm()" [disabled]="isSubmitting()">
+                    <span>Cancelar</span>
+                    <mat-icon>clear</mat-icon>
+                </button>
+
+                <button type="submit" class="submit-btn" [disabled]="isSubmitting()">
+                    <ng-container *ngIf="!isSubmitting()">
+                        <span>Enviar</span>
+                        <mat-icon>eco</mat-icon>
+                    </ng-container>
+                    <span *ngIf="isSubmitting()" class="spinner-loader"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Custom Pop up de Notificación -->
+    <div class="notification-popup" [class.show]="showPopup()" [class.success]="popupType() === 'success'"
+        [class.error]="popupType() === 'error'">
+        <mat-icon class="status-icon">{{ popupType() === 'success' ? 'check_circle' : 'error' }}</mat-icon>
+        <span class="message">{{ popupMessage() }}</span>
+        <button class="close-popup-btn" (click)="closePopup()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <div class="progress-bar"></div>
+    </div>
+</section>

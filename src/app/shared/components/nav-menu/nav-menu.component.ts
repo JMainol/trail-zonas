@@ -17,7 +17,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
           <!-- Logo / Home Link -->
           <div class="flex-shrink-0 flex items-center">
             <a routerLink="/" class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:scale-105 transition-all cursor-pointer tracking-tighter filter drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-              AMAZONAS JUNGLE
+              SELVA AMAZONAS
             </a>
           </div>
           
@@ -25,29 +25,24 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
           <div class="hidden md:flex items-center justify-between flex-grow ml-10">
             <ul class="flex items-center justify-center space-x-2">
               
-              <!-- Inicio -->
-              <li>
-                <a routerLink="/" 
-                   routerLinkActive="active-link" 
-                   [routerLinkActiveOptions]="{exact: true}"
-                   class="nav-item">
-                   <mat-icon class="icon">home</mat-icon>
-                   {{ 'COMMON.HOME' | translate }}
-                </a>
-              </li>
-
               <!-- Generador de Secciones -->
               <ng-container *ngFor="let section of menuItems">
-                <li class="relative group" (mouseenter)="onMouseEnter(section.id)" (mouseleave)="onMouseLeave()">
+                <li class="relative group" (mouseenter)="section.items ? onMouseEnter(section.id) : null" (mouseleave)="onMouseLeave()">
                     
-                    <button class="nav-item group-hover:glow-cyan focus:outline-none"
+                    <!-- Si tiene ítems (Dropdown) -->
+                    <button *ngIf="section.items" class="nav-item group-hover:glow-cyan focus:outline-none"
                             [attr.aria-expanded]="activeDropdown === section.id">
                         {{ section.label | translate }}
                         <mat-icon class="icon transition-transform duration-300 group-hover:rotate-180">expand_more</mat-icon>
                     </button>
 
+                    <!-- Si es link directo -->
+                    <a *ngIf="section.link" [routerLink]="section.link" routerLinkActive="active-link" class="nav-item group-hover:glow-cyan">
+                        {{ section.label | translate }}
+                    </a>
+
                     <!-- Mega Menu / Dropdown -->
-                    <div class="dropdown-panel">
+                    <div *ngIf="section.items" class="dropdown-panel">
                         <div class="dropdown-content">
                             <div class="py-2">
                                 <ng-container *ngFor="let item of section.items">
@@ -114,15 +109,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       <!-- Mobile Menu Panel -->
       <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen" [class.max-h-screen]="isMobileMenuOpen" [class.opacity-0]="!isMobileMenuOpen" [class.overflow-hidden]="!isMobileMenuOpen" id="mobile-menu">
         <div class="px-4 pt-4 pb-8 space-y-2">
-            <a routerLink="/" (click)="closeMobileMenu()" class="nav-item-mobile">{{ 'COMMON.HOME' | translate }}</a>
-            
             <div *ngFor="let section of menuItems" class="space-y-1">
-                <button (click)="toggleMobileSection(section.id)" class="w-full text-left flex justify-between nav-item-mobile">
+                <!-- Si tiene ítems (Mobile Dropdown) -->
+                <button *ngIf="section.items" (click)="toggleMobileSection(section.id)" class="w-full text-left flex justify-between nav-item-mobile">
                     {{ section.label | translate }}
                     <mat-icon>{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
                 </button>
+
+                <!-- Si es link directo (Mobile) -->
+                <a *ngIf="section.link" [routerLink]="section.link" (click)="closeMobileMenu()" class="w-full text-left block nav-item-mobile">
+                    {{ section.label | translate }}
+                </a>
                 
-                <div *ngIf="activeMobileSection === section.id" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
+                <div *ngIf="section.items && activeMobileSection === section.id" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
                     <ng-container *ngFor="let item of section.items">
                         <!-- Regular Mobile Item -->
                         <a *ngIf="!item.items"
@@ -165,7 +164,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   `,
    styles: [`
     .nav-item {
-        @apply px-4 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
+        @apply px-3 py-2 rounded-full text-[11px] font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
         &.active-link {
             @apply text-cyan-400 bg-cyan-500/10 shadow-[0_0_15px_rgba(34,211,238,0.2)];
         }
@@ -365,6 +364,29 @@ export class NavMenuComponent {
             { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico' },
             { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones' }
          ]
+      },
+      {
+         id: 'recursos',
+         label: 'COMMON.RESOURCES',
+         items: [
+            { label: 'COMMON.BOOKS', link: '/amazonia/recursos/libros' },
+            { label: 'COMMON.DOCUMENTARIES', link: '/amazonia/recursos/documentales' },
+            { label: 'COMMON.MOVIES', link: '/amazonia/recursos/peliculas' },
+            { label: 'COMMON.RESEARCH', link: '/amazonia/recursos/investigacion' }
+         ]
+      },
+      {
+         id: 'exploracion',
+         label: 'COMMON.EXPLORATION',
+         items: [
+            { label: 'COMMON.HISTORY', link: '/amazonia/exploracion/historia' },
+            { label: 'COMMON.SURVIVAL', link: '/amazonia/exploracion/supervivencia' }
+         ]
+      },
+      {
+         id: 'contacto',
+         label: 'COMMON.CONTACT',
+         link: '/amazonia/contacto'
       }
    ];
 
@@ -396,7 +418,7 @@ export class NavMenuComponent {
          this.activeMobileSection = null;
       } else {
          this.activeMobileSection = id;
-         this.activeMobileSubSection = null; // Reset sub-section when switching main sections
+         this.activeMobileSubSection = null;
       }
    }
 
