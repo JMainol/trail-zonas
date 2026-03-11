@@ -55,7 +55,16 @@
         "MORE_INFO": "Más información",
         "READ_MORE": "Leer más",
         "READ_LESS": "Leer menos",
-        "WAORANI": "Waorani"
+        "WAORANI": "Waorani",
+        "RESOURCES": "Recursos",
+        "BOOKS": "Libros",
+        "DOCUMENTARIES": "Documentales",
+        "MOVIES": "Películas",
+        "RESEARCH": "Trabajos de investigación",
+        "EXPLORATION": "Exploración",
+        "HISTORY": "Historia",
+        "SURVIVAL": "Supervivencia",
+        "CONTACT": "Contacto"
     },
     "MAMMALS": {
         "SLIDER": {
@@ -122,6 +131,29 @@
             "MAP_HIGH": "Pasos de Manada",
             "MAP_MEDIUM": "Zonas de Forrajeo",
             "MAP_TYPE": "Bosque Tropical Primario"
+        }
+    },
+    "EXPLORATION": {
+        "HISTORY": {
+            "TITLE": "Francisco de Orellana:<br><span class=\"subtitle-text\">La Odisea del \"Mar Dulce\"</span>",
+            "ALT_BOOK": "Relación del nuevo descubrimiento",
+            "CAPTION_BOOK": "Pagina manuscrito libro Relación del nuevo descubrimiento del famoso río Grande",
+            "ORELLANA_STORY_1": "En febrero de 1542, lo que comenzó como una desesperada búsqueda de comida se convirtió en el viaje más extraordinario jamás realizado en el Nuevo Mundo. <strong>Francisco de Orellana</strong>, junto a 57 hombres y el fraile <strong>Gaspar de Carvajal</strong>, se separó de la expedición principal de Gonzalo Pizarro para adentrarse en las entrañas de una selva que nadie había cartografiado. No buscaban gloria, buscaban sobrevivir; pero el destino les tenía reservada la eternidad.",
+            "SUBTITLE_HUNGER": "El Hambre y la Madera: El Nacimiento del \"Victoria\"",
+            "CARVAJAL_CHRONICLE": "La crónica de Carvajal, <em>Relación del nuevo descubrimiento del famoso río Grande</em>, nos narra la crudeza de los primeros días. Los hombres, debilitados por el hambre, llegaron a comerse el cuero de sus zapatos y las suelas de sus vainas cocidas con hierbas desconocidas.",
+            "INGENUITY_VICTORIA": "En un alarde de ingenio y voluntad, en medio de la nada, construyeron un bergantín: el <strong>San Pedro</strong>, y más tarde el <strong>Victoria</strong>. Sin fraguas, sin clavos y con la madera húmeda de la selva, Orellana lideró una obra de ingeniería imposible que les permitiría navegar la corriente de un río que parecía no tener fin.",
+            "SUBTITLE_WARRIORS": "El Encuentro con las Guerreras: El Mito del Amazonas",
+            "WARRIORS_STORY": "El nombre del río no nació en un despacho de España, sino en el fragor de la batalla. El 24 de junio de 1542, Carvajal relata un encuentro que cambiaría la historia. Los expedicionarios fueron atacados por una tribu liderada por mujeres de gran estatura, piel blanca y cabello largo trenzado, que luchaban con una ferocidad superior a la de cualquier hombre que hubieran visto.",
+            "QUOTATION_WOMEN": "\"Hacían tanta guerra que no parecía sino que cada una de ellas valía por diez indios\" — anotó Carvajal.",
+            "NAME_BAPTISM": "Inspirado por el mito griego de las Amazonas, Orellana bautizó así al río que inicialmente llamó \"Río de Orellana\". Aquellas mujeres eran reales, y su resistencia grabó el nombre del río en el mapa del mundo para siempre.",
+            "SUBTITLE_ROUTE": "De la Selva al Océano: La Ruta",
+            "ALT_MAP": "Mapa de la expedición de Orellana",
+            "CAPTION_MAP": "Ruta de casi 5.000 kilómetros seguida por Francisco de Orellana a través del cauce del Amazonas.",
+            "JOURNEY_DISTANCE": "Durante siete meses y medio, recorrieron casi 5.000 kilómetros de cauce. Navegaron por un \"Mar Dulce\" donde las orillas a veces desaparecían de la vista por la inmensidad del caudal. Soportaron flechas envenenadas, tormentas tropicales y el aislamiento absoluto.",
+            "END_OF_JOURNEY": "Finalmente, el 26 de agosto de 1542, el agua dulce se mezcló con la salada del Atlántico. Orellana y sus hombres habían cruzado el continente por su arteria más salvaje, demostrando que el Amazonas no era solo un río, sino un sistema de vida colosal que conectaba los Andes con el océano.",
+            "SUBTITLE_WHY_ALIVE": "¿Por qué esta historia sigue viva?",
+            "LEGACY": "La expedición de Orellana no fue solo una conquista territorial; fue el primer encuentro documentado con la complejidad de las civilizaciones amazónicas. A través de los ojos de Carvajal, hoy sabemos que el Amazonas que ellos vieron no estaba vacío, sino poblado por grandes señoríos y culturas vibrantes que hoy intentamos proteger.",
+            "FINAL_QUOTE": "Orellana no buscaba el Amazonas, pero tuvo el valor de no darle la espalda cuando el río decidió llevárselo."
         }
     }
 }

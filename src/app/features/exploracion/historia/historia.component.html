@@ -1,0 +1,74 @@
+<section class="history-section">
+    <div class="back-nav-container">
+        <button class="back-btn" (click)="goBack()">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+    </div>
+    <h1 class="history-title" [innerHTML]="'EXPLORATION.HISTORY.TITLE' | translate">
+    </h1>
+
+    <div class="hero-visual">
+        <div class="parallax-container" [style.transform]="parallaxTransform()">
+            <div class="book-container">
+                <img src="assets/images/history/pagina_libro_relacion_del_nuevo_descubrimiento_del_famoso_rio_grande.png"
+                    [alt]="'EXPLORATION.HISTORY.ALT_BOOK' | translate" class="book-image">
+                <p class="caption" [innerHTML]="'EXPLORATION.HISTORY.CAPTION_BOOK' | translate"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="history-content">
+        <div class="history-body">
+            <!-- Fila 1 -->
+            <div class="hero-column">
+                <p [innerHTML]="'EXPLORATION.HISTORY.ORELLANA_STORY_1' | translate">
+                </p>
+
+                <h3 class="section-subtitle" [innerHTML]="'EXPLORATION.HISTORY.SUBTITLE_HUNGER' | translate"></h3>
+                <p [innerHTML]="'EXPLORATION.HISTORY.CARVAJAL_CHRONICLE' | translate">
+                </p>
+                <p [innerHTML]="'EXPLORATION.HISTORY.INGENUITY_VICTORIA' | translate">
+                </p>
+            </div>
+
+            <div class="hero-column">
+                <h3 class="section-subtitle" [innerHTML]="'EXPLORATION.HISTORY.SUBTITLE_WARRIORS' | translate"></h3>
+                <p [innerHTML]="'EXPLORATION.HISTORY.WARRIORS_STORY' | translate">
+                </p>
+
+                <span class="poetic-touch" [innerHTML]="'EXPLORATION.HISTORY.QUOTATION_WOMEN' | translate"></span>
+
+                <p [innerHTML]="'EXPLORATION.HISTORY.NAME_BAPTISM' | translate">
+                </p>
+            </div>
+
+            <!-- Fila 2: Mapa a tamaño grande -->
+            <div class="map-container hero-column-full">
+                <h3 class="section-subtitle text-center mb-4"
+                    [innerHTML]="'EXPLORATION.HISTORY.SUBTITLE_ROUTE' | translate"></h3>
+                <img src="assets/images/history/mapa_expedicion_Franciso_de_Orellana.png"
+                    [alt]="'EXPLORATION.HISTORY.ALT_MAP' | translate" class="expedition-map">
+                <p class="caption" [innerHTML]="'EXPLORATION.HISTORY.CAPTION_MAP' | translate"></p>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="hero-column">
+                <p [innerHTML]="'EXPLORATION.HISTORY.JOURNEY_DISTANCE' | translate">
+                </p>
+                <p [innerHTML]="'EXPLORATION.HISTORY.END_OF_JOURNEY' | translate">
+                </p>
+            </div>
+
+            <div class="hero-column">
+                <h3 class="section-subtitle" [innerHTML]="'EXPLORATION.HISTORY.SUBTITLE_WHY_ALIVE' | translate"></h3>
+                <p [innerHTML]="'EXPLORATION.HISTORY.LEGACY' | translate">
+                </p>
+
+                <p class="highlight-text" [innerHTML]="'EXPLORATION.HISTORY.FINAL_QUOTE' | translate">
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
