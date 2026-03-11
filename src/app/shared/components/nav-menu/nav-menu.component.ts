@@ -92,7 +92,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
           </div>
 
           <!-- Mobile Menu Button (Hamburger) -->
-          <div class="-mr-2 flex md:hidden items-center gap-2">
+          <div class="flex md:hidden items-center gap-2">
              <!-- Language Switcher Mobile -->
              <button (click)="toggleLanguage()" class="mobile-lang-btn">
                 {{ currentLang | uppercase }}
@@ -293,7 +293,8 @@ export class NavMenuComponent {
                label: 'COMMON.BIRDS',
                link: '/amazonia/animales/aves',
                items: [
-                  { label: 'Tucán', link: '/amazonia/animales/aves/tucan' }
+                  { label: 'Tucán', link: '/amazonia/animales/aves/tucan' },
+                  { label: 'Cotinga', link: '/amazonia/animales/aves/cotinga' }
                ]
             },
             { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios' },
