@@ -21,8 +21,9 @@ $font-body: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
 
     @media (min-width: 768px) {
         display: grid;
@@ -36,13 +37,14 @@ $font-body: "Inter", sans-serif;
 
 .hero-title {
     font-family: $font-heading;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
-    line-height: 0.9;
-    letter-spacing: -2px;
+    line-height: 1.1;
+    letter-spacing: -1px;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
+    word-break: break-word;
     position: relative;
     z-index: 30;
     text-align: center;
@@ -178,6 +180,8 @@ $font-body: "Inter", sans-serif;
     justify-content: center;
     padding: 1rem;
     margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
 
     @media (min-width: 768px) {
         grid-column: 2;
@@ -202,13 +206,18 @@ $font-body: "Inter", sans-serif;
         font-family: $font-body;
         font-size: 1.05rem;
         flex: 1;
-        min-width: 300px;
+        min-width: 0;
 
         p {
             margin-bottom: 1.5rem;
             line-height: 1.8;
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.9);
+            text-align: justify;
+
+            @media (min-width: 768px) {
+                text-align: left;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -224,6 +233,8 @@ $font-body: "Inter", sans-serif;
             color: #ffd700;
             font-family: 'Times New Roman', serif;
             font-size: 1.2rem;
+            box-sizing: border-box;
+            width: 100%;
         }
     }
 }
