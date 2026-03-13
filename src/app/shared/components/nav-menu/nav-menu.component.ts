@@ -31,33 +31,37 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                     
                     <!-- Si tiene ítems (Dropdown) -->
                     <button *ngIf="section.items" class="nav-item group-hover:glow-cyan focus:outline-none"
-                            [attr.aria-expanded]="activeDropdown === section.id">
+                            [attr.aria-expanded]="activeDropdown === section.id"
+                            [class.nav-disabled]="section.disabled">
                         {{ section.label | translate }}
                         <mat-icon class="icon transition-transform duration-300 group-hover:rotate-180">expand_more</mat-icon>
                     </button>
 
                     <!-- Si es link directo -->
-                    <a *ngIf="section.link" [routerLink]="section.link" routerLinkActive="active-link" class="nav-item group-hover:glow-cyan">
+                    <a *ngIf="section.link" [routerLink]="section.disabled ? null : section.link" routerLinkActive="active-link" 
+                       class="nav-item group-hover:glow-cyan"
+                       [class.nav-disabled]="section.disabled">
                         {{ section.label | translate }}
                     </a>
 
                     <!-- Mega Menu / Dropdown -->
-                    <div *ngIf="section.items" class="dropdown-panel">
+                    <div *ngIf="section.items && !section.disabled" class="dropdown-panel">
                         <div class="dropdown-content">
                             <div class="py-2">
                                 <ng-container *ngFor="let item of section.items">
                                     <!-- Regular Item -->
                                     <a *ngIf="!item.items" 
-                                       [routerLink]="item.link"
+                                       [routerLink]="item.disabled ? null : item.link"
                                        routerLinkActive="dropdown-active"
-                                       class="dropdown-item">
+                                       class="dropdown-item"
+                                       [class.nav-disabled]="item.disabled">
                                         {{ item.label | translate }}
                                     </a>
 
                                     <!-- Nested Dropdown Item -->
-                                    <div *ngIf="item.items" class="relative has-nested-dropdown">
+                                    <div *ngIf="item.items" class="relative has-nested-dropdown" [class.nav-disabled]="item.disabled">
                                         <div class="dropdown-item flex items-center gap-[10px] cursor-pointer group/nested">
-                                            <a *ngIf="item.link" [routerLink]="item.link" routerLinkActive="dropdown-active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-cyan-400 transition-colors">
+                                            <a *ngIf="item.link" [routerLink]="item.disabled ? null : item.link" routerLinkActive="dropdown-active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-cyan-400 transition-colors">
                                                 {{ item.label | translate }}
                                             </a>
                                             <span *ngIf="!item.link">{{ item.label | translate }}</span>
@@ -66,9 +70,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
                                         <div class="nested-dropdown">
                                             <div class="dropdown-content-premium py-2">
                                                 <a *ngFor="let subItem of item.items" 
-                                                   [routerLink]="subItem.link"
+                                                   [routerLink]="subItem.disabled ? null : subItem.link"
                                                    routerLinkActive="dropdown-active"
-                                                   class="dropdown-item-premium">
+                                                   class="dropdown-item-premium"
+                                                   [class.nav-disabled]="subItem.disabled">
                                                     {{ subItem.label | translate }}
                                                 </a>
                                             </div>
@@ -111,46 +116,59 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         <div class="px-4 pt-4 pb-8 space-y-2">
             <div *ngFor="let section of menuItems" class="space-y-1">
                 <!-- Si tiene ítems (Mobile Dropdown) -->
-                <button *ngIf="section.items" (click)="toggleMobileSection(section.id)" class="w-full text-left flex justify-between nav-item-mobile">
+                <button *ngIf="section.items" (click)="section.disabled ? null : toggleMobileSection(section.id)" 
+                        class="w-full text-left flex justify-between nav-item-mobile"
+                        [class.nav-disabled]="section.disabled">
                     {{ section.label | translate }}
-                    <mat-icon>{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+                    <mat-icon *ngIf="!section.disabled">{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
                 </button>
 
                 <!-- Si es link directo (Mobile) -->
-                <a *ngIf="section.link" [routerLink]="section.link" (click)="closeMobileMenu()" class="w-full text-left block nav-item-mobile">
+                <a *ngIf="section.link" [routerLink]="section.disabled ? null : section.link" 
+                   (click)="section.disabled ? null : closeMobileMenu()" 
+                   class="w-full text-left block nav-item-mobile"
+                   [class.nav-disabled]="section.disabled">
                     {{ section.label | translate }}
                 </a>
                 
-                <div *ngIf="section.items && activeMobileSection === section.id" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
+                <div *ngIf="section.items && activeMobileSection === section.id && !section.disabled" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
                     <ng-container *ngFor="let item of section.items">
                         <!-- Regular Mobile Item -->
                         <a *ngIf="!item.items"
-                           [routerLink]="item.link" 
-                           (click)="closeMobileMenu()"
-                           class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                           [routerLink]="item.disabled ? null : item.link" 
+                           (click)="item.disabled ? null : closeMobileMenu()"
+                           class="block px-3 py-3 rounded-lg text-base font-medium transition-all"
+                           [class.text-gray-400]="!item.disabled"
+                           [class.hover:text-cyan-400]="!item.disabled"
+                           [class.hover:bg-cyan-500/10]="!item.disabled"
+                           [class.nav-disabled]="item.disabled">
                            {{ item.label | translate }}
                         </a>
                         
                         <!-- Nested Mobile Item -->
                         <div *ngIf="item.items" class="space-y-1">
-                            <div class="flex items-center justify-between nav-item-mobile pr-2">
-                                <a *ngIf="item.link" [routerLink]="item.link" (click)="closeMobileMenu()" class="flex-grow">
+                            <div class="flex items-center justify-between nav-item-mobile pr-2" [class.nav-disabled]="item.disabled">
+                                <a *ngIf="item.link" [routerLink]="item.disabled ? null : item.link" (click)="item.disabled ? null : closeMobileMenu()" class="flex-grow">
                                     {{ item.label | translate }}
                                 </a>
                                 <span *ngIf="!item.link" class="flex-grow">
                                     {{ item.label | translate }}
                                 </span>
-                                <button (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
+                                <button *ngIf="!item.disabled" (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
                                     <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
                                 </button>
                             </div>
                             
-                            <div *ngIf="activeMobileSubSection === item.label" 
+                            <div *ngIf="activeMobileSubSection === item.label && !item.disabled" 
                                  class="pl-4 border-l-2 border-cyan-800/30 space-y-1 mt-1">
                                 <a *ngFor="let subItem of item.items" 
-                                   [routerLink]="subItem.link" 
-                                   (click)="closeMobileMenu()"
-                                   class="block px-3 py-3 rounded-lg text-base font-medium text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all">
+                                   [routerLink]="subItem.disabled ? null : subItem.link" 
+                                   (click)="subItem.disabled ? null : closeMobileMenu()"
+                                   class="block px-3 py-3 rounded-lg text-base font-medium transition-all"
+                                   [class.text-gray-400]="!subItem.disabled"
+                                   [class.hover:text-cyan-400]="!subItem.disabled"
+                                   [class.hover:bg-cyan-500/10]="!subItem.disabled"
+                                   [class.nav-disabled]="subItem.disabled">
                                    {{ subItem.label | translate }}
                                 </a>
                             </div>
@@ -197,7 +215,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     .dropdown-item-premium {
         @apply block px-4 py-3 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 hover:pl-6;
         &:hover {
-           text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+            text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
         }
         &.dropdown-active {
             @apply bg-blue-500/10 text-white border-l-purple-500 pl-6;
@@ -207,8 +225,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         @apply px-3 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-3;
     }
     .glow-cyan {
-        text-shadow: 0 0- 10px rgba(34, 211, 238, 0.8);
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
         @apply text-cyan-400;
+    }
+
+    .nav-disabled {
+        opacity: 0.3 !important;
+        filter: saturate(0) brightness(0.7);
+        pointer-events: none !important;
+        cursor: default !important;
     }
 
     /* Language Switcher Avatar Style */
@@ -275,7 +300,7 @@ export class NavMenuComponent {
       return this.translate.currentLang || 'es';
    }
 
-   menuItems = [
+   menuItems: any[] = [
       {
          id: 'animales',
          label: 'COMMON.ANIMALS',
@@ -297,8 +322,8 @@ export class NavMenuComponent {
                   { label: 'Cotinga', link: '/amazonia/animales/aves/cotinga' }
                ]
             },
-            { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios' },
-            { label: 'COMMON.AQUATIC_FAUNA', link: '/amazonia/animales/fauna-acuatica' }
+            { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios', disabled: true },
+            { label: 'COMMON.AQUATIC_FAUNA', link: '/amazonia/animales/fauna-acuatica', disabled: true }
          ]
       },
       {
@@ -314,19 +339,19 @@ export class NavMenuComponent {
                   { label: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
                ]
             },
-            { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical' },
-            { label: 'COMMON.FLORA_TYPES', link: '/amazonia/plantas/tipos-flora' },
-            { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos' }
+            { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical', disabled: true },
+            { label: 'COMMON.FLORA_TYPES', link: '/amazonia/plantas/tipos-flora', disabled: true },
+            { label: 'COMMON.ETHNOBOTANY', link: '/amazonia/plantas/etnobotanica-usos', disabled: true }
          ]
       },
       {
          id: 'insectos',
          label: 'COMMON.INSECTS',
          items: [
-            { label: 'COMMON.SOCIAL_BIOLOGY', link: '/amazonia/insectos/biologia-social' },
-            { label: 'COMMON.BUTTERFLIES', link: '/amazonia/insectos/mariposas-polillas' },
-            { label: 'COMMON.SPIDERS', link: '/amazonia/insectos/aranas-invertebrados' },
-            { label: 'COMMON.FOOD_CHAIN', link: '/amazonia/insectos/cadena-trofica' }
+            { label: 'COMMON.SOCIAL_BIOLOGY', link: '/amazonia/insectos/biologia-social', disabled: true },
+            { label: 'COMMON.BUTTERFLIES', link: '/amazonia/insectos/mariposas-polillas', disabled: true },
+            { label: 'COMMON.SPIDERS', link: '/amazonia/insectos/aranas-invertebrados', disabled: true },
+            { label: 'COMMON.FOOD_CHAIN', link: '/amazonia/insectos/cadena-trofica', disabled: true }
          ]
       },
       {
@@ -334,11 +359,11 @@ export class NavMenuComponent {
          label: 'COMMON.GEOGRAPHY',
          items: [
             { label: 'COMMON.MAP', link: '/amazonia/reservas/mapa' },
-            { label: 'COMMON.MANU', link: '/amazonia/geografia/manu' },
-            { label: 'COMMON.YASUNI', link: '/amazonia/geografia/yasuni' },
-            { label: 'COMMON.JAU', link: '/amazonia/geografia/jau' },
-            { label: 'COMMON.PACAYA', link: '/amazonia/geografia/pacaya' },
-            { label: 'COMMON.CHIRIBIQUETE', link: '/amazonia/geografia/chiribiquete' }
+            { label: 'COMMON.MANU', link: '/amazonia/geografia/manu', disabled: true },
+            { label: 'COMMON.YASUNI', link: '/amazonia/geografia/yasuni', disabled: true },
+            { label: 'COMMON.JAU', link: '/amazonia/geografia/jau', disabled: true },
+            { label: 'COMMON.PACAYA', link: '/amazonia/geografia/pacaya', disabled: true },
+            { label: 'COMMON.CHIRIBIQUETE', link: '/amazonia/geografia/chiribiquete', disabled: true }
          ]
       },
       {
@@ -352,28 +377,28 @@ export class NavMenuComponent {
                   { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' }
                ]
             },
-            { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad' },
-            { label: 'COMMON.ANCESTRAL_KNOWLEDGE', link: '/amazonia/tribus/conocimiento-ancestral' },
-            { label: 'COMMON.CHALLENGES', link: '/amazonia/tribus/desafios-supervivencia' }
+            { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad', disabled: true },
+            { label: 'COMMON.ANCESTRAL_KNOWLEDGE', link: '/amazonia/tribus/conocimiento-ancestral', disabled: true },
+            { label: 'COMMON.CHALLENGES', link: '/amazonia/tribus/desafios-supervivencia', disabled: true }
          ]
       },
       {
          id: 'conservacion',
          label: 'COMMON.CONSERVATION',
          items: [
-            { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria' },
-            { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico' },
-            { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones' }
+            { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria', disabled: true },
+            { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico', disabled: true },
+            { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones', disabled: true }
          ]
       },
       {
          id: 'recursos',
          label: 'COMMON.RESOURCES',
          items: [
-            { label: 'COMMON.BOOKS', link: '/amazonia/recursos/libros' },
-            { label: 'COMMON.DOCUMENTARIES', link: '/amazonia/recursos/documentales' },
-            { label: 'COMMON.MOVIES', link: '/amazonia/recursos/peliculas' },
-            { label: 'COMMON.RESEARCH', link: '/amazonia/recursos/investigacion' }
+            { label: 'COMMON.BOOKS', link: '/amazonia/recursos/libros', disabled: true },
+            { label: 'COMMON.DOCUMENTARIES', link: '/amazonia/recursos/documentales', disabled: true },
+            { label: 'COMMON.MOVIES', link: '/amazonia/recursos/peliculas', disabled: true },
+            { label: 'COMMON.RESEARCH', link: '/amazonia/recursos/investigacion', disabled: true }
          ]
       },
       {
@@ -381,7 +406,7 @@ export class NavMenuComponent {
          label: 'COMMON.EXPLORATION',
          items: [
             { label: 'COMMON.HISTORY', link: '/amazonia/exploracion/historia' },
-            { label: 'COMMON.SURVIVAL', link: '/amazonia/exploracion/supervivencia' }
+            { label: 'COMMON.SURVIVAL', link: '/amazonia/exploracion/supervivencia', disabled: true }
          ]
       },
       {
@@ -437,3 +462,4 @@ export class NavMenuComponent {
       this.activeMobileSubSection = null;
    }
 }
+
