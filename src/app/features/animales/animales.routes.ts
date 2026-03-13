@@ -29,7 +29,8 @@ export const ANIMALES_ROUTES: Routes = [
                         loadComponent: () => import('./aves/aves.component').then(m => m.AvesComponent),
                     },
                     { path: 'tucan', loadComponent: () => import('./aves/tucan/tucan.component').then(m => m.TucanComponent), title: 'Tucán' },
-                    { path: 'cotinga', loadComponent: () => import('./aves/cotinga/cotinga.component').then(m => m.CotingaComponent), title: 'Cotinga' }
+                    { path: 'cotinga', loadComponent: () => import('./aves/cotinga/cotinga.component').then(m => m.CotingaComponent), title: 'Cotinga' },
+                    { path: 'tangara-paraiso', loadComponent: () => import('./aves/tangara-paraiso/tangara-paraiso.component').then(m => m.TangaraParaisoComponent), title: 'Tangara Paraíso' }
                 ]
             },
             {

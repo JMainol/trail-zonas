@@ -1,16 +1,23 @@
 
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, signal, computed, ElementRef, ViewChild, HostListener, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+interface SearchResult {
+  title: string;
+  link: string;
+}
 
 @Component({
    selector: 'app-nav-menu',
    standalone: true,
-   imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule],
+   imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule, FormsModule],
    template: `
-    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
+    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="MenÃº Principal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           
@@ -29,7 +36,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
               <ng-container *ngFor="let section of menuItems">
                 <li class="relative group" (mouseenter)="section.items ? onMouseEnter(section.id) : null" (mouseleave)="onMouseLeave()">
                     
-                    <!-- Si tiene ítems (Dropdown) -->
+                    <!-- Si tiene Ã­tems (Dropdown) -->
                     <button *ngIf="section.items" class="nav-item group-hover:glow-cyan focus:outline-none"
                             [attr.aria-expanded]="activeDropdown === section.id"
                             [class.nav-disabled]="section.disabled">
@@ -88,11 +95,25 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
             </ul>
 
-            <!-- Language Switcher Desktop -->
-            <div class="language-switcher">
-               <button (click)="switchLanguage('es')" [class.active]="currentLang === 'es'" class="lang-btn">ES</button>
-               <div class="divider"></div>
-               <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'" class="lang-btn">EN</button>
+            <!-- Right Controls: Search + Language Switcher -->
+            <div class="flex items-center gap-3">
+              <!-- Search Button -->
+              <button
+                class="search-icon-btn"
+                (click)="toggleSearch()"
+                [class.active]="isSearchOpen()"
+                title="Buscar paginas"
+                aria-label="Abrir buscador"
+              >
+                <mat-icon>search</mat-icon>
+              </button>
+
+              <!-- Language Switcher Desktop -->
+              <div class="language-switcher">
+                 <button (click)="switchLanguage('es')" [class.active]="currentLang === 'es'" class="lang-btn">ES</button>
+                 <div class="divider"></div>
+                 <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'" class="lang-btn">EN</button>
+              </div>
             </div>
           </div>
 
@@ -104,7 +125,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
              </button>
 
             <button (click)="toggleMobileMenu()" type="button" class="inline-flex items-center justify-center p-3 rounded-full text-cyan-400 hover:bg-cyan-900/40 transition-colors" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen">
-              <span class="sr-only">Abrir menú principal</span>
+              <span class="sr-only">Abrir menÃº principal</span>
               <mat-icon>{{ isMobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
             </button>
           </div>
@@ -115,67 +136,169 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
       <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen" [class.max-h-screen]="isMobileMenuOpen" [class.opacity-0]="!isMobileMenuOpen" [class.overflow-hidden]="!isMobileMenuOpen" id="mobile-menu">
         <div class="px-4 pt-4 pb-8 space-y-2">
             <div *ngFor="let section of menuItems" class="space-y-1">
-                <!-- Si tiene ítems (Mobile Dropdown) -->
-                <button *ngIf="section.items" (click)="section.disabled ? null : toggleMobileSection(section.id)" 
-                        class="w-full text-left flex justify-between nav-item-mobile"
-                        [class.nav-disabled]="section.disabled">
-                    {{ section.label | translate }}
-                    <mat-icon *ngIf="!section.disabled">{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
-                </button>
+                <!-- Si tiene Ã­tems (Mobile Dropdown) -->
+                <ng-container *ngIf="section.items">
+                    <button *ngIf="!section.disabled" (click)="toggleMobileSection(section.id)" 
+                            class="w-full text-left flex justify-between nav-item-mobile">
+                        {{ section.label | translate }}
+                        <mat-icon>{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+                    </button>
+                    <div *ngIf="section.disabled" class="w-full text-left flex justify-between nav-item-mobile nav-disabled">
+                        {{ section.label | translate }}
+                    </div>
+                </ng-container>
 
                 <!-- Si es link directo (Mobile) -->
-                <a *ngIf="section.link" [routerLink]="section.disabled ? null : section.link" 
-                   (click)="section.disabled ? null : closeMobileMenu()" 
-                   class="w-full text-left block nav-item-mobile"
-                   [class.nav-disabled]="section.disabled">
-                    {{ section.label | translate }}
-                </a>
+                <ng-container *ngIf="section.link">
+                    <a *ngIf="!section.disabled" [routerLink]="section.link" 
+                       (click)="closeMobileMenu()" 
+                       class="w-full text-left block nav-item-mobile">
+                        {{ section.label | translate }}
+                    </a>
+                    <div *ngIf="section.disabled" class="w-full text-left block nav-item-mobile nav-disabled">
+                        {{ section.label | translate }}
+                    </div>
+                </ng-container>
                 
                 <div *ngIf="section.items && activeMobileSection === section.id && !section.disabled" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
                     <ng-container *ngFor="let item of section.items">
                         <!-- Regular Mobile Item -->
-                        <a *ngIf="!item.items"
-                           [routerLink]="item.disabled ? null : item.link" 
-                           (click)="item.disabled ? null : closeMobileMenu()"
-                           class="block px-3 py-3 rounded-lg text-base font-medium transition-all"
-                           [class.text-gray-400]="!item.disabled"
-                           [class.hover:text-cyan-400]="!item.disabled"
-                           [class.hover:bg-cyan-500/10]="!item.disabled"
-                           [class.nav-disabled]="item.disabled">
-                           {{ item.label | translate }}
-                        </a>
+                        <ng-container *ngIf="!item.items">
+                            <a *ngIf="!item.disabled"
+                               [routerLink]="item.link" 
+                               (click)="closeMobileMenu()"
+                               class="block px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
+                               {{ item.label | translate }}
+                            </a>
+                            <div *ngIf="item.disabled"
+                                 class="block px-3 py-3 rounded-lg text-base font-medium nav-disabled">
+                                 {{ item.label | translate }}
+                            </div>
+                        </ng-container>
                         
                         <!-- Nested Mobile Item -->
                         <div *ngIf="item.items" class="space-y-1">
                             <div class="flex items-center justify-between nav-item-mobile pr-2" [class.nav-disabled]="item.disabled">
-                                <a *ngIf="item.link" [routerLink]="item.disabled ? null : item.link" (click)="item.disabled ? null : closeMobileMenu()" class="flex-grow">
-                                    {{ item.label | translate }}
-                                </a>
-                                <span *ngIf="!item.link" class="flex-grow">
-                                    {{ item.label | translate }}
-                                </span>
-                                <button *ngIf="!item.disabled" (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
-                                    <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
-                                </button>
+                                <ng-container *ngIf="!item.disabled">
+                                    <a *ngIf="item.link" [routerLink]="item.link" (click)="closeMobileMenu()" class="flex-grow">
+                                        {{ item.label | translate }}
+                                    </a>
+                                    <span *ngIf="!item.link" class="flex-grow">
+                                        {{ item.label | translate }}
+                                    </span>
+                                    <button (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
+                                        <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
+                                    </button>
+                                </ng-container>
+                                <ng-container *ngIf="item.disabled">
+                                    <span class="flex-grow">
+                                        {{ item.label | translate }}
+                                    </span>
+                                </ng-container>
                             </div>
                             
                             <div *ngIf="activeMobileSubSection === item.label && !item.disabled" 
                                  class="pl-4 border-l-2 border-cyan-800/30 space-y-1 mt-1">
-                                <a *ngFor="let subItem of item.items" 
-                                   [routerLink]="subItem.disabled ? null : subItem.link" 
-                                   (click)="subItem.disabled ? null : closeMobileMenu()"
-                                   class="block px-3 py-3 rounded-lg text-base font-medium transition-all"
-                                   [class.text-gray-400]="!subItem.disabled"
-                                   [class.hover:text-cyan-400]="!subItem.disabled"
-                                   [class.hover:bg-cyan-500/10]="!subItem.disabled"
-                                   [class.nav-disabled]="subItem.disabled">
-                                   {{ subItem.label | translate }}
-                                </a>
+                                <ng-container *ngFor="let subItem of item.items">
+                                    <a *ngIf="!subItem.disabled"
+                                       [routerLink]="subItem.link" 
+                                       (click)="closeMobileMenu()"
+                                       class="block px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
+                                       {{ subItem.label | translate }}
+                                    </a>
+                                    <div *ngIf="subItem.disabled"
+                                         class="block px-3 py-3 rounded-lg text-base font-medium nav-disabled">
+                                         {{ subItem.label | translate }}
+                                    </div>
+                                </ng-container>
                             </div>
                         </div>
                     </ng-container>
                 </div>
             </div>
+        </div>
+      </div>
+
+      <!-- Search Panel -->
+      <div class="search-panel" [class.search-panel--open]="isSearchOpen()">
+        <div class="search-panel__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+
+          <!-- Input Row -->
+          <div class="search-input-row">
+            <div class="search-field-wrap">
+              <mat-icon class="search-field-icon">search</mat-icon>
+              <input
+                #searchInput
+                id="search-input"
+                type="text"
+                class="search-field"
+                placeholder="Buscar paginas..."
+                [value]="searchQuery()"
+                (input)="onQueryChange($any($event.target).value)"
+                (keydown)="onKeyDown($event)"
+                autocomplete="off"
+                aria-label="Campo de busqueda"
+              />
+              <button
+                *ngIf="searchQuery()"
+                class="search-clear-btn"
+                (click)="clearSearch()"
+                title="Limpiar busqueda"
+              >
+                <mat-icon>close</mat-icon>
+              </button>
+            </div>
+
+            <!-- Navigate button -->
+            <button
+              class="search-go-btn"
+              [disabled]="filteredResults().length === 0"
+              (click)="navigateToSelected()"
+              title="Ir a la pagina seleccionada"
+            >
+              <mat-icon>arrow_forward</mat-icon>
+              <span>Ir</span>
+            </button>
+
+            <!-- Close button -->
+            <button class="search-close-btn" (click)="closeSearch()" title="Cerrar buscador (Esc)">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+
+          <!-- Keyboard hint -->
+          <p class="search-hint">
+            <kbd>&uarr;&darr;</kbd> Navegar resultados &nbsp;&middot;&nbsp;
+            <kbd>Enter</kbd> Ir a la pagina &nbsp;&middot;&nbsp;
+            <kbd>Esc</kbd> Cerrar
+          </p>
+
+          <!-- Results -->
+          <div class="search-results" *ngIf="searchQuery()">
+
+            <!-- No results -->
+            <div *ngIf="filteredResults().length === 0" class="search-no-results">
+              <mat-icon>search_off</mat-icon>
+              <span>No se encontraron resultados para <strong>"{{ searchQuery() }}"</strong></span>
+            </div>
+
+            <!-- Result list -->
+            <ul *ngIf="filteredResults().length > 0" class="search-results-list" role="listbox">
+              <li
+                *ngFor="let result of filteredResults(); let i = index"
+                class="search-result-item"
+                [class.search-result-item--active]="selectedIndex() === i"
+                (click)="navigateTo(result.link)"
+                (mouseenter)="selectedIndex.set(i)"
+                role="option"
+                [attr.aria-selected]="selectedIndex() === i"
+              >
+                <mat-icon class="search-result-icon">chevron_right</mat-icon>
+                <span [innerHTML]="highlight(result.title)"></span>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </nav>
@@ -230,10 +353,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     }
 
     .nav-disabled {
-        opacity: 0.3 !important;
-        filter: saturate(0) brightness(0.7);
+        opacity: 0.4 !important;
+        filter: grayscale(1) brightness(0.6) !important;
         pointer-events: none !important;
-        cursor: default !important;
+        cursor: not-allowed !important;
+        color: #64748b !important;
+        user-select: none;
     }
 
     /* Language Switcher Avatar Style */
@@ -246,7 +371,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
        border: 1px solid rgba(0, 242, 255, 0.2);
        backdrop-filter: blur(15px);
        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-       margin-left: 2rem;
     }
 
     .lang-btn {
@@ -288,6 +412,306 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
        font-weight: 800;
        backdrop-filter: blur(10px);
     }
+
+    /* ================================================
+       SEARCH ICON BUTTON
+    ================================================ */
+    .search-icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 242, 255, 0.2);
+      background: rgba(10, 14, 20, 0.4);
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(15px);
+
+      mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: #00f2ff;
+        border-color: rgba(0, 242, 255, 0.6);
+        background: rgba(0, 242, 255, 0.08);
+        box-shadow: 0 0 14px rgba(0, 242, 255, 0.25);
+      }
+
+      &.active {
+        color: #00f2ff;
+        border-color: rgba(0, 242, 255, 0.7);
+        background: rgba(0, 242, 255, 0.12);
+        box-shadow: 0 0 18px rgba(0, 242, 255, 0.3);
+
+        mat-icon {
+          transform: rotate(90deg) scale(1.1);
+        }
+      }
+    }
+
+    /* ================================================
+       SEARCH PANEL
+    ================================================ */
+    .search-panel {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity 0.3s ease;
+      border-top: 1px solid transparent;
+      background: rgba(2, 6, 23, 0.97);
+      backdrop-filter: blur(20px);
+
+      &--open {
+        max-height: 600px;
+        opacity: 1;
+        border-top-color: rgba(0, 242, 255, 0.15);
+      }
+    }
+
+    /* Input row */
+    .search-input-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .search-field-wrap {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-field-icon {
+      position: absolute;
+      left: 14px;
+      color: rgba(0, 242, 255, 0.4);
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+    }
+
+    .search-field {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 242, 255, 0.25);
+      border-radius: 50px;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.65rem 2.75rem 0.65rem 2.75rem;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+      font-family: inherit;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      &:focus {
+        border-color: rgba(0, 242, 255, 0.6);
+        background: rgba(0, 242, 255, 0.04);
+        box-shadow: 0 0 0 3px rgba(0, 242, 255, 0.08), 0 0 20px rgba(0, 242, 255, 0.1);
+      }
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 2px;
+      border-radius: 50%;
+      transition: color 0.2s;
+
+      mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .search-go-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      border: 1px solid rgba(0, 242, 255, 0.3);
+      background: rgba(0, 242, 255, 0.08);
+      color: #00f2ff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      font-family: inherit;
+
+      mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover:not(:disabled) {
+        background: rgba(0, 242, 255, 0.16);
+        border-color: rgba(0, 242, 255, 0.6);
+        box-shadow: 0 0 14px rgba(0, 242, 255, 0.25);
+      }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+    }
+
+    .search-close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+
+      mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+
+      &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    /* Keyboard hint */
+    .search-hint {
+      margin-top: 0.6rem;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 0.02em;
+
+      kbd {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        padding: 0 5px;
+        font-size: 0.65rem;
+        font-family: monospace;
+        color: rgba(255, 255, 255, 0.55);
+      }
+    }
+
+    /* Results */
+    .search-results {
+      margin-top: 0.75rem;
+    }
+
+    .search-no-results {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+
+      mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      strong {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    .search-results-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-height: 340px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 242, 255, 0.2) transparent;
+    }
+
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      background: rgba(255, 255, 255, 0.02);
+
+      mat-icon.search-result-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.35;
+        flex-shrink: 0;
+        transition: opacity 0.2s, color 0.2s;
+      }
+
+      &:hover,
+      &--active {
+        color: #e2e8f0;
+        background: rgba(0, 242, 255, 0.07);
+        border-color: rgba(0, 242, 255, 0.2);
+
+        mat-icon.search-result-icon {
+          opacity: 1;
+          color: #00f2ff;
+        }
+      }
+    }
+
+    /* Highlight of matched term */
+    :host ::ng-deep .search-highlight {
+      background: rgba(0, 242, 255, 0.18);
+      color: #00f2ff;
+      border-radius: 3px;
+      padding: 0 2px;
+      font-weight: 700;
+    }
   `]
 })
 export class NavMenuComponent {
@@ -296,9 +720,67 @@ export class NavMenuComponent {
    activeMobileSection: string | null = null;
    activeMobileSubSection: string | null = null;
 
+   // Search state
+   isSearchOpen = signal(false);
+   searchQuery = signal('');
+   selectedIndex = signal(-1);
+
+   private sanitizer = inject(DomSanitizer);
+
+   @ViewChild('searchInput') searchInputRef!: ElementRef<HTMLInputElement>;
+
+   private router = inject(Router);
+
    get currentLang() {
       return this.translate.currentLang || 'es';
    }
+
+   // -------------------------------------------------------
+   // Searchable pages catalog (Spanish titles + routes)
+   // -------------------------------------------------------
+   private readonly searchablePages: SearchResult[] = [
+      // Home
+      { title: 'Inicio', link: '/' },
+
+      // Animales - Mammals
+      { title: 'Listado Mamiferos Terrestres', link: '/amazonia/animales/mamiferos-terrestres' },
+      { title: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
+      { title: 'Pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
+      { title: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' },
+
+      // Animales - Aves
+      { title: 'Listado Aves', link: '/amazonia/animales/aves' },
+      { title: 'Tucan Vitelado', link: '/amazonia/animales/aves/tucan' },
+      { title: 'Cotinga de Lentejuelas', link: '/amazonia/animales/aves/cotinga' },
+      { title: 'Tangara del Paraiso', link: '/amazonia/animales/aves/tangara-paraiso' },
+
+      // Plantas - Medicinales
+      { title: 'Listado Plantas Medicinales', link: '/amazonia/plantas/medicinales' },
+      { title: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
+      { title: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
+      { title: 'Una de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' },
+
+      // Geografia
+      { title: 'Mapa Amazonico', link: '/amazonia/reservas/mapa' },
+
+      // Tribus
+      { title: 'Etnias de la Amazonia', link: '/amazonia/tribus/etnias' },
+      { title: 'Pueblo Waorani', link: '/amazonia/tribus/etnias/waorani' },
+
+      // Exploracion
+      { title: 'Historia de la Exploracion Amazonica', link: '/amazonia/exploracion/historia' },
+
+      // Contacto
+      { title: 'Contacto', link: '/amazonia/contacto' },
+   ];
+
+   filteredResults = computed(() => {
+      const q = this.searchQuery().trim().toLowerCase();
+      if (!q) return [];
+      return this.searchablePages.filter(p =>
+         p.title.toLowerCase().includes(q)
+      );
+   });
 
    menuItems: any[] = [
       {
@@ -309,6 +791,7 @@ export class NavMenuComponent {
                label: 'COMMON.MAMMALS',
                link: '/amazonia/animales/mamiferos-terrestres',
                items: [
+                  { label: 'Listado MamÃ­feros', link: '/amazonia/animales/mamiferos-terrestres' },
                   { label: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
                   { label: 'Pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
                   { label: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' }
@@ -318,8 +801,10 @@ export class NavMenuComponent {
                label: 'COMMON.BIRDS',
                link: '/amazonia/animales/aves',
                items: [
-                  { label: 'Tucán', link: '/amazonia/animales/aves/tucan' },
-                  { label: 'Cotinga', link: '/amazonia/animales/aves/cotinga' }
+                  { label: 'Listado Aves', link: '/amazonia/animales/aves' },
+                  { label: 'Tucan Vitelado', link: '/amazonia/animales/aves/tucan' },
+                  { label: 'Cotinga Lentejuelas', link: '/amazonia/animales/aves/cotinga' },
+                  { label: 'Tangara ParaÃ­so', link: '/amazonia/animales/aves/tangara-paraiso' }
                ]
             },
             { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios', disabled: true },
@@ -334,9 +819,10 @@ export class NavMenuComponent {
                label: 'COMMON.MEDICINAL',
                link: '/amazonia/plantas/medicinales',
                items: [
+                  { label: 'Listado Medicinales', link: '/amazonia/plantas/medicinales' },
                   { label: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
                   { label: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
-                  { label: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
+                  { label: 'UÃ±a de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
                ]
             },
             { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical', disabled: true },
@@ -418,6 +904,111 @@ export class NavMenuComponent {
 
    constructor(private translate: TranslateService) { }
 
+   // ===================== Search methods =====================
+
+   toggleSearch() {
+      if (this.isSearchOpen()) {
+         this.closeSearch();
+      } else {
+         this.isSearchOpen.set(true);
+         // Focus input after animation frame
+         setTimeout(() => {
+            this.searchInputRef?.nativeElement?.focus();
+         }, 50);
+      }
+   }
+
+   closeSearch() {
+      this.isSearchOpen.set(false);
+      this.clearSearch();
+   }
+
+   clearSearch() {
+      this.searchQuery.set('');
+      this.selectedIndex.set(-1);
+   }
+
+   onQueryChange(value: string) {
+      this.searchQuery.set(value);
+      this.selectedIndex.set(-1);
+   }
+
+   onKeyDown(event: KeyboardEvent) {
+      const results = this.filteredResults();
+      const total = results.length;
+
+      switch (event.key) {
+         case 'Escape':
+            this.closeSearch();
+            break;
+
+         case 'Enter':
+            event.preventDefault();
+            if (total > 0) {
+               const idx = this.selectedIndex() >= 0 ? this.selectedIndex() : 0;
+               this.navigateTo(results[idx].link);
+            }
+            break;
+
+         case 'ArrowDown':
+            event.preventDefault();
+            if (total > 0) {
+               const next = this.selectedIndex() + 1;
+               this.selectedIndex.set(next >= total ? 0 : next);
+               this.scrollActiveIntoView();
+            }
+            break;
+
+         case 'ArrowUp':
+            event.preventDefault();
+            if (total > 0) {
+               const prev = this.selectedIndex() - 1;
+               this.selectedIndex.set(prev < 0 ? total - 1 : prev);
+               this.scrollActiveIntoView();
+            }
+            break;
+      }
+   }
+
+   navigateToSelected() {
+      const results = this.filteredResults();
+      if (results.length === 0) return;
+      const idx = this.selectedIndex() >= 0 ? this.selectedIndex() : 0;
+      this.navigateTo(results[idx].link);
+   }
+
+   navigateTo(link: string) {
+      this.router.navigateByUrl(link);
+      this.closeSearch();
+   }
+
+   highlight(title: string): SafeHtml {
+      const q = this.searchQuery().trim();
+      if (!q) return title;
+      const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const highlighted = title.replace(
+         new RegExp(`(${escaped})`, 'gi'),
+         `<span class="search-highlight">$1</span>`
+      );
+      return this.sanitizer.bypassSecurityTrustHtml(highlighted);
+   }
+
+   private scrollActiveIntoView() {
+      setTimeout(() => {
+         const el = document.querySelector('.search-result-item--active');
+         el?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }, 0);
+   }
+
+   @HostListener('document:keydown.escape')
+   onEscape() {
+      if (this.isSearchOpen()) {
+         this.closeSearch();
+      }
+   }
+
+   // ===================== Nav methods =====================
+
    switchLanguage(lang: string) {
       this.translate.use(lang);
    }
@@ -462,4 +1053,4 @@ export class NavMenuComponent {
       this.activeMobileSubSection = null;
    }
 }
-
+// search-feature
