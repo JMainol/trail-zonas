@@ -1,4 +1,4 @@
-
+﻿
 import { Component, signal, computed, ElementRef, ViewChild, HostListener, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -8,8 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 interface SearchResult {
-  title: string;
-  link: string;
+   title: string;
+   link: string;
 }
 
 @Component({
@@ -758,7 +758,7 @@ export class NavMenuComponent {
       { title: 'Listado Plantas Medicinales', link: '/amazonia/plantas/medicinales' },
       { title: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
       { title: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
-      { title: 'Una de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' },
+      { title: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' },
 
       // Geografia
       { title: 'Mapa Amazonico', link: '/amazonia/reservas/mapa' },
@@ -768,7 +768,7 @@ export class NavMenuComponent {
       { title: 'Pueblo Waorani', link: '/amazonia/tribus/etnias/waorani' },
 
       // Exploracion
-      { title: 'Historia de la Exploracion Amazonica', link: '/amazonia/exploracion/historia' },
+      { title: 'Francisco de Orellana,Historia de la Exploracion Amazonica', link: '/amazonia/exploracion/historia' },
 
       // Contacto
       { title: 'Contacto', link: '/amazonia/contacto' },
@@ -791,7 +791,7 @@ export class NavMenuComponent {
                label: 'COMMON.MAMMALS',
                link: '/amazonia/animales/mamiferos-terrestres',
                items: [
-                  { label: 'Listado MamÃ­feros', link: '/amazonia/animales/mamiferos-terrestres' },
+                  { label: 'Listado Mamiferos', link: '/amazonia/animales/mamiferos-terrestres' },
                   { label: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
                   { label: 'Pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
                   { label: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' }
@@ -804,7 +804,7 @@ export class NavMenuComponent {
                   { label: 'Listado Aves', link: '/amazonia/animales/aves' },
                   { label: 'Tucan Vitelado', link: '/amazonia/animales/aves/tucan' },
                   { label: 'Cotinga Lentejuelas', link: '/amazonia/animales/aves/cotinga' },
-                  { label: 'Tangara ParaÃ­so', link: '/amazonia/animales/aves/tangara-paraiso' }
+                  { label: 'Tangara Paraiso', link: '/amazonia/animales/aves/tangara-paraiso' }
                ]
             },
             { label: 'COMMON.REPTILES', link: '/amazonia/animales/reptiles-anfibios', disabled: true },
@@ -822,7 +822,7 @@ export class NavMenuComponent {
                   { label: 'Listado Medicinales', link: '/amazonia/plantas/medicinales' },
                   { label: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
                   { label: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
-                  { label: 'UÃ±a de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
+                  { label: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
                ]
             },
             { label: 'COMMON.VERTICAL_FOREST', link: '/amazonia/plantas/bosque-vertical', disabled: true },
