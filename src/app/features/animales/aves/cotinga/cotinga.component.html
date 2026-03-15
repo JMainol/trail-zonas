@@ -1,5 +1,8 @@
 <section class="hero-section">
-    <h1 class="hero-title">El Cotinga de Lentejuelas</h1>
+    <div class="hero-header">
+        <h1 class="hero-title">{{ 'BIRDS.COTINGA' | translate }}</h1>
+        <span class="scientific-name">{{ 'BIRDS.COTINGA_SCI' | translate }}</span>
+    </div>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
@@ -11,6 +14,12 @@
                     [playerVars]="{ autoplay: 1, mute: 1, controls: 0, rel: 0, loop: 1, playlist: 'VtsSfaFIKuI', playsinline: 1, showinfo: 0, modestbranding: 1 }"
                     class="youtube-short">
                 </youtube-player>
+                <app-media-caption 
+                    [title]="'BIRDS.COTINGA_CAPTION_TITLE' | translate"
+                    [author]="'BIRDS.COTINGA_CAPTION_AUTHOR' | translate"
+                    [authorUrl]="'BIRDS.COTINGA_CAPTION_URL' | translate"
+                    [iconType]="'youtube'">
+                </app-media-caption>
             </div>
             } @placeholder {
             <div class="video-placeholder">Cargando...</div>
@@ -25,7 +34,7 @@
         <div class="hero-body">
             <div class="hero-column">
                 <p>
-                    <strong>El Cotinga de Lentejuelas</strong> es, para muchos ornitólogos y exploradores, la máxima
+                    <strong>El {{ 'BIRDS.COTINGA' | translate }}</strong> es, para muchos ornitólogos y exploradores, la máxima
                     expresión estética de la cuenca amazónica. Este paseriforme destaca por un plumaje de un azul
                     turquesa tan vibrante que parece emitir una luminiscencia propia entre la penumbra del bosque. Lo
                     que percibimos como color es, en realidad, un prodigio de la biofísica: el azul en sus plumas no
