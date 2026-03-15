@@ -64,7 +64,8 @@
         "EXPLORATION": "Exploration",
         "HISTORY": "History",
         "SURVIVAL": "Survival",
-        "CONTACT": "Contact"
+        "CONTACT": "Contact",
+        "CAPTION_BY": "by"
     },
     "MAMMALS": {
         "SLIDER": {
@@ -133,11 +134,47 @@
             "MAP_TYPE": "Primary Tropical Forest"
         }
     },
+    "BIRDS": {
+        "TITLE": "Amazonian Birds",
+        "TOUCAN": "Channel-billed Toucan",
+        "TOUCAN_SCI": "Ramphastos vitellinus",
+        "COTINGA": "Spangled Cotinga",
+        "COTINGA_SCI": "Cotinga cayana",
+        "TANGARA": "Paradise Tanager",
+        "TANGARA_SCI": "Tangara chilensis",
+        "TOUCAN_CAPTION_TITLE": "Amazonian Toucan",
+        "TOUCAN_CAPTION_AUTHOR": "@dondeestas_andres",
+        "TOUCAN_CAPTION_URL": "https://www.instagram.com/dondeestas_andres/",
+        "COTINGA_CAPTION_TITLE": "Spangled Cotinga",
+        "COTINGA_CAPTION_AUTHOR": "Onsite Bird",
+        "COTINGA_CAPTION_URL": "https://www.youtube.com/watch?v=VtsSfaFIKuI",
+        "TANGARA_CAPTION_TITLE": "Paradise Tanager (Tangara chilensis)",
+        "TANGARA_CAPTION_AUTHOR": "Jose Cuevas",
+        "TANGARA_CAPTION_URL": "https://www.youtube.com/shorts/s8eRJQr7plQ",
+        "SLIDER": {
+            "TITLE": "Bird Species",
+            "WINGSPAN_LABEL": "Wingspan",
+            "TOUCAN": {
+                "DESCRIPTION": "The Channel-billed Toucan is a living emblem of the Amazon, noted for its vivid yellow throat and the bluish base of its beak. This 'architect of the jungle' is an efficient seed disperser that inhabits the upper canopy, where its characteristic call sets the rhythm of the tropical morning.",
+                "WINGSPAN": "100 cm"
+            },
+            "COTINGA": {
+                "DESCRIPTION": "The Spangled Cotinga is the ultimate aesthetic expression of the Amazon. Its vibrant turquoise-blue plumage has a luminescence of its own thanks to its structural coloration. A master of mystery and 'gardener' of the forest, it silently disperses seeds from the highest levels of the canopy.",
+                "WINGSPAN": "35 cm"
+            },
+            "TANGARA": {
+                "DESCRIPTION": "The Paradise Tanager is one of the most dazzling living jewels of the basin. With its apple-green face and electric-blue breast, this small gregarious bird defies natural sobriety as it travels the canopy in mixed groups, ensuring vital seed dispersal.",
+                "WINGSPAN": "22 cm"
+            }
+        }
+    },
     "EXPLORATION": {
         "HISTORY": {
-            "TITLE": "Francisco de Orellana:<br><span class=\"subtitle-text\">The Odyssey of the \"Freshwater Sea\"</span>",
-            "ALT_BOOK": "Account of the Recent Discovery",
-            "CAPTION_BOOK": "Manuscript page from the book Account of the Recent Discovery of the Famous Great River",
+            "TITLE": "Francisco de Orellana,<br><span class=\"subtitle-text\">History of Amazonian exploration.</span>",
+            "ALT_BOOK": "Orellana's men",
+            "CAPTION_BOOK_TITLE": "Orellana's men. Engraving",
+            "CAPTION_BOOK_AUTHOR": "engraving by Theodor de Bry",
+            "CAPTION_BOOK_URL": "https://en.wikipedia.org/wiki/Theodor_de_Bry",
             "ORELLANA_STORY_1": "In February 1542, what began as a desperate search for sustenance transformed into the most extraordinary journey ever undertaken in the New World. <strong>Francisco de Orellana</strong>, accompanied by 57 men and the friar <strong>Gaspar de Carvajal</strong>, separated from Gonzalo Pizarro’s main expedition to venture into the depths of a jungle that no one had yet charted. They were not seeking glory; they were seeking survival. Yet, destiny had reserved for them a place in eternity.",
             "SUBTITLE_HUNGER": "Hunger and Timber: The Birth of the \"Victoria\"",
             "CARVAJAL_CHRONICLE": "Carvajal’s chronicle, <em>Relación del nuevo descubrimiento del famoso río Grande</em> (Account of the Recent Discovery of the Famous Great River), recounts the sheer brutality of those early days. Weakened by famine, the men resorted to consuming the leather of their shoes and the soles of their scabbards, boiled with unknown herbs.",
