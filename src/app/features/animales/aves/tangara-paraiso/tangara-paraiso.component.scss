@@ -35,6 +35,20 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+.hero-header {
+    width: 100%;
+    z-index: 30;
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
 .hero-title {
     font-family: $font-heading;
     font-size: 2.2rem;
@@ -42,12 +56,11 @@ $font-body: "Inter", sans-serif;
     color: #fff;
     line-height: 1.1;
     letter-spacing: -1px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     word-break: break-word;
     position: relative;
-    z-index: 30;
-    text-align: center;
+    text-align: inherit;
 
     &::before {
         content: '';
@@ -60,15 +73,27 @@ $font-body: "Inter", sans-serif;
     }
 
     @media (min-width: 768px) {
-        grid-column: 2;
-        grid-row: 1;
-        text-align: left;
         font-size: 3.0625rem;
-        margin-bottom: 3rem;
 
         &::before {
             margin: 0 0 1rem 0;
         }
+    }
+}
+
+.scientific-name {
+    display: block;
+    font-family: $font-body;
+    font-size: 1.1rem;
+    color: #ffd700;
+    font-style: italic;
+    text-transform: none;
+    font-weight: 500;
+    position: relative;
+    text-align: inherit;
+
+    @media (min-width: 768px) {
+        font-size: 1.35rem;
     }
 }
 
@@ -133,8 +158,10 @@ $font-body: "Inter", sans-serif;
 
 .youtube-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.2rem;
     max-width: 80vw;
     width: 250px;
     position: relative;

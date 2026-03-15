@@ -64,7 +64,8 @@
         "EXPLORATION": "Exploración",
         "HISTORY": "Historia",
         "SURVIVAL": "Supervivencia",
-        "CONTACT": "Contacto"
+        "CONTACT": "Contacto",
+        "CAPTION_BY": "de"
     },
     "MAMMALS": {
         "SLIDER": {
@@ -133,11 +134,47 @@
             "MAP_TYPE": "Bosque Tropical Primario"
         }
     },
+    "BIRDS": {
+        "TITLE": "Aves Amazónicas",
+        "TOUCAN": "Tucán Vitelado",
+        "TOUCAN_SCI": "Ramphastos vitellinus",
+        "COTINGA": "Cotinga de Lentejuelas",
+        "COTINGA_SCI": "Cotinga cayana",
+        "TANGARA": "Tangara Paraíso",
+        "TANGARA_SCI": "Tangara chilensis",
+        "TOUCAN_CAPTION_TITLE": "Tucán amazónico",
+        "TOUCAN_CAPTION_AUTHOR": "@dondeestas_andres",
+        "TOUCAN_CAPTION_URL": "https://www.instagram.com/dondeestas_andres/",
+        "COTINGA_CAPTION_TITLE": "Spangled Cotinga",
+        "COTINGA_CAPTION_AUTHOR": "Onsite Bird",
+        "COTINGA_CAPTION_URL": "https://www.youtube.com/watch?v=VtsSfaFIKuI",
+        "TANGARA_CAPTION_TITLE": "Tangara paraíso (Tangara chilensis)",
+        "TANGARA_CAPTION_AUTHOR": "Jose Cuevas",
+        "TANGARA_CAPTION_URL": "https://www.youtube.com/shorts/s8eRJQr7plQ",
+        "SLIDER": {
+            "TITLE": "Especies de Aves",
+            "WINGSPAN_LABEL": "Envergadura",
+            "TOUCAN": {
+                "DESCRIPTION": "El Tucán Vitelado es un emblema viviente de la Amazonía, destacando por su garganta amarillo intenso y la base azulada de su pico. Este 'arquitecto de la selva' es un eficiente dispersor de semillas que habita el dosel superior, donde su vocalización característica marca el ritmo de la mañana tropical.",
+                "WINGSPAN": "100 cm"
+            },
+            "COTINGA": {
+                "DESCRIPTION": "El Cotinga de Lentejuelas es la máxima expresión estética del Amazonas. Su plumaje azul turquesa vibrante posee una luminiscencia propia gracias a su coloración estructural. Maestro del misterio y 'jardinero' del bosque, dispersa semillas silenciosamente desde lo más alto del dosel.",
+                "WINGSPAN": "35 cm"
+            },
+            "TANGARA": {
+                "DESCRIPTION": "La Tangara Paraíso es una de las joyas vivientes más deslumbrantes de la cuenca. Con su rostro verde manzana y pecho azul eléctrico, este pequeño pájaro gregario desafía la sobriedad natural mientras surca el dosel en grupos mixtos, asegurando la dispersión vital de las semillas.",
+                "WINGSPAN": "22 cm"
+            }
+        }
+    },
     "EXPLORATION": {
         "HISTORY": {
-            "TITLE": "Francisco de Orellana:<br><span class=\"subtitle-text\">La Odisea del \"Mar Dulce\"</span>",
-            "ALT_BOOK": "Relación del nuevo descubrimiento",
-            "CAPTION_BOOK": "Pagina manuscrito libro Relación del nuevo descubrimiento del famoso río Grande",
+            "TITLE": "Francisco de Orellana,<br><span class=\"subtitle-text\">historia de la exploración amazónica.</span>",
+            "ALT_BOOK": "Los hombres de Orellana",
+            "CAPTION_BOOK_TITLE": "Los hombres de Orellana. Grabado",
+            "CAPTION_BOOK_AUTHOR": "grabado de Theodor de Bry",
+            "CAPTION_BOOK_URL": "https://es.wikipedia.org/wiki/Theodor_de_Bry",
             "ORELLANA_STORY_1": "En febrero de 1542, lo que comenzó como una desesperada búsqueda de comida se convirtió en el viaje más extraordinario jamás realizado en el Nuevo Mundo. <strong>Francisco de Orellana</strong>, junto a 57 hombres y el fraile <strong>Gaspar de Carvajal</strong>, se separó de la expedición principal de Gonzalo Pizarro para adentrarse en las entrañas de una selva que nadie había cartografiado. No buscaban gloria, buscaban sobrevivir; pero el destino les tenía reservada la eternidad.",
             "SUBTITLE_HUNGER": "El Hambre y la Madera: El Nacimiento del \"Victoria\"",
             "CARVAJAL_CHRONICLE": "La crónica de Carvajal, <em>Relación del nuevo descubrimiento del famoso río Grande</em>, nos narra la crudeza de los primeros días. Los hombres, debilitados por el hambre, llegaron a comerse el cuero de sus zapatos y las suelas de sus vainas cocidas con hierbas desconocidas.",

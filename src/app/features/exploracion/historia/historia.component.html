@@ -12,9 +12,14 @@
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
             <div class="book-container">
-                <img src="assets/images/history/pagina_libro_relacion_del_nuevo_descubrimiento_del_famoso_rio_grande.png"
+                <img src="assets/images/history/pintura_Orellana_y_sus_hombres.jpg"
                     [alt]="'EXPLORATION.HISTORY.ALT_BOOK' | translate" class="book-image">
-                <p class="caption" [innerHTML]="'EXPLORATION.HISTORY.CAPTION_BOOK' | translate"></p>
+                <app-media-caption 
+                    [title]="'EXPLORATION.HISTORY.CAPTION_BOOK_TITLE' | translate"
+                    [author]="'EXPLORATION.HISTORY.CAPTION_BOOK_AUTHOR' | translate"
+                    [authorUrl]="'EXPLORATION.HISTORY.CAPTION_BOOK_URL' | translate"
+                    [iconType]="'web'">
+                </app-media-caption>
             </div>
         </div>
     </div>

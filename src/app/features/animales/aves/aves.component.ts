@@ -24,28 +24,28 @@ export class AvesComponent implements AfterViewInit {
     // Slide data (Cloned from mammals for now, as requested)
     readonly slides: Slide[] = [
         {
-            title: 'MAMMALS.JAGUAR.TITLE',
-            scientificName: 'Panthera onca',
-            description: 'MAMMALS.SLIDER.JAGUAR.DESCRIPTION',
-            weight: 'MAMMALS.SLIDER.JAGUAR.WEIGHT',
-            image: 'assets/mammals/jaguar.png',
-            link: 'jaguar'
+            title: 'BIRDS.TOUCAN',
+            scientificName: 'Ramphastos vitellinus',
+            description: 'BIRDS.SLIDER.TOUCAN.DESCRIPTION',
+            weight: 'BIRDS.SLIDER.TOUCAN.WINGSPAN',
+            image: 'assets/toucan-vitelado.png',
+            link: 'tucan'
         },
         {
-            title: 'MAMMALS.TAPIR.TITLE',
-            scientificName: 'Tapirus terrestris',
-            description: 'MAMMALS.SLIDER.TAPIR.DESCRIPTION',
-            weight: 'MAMMALS.SLIDER.TAPIR.WEIGHT',
-            image: 'assets/mammals/tapir.png',
-            link: 'tapir'
+            title: 'BIRDS.COTINGA',
+            scientificName: 'Cotinga cayana',
+            description: 'BIRDS.SLIDER.COTINGA.DESCRIPTION',
+            weight: 'BIRDS.SLIDER.COTINGA.WINGSPAN',
+            image: 'assets/toucan-vitelado.png', // Placeholder
+            link: 'cotinga'
         },
         {
-            title: 'MAMMALS.PECARI.TITLE',
-            scientificName: 'Tayassu pecari',
-            description: 'MAMMALS.SLIDER.PECARI.DESCRIPTION',
-            weight: 'MAMMALS.SLIDER.PECARI.WEIGHT',
-            image: 'assets/mammals/peccary.png',
-            link: 'pecari'
+            title: 'BIRDS.TANGARA',
+            scientificName: 'Tangara chilensis',
+            description: 'BIRDS.SLIDER.TANGARA.DESCRIPTION',
+            weight: 'BIRDS.SLIDER.TANGARA.WINGSPAN',
+            image: 'assets/toucan-vitelado.png', // Placeholder
+            link: 'tangara-paraiso'
         }
     ];
 

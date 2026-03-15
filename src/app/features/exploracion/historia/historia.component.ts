@@ -4,10 +4,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { MediaCaptionComponent } from '../../../shared/components/media-caption/media-caption.component';
+
 @Component({
     selector: 'app-historia',
     standalone: true,
-    imports: [CommonModule, MatIconModule, RouterModule, TranslateModule],
+    imports: [CommonModule, MatIconModule, RouterModule, TranslateModule, MediaCaptionComponent],
     templateUrl: './historia.component.html',
     styleUrl: './historia.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush

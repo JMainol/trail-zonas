@@ -1,10 +1,13 @@
 <section class="hero-section">
-    <h1 class="hero-title">Tangara Paraíso</h1>
+    <div class="hero-header">
+        <h1 class="hero-title">{{ 'BIRDS.TANGARA' | translate }}</h1>
+        <span class="scientific-name">{{ 'BIRDS.TANGARA_SCI' | translate }}</span>
+    </div>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
             <!-- Mobile: Static Image (Placeholder) -->
-            <img src="assets/images/tangara-paraiso.png" alt="Tangara chilensis - Tangara Paraíso"
+            <img src="assets/images/tangara-paraiso.png" alt="Tangara chilensis - {{ 'BIRDS.TANGARA' | translate }}"
                 class="toucan-image mobile-only">
 
             <!-- Youtube Short (Responsive for Mobile & Desktop) -->
@@ -15,6 +18,12 @@
                     [playerVars]="{ autoplay: 1, mute: 1, controls: 0, rel: 0, loop: 1, playlist: 's8eRJQr7plQ', playsinline: 1, showinfo: 0, modestbranding: 1 }"
                     class="youtube-short">
                 </youtube-player>
+                <app-media-caption 
+                    [title]="'BIRDS.TANGARA_CAPTION_TITLE' | translate"
+                    [author]="'BIRDS.TANGARA_CAPTION_AUTHOR' | translate"
+                    [authorUrl]="'BIRDS.TANGARA_CAPTION_URL' | translate"
+                    [iconType]="'youtube'">
+                </app-media-caption>
             </div>
             } @placeholder {
             <div class="video-placeholder">Cargando...</div>
@@ -29,10 +38,10 @@
         <div class="hero-body">
             <div class="hero-column">
                 <p>
-                    El <strong>Tangara Paraíso (Tangara chilensis)</strong> es, sin duda, una de las joyas vivientes más deslumbrantes de la cuenca amazónica. Miembro de la familia Thraupidae, esta pequeña ave de unos trece centímetros de longitud parece desafiar las leyes de la sobriedad natural. Su plumaje es un lienzo vibrante donde convergen el verde manzana fluorescente de su rostro, el azul eléctrico de su pecho y un rojo carmesí profundo en la rabadilla, creando un contraste que parece más una expresión artística que un producto de la evolución.
+                    El <strong>{{ 'BIRDS.TANGARA' | translate }} (Tangara chilensis)</strong> es, sin duda, una de las joyas vivientes más deslumbrantes de la cuenca amazónica. Miembro de la familia Thraupidae, esta pequeña ave de unos trece centímetros de longitud parece desafiar las leyes de la sobriedad natural. Su plumaje es un lienzo vibrante donde convergen el verde manzana fluorescente de su rostro, el azul eléctrico de su pecho y un rojo carmesí profundo en la rabadilla, creando un contraste que parece más una expresión artística que un producto de la evolución.
                 </p>
                 <p>
-                    Habitante de los estratos más altos del bosque, este pájaro transcurre su vida en el dosel forestal, ese techo verde y denso donde la luz del sol golpea con mayor intensidad. Es allí, a menudo a más de treinta metros de altura, donde el Tangara Paraíso cumple su función ecológica como un activo dispersor de semillas. Su dieta es predominantemente frugívora, aunque no desprecia pequeños insectos que captura con agilidad entre el follaje, moviéndose con una energía frenética que simboliza la vitalidad inagotable de la selva tropical.
+                    Habitante de los estratos más altos del bosque, este pájaro transcurre su vida en el dosel forestal, ese techo verde y denso donde la luz del sol golpea con mayor intensidad. Es allí, a menudo a más de treinta metros de altura, donde el {{ 'BIRDS.TANGARA' | translate }} cumple su función ecológica como un activo dispersor de semillas. Su dieta es predominantemente frugívora, aunque no desprecia pequeños insectos que captura con agilidad entre el follaje, moviéndose con una energía frenética que simboliza la vitalidad inagotable de la selva tropical.
                 </p>
                 <p>
                     Desde una perspectiva científica, su coloración no es solo un capricho estético, sino un prodigio de la biofísica estructural. A diferencia de otros pigmentos que absorben y reflejan la luz, los tonos azules de su pecho se deben a la microestructura de sus plumas, que dispersan la luz solar para crear una iridiscencia casi irreal.
@@ -40,10 +49,10 @@
             </div>
             <div class="hero-column">
                 <p>
-                    Su comportamiento social es igualmente fascinante. El Tangara Paraíso es un ave gregaria que entiende la seguridad en la colectividad; al integrarse en grupos diversos, optimiza la búsqueda de alimento y minimiza el riesgo ante depredadores. Sus llamados son agudos y rápidos, una suerte de lenguaje cifrado que mantiene al grupo cohesionado mientras navegan por el océano de hojas. En este sentido, la especie no es solo un habitante del Amazonas, sino una nota musical necesaria en la compleja sinfonía de biodiversidad que define a esta región.
+                    Su comportamiento social es igualmente fascinante. El {{ 'BIRDS.TANGARA' | translate }} es un ave gregaria que entiende la seguridad en la colectividad; al integrarse en grupos diversos, optimiza la búsqueda de alimento y minimiza el riesgo ante depredadores. Sus llamados son agudos y rápidos, una suerte de lenguaje cifrado que mantiene al grupo cohesionado mientras navegan por el océano de hojas. En este sentido, la especie no es solo un habitante del Amazonas, sino una nota musical necesaria en la compleja sinfonía de biodiversidad que define a esta región.
                 </p>
                 <p>
-                    Finalmente, el Tangara Paraíso actúa como un recordatorio silencioso de la fragilidad de su ecosistema. Aunque su belleza invita a la contemplación poética, su supervivencia depende estrictamente de la integridad de las selvas primarias y secundarias que habita. Proteger su hogar es asegurar que las futuras generaciones aún puedan maravillarse con esta "pincelada de paraíso".
+                    Finalmente, el {{ 'BIRDS.TANGARA' | translate }} actúa como un recordatorio silencioso de la fragilidad de su ecosistema. Aunque su belleza invita a la contemplación poética, su supervivencia depende estrictamente de la integridad de las selvas primarias y secundarias que habita. Proteger su hogar es asegurar que las futuras generaciones aún puedan maravillarse con esta "pincelada de paraíso".
                     <span class="poetic-touch">"Una pincelada de paraíso que, tras millones de años de adaptación, continúa surcando los cielos de la mayor reserva de vida del planeta."</span>
                 </p>
             </div>
@@ -78,7 +87,7 @@
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>Espectacular Tangara del Paraíso</h3>
+                <h3>Espectacular {{ 'BIRDS.TANGARA' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

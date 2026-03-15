@@ -30,7 +30,10 @@
             [style.z-index]="getZIndex(i)">
 
             <h2>{{ slide.title | translate }}</h2>
-            <span class="ps-price">{{ slide.weight | translate }}</span>
+            <div class="ps-metadata">
+                <span class="ps-label">{{ 'BIRDS.SLIDER.WINGSPAN_LABEL' | translate }}:</span>
+                <span class="ps-price">{{ slide.weight | translate }}</span>
+            </div>
             <p>
                 <em class="scientific-name">{{ slide.scientificName }}</em><br><br>
                 {{ slide.description | translate }}

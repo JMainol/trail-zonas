@@ -3,11 +3,13 @@ import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
+import { TranslateModule } from '@ngx-translate/core';
+import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
 @Component({
     selector: 'app-cotinga',
     standalone: true,
-    imports: [CommonModule, YouTubePlayer],
+    imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent],
     templateUrl: './cotinga.component.html',
     styleUrl: './cotinga.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
