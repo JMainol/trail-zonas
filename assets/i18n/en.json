@@ -151,6 +151,7 @@
         "TANGARA_CAPTION_TITLE": "Paradise Tanager (Tangara chilensis)",
         "TANGARA_CAPTION_AUTHOR": "Jose Cuevas",
         "TANGARA_CAPTION_URL": "https://www.youtube.com/shorts/s8eRJQr7plQ",
+        "AI_CAPTION_TEXT": "AI-generated image for visual sketch. Provisional",
         "SLIDER": {
             "TITLE": "Bird Species",
             "WINGSPAN_LABEL": "Wingspan",
@@ -166,7 +167,13 @@
                 "DESCRIPTION": "The Paradise Tanager is one of the most dazzling living jewels of the basin. With its apple-green face and electric-blue breast, this small gregarious bird defies natural sobriety as it travels the canopy in mixed groups, ensuring vital seed dispersal.",
                 "WINGSPAN": "22 cm"
             }
-        }
+        },
+        "SUBSPECIES": "Subspecies",
+        "SUBSPECIES_TITLE": "Toucan Subspecies",
+        "SUBSPECIES_1_NAME": "Collared Aracari",
+        "SUBSPECIES_1_SCI": "Pteroglossus torquatus",
+        "SUBSPECIES_2_NAME": "Red-breasted Toucan",
+        "SUBSPECIES_2_SCI": "Ramphastos dicolorus"
     },
     "EXPLORATION": {
         "HISTORY": {
