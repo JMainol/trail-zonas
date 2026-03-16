@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
+
 interface Slide {
     title: string;
     scientificName: string;
     description: string;
     weight: string;
+    wingspanCm: number;
     image: string;
     link?: string;
 }
@@ -28,6 +30,7 @@ export class AvesComponent implements AfterViewInit {
             scientificName: 'Ramphastos vitellinus',
             description: 'BIRDS.SLIDER.TOUCAN.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TOUCAN.WINGSPAN',
+            wingspanCm: 100,
             image: 'assets/toucan-vitelado.png',
             link: 'tucan'
         },
@@ -36,6 +39,7 @@ export class AvesComponent implements AfterViewInit {
             scientificName: 'Cotinga cayana',
             description: 'BIRDS.SLIDER.COTINGA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.COTINGA.WINGSPAN',
+            wingspanCm: 35,
             image: 'assets/toucan-vitelado.png', // Placeholder
             link: 'cotinga'
         },
@@ -44,6 +48,7 @@ export class AvesComponent implements AfterViewInit {
             scientificName: 'Tangara chilensis',
             description: 'BIRDS.SLIDER.TANGARA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TANGARA.WINGSPAN',
+            wingspanCm: 22,
             image: 'assets/toucan-vitelado.png', // Placeholder
             link: 'tangara-paraiso'
         }

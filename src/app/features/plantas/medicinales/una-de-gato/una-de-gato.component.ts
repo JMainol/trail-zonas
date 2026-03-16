@@ -3,12 +3,14 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild
 import { CommonModule, Location } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
 
 @Component({
     selector: 'app-una-de-gato',
     standalone: true,
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, MediaCaptionComponent, TranslateModule],
 
     templateUrl: './una-de-gato.component.html',
     styleUrl: './una-de-gato.component.scss',

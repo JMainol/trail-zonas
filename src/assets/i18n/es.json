@@ -151,6 +151,7 @@
         "TANGARA_CAPTION_TITLE": "Tangara paraíso (Tangara chilensis)",
         "TANGARA_CAPTION_AUTHOR": "Jose Cuevas",
         "TANGARA_CAPTION_URL": "https://www.youtube.com/shorts/s8eRJQr7plQ",
+        "AI_CAPTION_TEXT": "Imagen generada por IA para boceto visual. Provisional",
         "SLIDER": {
             "TITLE": "Especies de Aves",
             "WINGSPAN_LABEL": "Envergadura",
@@ -166,7 +167,13 @@
                 "DESCRIPTION": "La Tangara Paraíso es una de las joyas vivientes más deslumbrantes de la cuenca. Con su rostro verde manzana y pecho azul eléctrico, este pequeño pájaro gregario desafía la sobriedad natural mientras surca el dosel en grupos mixtos, asegurando la dispersión vital de las semillas.",
                 "WINGSPAN": "22 cm"
             }
-        }
+        },
+        "SUBSPECIES": "Subespecies",
+        "SUBSPECIES_TITLE": "Subespecies del Tucán",
+        "SUBSPECIES_1_NAME": "Arasarí acollarado",
+        "SUBSPECIES_1_SCI": "Pteroglossus torquatus",
+        "SUBSPECIES_2_NAME": "Tucán bicolor",
+        "SUBSPECIES_2_SCI": "Ramphastos dicolorus"
     },
     "EXPLORATION": {
         "HISTORY": {

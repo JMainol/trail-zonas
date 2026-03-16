@@ -3,12 +3,14 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild
 import { CommonModule, Location } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
 
 @Component({
     selector: 'app-sangre-de-grado',
     standalone: true,
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, MediaCaptionComponent, TranslateModule],
 
     templateUrl: './sangre-de-grado.component.html',
     styleUrl: './sangre-de-grado.component.scss',

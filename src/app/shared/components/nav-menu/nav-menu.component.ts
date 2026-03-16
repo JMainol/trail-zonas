@@ -871,7 +871,10 @@ export class NavMenuComponent {
                label: 'COMMON.ETHNIC_REGIONS',
                link: '/amazonia/tribus/etnias',
                items: [
-                  { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' }
+                  { label: 'Listado Etnias', link: '/amazonia/tribus/etnias' },
+                  { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' },
+                  { label: 'Cofán', link: '/amazonia/tribus/etnias/cofan', disabled: true },
+                  { label: 'Shuar', link: '/amazonia/tribus/etnias/shuar', disabled: true }
                ]
             },
             { label: 'COMMON.CULTURE_SOCIETY', link: '/amazonia/tribus/cultura-sociedad', disabled: true },

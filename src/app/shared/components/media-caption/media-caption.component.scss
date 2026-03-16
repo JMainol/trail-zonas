@@ -42,6 +42,15 @@
             .link-icon { color: #db2777; }
         }
     }
+
+    &.type-ai {
+        color: #3b82f6; // blue-500 from the logo
+        &:hover {
+            color: #2563eb; // blue-600
+            background: rgba(59, 130, 246, 0.08);
+            .link-icon { color: #2563eb; }
+        }
+    }
     
     &.clickable {
         cursor: pointer;
