@@ -675,6 +675,12 @@ $font-body: "Inter", sans-serif;
             .trait-title {
                 color: #fff;
                 text-shadow: 0 0 10px rgba($avatar-cyan, 0.5);
+
+                .trait-icon {
+                    color: $avatar-cyan;
+                    filter: drop-shadow(0 0 8px $avatar-cyan);
+                    transform: scale(1.2) rotate(5deg);
+                }
             }
         }
 
@@ -690,10 +696,12 @@ $font-body: "Inter", sans-serif;
             align-items: center;
             gap: 0.75rem;
 
-            &::before {
-                content: '►';
-                font-size: 0.7rem;
+            .trait-icon {
+                width: 24px;
+                height: 24px;
                 color: $avatar-magenta;
+                filter: drop-shadow(0 0 5px rgba($avatar-magenta, 0.3));
+                transition: all 0.3s ease;
             }
         }
 

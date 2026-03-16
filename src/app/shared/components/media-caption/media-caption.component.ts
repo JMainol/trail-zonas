@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
 
-export type MediaIconType = 'web' | 'instagram' | 'youtube';
+export type MediaIconType = 'web' | 'instagram' | 'youtube' | 'ai';
 
 @Component({
   selector: 'app-media-caption',

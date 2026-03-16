@@ -49,6 +49,7 @@
                     la espesura, marcando el ritmo de la mañana. Su estructura ósea ligera y su pico, aunque masivo, es
                     sorprendentemente liviano, permitiéndole alcanzar frutos en las puntas más finas de las ramas.
                 </p>
+
             </div>
             <div class="hero-column">
                 <p>
@@ -90,6 +91,13 @@
                     <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
                 </svg>
                 Mapa
+            </button>
+            <button [class.active]="activeTab() === 'subspecies'" (click)="setTab('subspecies')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M21 5c-1.11 0-2 .89-2 2 0 .73.4 1.35 1 1.7V11c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2V8.7c.6-.35 1-.97 1-1.7 0-1.11-.89-2-2-2S4 5.89 4 7c0 .73.4 1.35 1 1.7V11c0 2.21 1.79 4 4 4h7c1.38 0 2.5.84 2.5 2.5V20h-7V17c0-1.1-.9-2-2-2" />
+                </svg>
+                {{ 'BIRDS.SUBSPECIES' | translate }}
             </button>
         </div>
 
@@ -162,6 +170,38 @@
                             <span>Bosque Tropical / Ríos</span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Subspecies Tab -->
+            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                <h3>{{ 'BIRDS.SUBSPECIES_TITLE' | translate }}</h3>
+                <div class="gallery-wrapper">
+                    <button class="nav-btn prev" (click)="prevPhoto()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+
+                    <div class="main-photo-view">
+                        <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                    </div>
+
+                    <button class="nav-btn next" (click)="nextPhoto()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+
+                <div class="subspecies-info">
+                    <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
+                    <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
+                </div>
+
+                <div class="thumbnails-track">
+                    @for (img of galleryImages; track img.url; let i = $index) {
+                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                        <img [src]="img.url" alt="Thumbnail">
+                    </div>
+                    }
                 </div>
             </div>
         </div>

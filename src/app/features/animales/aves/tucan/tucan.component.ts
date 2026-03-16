@@ -6,10 +6,14 @@ import { YouTubePlayer } from '@angular/youtube-player';
 import { TranslateModule } from '@ngx-translate/core';
 import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
+
+import { MatIconModule } from '@angular/material/icon';
+
+
 @Component({
   selector: 'app-tucan',
   standalone: true,
-  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent],
+  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent, MatIconModule],
   templateUrl: './tucan.component.html',
   styleUrl: './tucan.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -44,7 +48,22 @@ export class TucanComponent implements OnInit {
   protected currentTime = signal(0);
   protected duration = signal(0);
   protected progress = signal(0);
-  protected activeTab = signal('video'); // 'video', 'sound', 'map'
+  protected activeTab = signal('video'); // 'video', 'sound', 'map', 'subspecies'
+
+  // Gallery Slider
+  protected galleryImages = [
+    {
+      url: 'assets/images/birds/tucan/arasari_acollarado.png.png',
+      nameKey: 'BIRDS.SUBSPECIES_1_NAME',
+      sciKey: 'BIRDS.SUBSPECIES_1_SCI'
+    },
+    {
+      url: 'assets/images/birds/tucan/tucan_bicolor.png.png',
+      nameKey: 'BIRDS.SUBSPECIES_2_NAME',
+      sciKey: 'BIRDS.SUBSPECIES_2_SCI'
+    }
+  ];
+  protected currentPhotoIndex = signal(0);
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
@@ -99,5 +118,13 @@ export class TucanComponent implements OnInit {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs.toString().padStart(2, '0')}`;
+  }
+
+  nextPhoto() {
+    this.currentPhotoIndex.update(i => (i + 1) % this.galleryImages.length);
+  }
+
+  prevPhoto() {
+    this.currentPhotoIndex.update(i => (i - 1 + this.galleryImages.length) % this.galleryImages.length);
   }
 }

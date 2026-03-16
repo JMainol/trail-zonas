@@ -187,6 +187,21 @@
         filter: brightness(1.2);
     }
 
+    &.disabled {
+        opacity: 0.5;
+        filter: grayscale(1);
+        pointer-events: none;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            filter: grayscale(1) brightness(1);
+        }
+    }
+
     &:before {
         content: '✦';
         padding-right: 12px;
