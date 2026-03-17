@@ -119,15 +119,27 @@ interface SearchResult {
             </div>
           </div>
 
-          <!-- Mobile Menu Button (Hamburger) -->
-          <div class="flex md:hidden items-center gap-2">
+          <!-- Mobile Controls (Language + Search + Hamburger) -->
+          <div class="flex md:hidden items-center gap-1.5 sm:gap-2">
              <!-- Language Switcher Mobile -->
              <button (click)="toggleLanguage()" class="mobile-lang-btn">
                 {{ currentLang | uppercase }}
              </button>
 
-            <button (click)="toggleMobileMenu()" type="button" class="inline-flex items-center justify-center p-3 rounded-full text-cyan-400 hover:bg-cyan-900/40 transition-colors" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen">
-              <span class="sr-only">Abrir menÃº principal</span>
+             <!-- Search Button Mobile -->
+             <button
+               class="search-icon-btn search-icon-btn--mobile"
+               (click)="toggleSearch()"
+               [class.active]="isSearchOpen()"
+               title="Buscar paginas"
+               aria-label="Abrir buscador"
+             >
+               <mat-icon>search</mat-icon>
+             </button>
+
+            <!-- Hamburger Button -->
+            <button (click)="toggleMobileMenu()" type="button" class="mobile-menu-btn" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen">
+              <span class="sr-only">Abrir menú principal</span>
               <mat-icon>{{ isMobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
             </button>
           </div>
@@ -347,7 +359,7 @@ interface SearchResult {
         }
     }
     .nav-item-mobile {
-        @apply px-3 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-3;
+        @apply px-3 py-2.5 rounded-xl text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center gap-3;
     }
     .glow-cyan {
         text-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
@@ -408,11 +420,31 @@ interface SearchResult {
        background: rgba(0, 242, 255, 0.1);
        border: 1px solid rgba(0, 242, 255, 0.3);
        color: #00f2ff;
-       padding: 0.5rem 1rem;
+       padding: 0.35rem 0.75rem;
        border-radius: 50px;
-       font-size: 0.8rem;
+       font-size: 0.7rem;
        font-weight: 800;
        backdrop-filter: blur(10px);
+       transition: all 0.2s ease;
+
+       &:active {
+         background: rgba(0, 242, 255, 0.2);
+         transform: scale(0.95);
+       }
+    }
+
+    .mobile-menu-btn {
+      @apply inline-flex items-center justify-center p-2 rounded-full text-cyan-400 hover:bg-cyan-900/40 transition-colors;
+      
+      mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
     }
 
     /* ================================================
@@ -454,6 +486,17 @@ interface SearchResult {
 
         mat-icon {
           transform: rotate(90deg) scale(1.1);
+        }
+      }
+
+      &--mobile {
+        width: 32px;
+        height: 32px;
+
+        mat-icon {
+          font-size: 16px;
+          width: 16px;
+          height: 16px;
         }
       }
     }
@@ -582,6 +625,13 @@ interface SearchResult {
         opacity: 0.35;
         cursor: not-allowed;
       }
+
+      @media (max-width: 640px) {
+        padding: 0.6rem;
+        span {
+          display: none;
+        }
+      }
     }
 
     .search-close-btn {
@@ -617,6 +667,10 @@ interface SearchResult {
       font-size: 0.7rem;
       color: rgba(255, 255, 255, 0.3);
       letter-spacing: 0.02em;
+
+      @media (max-width: 640px) {
+        display: none;
+      }
 
       kbd {
         display: inline-block;
@@ -924,6 +978,7 @@ export class NavMenuComponent {
       if (this.isSearchOpen()) {
          this.closeSearch();
       } else {
+         this.isMobileMenuOpen = false;
          this.isSearchOpen.set(true);
          // Focus input after animation frame
          setTimeout(() => {
@@ -1041,6 +1096,9 @@ export class NavMenuComponent {
    }
 
    toggleMobileMenu() {
+      if (!this.isMobileMenuOpen) {
+         this.closeSearch();
+      }
       this.isMobileMenuOpen = !this.isMobileMenuOpen;
    }
 

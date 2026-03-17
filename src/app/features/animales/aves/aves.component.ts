@@ -31,7 +31,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.TOUCAN.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TOUCAN.WINGSPAN',
             wingspanCm: 100,
-            image: 'assets/toucan-vitelado.png',
+            image: 'assets/images/birds/tucan/tucan_vitelado.png',
             link: 'tucan'
         },
         {
@@ -40,7 +40,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.COTINGA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.COTINGA.WINGSPAN',
             wingspanCm: 35,
-            image: 'assets/toucan-vitelado.png', // Placeholder
+            image: 'assets/images/birds/cotinga_de_lentejuelas.jpg',
             link: 'cotinga'
         },
         {
@@ -49,7 +49,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.TANGARA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TANGARA.WINGSPAN',
             wingspanCm: 22,
-            image: 'assets/toucan-vitelado.png', // Placeholder
+            image: 'assets/images/birds/tangara_paraiso.jpg',
             link: 'tangara-paraiso'
         }
     ];
