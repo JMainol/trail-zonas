@@ -6,6 +6,10 @@
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
+            <!-- Mobile: Static Image -->
+            <img src="assets/images/birds/cotinga_de_lentejuelas.jpg" alt="Cotinga cayana - {{ 'BIRDS.COTINGA' | translate }}"
+                class="toucan-image mobile-only">
+
             <!-- Youtube Short (Responsive for Mobile & Desktop) -->
             @if (isBrowser()) {
             @defer (on viewport) {

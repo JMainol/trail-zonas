@@ -124,6 +124,39 @@ $font-body: "Inter", sans-serif;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.toucan-image {
+    max-width: 100%;
+    width: 90vw;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.6));
+    transform: translateY(-5%);
+    transition: all 0.5s ease;
+
+    @media (min-width: 768px) {
+        width: 60vw;
+        max-height: 87vh;
+        transform: translateX(-13%);
+    }
+
+    &.mobile-only {
+        display: block;
+
+        @media (min-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    &.desktop-only {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block !important;
+        }
+    }
+}
+
 .youtube-wrapper {
     display: flex;
     flex-direction: column;
