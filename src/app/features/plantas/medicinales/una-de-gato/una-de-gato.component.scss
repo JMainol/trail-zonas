@@ -237,16 +237,19 @@ $font-body: "Inter", sans-serif;
 }
 
 .multimedia-section {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 3rem;
+    padding-top: 0.75rem;
     width: 100%;
 
     @media (min-width: 768px) {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        gap: 3rem;
         grid-column: 1 / span 2;
         grid-row: 3;
         margin-left: 0;
@@ -258,39 +261,43 @@ $font-body: "Inter", sans-serif;
 .multimedia-tabs-header {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-wrap: nowrap;
+    gap: 0.1rem;
     background: rgba($avatar-blue-deep, 0.6);
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: 12px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 768px) {
+        margin-bottom: 2rem;
+    }
 
     button {
         background: transparent;
         border: none;
         color: rgba(255, 255, 255, 0.6);
-        padding: 0.6rem 1rem;
+        padding: 0.4rem 0.4rem;
         border-radius: 8px;
         cursor: pointer;
         font-family: $font-heading;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 0.8rem;
+        letter-spacing: 0;
+        font-size: 0.6rem;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
         transition: all 0.3s ease;
 
         svg {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
         }
 
         @media (min-width: 768px) {

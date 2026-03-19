@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
 @Component({
   selector: 'app-tangara-paraiso',
   standalone: true,
-  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent],
+  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent, MatIconModule],
   templateUrl: './tangara-paraiso.component.html',
   styleUrl: './tangara-paraiso.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -17,6 +19,7 @@ import { MediaCaptionComponent } from '../../../../shared/components/media-capti
 export class TangaraParaisoComponent implements OnInit {
   private sanitizer = inject(DomSanitizer);
   private platformId = inject(PLATFORM_ID);
+  private router = inject(Router);
   protected isBrowser = signal(false);
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
 
@@ -45,6 +48,11 @@ export class TangaraParaisoComponent implements OnInit {
   protected duration = signal(0);
   protected progress = signal(0);
   protected activeTab = signal('video'); // 'video', 'sound', 'map'
+  protected isExpanded = signal(false);
+
+  toggleExpanded() {
+    this.isExpanded.set(!this.isExpanded());
+  }
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
@@ -99,5 +107,9 @@ export class TangaraParaisoComponent implements OnInit {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs.toString().padStart(2, '0')}`;
+  }
+
+  goBack() {
+    this.router.navigate(['/amazonia/animales/aves']);
   }
 }
