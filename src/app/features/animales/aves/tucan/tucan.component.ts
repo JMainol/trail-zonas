@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
 import { TranslateModule } from '@ngx-translate/core';
@@ -21,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class TucanComponent implements OnInit {
   private sanitizer = inject(DomSanitizer);
   private platformId = inject(PLATFORM_ID);
+  private router = inject(Router);
   protected isBrowser = signal(false);
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
 
@@ -126,5 +128,9 @@ export class TucanComponent implements OnInit {
 
   prevPhoto() {
     this.currentPhotoIndex.update(i => (i - 1 + this.galleryImages.length) % this.galleryImages.length);
+  }
+
+  goBack() {
+    this.router.navigate(['/amazonia/animales/aves']);
   }
 }

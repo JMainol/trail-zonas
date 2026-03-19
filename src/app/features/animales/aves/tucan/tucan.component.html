@@ -1,4 +1,11 @@
 <section class="hero-section">
+    <div class="back-nav-container">
+        <button class="back-btn" (click)="goBack()">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+    </div>
     <div class="hero-header">
         <h1 class="hero-title">{{ 'BIRDS.TOUCAN' | translate }}</h1>
         <span class="scientific-name">{{ 'BIRDS.TOUCAN_SCI' | translate }}</span>
@@ -38,32 +45,14 @@
     <div class="hero-content">
         <div class="hero-body">
             <div class="hero-column">
-                <p>
-                    El <strong>Ramphastos vitellinus</strong>, joya del dosel amazónico, destaca por su garganta de
-                    intenso amarillo vitelino y la base azulada de su pico. Este arquitecto de la selva desempeña un rol
-                    crucial como eficiente dispersor de semillas, tejiendo la biodiversidad con cada vuelo en el dosel
-                    superior.
-                </p>
-                <p>
-                    Habitante de las tierras bajas de la cuenca del Amazonas, su vocalización característica atraviesa
-                    la espesura, marcando el ritmo de la mañana. Su estructura ósea ligera y su pico, aunque masivo, es
-                    sorprendentemente liviano, permitiéndole alcanzar frutos en las puntas más finas de las ramas.
-                </p>
-
+                <p [innerHTML]="'BIRDS.TOUCAN_BODY_1' | translate"></p>
+                <p [innerHTML]="'BIRDS.TOUCAN_BODY_2' | translate"></p>
             </div>
             <div class="hero-column">
+                <p [innerHTML]="'BIRDS.TOUCAN_BODY_3' | translate"></p>
                 <p>
-                    Como emblema viviente, el tucán trasciende su rol biológico para convertirse en el símbolo por
-                    excelencia de la Amazonía. Esta vasta cuenca es el santuario definitivo de la familia
-                    <strong>Ramphastidae</strong>, albergando la mayor diversidad de especies de tucanes en el planeta.
-                </p>
-                <p>
-                    Su vuelo ondulante, una coreografía de altibajos sobre el océano verde, guía la mirada hacia los
-                    secretos de la selva. Su presencia es un termómetro de la salud del bosque, una nota vibrante en el
-                    pentagrama de la vida que insufla aliento a la inmensa alfombra esmeralda.
-                    <span class="poetic-touch">"Su pico robusto, herramienta maestra en la dispersión de semillas,
-                        resuena en la quietud de la mañana amazónica, un eco vibrante en la sinfonía de la
-                        selva."</span>
+                    <span [innerHTML]="'BIRDS.TOUCAN_BODY_4' | translate"></span>
+                    <span class="poetic-touch">{{ 'BIRDS.TOUCAN_QUOTE' | translate }}</span>
                 </p>
             </div>
         </div>
@@ -104,7 +93,7 @@
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>Video de la Especie</h3>
+                <h3>{{ 'BIRDS.TOUCAN_VIDEO_TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -115,7 +104,7 @@
 
             <!-- Sound Tab -->
             <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>Eco de la Selva</h3>
+                <h3>{{ 'BIRDS.TOUCAN_SOUND_TITLE' | translate }}</h3>
                 <div class="avatar-audio-player">
                     <audio #audioPlayer src="assets/sounds/toucan-call.mp3" (timeupdate)="onTimeUpdate()"
                         (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
@@ -151,23 +140,23 @@
 
             <!-- Map Tab -->
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>Santuario Amazónico</h3>
+                <h3>{{ 'BIRDS.TOUCAN_MAP_TITLE' | translate }}</h3>
                 <div class="map-container">
                     <img src="assets/mapa-toucan-vitelado.png" alt="Mapa de probabilidad de Ramphastos vitellinus"
                         class="habitat-map">
                     <div class="map-legend">
-                        <div class="legend-title">Probabilidad de Avistamiento</div>
+                        <div class="legend-title">{{ 'BIRDS.TOUCAN_MAP_LEGEND_TITLE' | translate }}</div>
                         <div class="legend-item">
                             <span class="color-dot high"></span>
-                            <span>Alta Probabilidad</span>
+                            <span>{{ 'BIRDS.TOUCAN_MAP_HIGH' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot medium"></span>
-                            <span>Media Probabilidad</span>
+                            <span>{{ 'BIRDS.TOUCAN_MAP_MEDIUM' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot jungle"></span>
-                            <span>Bosque Tropical / Ríos</span>
+                            <span>{{ 'BIRDS.TOUCAN_MAP_TYPE' | translate }}</span>
                         </div>
                     </div>
                 </div>

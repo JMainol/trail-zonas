@@ -1,4 +1,11 @@
 <section class="hero-section">
+    <div class="back-nav-container">
+        <button class="back-btn" (click)="goBack()">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+    </div>
     <div class="hero-header">
         <h1 class="hero-title">{{ 'BIRDS.TANGARA' | translate }}</h1>
         <span class="scientific-name">{{ 'BIRDS.TANGARA_SCI' | translate }}</span>
@@ -37,23 +44,24 @@
     <div class="hero-content">
         <div class="hero-body">
             <div class="hero-column">
-                <p>
-                    El <strong>{{ 'BIRDS.TANGARA' | translate }} (Tangara chilensis)</strong> es, sin duda, una de las joyas vivientes más deslumbrantes de la cuenca amazónica. Miembro de la familia Thraupidae, esta pequeña ave de unos trece centímetros de longitud parece desafiar las leyes de la sobriedad natural. Su plumaje es un lienzo vibrante donde convergen el verde manzana fluorescente de su rostro, el azul eléctrico de su pecho y un rojo carmesí profundo en la rabadilla, creando un contraste que parece más una expresión artística que un producto de la evolución.
-                </p>
-                <p>
-                    Habitante de los estratos más altos del bosque, este pájaro transcurre su vida en el dosel forestal, ese techo verde y denso donde la luz del sol golpea con mayor intensidad. Es allí, a menudo a más de treinta metros de altura, donde el {{ 'BIRDS.TANGARA' | translate }} cumple su función ecológica como un activo dispersor de semillas. Su dieta es predominantemente frugívora, aunque no desprecia pequeños insectos que captura con agilidad entre el follaje, moviéndose con una energía frenética que simboliza la vitalidad inagotable de la selva tropical.
-                </p>
-                <p>
-                    Desde una perspectiva científica, su coloración no es solo un capricho estético, sino un prodigio de la biofísica estructural. A diferencia de otros pigmentos que absorben y reflejan la luz, los tonos azules de su pecho se deben a la microestructura de sus plumas, que dispersan la luz solar para crear una iridiscencia casi irreal.
-                </p>
+                <p [innerHTML]="'BIRDS.TANGARA_BODY_1' | translate"></p>
+
+                <!-- Read more button - Mobile Only -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content" [innerHTML]="'BIRDS.TANGARA_BODY_2' | translate"></p>
+                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content" [innerHTML]="'BIRDS.TANGARA_BODY_3' | translate"></p>
             </div>
-            <div class="hero-column">
+            <div class="hero-column expandable-content" [class.mobile-hidden]="!isExpanded()">
+                <p [innerHTML]="'BIRDS.TANGARA_BODY_4' | translate"></p>
                 <p>
-                    Su comportamiento social es igualmente fascinante. El {{ 'BIRDS.TANGARA' | translate }} es un ave gregaria que entiende la seguridad en la colectividad; al integrarse en grupos diversos, optimiza la búsqueda de alimento y minimiza el riesgo ante depredadores. Sus llamados son agudos y rápidos, una suerte de lenguaje cifrado que mantiene al grupo cohesionado mientras navegan por el océano de hojas. En este sentido, la especie no es solo un habitante del Amazonas, sino una nota musical necesaria en la compleja sinfonía de biodiversidad que define a esta región.
-                </p>
-                <p>
-                    Finalmente, el {{ 'BIRDS.TANGARA' | translate }} actúa como un recordatorio silencioso de la fragilidad de su ecosistema. Aunque su belleza invita a la contemplación poética, su supervivencia depende estrictamente de la integridad de las selvas primarias y secundarias que habita. Proteger su hogar es asegurar que las futuras generaciones aún puedan maravillarse con esta "pincelada de paraíso".
-                    <span class="poetic-touch">"Una pincelada de paraíso que, tras millones de años de adaptación, continúa surcando los cielos de la mayor reserva de vida del planeta."</span>
+                    <span [innerHTML]="'BIRDS.TANGARA_BODY_5' | translate"></span>
+                    <span class="poetic-touch">{{ 'BIRDS.TANGARA_QUOTE' | translate }}</span>
                 </p>
             </div>
         </div>
@@ -87,7 +95,7 @@
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>Espectacular {{ 'BIRDS.TANGARA' | translate }}</h3>
+                <h3>{{ 'BIRDS.TANGARA_VIDEO_TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -98,7 +106,7 @@
 
             <!-- Sound Tab -->
             <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>Eco de la Selva</h3>
+                <h3>{{ 'BIRDS.TANGARA_SOUND_TITLE' | translate }}</h3>
                 <div class="avatar-audio-player">
                     <audio #audioPlayer src="assets/sounds/tangara-call.mp3" (timeupdate)="onTimeUpdate()"
                         (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
@@ -134,23 +142,23 @@
 
             <!-- Map Tab -->
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>Santuario Amazónico</h3>
+                <h3>{{ 'BIRDS.TANGARA_MAP_TITLE' | translate }}</h3>
                 <div class="map-container">
                     <img src="assets/mapa-tangara-paraiso.png" alt="Mapa de probabilidad de Tangara chilensis"
                         class="habitat-map">
                     <div class="map-legend">
-                        <div class="legend-title">Probabilidad de Avistamiento</div>
+                        <div class="legend-title">{{ 'BIRDS.TANGARA_MAP_LEGEND_TITLE' | translate }}</div>
                         <div class="legend-item">
                             <span class="color-dot high"></span>
-                            <span>Alta Probabilidad</span>
+                            <span>{{ 'BIRDS.TANGARA_MAP_HIGH' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot medium"></span>
-                            <span>Media Probabilidad</span>
+                            <span>{{ 'BIRDS.TANGARA_MAP_MEDIUM' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot jungle"></span>
-                            <span>Bosque Tropical / Ríos</span>
+                            <span>{{ 'BIRDS.TANGARA_MAP_TYPE' | translate }}</span>
                         </div>
                     </div>
                 </div>
