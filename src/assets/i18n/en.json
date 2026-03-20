@@ -47,7 +47,7 @@
         "CHIRIBIQUETE": "Chiribiquete National Park",
         "AQUATIC_ECOSYSTEMS": "Aquatic Ecosystems",
         "VARZEA": "Várzea",
-        "LAKES": "Lakes",
+        "LAKES": "Lagos",
         "CONSERVATION": "Conservation",
         "DEFORESTATION": "Deforestation",
         "CLIMATE_CHANGE": "Climate Change",
@@ -116,7 +116,12 @@
             "MAP_LEGEND_TITLE": "Tapir Presence",
             "MAP_HIGH": "High Probability",
             "MAP_MEDIUM": "Foraging Zones",
-            "MAP_TYPE": "Water Bodies / Forest"
+            "MAP_TYPE": "Water Bodies / Forest",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sound",
+                "MAP": "Map"
+            }
         },
         "PECARI": {
             "TITLE": "White-lipped Peccary",
@@ -131,7 +136,12 @@
             "MAP_LEGEND_TITLE": "Peccary Presence",
             "MAP_HIGH": "Herd Paths",
             "MAP_MEDIUM": "Foraging Zones",
-            "MAP_TYPE": "Primary Tropical Forest"
+            "MAP_TYPE": "Primary Tropical Forest",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sound",
+                "MAP": "Map"
+            }
         }
     },
     "BIRDS": {
@@ -213,6 +223,89 @@
         "SUBSPECIES_1_SCI": "Pteroglossus torquatus",
         "SUBSPECIES_2_NAME": "Red-breasted Toucan",
         "SUBSPECIES_2_SCI": "Ramphastos dicolorus"
+    },
+    "PLANTS": {
+        "MEDICINAL": {
+            "TITLE": "Amazonian Medicinal Plants",
+            "INFO_BUTTON": "More information",
+            "SLIDES": {
+                "UNA_DE_GATO": {
+                    "TITLE": "Cat's Claw",
+                    "USAGE": "Immune",
+                    "DESCRIPTION": "Cat's Claw is an Amazonian vine that climbs toward the sun using claw-shaped thorns. Renowned for its oxindole alkaloids, it acts as a powerful natural immunomodulator and broad-spectrum anti-inflammatory. It is, in essence, a biological shield that transmutes the jungle's vitality into medicine, protecting the body's integrity with the tenacity of an ancestral guardian."
+                },
+                "SANGRE_DE_GRADO": {
+                    "TITLE": "Dragon's Blood",
+                    "USAGE": "Heal",
+                    "DESCRIPTION": "Dragon's Blood is an Amazonian tree that, when wounded, bleeds a thick reddish latex of astonishing regenerative capacity. Rich in taspine and proanthocyanidins, this resin acts as a potent natural healing agent and antiseptic, sealing tissues with an instant protective barrier. It is, in essence, a scarlet tear of the jungle that transmutes the tree's pain into medicine, restoring the skin."
+                },
+                "AYAHUASCA": {
+                    "TITLE": "Ayahuasca",
+                    "USAGE": "Ritual",
+                    "DESCRIPTION": "Ayahuasca is the 'vine of the soul,' a master plant and ritual axis for spiritual cleansing and connection with the forest's spirit. Rich in beta-carbolinas, its pharmacology allows for a deep purge and expansion of consciousness. It is a visionary bridge that merges the self with the pulse of the jungle, drawing back the veil of the invisible with millenary wisdom."
+                }
+            },
+            "UNA_DE_GATO": {
+                "TITLE": "Cat's Claw",
+                "BODY_1": "<strong>Uncaria tomentosa</strong>, commonly known as cat's claw, is a climbing vine from the Rubiaceae family native to the virgin rainforests of Peru. Its name comes from the curved thorns that grow along the stem, which it uses to attach itself to trees.",
+                "BODY_2": "Globally recognized for its potent oxindole alkaloids, this plant acts as a natural immunomodulator and broad-spectrum anti-inflammatory. Indigenous communities consider it a biological shield that protects the body's integrity.",
+                "BODY_3": "For centuries, the Asháninka and other Amazonian ethnic groups have used the bark and roots to treat various ailments, from joint pain to digestive issues. Today, it is one of the most studied and appreciated medicinal plants in modern phytotherapy.",
+                "BODY_4": "Its presence in the understory is a reminder of the living pharmacy that is the Amazon. Each vine rising toward the sun is a link between the earth and health, a promise of well-being woven into the jungle's wood.",
+                "POEM": "\"Its vegetative claws do not wound, but rather sustain life, transmuting the jungle's strength into medicine for the soul and body.\"",
+                "VIDEO_TITLE": "Species Video",
+                "SOUND_TITLE": "Jungle Echo",
+                "MAP_TITLE": "Natural Habitat",
+                "MAP_LEGEND_TITLE": "Plant Presence",
+                "MAP_HIGH": "High Density",
+                "MAP_MEDIUM": "Moderate Presence",
+                "MAP_TYPE": "Tropical Primary Forest",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sound",
+                    "MAP": "Map"
+                }
+            },
+            "SANGRE_DE_GRADO": {
+                "TITLE": "Dragon's Blood",
+                "BODY_1": "<strong>Croton lechleri</strong>, popularly known as dragon's blood, is a tree from the Euphorbiaceae family that can reach 20 meters in height. Its most distinctive feature is the deep red latex that flows from its bark when wounded.",
+                "BODY_2": "This latex is a jewel of the Amazonian pharmacopeia, rich in taspine and proanthocyanidins. Its ability to accelerate wound healing and act as a powerful natural antiseptic makes it an indispensable element for health in the jungle.",
+                "BODY_3": "Traditionally used to treat ulcers, hemorrhages, and various skin infections, the latex creates an instantaneous protective barrier over the skin, functioning as a \"liquid bandage.\" It is, in essence, a scarlet tear the tree offers to restore life.",
+                "BODY_4": "Dragon's Blood is a symbol of nature's resilience and generosity. Just as the tree heals its own incisions, it teaches us that in the heart of the forest lies the balm for our own wounds, both physical and spiritual.",
+                "POEM": "\"A crimson drop that springs from the heart of the wood, sealing skin and destiny with the earth's regenerative strength.\"",
+                "VIDEO_TITLE": "Species Video",
+                "SOUND_TITLE": "Jungle Echo",
+                "MAP_TITLE": "Natural Habitat",
+                "MAP_LEGEND_TITLE": "Tree Presence",
+                "MAP_HIGH": "High Density",
+                "MAP_MEDIUM": "Moderate Presence",
+                "MAP_TYPE": "Secondary Forest / Brushwood",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sound",
+                    "MAP": "Map"
+                }
+            },
+            "AYAHUASCA": {
+                "TITLE": "Ayahuasca",
+                "BODY_1": "<strong>Banisteriopsis caapi</strong>, known as ayahuasca or \"vine of the soul,\" is the preeminent master plant of the Amazon. This giant vine is the base of a sacred brew that has been used for millennia by indigenous peoples for spiritual healing and connection with the cosmos.",
+                "BODY_2": "Its pharmacology is fascinating: rich in beta-carbolines such as harmine and tetrahydroharmine, it acts by allowing other visionary compounds to be processed by the body. It is, in essence, the key that opens the doors of perception and deep introspection.",
+                "BODY_3": "More than a drug, ayahuasca is considered a sentient being, a guiding spirit that facilitates the purging of physical and emotional toxins. Ceremonies led by master healers seek to restore the balance between the human being, nature, and the invisible.",
+                "BODY_4": "Its presence in the jungle structures the spiritual map of the Amazon. It is a living bridge that reminds us of our interconnection with everything that breathes, a mirror that reflects the vastness of the universe within ourselves.",
+                "POEM": "\"The rope that joins heaven and earth, drawing back the veil of the invisible to reveal the eternal symphony of the jungle.\"",
+                "VIDEO_TITLE": "Species Video",
+                "SOUND_TITLE": "Icaros and Jungle",
+                "MAP_TITLE": "Sacred Habitat",
+                "MAP_LEGEND_TITLE": "Vine Presence",
+                "MAP_HIGH": "High Density",
+                "MAP_MEDIUM": "Moderate Presence",
+                "MAP_TYPE": "Deep Virgin Rainforest",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sound",
+                    "MAP": "Map"
+                }
+            }
+        }
     },
     "EXPLORATION": {
         "HISTORY": {
