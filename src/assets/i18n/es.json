@@ -116,7 +116,12 @@
             "MAP_LEGEND_TITLE": "Presencia del Tapir",
             "MAP_HIGH": "Alta Probabilidad",
             "MAP_MEDIUM": "Zonas de Forrajeo",
-            "MAP_TYPE": "Cuerpos de Agua / Bosque"
+            "MAP_TYPE": "Cuerpos de Agua / Bosque",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sonido",
+                "MAP": "Mapa"
+            }
         },
         "PECARI": {
             "TITLE": "Pecarí Labiado",
@@ -131,7 +136,12 @@
             "MAP_LEGEND_TITLE": "Presencia del Pecarí",
             "MAP_HIGH": "Pasos de Manada",
             "MAP_MEDIUM": "Zonas de Forrajeo",
-            "MAP_TYPE": "Bosque Tropical Primario"
+            "MAP_TYPE": "Bosque Tropical Primario",
+            "TABS": {
+                "VIDEO": "Video",
+                "SOUND": "Sonido",
+                "MAP": "Mapa"
+            }
         }
     },
     "BIRDS": {
@@ -213,6 +223,89 @@
         "SUBSPECIES_1_SCI": "Pteroglossus torquatus",
         "SUBSPECIES_2_NAME": "Tucán bicolor",
         "SUBSPECIES_2_SCI": "Ramphastos dicolorus"
+    },
+    "PLANTS": {
+        "MEDICINAL": {
+            "TITLE": "Plantas Medicinales Amazónicas",
+            "INFO_BUTTON": "Más información",
+            "SLIDES": {
+                "UNA_DE_GATO": {
+                    "TITLE": "Uña de Gato",
+                    "USAGE": "Inmune",
+                    "DESCRIPTION": "La uña de gato es una liana amazónica que escala hacia el sol mediante espinas en forma de garra. Reconocida por sus alcaloides oxindólicos, actúa como un potente inmunomodulador y antiinflamatorio natural de amplio espectro. Es, en esencia, un escudo biológico que transmuta la vitalidad de la selva en medicina, protegiendo la integridad del organismo con la tenacidad de un guardián ancestral."
+                },
+                "SANGRE_DE_GRADO": {
+                    "TITLE": "Sangre de Grado",
+                    "USAGE": "Cura",
+                    "DESCRIPTION": "La sangre de grado es un árbol amazónico que, al ser herido, exhala un denso látex rojizo de asombrosa capacidad regenerativa. Rica en taspina y proantocianidinas, esta resina actúa como un potente cicatrizante y antiséptico natural, sellando tejidos con una barrera protectora instantánea. Es, en esencia, una lágrima escarlata de la selva que transmuta el dolor del árbol en medicina, restaurando la piel."
+                },
+                "AYAHUASCA": {
+                    "TITLE": "Ayahuasca",
+                    "USAGE": "Ritual",
+                    "DESCRIPTION": "La ayahuasca es la \"liana del alma\", planta maestra y eje ritual para la limpieza espiritual y la conexión con el espíritu de la selva. Rica en beta-carbolinas, su farmacología permite una profunda purga y expansión de la conciencia. Es un puente visionario que funde el ser con el pulso de la selva, descorriendo el velo de lo invisible con sabiduría milenaria."
+                }
+            },
+            "UNA_DE_GATO": {
+                "TITLE": "Uña de Gato",
+                "BODY_1": "La <strong>Uncaria tomentosa</strong>, conocida como uña de gato, es una liana trepadora de la familia de las rubiáceas originaria de las selvas vírgenes del Perú. Su nombre proviene de las espinas curvadas que crecen a lo largo del tallo y que utiliza para sujetarse a los árboles.",
+                "BODY_2": "Reconocida mundialmente por sus potentes alcaloides oxindólicos, esta planta actúa como un inmunomodulador y antiinflamatorio natural de amplio espectro. Es considerada por las comunidades indígenas como un escudo biológico que protege la integridad del organismo.",
+                "BODY_3": "Desde hace siglos, los Asháninca y otras etnias amazónicas han utilizado la corteza y las raíces para tratar diversas dolencias, desde dolores articulares hasta problemas digestivos. Hoy en día, es una de las plantas medicinales más estudiadas y apreciadas en la fitoterapia moderna.",
+                "BODY_4": "Su presencia en el sotobosque es un recordatorio de la farmacia viviente que es la Amazonía. Cada liana que se eleva hacia el sol es un vínculo entre la tierra y la salud, una promesa de bienestar tejida en la madera de la selva.",
+                "POEM": "\"Sus garras vegetales no hieren, sino que sostienen la vida, transmutando la fuerza de la selva en medicina para el alma y el cuerpo.\"",
+                "VIDEO_TITLE": "Video de la Especie",
+                "SOUND_TITLE": "Eco de la Selva",
+                "MAP_TITLE": "Hábitat Natural",
+                "MAP_LEGEND_TITLE": "Presencia de la Planta",
+                "MAP_HIGH": "Alta Densidad",
+                "MAP_MEDIUM": "Presencia Moderada",
+                "MAP_TYPE": "Bosque Tropical Primario",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sonido",
+                    "MAP": "Mapa"
+                }
+            },
+            "SANGRE_DE_GRADO": {
+                "TITLE": "Sangre de Grado",
+                "BODY_1": "El <strong>Croton lechleri</strong>, popularmente conocido como sangre de grado o sangre de drago, es un árbol de la familia de las euforbiáceas que puede alcanzar los 20 metros de altura. Su característica más distintiva es el látex de color rojo intenso que brota de su corteza cuando es herida.",
+                "BODY_2": "Este látex es una joya de la farmacopea amazónica, rico en taspina y proantocianidinas. Su capacidad para acelerar la cicatrización de heridas y actuar como un potente antiséptico natural lo convierte en un elemento indispensable para la salud en la selva.",
+                "BODY_3": "Utilizado tradicionalmente para tratar úlceras, hemorragias y diversas infecciones cutáneas, el látex crea una barrera protectora instantánea sobre la piel, funcionando como una \"venda líquida\". Es, en esencia, una lágrima escarlata que el árbol ofrece para restaurar la vida.",
+                "BODY_4": "La sangre de grado es un símbolo de resiliencia y generosidad de la naturaleza. Al igual que el árbol sana sus propias incisiones, nos enseña que en el corazón de la selva reside el bálsamo para nuestras propias heridas, tanto físicas como espirituales.",
+                "POEM": "\"Una gota carmesí que brota del corazón de la madera, sellando la piel y el destino con la fuerza regeneradora de la tierra.\"",
+                "VIDEO_TITLE": "Video de la Especie",
+                "SOUND_TITLE": "Eco de la Selva",
+                "MAP_TITLE": "Hábitat Natural",
+                "MAP_LEGEND_TITLE": "Presencia del Árbol",
+                "MAP_HIGH": "Alta Densidad",
+                "MAP_MEDIUM": "Presencia Moderada",
+                "MAP_TYPE": "Bosque Secundario / Rastrojos",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sonido",
+                    "MAP": "Mapa"
+                }
+            },
+            "AYAHUASCA": {
+                "TITLE": "Ayahuasca",
+                "BODY_1": "La <strong>Banisteriopsis caapi</strong>, conocida como ayahuasca o \"liana del alma\", es la planta maestra por excelencia del Amazonas. Esta liana gigante es la base de un brebaje sagrado que ha sido utilizado durante milenios por los pueblos indígenas para la sanación espiritual y la conexión con el cosmos.",
+                "BODY_2": "Su farmacología es fascinante: rica en beta-carbolinas como la harmina y la tetrahidroharmina, actúa permitiendo que otros compuestos visionarios sean procesados por el organismo. Es, en esencia, la llave que abre las puertas de la percepción y la introspección profunda.",
+                "BODY_3": "Más que un fármaco, la ayahuasca es considerada un ser sintiente, un espíritu guía que facilita la purga de toxinas físicas y emocionales. Las ceremonias dirigidas por los maestros curanderos buscan restaurar el equilibrio entre el ser humano, la naturaleza y lo invisible.",
+                "BODY_4": "Su presencia en la selva estructura el mapa espiritual de la Amazonía. Es un puente viviente que nos recuerda nuestra interconexión con todo lo que respira, un espejo que refleja la inmensidad del universo dentro de nosotros mismos.",
+                "POEM": "\"La cuerda que une el cielo y la tierra, descorriendo el velo de lo invisible para revelar la sinfonía eterna de la selva.\"",
+                "VIDEO_TITLE": "Video de la Especie",
+                "SOUND_TITLE": "Icaros y Selva",
+                "MAP_TITLE": "Hábitat Sagrado",
+                "MAP_LEGEND_TITLE": "Presencia de la Liana",
+                "MAP_HIGH": "Alta Densidad",
+                "MAP_MEDIUM": "Presencia Moderada",
+                "MAP_TYPE": "Selva Virgen Profunda",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "SOUND": "Sonido",
+                    "MAP": "Mapa"
+                }
+            }
+        }
     },
     "EXPLORATION": {
         "HISTORY": {

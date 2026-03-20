@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal, computed, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 interface Slide {
@@ -15,7 +16,8 @@ interface Slide {
 @Component({
     selector: 'app-medicinales',
     standalone: true,
-    imports: [CommonModule, RouterModule],
+    imports: [CommonModule, RouterModule, TranslateModule],
+
 
     templateUrl: './medicinales.component.html',
     styleUrls: ['./medicinales.component.scss'],
@@ -25,30 +27,31 @@ export class MedicinalesComponent implements AfterViewInit {
     // Slide data
     readonly slides: Slide[] = [
         {
-            title: 'Uña de Gato',
+            title: 'PLANTS.MEDICINAL.SLIDES.UNA_DE_GATO.TITLE',
             scientificName: 'Uncaria tomentosa',
-            description: 'La uña de gato es una liana amazónica que escala hacia el sol mediante espinas en forma de garra. Reconocida por sus alcaloides oxindólicos, actúa como un potente inmunomodulador y antiinflamatorio natural de amplio espectro. Es, en esencia, un escudo biológico que transmuta la vitalidad de la selva en medicina, protegiendo la integridad del organismo con la tenacidad de un guardián ancestral.',
-            weight: 'Inmune',
+            description: 'PLANTS.MEDICINAL.SLIDES.UNA_DE_GATO.DESCRIPTION',
+            weight: 'PLANTS.MEDICINAL.SLIDES.UNA_DE_GATO.USAGE',
             image: 'assets/plants/una-de-gato.png',
             link: 'una-de-gato'
         },
         {
-            title: 'Sangre de Grado',
+            title: 'PLANTS.MEDICINAL.SLIDES.SANGRE_DE_GRADO.TITLE',
             scientificName: 'Croton lechleri',
-            description: 'La sangre de grado es un árbol amazónico que, al ser herido, exhala un denso látex rojizo de asombrosa capacidad regenerativa. Rica en taspina y proantocianidinas, esta resina actúa como un potente cicatrizante y antiséptico natural, sellando tejidos con una barrera protectora instantánea. Es, en esencia, una lágrima escarlata de la selva que transmuta el dolor del árbol en medicina, restaurando la piel.',
-            weight: 'Cura',
+            description: 'PLANTS.MEDICINAL.SLIDES.SANGRE_DE_GRADO.DESCRIPTION',
+            weight: 'PLANTS.MEDICINAL.SLIDES.SANGRE_DE_GRADO.USAGE',
             image: 'assets/plants/sangre-de-grado.png',
             link: 'sangre-de-grado'
         },
         {
-            title: 'Ayahuasca',
+            title: 'PLANTS.MEDICINAL.SLIDES.AYAHUASCA.TITLE',
             scientificName: 'Banisteriopsis caapi',
-            description: 'La ayahuasca es la "liana del alma", planta maestra y eje ritual para la limpieza espiritual y la conexión con el espíritu de la selva. Rica en beta-carbolinas, su farmacología permite una profunda purga y expansión de la conciencia. Es un puente visionario que funde el ser con el pulso de la selva, descorriendo el velo de lo invisible con sabiduría milenaria.',
-            weight: 'Ritual',
+            description: 'PLANTS.MEDICINAL.SLIDES.AYAHUASCA.DESCRIPTION',
+            weight: 'PLANTS.MEDICINAL.SLIDES.AYAHUASCA.USAGE',
             image: 'assets/plants/ayahuasca.png',
             link: 'ayahuasca'
         }
     ];
+
 
     // Current slide index
     readonly current = signal<number>(0);

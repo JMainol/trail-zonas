@@ -13,7 +13,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
+
+
 
 .home-main-content {
     position: relative;

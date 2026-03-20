@@ -6,11 +6,11 @@
             </svg>
         </button>
     </div>
-    <h1 class="hero-title">Sangre de Grado</h1>
+    <h1 class="hero-title">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TITLE' | translate }}</h1>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/plants/sangre-de-grado.png" alt="Croton lechleri - Sangre de Grado" class="plant-image">
+            <img src="assets/plants/sangre-de-grado.png" [alt]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TITLE' | translate" class="plant-image">
         </div>
         <app-media-caption 
             [title]="'BIRDS.AI_CAPTION_TEXT' | translate"
@@ -22,31 +22,13 @@
     <div class="hero-content">
         <div class="hero-body">
             <div class="hero-column">
-                <p>
-                    El <strong>Croton lechleri</strong>, popularmente conocido como sangre de grado o sangre de drago,
-                    es un árbol de la familia de las euforbiáceas que puede alcanzar los 20 metros de altura. Su
-                    característica más distintiva es el látex de color rojo intenso que brota de su corteza cuando es
-                    herida.
-                </p>
-                <p>
-                    Este látex es una joya de la farmacopea amazónica, rico en taspina y proantocianidinas. Su capacidad
-                    para acelerar la cicatrización de heridas y actuar como un potente antiséptico natural lo convierte
-                    en un elemento indispensable para la salud en la selva.
-                </p>
+                <p [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.BODY_1' | translate"></p>
+                <p [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.BODY_2' | translate"></p>
             </div>
             <div class="hero-column">
-                <p>
-                    Utilizado tradicionalmente para tratar úlceras, hemorragias y diversas infecciones cutáneas, el
-                    látex crea una barrera protectora instantánea sobre la piel, funcionando como una "venda líquida".
-                    Es, en esencia, una lágrima escarlata que el árbol ofrece para restaurar la vida.
-                </p>
-                <p>
-                    La sangre de grado es un símbolo de resiliencia y generosidad de la naturaleza. Al igual que el
-                    árbol sana sus propias incisiones, nos enseña que en el corazón de la selva reside el bálsamo para
-                    nuestras propias heridas, tanto físicas como espirituales.
-                    <span class="poetic-touch">"Una gota carmesí que brota del corazón de la madera, sellando la piel y
-                        el destino con la fuerza regeneradora de la tierra."</span>
-                </p>
+                <p [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.BODY_3' | translate"></p>
+                <p [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.BODY_4' | translate"></p>
+                <span class="poetic-touch">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.POEM' | translate }}</span>
             </div>
         </div>
     </div>
@@ -59,27 +41,27 @@
                     <path fill="currentColor"
                         d="M21.58,7.19C21.35,6.33,20.67,5.65,19.81,5.42C18.25,5,12,5,12,5s-6.25,0-7.81,0.42c-0.86,0.23-1.54,0.91-1.77,1.77C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z M10,15.5v-7l6,3.5L10,15.5z" />
                 </svg>
-                Video
+                {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TABS.VIDEO' | translate }}
             </button>
             <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
                 <svg viewBox="0 0 24 24" class="sound-icon">
                     <path fill="currentColor"
                         d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
                 </svg>
-                Sonido
+                {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TABS.SOUND' | translate }}
             </button>
             <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
                 <svg viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
                 </svg>
-                Mapa
+                {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TABS.MAP' | translate }}
             </button>
         </div>
 
         <div class="multimedia-content-wrapper">
-            <!-- Video Tab -->
-            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>Video de la Especie</h3>
+             <!-- Video Tab -->
+             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+                <h3>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.VIDEO_TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -90,7 +72,7 @@
 
             <!-- Sound Tab -->
             <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>Eco de la Selva</h3>
+                <h3>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOUND_TITLE' | translate }}</h3>
                 <div class="avatar-audio-player">
                     <audio #audioPlayer src="assets/sounds/ambiente-selva.mp3" (timeupdate)="onTimeUpdate()"
                         (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
@@ -126,23 +108,23 @@
 
             <!-- Map Tab -->
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>Hábitat Natural</h3>
+                <h3>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_TITLE' | translate }}</h3>
                 <div class="map-container">
-                    <img src="assets/images/mapa-amazonia.png" alt="Mapa de distribución de Sangre de Grado"
+                    <img src="assets/images/mapa-amazonia.png" [alt]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_TITLE' | translate"
                         class="habitat-map">
                     <div class="map-legend">
-                        <div class="legend-title">Presencia del Árbol</div>
+                        <div class="legend-title">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_LEGEND_TITLE' | translate }}</div>
                         <div class="legend-item">
                             <span class="color-dot high"></span>
-                            <span>Alta Densidad</span>
+                            <span>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_HIGH' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot medium"></span>
-                            <span>Presencia Moderada</span>
+                            <span>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_MEDIUM' | translate }}</span>
                         </div>
                         <div class="legend-item">
                             <span class="color-dot jungle"></span>
-                            <span>Bosque Secundario / Rastrojos</span>
+                            <span>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.MAP_TYPE' | translate }}</span>
                         </div>
                     </div>
                 </div>
