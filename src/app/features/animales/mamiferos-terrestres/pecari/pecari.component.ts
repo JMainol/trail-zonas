@@ -6,10 +6,13 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 
+import { MatIconModule } from '@angular/material/icon';
+
+
 @Component({
     selector: 'app-pecari',
     standalone: true,
-    imports: [CommonModule, RouterModule, TranslateModule],
+    imports: [CommonModule, RouterModule, TranslateModule, MatIconModule],
 
     templateUrl: './pecari.component.html',
     styleUrl: './pecari.component.scss',
@@ -34,6 +37,11 @@ export class PecariComponent {
     protected duration = signal(0);
     protected progress = signal(0);
     protected activeTab = signal('video'); // 'video', 'sound', 'map'
+    protected isExpanded = signal(false);
+
+    toggleExpanded() {
+        this.isExpanded.set(!this.isExpanded());
+    }
 
     @HostListener('mousemove', ['$event'])
     onMouseMove(event: MouseEvent) {

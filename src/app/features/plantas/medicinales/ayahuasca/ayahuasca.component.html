@@ -23,9 +23,18 @@
         <div class="hero-body">
             <div class="hero-column">
                 <p [innerHTML]="'PLANTS.MEDICINAL.AYAHUASCA.BODY_1' | translate"></p>
-                <p [innerHTML]="'PLANTS.MEDICINAL.AYAHUASCA.BODY_2' | translate"></p>
+
+                <!-- Read more button - Mobile Only -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [innerHTML]="'PLANTS.MEDICINAL.AYAHUASCA.BODY_2' | translate" [class.mobile-hidden]="!isExpanded()"></p>
             </div>
-            <div class="hero-column">
+            <div class="hero-column" [class.mobile-hidden]="!isExpanded()">
                 <p [innerHTML]="'PLANTS.MEDICINAL.AYAHUASCA.BODY_3' | translate"></p>
                 <p [innerHTML]="'PLANTS.MEDICINAL.AYAHUASCA.BODY_4' | translate"></p>
                 <span class="poetic-touch">{{ 'PLANTS.MEDICINAL.AYAHUASCA.POEM' | translate }}</span>
@@ -34,7 +43,7 @@
     </div>
 
     <div class="multimedia-section">
-        <!-- Tabs Header (Desktop Only) -->
+        <!-- Tabs Header -->
         <div class="multimedia-tabs-header">
             <button [class.active]="activeTab() === 'video'" (click)="setTab('video')">
                 <svg viewBox="0 0 24 24" class="yt-icon">
@@ -43,24 +52,17 @@
                 </svg>
                 {{ 'PLANTS.MEDICINAL.AYAHUASCA.TABS.VIDEO' | translate }}
             </button>
-            <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
-                <svg viewBox="0 0 24 24" class="sound-icon">
-                    <path fill="currentColor"
-                        d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
-                </svg>
-                {{ 'PLANTS.MEDICINAL.AYAHUASCA.TABS.SOUND' | translate }}
-            </button>
-            <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
+            <button [class.active]="activeTab() === 'properties'" (click)="setTab('properties')">
                 <svg viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    <path fill="currentColor" d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.89,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19M7,7H17V9H7V7M7,11H17V13H7V11M7,15H17V17H7V15Z" />
                 </svg>
-                {{ 'PLANTS.MEDICINAL.AYAHUASCA.TABS.MAP' | translate }}
+                {{ 'PLANTS.MEDICINAL.AYAHUASCA.TABS.PROPERTIES' | translate }}
             </button>
         </div>
 
         <div class="multimedia-content-wrapper">
-             <!-- Video Tab -->
-             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+            <!-- Video Tab -->
+            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
                 <h3>{{ 'PLANTS.MEDICINAL.AYAHUASCA.VIDEO_TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
@@ -70,62 +72,172 @@
                 </div>
             </div>
 
-            <!-- Sound Tab -->
-            <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOUND_TITLE' | translate }}</h3>
-                <div class="avatar-audio-player">
-                    <audio #audioPlayer src="assets/sounds/ambiente-selva.mp3" (timeupdate)="onTimeUpdate()"
-                        (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
-                    </audio>
+            <!-- Properties Tab -->
+            <div class="multimedia-item properties-container" [class.tab-hidden]="activeTab() !== 'properties'">
+                <h3>{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_TITLE' | translate }}</h3>
+                <div class="traits-list">
 
-                    <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
-                        <div class="icon">
-                            @if (!isPlaying()) {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                            </svg>
-                            } @else {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
-                            </svg>
-                            }
-                        </div>
-                    </button>
-
-                    <div class="player-controls">
-                        <div class="progress-container" (click)="seek($event)">
-                            <div class="progress-bar" [style.width.%]="progress()">
-                                <div class="progress-glow"></div>
-                            </div>
-                        </div>
-                        <div class="time-info">
-                            <span>{{ formatTime(currentTime()) }}</span>
-                            <span>{{ formatTime(duration()) }}</span>
+                    <!-- Card 0: Depression treatment -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">psychology</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.0.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.0.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.0.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.nature.com/srep/" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.0.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Map Tab -->
-            <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>{{ 'PLANTS.MEDICINAL.AYAHUASCA.MAP_TITLE' | translate }}</h3>
-                <div class="map-container">
-                    <img src="assets/images/mapa-amazonia.png" [alt]="'PLANTS.MEDICINAL.AYAHUASCA.MAP_TITLE' | translate"
-                        class="habitat-map">
-                    <div class="map-legend">
-                        <div class="legend-title">{{ 'PLANTS.MEDICINAL.AYAHUASCA.MAP_LEGEND_TITLE' | translate }}</div>
-                        <div class="legend-item">
-                            <span class="color-dot high"></span>
-                            <span>{{ 'PLANTS.MEDICINAL.AYAHUASCA.MAP_HIGH' | translate }}</span>
+                    <!-- Card 1: PTSD therapy -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">self_improvement</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.1.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.1.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.1.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.frontiersin.org/journals/pharmacology" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.1.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
                         </div>
-                        <div class="legend-item">
-                            <span class="color-dot medium"></span>
-                            <span>{{ 'PLANTS.MEDICINAL.AYAHUASCA.MAP_MEDIUM' | translate }}</span>
+                    </div>
+
+                    <!-- Card 2: Addiction recovery -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">health_and_safety</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.2.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.2.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.2.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.eurekaselect.com/journal/69" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.2.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
                         </div>
-                        <div class="legend-item">
-                            <span class="color-dot jungle"></span>
-                            <span>{{ 'PLANTS.MEDICINAL.AYAHUASCA.MAP_TYPE' | translate }}</span>
+                    </div>
+
+                    <!-- Card 3: Neuroplasticity -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">biotech</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.3.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.3.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.3.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.nature.com/tp/" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.3.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
                         </div>
+                    </div>
+
+                    <!-- Card 4: Emotional regulation -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">spa</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.4.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.4.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.4.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.AYAHUASCA.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://journals.sagepub.com/home/jop" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_CARDS.4.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="properties-extra-info">
+                    <div class="extra-info-block">
+                        <span class="extra-info-label">
+                            <mat-icon>forest</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.AMAZON_USE_LABEL' | translate }}
+                        </span>
+                        <p>{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_AMAZON_USE' | translate }}</p>
+                    </div>
+                    <div class="extra-info-block">
+                        <span class="extra-info-label">
+                            <mat-icon>science</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.AYAHUASCA.PHARMA_USE_LABEL' | translate }}
+                        </span>
+                        <p>{{ 'PLANTS.MEDICINAL.AYAHUASCA.PROPERTIES_PHARMA_USE' | translate }}</p>
                     </div>
                 </div>
             </div>

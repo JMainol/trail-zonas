@@ -45,8 +45,8 @@ $font-body: "Inter", sans-serif;
         align-items: center;
         justify-content: center;
         background: rgba($avatar-blue-deep, 0.4);
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         border: 1px solid rgba($avatar-cyan, 0.2);
         backdrop-filter: blur(15px);
@@ -56,8 +56,8 @@ $font-body: "Inter", sans-serif;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
 
         svg {
-            width: 24px;
-            height: 24px;
+            width: 19px;
+            height: 19px;
             color: $avatar-cyan;
             filter: drop-shadow(0 0 5px $avatar-cyan);
             transition: transform 0.3s ease;
@@ -223,6 +223,49 @@ $font-body: "Inter", sans-serif;
             font-size: 1.2rem;
             text-shadow: 0 0 10px rgba(#ff4500, 0.3);
         }
+
+        .read-more-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: rgba($avatar-blue-deep, 0.4);
+            color: $avatar-cyan;
+            border: 1px solid rgba($avatar-cyan, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-family: $font-heading;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+
+            .icon {
+                font-size: 0.8rem;
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+
+            &:hover {
+                background: rgba($avatar-cyan, 0.1);
+                border-color: rgba($avatar-cyan, 0.5);
+                box-shadow: 0 0 20px rgba($avatar-cyan, 0.2);
+                transform: translateY(-2px);
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.mobile-hidden {
+    @media (max-width: 767px) {
+        display: none !important;
     }
 }
 
@@ -440,145 +483,88 @@ $font-body: "Inter", sans-serif;
     }
 }
 
-.map-legend {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.2rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-    backdrop-filter: blur(5px);
+/* Properties Tab Styles */
+.properties-container {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 
-    .legend-title {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 0.8rem;
-        font-weight: 600;
+    h3 {
+        color: $avatar-cyan;
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-shadow: 0 0 10px rgba($avatar-cyan, 0.3);
     }
 
-    .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-    }
+    .properties-content {
+        background: rgba($avatar-blue-deep, 0.4);
+        padding: 2.5rem;
+        border-radius: 20px;
+        border: 1px solid rgba($avatar-cyan, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-    .color-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        flex-shrink: 0;
+        .properties-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
 
-        &.high {
-            background-color: #ff8c00;
-            box-shadow: 0 0 8px #ff8c00;
-        }
+            li {
+                position: relative;
+                padding-left: 2.5rem;
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.9);
 
-        &.medium {
-            background-color: #007bff;
-            box-shadow: 0 0 8px #007bff;
-        }
+                &::before {
+                    content: "✦";
+                    position: absolute;
+                    left: 0;
+                    color: $avatar-magenta;
+                    font-size: 1.2rem;
+                    text-shadow: 0 0 8px $avatar-magenta;
+                }
 
-        &.jungle {
-            background-color: #28a745;
-            box-shadow: 0 0 8px #28a745;
+                strong {
+                    color: $avatar-cyan;
+                    display: block;
+                    margin-bottom: 0.3rem;
+                    font-family: $font-heading;
+                    letter-spacing: 0.5px;
+                }
+            }
         }
     }
 }
 
-/* Avatar Minimalist Audio Player */
-.avatar-audio-player {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background: rgba($avatar-blue-deep, 0.4);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid rgba($avatar-cyan, 0.2);
-    backdrop-filter: blur(15px);
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
-    transition: all 0.4s ease;
-
-    &:hover {
-        border-color: rgba($avatar-cyan, 0.4);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba($avatar-cyan, 0.1);
+@media (max-width: 768px) {
+    .multimedia-item h3 {
+        font-size: 1rem;
     }
 
-    .play-btn {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, $avatar-cyan, $avatar-magenta);
-        border: none;
-        color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-        flex-shrink: 0;
-        box-shadow: 0 0 15px rgba($avatar-cyan, 0.3);
+    .properties-container {
+        padding: 0.5rem;
 
-        svg {
-            width: 26px;
-            height: 26px;
+        h3 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        &:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba($avatar-cyan, 0.5);
-        }
-    }
+        .properties-content {
+            padding: 1.5rem;
 
-    .player-controls {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+            .properties-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
 
-        .progress-container {
-            height: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-
-            .progress-bar {
-                height: 100%;
-                background: linear-gradient(to right, $avatar-cyan, $avatar-magenta);
-                border-radius: 3px;
-                position: relative;
-                transition: width 0.1s linear;
-
-                .progress-glow {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 10px;
-                    height: 10px;
-                    background: white;
-                    border-radius: 50%;
-                    box-shadow: 0 0 10px white, 0 0 20px $avatar-cyan;
+                li {
+                    font-size: 1rem;
                 }
             }
-        }
-
-        .time-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            font-family: $font-body;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
         }
     }
 }
