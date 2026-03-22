@@ -486,56 +486,225 @@ $font-body: "Inter", sans-serif;
 /* Properties Tab Styles */
 .properties-container {
     padding: 1rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 
-    h3 {
-        color: $avatar-cyan;
-        font-family: $font-heading;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
-        text-shadow: 0 0 10px rgba($avatar-cyan, 0.3);
+    .traits-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
-    .properties-content {
+    .trait-item {
         background: rgba($avatar-blue-deep, 0.4);
-        padding: 2.5rem;
-        border-radius: 20px;
+        padding: 1.5rem;
+        border-radius: 12px;
         border: 1px solid rgba($avatar-cyan, 0.1);
         backdrop-filter: blur(10px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
 
-        .properties-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        &:hover {
+            border-color: rgba($avatar-cyan, 0.4);
+            background: rgba($avatar-blue-deep, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba($avatar-cyan, 0.05);
 
-            li {
-                position: relative;
-                padding-left: 2.5rem;
-                font-size: 1.1rem;
-                line-height: 1.6;
-                color: rgba(255, 255, 255, 0.9);
+            .trait-title {
+                color: #fff;
+                text-shadow: 0 0 10px rgba($avatar-cyan, 0.5);
 
-                &::before {
-                    content: "✦";
-                    position: absolute;
-                    left: 0;
-                    color: $avatar-magenta;
-                    font-size: 1.2rem;
-                    text-shadow: 0 0 8px $avatar-magenta;
+                .trait-icon {
+                    color: $avatar-cyan;
+                    filter: drop-shadow(0 0 8px $avatar-cyan);
+                    transform: scale(1.2) rotate(5deg);
                 }
+            }
+        }
+
+        .trait-title {
+            font-family: $font-heading;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $avatar-cyan;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .trait-icon {
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                color: $avatar-magenta;
+                filter: drop-shadow(0 0 5px rgba($avatar-magenta, 0.3));
+                transition: all 0.3s ease;
+            }
+        }
+
+        .trait-desc {
+            font-family: $font-body;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .trait-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            font-family: $font-body;
+
+            .evidence {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                color: #eab308;
 
                 strong {
                     color: $avatar-cyan;
-                    display: block;
-                    margin-bottom: 0.3rem;
-                    font-family: $font-heading;
-                    letter-spacing: 0.5px;
+                    opacity: 0.9;
                 }
+
+                .evidence-dots {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    .dot {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        transition: all 0.2s ease;
+
+                        &.filled {
+                            background: #eab308;
+                            box-shadow: 0 0 5px rgba(#eab308, 0.6);
+                        }
+
+                        &.empty {
+                            background: transparent;
+                            border: 1.5px solid rgba(#eab308, 0.35);
+                        }
+                    }
+                }
+
+                .evidence-score {
+                    font-weight: 700;
+                    color: #eab308;
+                    font-size: 0.8rem;
+                }
+            }
+
+            .source {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.35rem;
+                flex-wrap: wrap;
+                color: rgba(255, 255, 255, 0.6);
+
+                strong {
+                    color: $avatar-cyan;
+                    opacity: 0.9;
+                    white-space: nowrap;
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 0.7);
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    transition: color 0.3s ease;
+                    font-style: italic;
+
+                    .external-link-icon {
+                        width: 10px;
+                        height: 10px;
+                        flex-shrink: 0;
+                        opacity: 0.6;
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: $avatar-cyan;
+                        text-decoration: underline;
+
+                        .external-link-icon {
+                            opacity: 1;
+                            transform: translate(1px, -1px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .properties-extra-info {
+        margin-top: 3rem;
+        background: rgba($avatar-blue-deep, 0.5);
+        border-radius: 12px;
+        padding: 2rem;
+        border: 1px solid rgba($avatar-magenta, 0.2);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .extra-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &:not(:last-child) {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+            }
+
+            .extra-info-label {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-family: $font-heading;
+                font-size: 0.95rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                color: $avatar-magenta;
+
+                mat-icon {
+                    font-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                    filter: drop-shadow(0 0 4px rgba($avatar-magenta, 0.4));
+                }
+            }
+
+            p {
+                font-family: $font-body;
+                font-size: 1rem;
+                line-height: 1.8;
+                color: rgba(255, 255, 255, 0.85);
+                margin: 0;
             }
         }
     }
@@ -549,22 +718,14 @@ $font-body: "Inter", sans-serif;
     .properties-container {
         padding: 0.5rem;
 
-        h3 {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
+        .traits-list {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
 
-        .properties-content {
+        .properties-extra-info {
             padding: 1.5rem;
-
-            .properties-list {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-
-                li {
-                    font-size: 1rem;
-                }
-            }
+            margin-top: 2rem;
         }
     }
 }

@@ -14,10 +14,18 @@
         "SCROLL": "SCROLL",
         "BACK_TO_TOP": "TOP"
     },
+    "BRAND": {
+        "NAME": "AMAZON JUNGLE 2.0"
+    },
+
     "COMMON": {
         "CLOSE": "Close",
         "BACK": "Back",
         "HOME": "Home",
+        "BIRDS_LIST": "Birds List",
+        "MAMMALS_LIST": "Mammals List",
+        "MEDICINAL_LIST": "Medicinal Plants List",
+        "ETHNIC_LIST": "Tribes List",
         "ANIMALS": "Animals",
         "MAMMALS": "Terrestrial Mammals",
         "BIRDS": "Birds",
@@ -306,12 +314,44 @@
                 "POEM": "\"A crimson drop that springs from the heart of the wood, sealing skin and destiny with the earth's regenerative strength.\"",
                 "VIDEO_TITLE": "The medicinal properties of Dragon's Blood | Green Health",
                 "PROPERTIES_TITLE": "Healing Virtues",
-                "PROPERTIES_LIST": [
-                    "<strong>Healing:</strong> Drastically accelerates wound healing.",
-                    "<strong>Antiseptic:</strong> Powerful natural barrier against infections.",
-                    "<strong>Anti-inflammatory:</strong> Reduces swelling and calms bites.",
-                    "<strong>Regenerative:</strong> Stimulates collagen formation in the skin."
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Accelerated wound healing",
+                        "DESC": "The alkaloid taspine stimulates fibroblast migration to rapidly close cuts and burns.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "Journal of Natural Products."
+                    },
+                    {
+                        "TITLE": "Treatment of HIV-associated diarrhea",
+                        "DESC": "Its component crofelemer blocks excess water secretion in the intestine.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "U.S. Food and Drug Administration (FDA)."
+                    },
+                    {
+                        "TITLE": "Antiviral effect against Herpes",
+                        "DESC": "Applied topically, it reduces the lifespan of herpes simplex lesions.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Phytomedicine Journal."
+                    },
+                    {
+                        "TITLE": "Protection against gastric ulcers",
+                        "DESC": "Forms a protective film over the stomach mucosa, aiding regeneration.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Digestive Diseases and Sciences."
+                    },
+                    {
+                        "TITLE": "Treatment of insect bites",
+                        "DESC": "Neutralizes bite toxins and reduces inflammation and itching almost immediately.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Journal of Ethnopharmacology."
+                    }
                 ],
+                "PROPERTIES_AMAZON_USE": "It is the \"first aid\" remedy par excellence. Local inhabitants always carry a vial of the liquid resin. It is applied directly on any cut or insect bite; as it dries, it forms a reddish crust that acts as a natural, waterproof bandage.",
+                "PROPERTIES_PHARMA_USE": "It is the most successful example of a plant transitioning from the jungle to the modern pharmacy. The drug Crofelemer (Mytesi) is an FDA-approved medication extracted directly from this plant, used to treat chronic diarrhea in patients undergoing antiretroviral therapy.",
+                "EVIDENCE_LABEL": "Evidence:",
+                "SOURCE_LABEL": "Source:",
+                "AMAZON_USE_LABEL": "Current use in the Amazon",
+                "PHARMA_USE_LABEL": "Use in the pharmaceutical industry",
                 "TABS": {
                     "VIDEO": "Video",
                     "PROPERTIES": "Properties"

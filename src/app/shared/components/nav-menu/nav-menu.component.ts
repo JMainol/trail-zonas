@@ -25,8 +25,8 @@ interface SearchResult {
           
           <!-- Logo / Home Link -->
           <div class="flex-shrink-0 flex items-center">
-            <a routerLink="/" class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:scale-105 transition-all cursor-pointer tracking-tighter filter drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-              SELVA AMAZONAS
+            <a routerLink="/" class="text-[1.2rem] font-black bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 hover:scale-105 transition-all cursor-pointer tracking-tighter filter drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+              {{ 'BRAND.NAME' | translate }}
             </a>
           </div>
           
@@ -58,13 +58,13 @@ interface SearchResult {
                         <div class="dropdown-content">
                             <div class="py-2">
                                 <ng-container *ngFor="let item of section.items">
-                                    <!-- Regular Item -->
                                     <a *ngIf="!item.items" 
                                        [routerLink]="item.disabled ? null : item.link"
                                        routerLinkActive="dropdown-active"
-                                       class="dropdown-item"
+                                       class="dropdown-item flex items-center justify-between gap-4 w-full"
                                        [class.nav-disabled]="item.disabled">
-                                        {{ item.label | translate }}
+                                        <span>{{ item.label | translate }}</span>
+                                        <mat-icon *ngIf="item.icon" class="text-[18px] !w-auto !h-auto opacity-70 translate-y-[1px]">{{ item.icon }}</mat-icon>
                                     </a>
 
                                     <!-- Nested Dropdown Item -->
@@ -81,9 +81,10 @@ interface SearchResult {
                                                 <a *ngFor="let subItem of item.items" 
                                                    [routerLink]="subItem.disabled ? null : subItem.link"
                                                    routerLinkActive="dropdown-active"
-                                                   class="dropdown-item-premium"
+                                                   class="dropdown-item-premium flex items-center justify-between gap-4 w-full"
                                                    [class.nav-disabled]="subItem.disabled">
-                                                    {{ subItem.label | translate }}
+                                                    <span>{{ subItem.label | translate }}</span>
+                                                    <mat-icon *ngIf="subItem.icon" class="text-[18px] !w-auto !h-auto opacity-70 translate-y-[1px]">{{ subItem.icon }}</mat-icon>
                                                 </a>
                                             </div>
                                         </div>
@@ -181,8 +182,9 @@ interface SearchResult {
                             <a *ngIf="!item.disabled"
                                [routerLink]="item.link" 
                                (click)="closeMobileMenu()"
-                               class="block px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
-                               {{ item.label | translate }}
+                               class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
+                               <span>{{ item.label | translate }}</span>
+                               <mat-icon *ngIf="item.icon" class="text-[18px] w-[18px] h-[18px] opacity-70">{{ item.icon }}</mat-icon>
                             </a>
                             <div *ngIf="item.disabled"
                                  class="block px-3 py-3 rounded-lg text-base font-medium nav-disabled">
@@ -217,8 +219,9 @@ interface SearchResult {
                                     <a *ngIf="!subItem.disabled"
                                        [routerLink]="subItem.link" 
                                        (click)="closeMobileMenu()"
-                                       class="block px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
-                                       {{ subItem.label | translate }}
+                                       class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium transition-all text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10">
+                                       <span>{{ subItem.label | translate }}</span>
+                                       <mat-icon *ngIf="subItem.icon" class="text-[18px] w-[18px] h-[18px] opacity-70">{{ subItem.icon }}</mat-icon>
                                     </a>
                                     <div *ngIf="subItem.disabled"
                                          class="block px-3 py-3 rounded-lg text-base font-medium nav-disabled">
@@ -405,7 +408,7 @@ export class NavMenuComponent {
                label: 'COMMON.BIRDS',
                link: '/amazonia/animales/aves',
                items: [
-                  { label: 'Listado Aves', link: '/amazonia/animales/aves' },
+                  { label: 'COMMON.BIRDS_LIST', link: '/amazonia/animales/aves', icon: 'format_list_bulleted' },
                    { label: 'BIRDS.TOUCAN', link: '/amazonia/animales/aves/tucan' },
                    { label: 'BIRDS.COTINGA', link: '/amazonia/animales/aves/cotinga' },
                    { label: 'BIRDS.TANGARA', link: '/amazonia/animales/aves/tangara-paraiso' }
@@ -415,7 +418,7 @@ export class NavMenuComponent {
                label: 'COMMON.MAMMALS',
                link: '/amazonia/animales/mamiferos-terrestres',
                items: [
-                  { label: 'Listado Mamiferos', link: '/amazonia/animales/mamiferos-terrestres' },
+                  { label: 'COMMON.MAMMALS_LIST', link: '/amazonia/animales/mamiferos-terrestres', icon: 'format_list_bulleted' },
                   { label: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
                   { label: 'Pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
                   { label: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' }
@@ -433,7 +436,7 @@ export class NavMenuComponent {
                label: 'COMMON.MEDICINAL',
                link: '/amazonia/plantas/medicinales',
                items: [
-                  { label: 'Listado Medicinales', link: '/amazonia/plantas/medicinales' },
+                  { label: 'COMMON.MEDICINAL_LIST', link: '/amazonia/plantas/medicinales', icon: 'format_list_bulleted' },
                   { label: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
                   { label: 'Sangre de Grado', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
                   { label: 'Uña de Gato', link: '/amazonia/plantas/medicinales/una-de-gato' }
@@ -474,7 +477,7 @@ export class NavMenuComponent {
                label: 'COMMON.ETHNIC_REGIONS',
                link: '/amazonia/tribus/etnias',
                items: [
-                  { label: 'Listado Etnias', link: '/amazonia/tribus/etnias' },
+                  { label: 'COMMON.ETHNIC_LIST', link: '/amazonia/tribus/etnias', icon: 'format_list_bulleted' },
                   { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' },
                   { label: 'Cofán', link: '/amazonia/tribus/etnias/cofan', disabled: true },
                   { label: 'Shuar', link: '/amazonia/tribus/etnias/shuar', disabled: true }

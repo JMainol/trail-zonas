@@ -189,7 +189,9 @@ $font-body: "Inter", sans-serif;
     }
 
     &.mobile-only {
-        display: none; // Hide on mobile as requested
+        @media (max-width: 767px) {
+            display: block; // If explicitly mobile-only, show on mobile
+        }
 
         @media (min-width: 768px) {
             display: none !important;
@@ -250,6 +252,10 @@ $font-body: "Inter", sans-serif;
             object-fit: cover;
             pointer-events: none; // Disable pointer events for bg video effect
         }
+    }
+
+    &.hidden {
+        display: none !important;
     }
 }
 

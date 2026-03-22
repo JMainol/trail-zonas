@@ -158,19 +158,25 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       const baseChars = Array.from(text.chars || []).filter(char => !char.closest('.hx'));
 
       if (baseChars.length > 0) {
-        gsap.fromTo(baseChars,
-          { opacity: 0.2 },
-          {
-            scrollTrigger: {
-              trigger: block,
-              start: 'top 80%',
-              end: 'bottom 20%',
-              scrub: true
-            },
-            opacity: 1,
-            stagger: 0.1,
-          }
-        );
+        const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        
+        if (isDesktop) {
+          gsap.fromTo(baseChars,
+            { opacity: 0.2 },
+            {
+              scrollTrigger: {
+                trigger: block,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                scrub: true
+              },
+              opacity: 1,
+              stagger: 0.1,
+            }
+          );
+        } else {
+          gsap.set(baseChars, { opacity: 1 });
+        }
       }
     });
 

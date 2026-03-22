@@ -13,30 +13,48 @@
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <!-- Mobile: Static Image (Placeholder) -->
-            <img src="assets/images/birds/tangara_paraiso.jpg" alt="Tangara chilensis - {{ 'BIRDS.TANGARA' | translate }}"
-                class="toucan-image mobile-only">
-
-            <!-- Youtube Short (Responsive for Mobile & Desktop) -->
             @if (isBrowser()) {
-            @defer (on viewport) {
-            <div class="youtube-wrapper">
-                <youtube-player videoId="s8eRJQr7plQ" [width]="810" [height]="1440"
-                    [playerVars]="{ autoplay: 1, mute: 1, controls: 0, rel: 0, loop: 1, playlist: 's8eRJQr7plQ', playsinline: 1, showinfo: 0, modestbranding: 1 }"
-                    class="youtube-short">
-                </youtube-player>
-                <app-media-caption 
-                    [title]="'BIRDS.TANGARA_CAPTION_TITLE' | translate"
-                    [author]="'BIRDS.TANGARA_CAPTION_AUTHOR' | translate"
-                    [authorUrl]="'BIRDS.TANGARA_CAPTION_URL' | translate"
-                    [iconType]="'youtube'">
-                </app-media-caption>
-            </div>
-            } @placeholder {
-            <div class="video-placeholder">Cargando...</div>
-            }
+                <!-- Video Section -->
+                @if (videoStatus() === 'loading' || videoStatus() === 'ready') {
+                    @defer (on viewport) {
+                        @if (videoStatus() === 'loading') {
+                            <div class="video-placeholder">Cargando vídeo...</div>
+                        }
+                        
+                        <div class="youtube-wrapper" [class.hidden]="videoStatus() !== 'ready'">
+                            <youtube-player 
+                                videoId="s8eRJQr7plQ" 
+                                [width]="810" 
+                                [height]="1440"
+                                (ready)="onVideoReady()"
+                                (error)="onVideoError()"
+                                [playerVars]="{ autoplay: 1, mute: 1, controls: 0, rel: 0, loop: 1, playlist: 's8eRJQr7plQ', playsinline: 1, showinfo: 0, modestbranding: 1 }"
+                                class="youtube-short">
+                            </youtube-player>
+                            
+                            @if (videoStatus() === 'ready') {
+                                <app-media-caption 
+                                    [title]="'BIRDS.TANGARA_CAPTION_TITLE' | translate"
+                                    [author]="'BIRDS.TANGARA_CAPTION_AUTHOR' | translate"
+                                    [authorUrl]="'BIRDS.TANGARA_CAPTION_URL' | translate"
+                                    [iconType]="'youtube'">
+                                </app-media-caption>
+                            }
+                        </div>
+                    } @placeholder {
+                        <div class="video-placeholder">Cargando...</div>
+                    }
+                }
+
+                <!-- Fallback Image (Error or Timeout) -->
+                @if (videoStatus() === 'error' || videoStatus() === 'timed-out') {
+                    <img src="assets/images/birds/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
+                        class="toucan-image fallback-visible">
+                }
             } @else {
-            <div class="video-placeholder">Cargando...</div>
+                <!-- Server-side fallback -->
+                <img src="assets/images/birds/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
+                    class="toucan-image">
             }
         </div>
     </div>
