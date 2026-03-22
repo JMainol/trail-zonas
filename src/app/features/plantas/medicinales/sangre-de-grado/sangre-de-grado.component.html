@@ -75,13 +75,170 @@
             <!-- Properties Tab -->
             <div class="multimedia-item properties-container" [class.tab-hidden]="activeTab() !== 'properties'">
                 <h3>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_TITLE' | translate }}</h3>
-                <div class="properties-content">
-                    <ul class="properties-list">
-                        <li><span [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_LIST.0' | translate"></span></li>
-                        <li><span [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_LIST.1' | translate"></span></li>
-                        <li><span [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_LIST.2' | translate"></span></li>
-                        <li><span [innerHTML]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_LIST.3' | translate"></span></li>
-                    </ul>
+                <div class="traits-list">
+
+                    <!-- Card 0: Wound healing -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">healing</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.0.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.0.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.0.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://pubs.acs.org/journal/jnprdf" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.0.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 1: HIV diarrhea -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">medication</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.1.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.1.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.1.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.1.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Antiviral Herpes -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">shield</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.2.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.2.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.2.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.journals.elsevier.com/phytomedicine/" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.2.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Gastric ulcers -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">favorite</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.3.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.3.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.3.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://link.springer.com/journal/10620" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.3.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Insect bites -->
+                    <div class="trait-item">
+                        <span class="trait-title">
+                            <mat-icon class="trait-icon">bug_report</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.4.TITLE' | translate }}
+                        </span>
+                        <p class="trait-desc">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.4.DESC' | translate }}</p>
+                        <div class="trait-meta">
+                            <span class="evidence">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.EVIDENCE_LABEL' | translate }}</strong>
+                                <span class="evidence-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot empty"></span>
+                                    <span class="dot empty"></span>
+                                </span>
+                                <span class="evidence-score">{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.4.EVIDENCE' | translate }}</span>
+                            </span>
+                            <span class="source">
+                                <strong>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.SOURCE_LABEL' | translate }}</strong>
+                                <a href="https://www.journals.elsevier.com/journal-of-ethnopharmacology" target="_blank" rel="noopener noreferrer">
+                                    {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_CARDS.4.SOURCE' | translate }}
+                                    <svg class="external-link-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/></svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="properties-extra-info">
+                    <div class="extra-info-block">
+                        <span class="extra-info-label">
+                            <mat-icon>forest</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.AMAZON_USE_LABEL' | translate }}
+                        </span>
+                        <p>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_AMAZON_USE' | translate }}</p>
+                    </div>
+                    <div class="extra-info-block">
+                        <span class="extra-info-label">
+                            <mat-icon>science</mat-icon>
+                            {{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PHARMA_USE_LABEL' | translate }}
+                        </span>
+                        <p>{{ 'PLANTS.MEDICINAL.SANGRE_DE_GRADO.PROPERTIES_PHARMA_USE' | translate }}</p>
+                    </div>
                 </div>
             </div>
         </div>

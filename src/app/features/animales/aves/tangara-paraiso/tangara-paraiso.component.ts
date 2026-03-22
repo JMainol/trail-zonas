@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -16,11 +16,13 @@ import { MediaCaptionComponent } from '../../../../shared/components/media-capti
   styleUrl: './tangara-paraiso.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TangaraParaisoComponent implements OnInit {
+export class TangaraParaisoComponent implements OnInit, OnDestroy {
   private sanitizer = inject(DomSanitizer);
   private platformId = inject(PLATFORM_ID);
   private router = inject(Router);
   protected isBrowser = signal(false);
+  protected videoStatus = signal<'loading' | 'ready' | 'error' | 'timed-out'>('loading');
+  private timeoutId: any;
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
 
   ngOnInit() {
@@ -31,7 +33,28 @@ export class TangaraParaisoComponent implements OnInit {
         tag.src = 'https://www.youtube.com/iframe_api';
         document.body.appendChild(tag);
       }
+
+      // Fallback timeout after 7 seconds
+      this.timeoutId = setTimeout(() => {
+        if (this.videoStatus() === 'loading') {
+          this.videoStatus.set('timed-out');
+        }
+      }, 7000);
     }
+  }
+
+  onVideoReady() {
+    this.videoStatus.set('ready');
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+  }
+
+  onVideoError() {
+    this.videoStatus.set('error');
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+  }
+
+  ngOnDestroy() {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
   // Video URL - Horizontal multimedia section

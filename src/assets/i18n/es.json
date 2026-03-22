@@ -306,12 +306,44 @@
                 "POEM": "\"Una gota carmesí que brota del corazón de la madera, sellando la piel y el destino con la fuerza regeneradora de la tierra.\"",
                 "VIDEO_TITLE": "Las propiedades medicinales de la sangre de grado | Salud Verde",
                 "PROPERTIES_TITLE": "Virtudes Curativas",
-                "PROPERTIES_LIST": [
-                    "<strong>Cicatrizante:</strong> Acelera drásticamente la curación de heridas.",
-                    "<strong>Antiséptica:</strong> Potente barrera natural contra infecciones.",
-                    "<strong>Antiinflamatoria:</strong> Reduce la hinchazón y calma picaduras.",
-                    "<strong>Regeneradora:</strong> Estimula la formación de colágeno en la piel."
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Cicatrización acelerada de heridas",
+                        "DESC": "El alcaloide taspina estimula la migración de fibroblastos para cerrar cortes y quemaduras rápidamente.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "Journal of Natural Products."
+                    },
+                    {
+                        "TITLE": "Tratamiento de la diarrea asociada al VIH",
+                        "DESC": "Su componente crofelemer bloquea la secreción excesiva de agua en el intestino.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "U.S. Food and Drug Administration (FDA)."
+                    },
+                    {
+                        "TITLE": "Efecto antiviral contra el Herpes",
+                        "DESC": "Aplicada tópicamente, reduce el tiempo de vida de las lesiones por herpes simple.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Phytomedicine Journal."
+                    },
+                    {
+                        "TITLE": "Protección contra úlceras gástricas",
+                        "DESC": "Forma una película protectora sobre la mucosa del estómago, ayudando a la regeneración.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Digestive Diseases and Sciences."
+                    },
+                    {
+                        "TITLE": "Tratamiento de picaduras de insectos",
+                        "DESC": "Neutraliza las toxinas de la picadura y reduce la inflamación y el picor de forma casi inmediata.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Journal of Ethnopharmacology."
+                    }
                 ],
+                "PROPERTIES_AMAZON_USE": "Es el \"primer auxilio\" por excelencia. Los pobladores llevan siempre un frasco con la resina líquida. Se aplica directamente sobre cualquier corte o picadura de insecto; al secarse, forma una costra rojiza que actúa como una venda natural e impermeable.",
+                "PROPERTIES_PHARMA_USE": "Es el ejemplo más exitoso de transición de la selva a la farmacia moderna. El medicamento Crofelemer (Mytesi) es un fármaco aprobado por la FDA extraído directamente de esta planta, utilizado para tratar la diarrea crónica en pacientes bajo tratamiento antirretroviral.",
+                "EVIDENCE_LABEL": "Evidencia:",
+                "SOURCE_LABEL": "Fuente:",
+                "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
+                "PHARMA_USE_LABEL": "Uso en la industria farmacéutica",
                 "TABS": {
                     "VIDEO": "Video",
                     "PROPERTIES": "Propiedades"
