@@ -14,10 +14,18 @@
         "SCROLL": "DESPLAZAR",
         "BACK_TO_TOP": "SUBIR"
     },
+    "BRAND": {
+        "NAME": "SELVA AMAZONAS 2.0"
+    },
+
     "COMMON": {
         "CLOSE": "Cerrar",
         "BACK": "Volver",
         "HOME": "Inicio",
+        "BIRDS_LIST": "Listado Aves",
+        "MAMMALS_LIST": "Listado Mamíferos",
+        "MEDICINAL_LIST": "Listado Medicinales",
+        "ETHNIC_LIST": "Listado Etnias",
         "ANIMALS": "Animales",
         "MAMMALS": "Mamíferos terrestres",
         "BIRDS": "Aves",

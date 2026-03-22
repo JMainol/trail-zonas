@@ -14,10 +14,18 @@
         "SCROLL": "SCROLL",
         "BACK_TO_TOP": "TOP"
     },
+    "BRAND": {
+        "NAME": "AMAZON JUNGLE 2.0"
+    },
+
     "COMMON": {
         "CLOSE": "Close",
         "BACK": "Back",
         "HOME": "Home",
+        "BIRDS_LIST": "Birds List",
+        "MAMMALS_LIST": "Mammals List",
+        "MEDICINAL_LIST": "Medicinal Plants List",
+        "ETHNIC_LIST": "Tribes List",
         "ANIMALS": "Animals",
         "MAMMALS": "Terrestrial Mammals",
         "BIRDS": "Birds",
