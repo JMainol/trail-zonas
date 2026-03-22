@@ -19,9 +19,18 @@
         <div class="hero-body">
             <div class="hero-column">
                 <p [innerHTML]="'MAMMALS.PECARI.BODY_1' | translate"></p>
-                <p [innerHTML]="'MAMMALS.PECARI.BODY_2' | translate"></p>
+
+                <!-- Read more button -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [innerHTML]="'MAMMALS.PECARI.BODY_2' | translate" [class.content-hidden]="!isExpanded()"></p>
             </div>
-            <div class="hero-column">
+            <div class="hero-column" [class.content-hidden]="!isExpanded()">
                 <p [innerHTML]="'MAMMALS.PECARI.BODY_3' | translate"></p>
                 <p>
                     {{ 'MAMMALS.PECARI.BODY_4' | translate }}

@@ -19,9 +19,18 @@
         <div class="hero-body">
             <div class="hero-column">
                 <p [innerHTML]="'MAMMALS.TAPIR.BODY_1' | translate"></p>
-                <p [innerHTML]="'MAMMALS.TAPIR.BODY_2' | translate"></p>
+
+                <!-- Read more button -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [innerHTML]="'MAMMALS.TAPIR.BODY_2' | translate" [class.content-hidden]="!isExpanded()"></p>
             </div>
-            <div class="hero-column">
+            <div class="hero-column" [class.content-hidden]="!isExpanded()">
                 <p [innerHTML]="'MAMMALS.TAPIR.BODY_3' | translate"></p>
                 <p>
                     {{ 'MAMMALS.TAPIR.BODY_4' | translate }}
@@ -39,20 +48,20 @@
                     <path fill="currentColor"
                         d="M21.58,7.19C21.35,6.33,20.67,5.65,19.81,5.42C18.25,5,12,5,12,5s-6.25,0-7.81,0.42c-0.86,0.23-1.54,0.91-1.77,1.77C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z M10,15.5v-7l6,3.5L10,15.5z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.VIDEO' | translate }}
+                {{ 'MAMMALS.TAPIR.TABS.VIDEO' | translate }}
             </button>
             <button [class.active]="activeTab() === 'sound'" (click)="setTab('sound')">
                 <svg viewBox="0 0 24 24" class="sound-icon">
                     <path fill="currentColor"
                         d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.52C15.58,18.04 14.83,18.45 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18.06,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.SOUND' | translate }}
+                {{ 'MAMMALS.TAPIR.TABS.SOUND' | translate }}
             </button>
             <button [class.active]="activeTab() === 'map'" (click)="setTab('map')">
                 <svg viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
                 </svg>
-                {{ 'MAMMALS.JAGUAR.TABS.MAP' | translate }}
+                {{ 'MAMMALS.TAPIR.TABS.MAP' | translate }}
             </button>
         </div>
 

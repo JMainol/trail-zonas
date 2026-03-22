@@ -252,17 +252,49 @@
                 "BODY_3": "Desde hace siglos, los Asháninca y otras etnias amazónicas han utilizado la corteza y las raíces para tratar diversas dolencias, desde dolores articulares hasta problemas digestivos. Hoy en día, es una de las plantas medicinales más estudiadas y apreciadas en la fitoterapia moderna.",
                 "BODY_4": "Su presencia en el sotobosque es un recordatorio de la farmacia viviente que es la Amazonía. Cada liana que se eleva hacia el sol es un vínculo entre la tierra y la salud, una promesa de bienestar tejida en la madera de la selva.",
                 "POEM": "\"Sus garras vegetales no hieren, sino que sostienen la vida, transmutando la fuerza de la selva en medicina para el alma y el cuerpo.\"",
-                "VIDEO_TITLE": "Video de la Especie",
-                "SOUND_TITLE": "Eco de la Selva",
-                "MAP_TITLE": "Hábitat Natural",
-                "MAP_LEGEND_TITLE": "Presencia de la Planta",
-                "MAP_HIGH": "Alta Densidad",
-                "MAP_MEDIUM": "Presencia Moderada",
-                "MAP_TYPE": "Bosque Tropical Primario",
+                "VIDEO_TITLE": "¿PARA QUE SIRVE LA UÑA DE GATO? ¿QUE PROPIEDADES TIENE Y CÓMO TOMAR?",
+                "PROPERTIES_TITLE": "Propiedades Medicinales",
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Reducción del dolor en la osteoartritis",
+                        "DESC": "Ayuda a disminuir el dolor articular provocado por el desgaste del cartílago durante el movimiento.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "NIH - National Center for Complementary and Integrative Health."
+                    },
+                    {
+                        "TITLE": "Modulación del sistema inmunológico",
+                        "DESC": "Sus alcaloides estimulan la capacidad de los glóbulos blancos para combatir patógenos.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Memorial Sloan Kettering Cancer Center."
+                    },
+                    {
+                        "TITLE": "Alivio de la artritis reumatoide",
+                        "DESC": "Se utiliza como tratamiento complementario para reducir la hinchazón y la rigidez matutina.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Journal of Rheumatology."
+                    },
+                    {
+                        "TITLE": "Propiedades antioxidantes y reparación del ADN",
+                        "DESC": "Podría ayudar a las células a recuperarse del daño oxidativo, aunque se necesitan más pruebas en humanos.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Phytomedicine Journal."
+                    },
+                    {
+                        "TITLE": "Tratamiento de problemas digestivos (gastritis)",
+                        "DESC": "Uso común para limpiar el tracto digestivo, pero la evidencia clínica es aún limitada.",
+                        "EVIDENCE": "2/5",
+                        "SOURCE": "World Journal of Gastroenterology."
+                    }
+                ],
+                "PROPERTIES_AMAZON_USE": "Los habitantes locales la consumen principalmente en decocción (té) de la corteza. Se usa como un tónico general para \"limpiar la sangre\", tratar inflamaciones urinarias y como un preventivo contra enfermedades cuando se sienten débiles o agotados.",
+                "PROPERTIES_PHARMA_USE": "Es un éxito de ventas en el mercado de suplementos dietéticos. Se procesa en cápsulas, extractos líquidos y pomadas. Aunque hay patentes sobre sus alcaloides específicos, su uso principal sigue siendo como fitofármaco coadyuvante en terapias antiinflamatorias.",
+                "EVIDENCE_LABEL": "Evidencia:",
+                "SOURCE_LABEL": "Fuente:",
+                "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
+                "PHARMA_USE_LABEL": "Uso en la industria farmacéutica",
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sonido",
-                    "MAP": "Mapa"
+                    "PROPERTIES": "Propiedades"
                 }
             },
             "SANGRE_DE_GRADO": {
@@ -272,17 +304,17 @@
                 "BODY_3": "Utilizado tradicionalmente para tratar úlceras, hemorragias y diversas infecciones cutáneas, el látex crea una barrera protectora instantánea sobre la piel, funcionando como una \"venda líquida\". Es, en esencia, una lágrima escarlata que el árbol ofrece para restaurar la vida.",
                 "BODY_4": "La sangre de grado es un símbolo de resiliencia y generosidad de la naturaleza. Al igual que el árbol sana sus propias incisiones, nos enseña que en el corazón de la selva reside el bálsamo para nuestras propias heridas, tanto físicas como espirituales.",
                 "POEM": "\"Una gota carmesí que brota del corazón de la madera, sellando la piel y el destino con la fuerza regeneradora de la tierra.\"",
-                "VIDEO_TITLE": "Video de la Especie",
-                "SOUND_TITLE": "Eco de la Selva",
-                "MAP_TITLE": "Hábitat Natural",
-                "MAP_LEGEND_TITLE": "Presencia del Árbol",
-                "MAP_HIGH": "Alta Densidad",
-                "MAP_MEDIUM": "Presencia Moderada",
-                "MAP_TYPE": "Bosque Secundario / Rastrojos",
+                "VIDEO_TITLE": "Las propiedades medicinales de la sangre de grado | Salud Verde",
+                "PROPERTIES_TITLE": "Virtudes Curativas",
+                "PROPERTIES_LIST": [
+                    "<strong>Cicatrizante:</strong> Acelera drásticamente la curación de heridas.",
+                    "<strong>Antiséptica:</strong> Potente barrera natural contra infecciones.",
+                    "<strong>Antiinflamatoria:</strong> Reduce la hinchazón y calma picaduras.",
+                    "<strong>Regeneradora:</strong> Estimula la formación de colágeno en la piel."
+                ],
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sonido",
-                    "MAP": "Mapa"
+                    "PROPERTIES": "Propiedades"
                 }
             },
             "AYAHUASCA": {
@@ -292,17 +324,49 @@
                 "BODY_3": "Más que un fármaco, la ayahuasca es considerada un ser sintiente, un espíritu guía que facilita la purga de toxinas físicas y emocionales. Las ceremonias dirigidas por los maestros curanderos buscan restaurar el equilibrio entre el ser humano, la naturaleza y lo invisible.",
                 "BODY_4": "Su presencia en la selva estructura el mapa espiritual de la Amazonía. Es un puente viviente que nos recuerda nuestra interconexión con todo lo que respira, un espejo que refleja la inmensidad del universo dentro de nosotros mismos.",
                 "POEM": "\"La cuerda que une el cielo y la tierra, descorriendo el velo de lo invisible para revelar la sinfonía eterna de la selva.\"",
-                "VIDEO_TITLE": "Video de la Especie",
-                "SOUND_TITLE": "Icaros y Selva",
-                "MAP_TITLE": "Hábitat Sagrado",
-                "MAP_LEGEND_TITLE": "Presencia de la Liana",
-                "MAP_HIGH": "Alta Densidad",
-                "MAP_MEDIUM": "Presencia Moderada",
-                "MAP_TYPE": "Selva Virgen Profunda",
+                "VIDEO_TITLE": "Documental Ayahuasca, \"La medicina del alma\"",
+                "PROPERTIES_TITLE": "Propiedades Etnobotánicas",
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Tratamiento de la depresión resistente",
+                        "DESC": "Produce una mejora rápida y duradera en los síntomas de depresión que no responden a fármacos convencionales.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "Scientific Reports - Nature."
+                    },
+                    {
+                        "TITLE": "Terapia para el Trastorno de Estrés Postraumático (TEPT)",
+                        "DESC": "Facilita el procesamiento de recuerdos traumáticos al permitir una perspectiva emocional distinta.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Frontiers in Pharmacology."
+                    },
+                    {
+                        "TITLE": "Recuperación de adicciones (Sustancias)",
+                        "DESC": "Ayuda a reducir el ansia de consumo (craving) en pacientes con dependencia al alcohol o la cocaína.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Current Drug Abuse Reviews."
+                    },
+                    {
+                        "TITLE": "Estimulación de la neuroplasticidad",
+                        "DESC": "Compuestos como la dimetiltriptamina (N,N-DMT) fomentan el crecimiento de nuevas neuronas.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Translational Psychiatry."
+                    },
+                    {
+                        "TITLE": "Regulación emocional y autoconciencia",
+                        "DESC": "Mejora la capacidad de introspección y la aceptación emocional a través de la modificación de redes neuronales.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Journal of Psychopharmacology."
+                    }
+                ],
+                "PROPERTIES_AMAZON_USE": "Para las tribus como los Shipibo o los Asháninka, es una medicina sagrada. No se usa para \"curar\" síntomas aislados, sino para limpiar el espíritu, recibir guía de los ancestros y permitir que el chamán diagnostique la raíz espiritual de una dolencia física.",
+                "PROPERTIES_PHARMA_USE": "Actualmente está en el centro de una revolución psiquiátrica. Varias empresas de biotecnología (como ATAI Life Sciences) están realizando ensayos clínicos para sintetizar sus compuestos y crear medicamentos estandarizados que ofrezcan los beneficios terapéuticos sin necesariamente pasar por la experiencia psicodélica prolongada.",
+                "EVIDENCE_LABEL": "Evidencia:",
+                "SOURCE_LABEL": "Fuente:",
+                "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
+                "PHARMA_USE_LABEL": "Uso en la industria farmacéutica",
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sonido",
-                    "MAP": "Mapa"
+                    "PROPERTIES": "Propiedades"
                 }
             }
         }

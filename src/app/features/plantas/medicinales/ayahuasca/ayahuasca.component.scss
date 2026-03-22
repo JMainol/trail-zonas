@@ -45,8 +45,8 @@ $font-body: "Inter", sans-serif;
         align-items: center;
         justify-content: center;
         background: rgba($avatar-blue-deep, 0.4);
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         border: 1px solid rgba($avatar-cyan, 0.2);
         backdrop-filter: blur(15px);
@@ -56,8 +56,8 @@ $font-body: "Inter", sans-serif;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
 
         svg {
-            width: 24px;
-            height: 24px;
+            width: 19px;
+            height: 19px;
             color: $avatar-cyan;
             filter: drop-shadow(0 0 5px $avatar-cyan);
             transition: transform 0.3s ease;
@@ -234,6 +234,49 @@ $font-body: "Inter", sans-serif;
             font-size: 1.2rem;
             text-shadow: 0 0 10px rgba(#00ffaa, 0.3);
         }
+
+        .read-more-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: rgba($avatar-blue-deep, 0.4);
+            color: $avatar-cyan;
+            border: 1px solid rgba($avatar-cyan, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-family: $font-heading;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+
+            .icon {
+                font-size: 0.8rem;
+                width: 0.8rem;
+                height: 0.8rem;
+            }
+
+            &:hover {
+                background: rgba($avatar-cyan, 0.1);
+                border-color: rgba($avatar-cyan, 0.5);
+                box-shadow: 0 0 20px rgba($avatar-cyan, 0.2);
+                transform: translateY(-2px);
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.mobile-hidden {
+    @media (max-width: 767px) {
+        display: none !important;
     }
 }
 
@@ -451,145 +494,249 @@ $font-body: "Inter", sans-serif;
     }
 }
 
-.map-legend {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.2rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-    backdrop-filter: blur(5px);
+/* Properties Tab Styles */
+.properties-container {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
 
-    .legend-title {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 0.8rem;
-        font-weight: 600;
-    }
+    .traits-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
 
-    .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-    }
-
-    .color-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        flex-shrink: 0;
-
-        &.high {
-            background-color: #ff8c00;
-            box-shadow: 0 0 8px #ff8c00;
-        }
-
-        &.medium {
-            background-color: #007bff;
-            box-shadow: 0 0 8px #007bff;
-        }
-
-        &.jungle {
-            background-color: #00ffaa;
-            box-shadow: 0 0 8px #00ffaa;
-        }
-    }
-}
-
-/* Avatar Minimalist Audio Player */
-.avatar-audio-player {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background: rgba($avatar-blue-deep, 0.4);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid rgba($avatar-cyan, 0.2);
-    backdrop-filter: blur(15px);
-    width: 100%;
-    max-width: 450px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba($avatar-cyan, 0.05);
-    transition: all 0.4s ease;
-
-    &:hover {
-        border-color: rgba($avatar-cyan, 0.4);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba($avatar-cyan, 0.1);
-    }
-
-    .play-btn {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, $avatar-cyan, $avatar-magenta);
-        border: none;
-        color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-        flex-shrink: 0;
-        box-shadow: 0 0 15px rgba($avatar-cyan, 0.3);
-
-        svg {
-            width: 26px;
-            height: 26px;
-        }
-
-        &:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba($avatar-cyan, 0.5);
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 
-    .player-controls {
-        flex-grow: 1;
+    .trait-item {
+        background: rgba($avatar-blue-deep, 0.4);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba($avatar-cyan, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: left;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
 
-        .progress-container {
-            height: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+        &:hover {
+            border-color: rgba($avatar-cyan, 0.4);
+            background: rgba($avatar-blue-deep, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba($avatar-cyan, 0.05);
 
-            .progress-bar {
-                height: 100%;
-                background: linear-gradient(to right, $avatar-cyan, $avatar-magenta);
-                border-radius: 3px;
-                position: relative;
-                transition: width 0.1s linear;
+            .trait-title {
+                color: #fff;
+                text-shadow: 0 0 10px rgba($avatar-cyan, 0.5);
 
-                .progress-glow {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 10px;
-                    height: 10px;
-                    background: white;
-                    border-radius: 50%;
-                    box-shadow: 0 0 10px white, 0 0 20px $avatar-cyan;
+                .trait-icon {
+                    color: $avatar-cyan;
+                    filter: drop-shadow(0 0 8px $avatar-cyan);
+                    transform: scale(1.2) rotate(5deg);
                 }
             }
         }
 
-        .time-info {
+        .trait-title {
+            font-family: $font-heading;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $avatar-cyan;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
             display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
+            align-items: center;
+            gap: 0.75rem;
+
+            .trait-icon {
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                color: $avatar-magenta;
+                filter: drop-shadow(0 0 5px rgba($avatar-magenta, 0.3));
+                transition: all 0.3s ease;
+            }
+        }
+
+        .trait-desc {
             font-family: $font-body;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .trait-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            font-family: $font-body;
+
+            .evidence {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                color: #eab308;
+
+                strong {
+                    color: $avatar-cyan;
+                    opacity: 0.9;
+                }
+
+                .evidence-dots {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    .dot {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        transition: all 0.2s ease;
+
+                        &.filled {
+                            background: #eab308;
+                            box-shadow: 0 0 5px rgba(#eab308, 0.6);
+                        }
+
+                        &.empty {
+                            background: transparent;
+                            border: 1.5px solid rgba(#eab308, 0.35);
+                        }
+                    }
+                }
+
+                .evidence-score {
+                    font-weight: 700;
+                    color: #eab308;
+                    font-size: 0.8rem;
+                }
+            }
+
+            .source {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.35rem;
+                flex-wrap: wrap;
+                color: rgba(255, 255, 255, 0.6);
+
+                strong {
+                    color: $avatar-cyan;
+                    opacity: 0.9;
+                    white-space: nowrap;
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 0.7);
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    transition: color 0.3s ease;
+                    font-style: italic;
+
+                    .external-link-icon {
+                        width: 10px;
+                        height: 10px;
+                        flex-shrink: 0;
+                        opacity: 0.6;
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        color: $avatar-cyan;
+                        text-decoration: underline;
+
+                        .external-link-icon {
+                            opacity: 1;
+                            transform: translate(1px, -1px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .properties-extra-info {
+        margin-top: 3rem;
+        background: rgba($avatar-blue-deep, 0.5);
+        border-radius: 12px;
+        padding: 2rem;
+        border: 1px solid rgba($avatar-magenta, 0.2);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .extra-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &:not(:last-child) {
+                padding-bottom: 1.5rem;
+                border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+            }
+
+            .extra-info-label {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-family: $font-heading;
+                font-size: 0.95rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                color: $avatar-magenta;
+
+                mat-icon {
+                    font-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                    filter: drop-shadow(0 0 4px rgba($avatar-magenta, 0.4));
+                }
+            }
+
+            p {
+                font-family: $font-body;
+                font-size: 1rem;
+                line-height: 1.8;
+                color: rgba(255, 255, 255, 0.85);
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .multimedia-item h3 {
+        font-size: 1rem;
+    }
+
+    .properties-container {
+        padding: 0.5rem;
+
+        .traits-list {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .properties-extra-info {
+            padding: 1.5rem;
+            margin-top: 2rem;
         }
     }
 }

@@ -1,0 +1,29 @@
+[33m❯[39m Building...
+[32m✔[39m Building...
+[35mPrerendered 0 static routes.[39m
+Application bundle generation failed. [5.914 seconds] - 2026-03-21T22:04:25.883Z
+
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUndefined variable.
+    ╷
+505 │         font-family: $font-title;
+    │                      ^^^^^^^^^^^
+    ╵
+  src\app\features\plantas\medicinales\ayahuasca\ayahuasca.component.scss 505:22  root stylesheet[0m [1m[35m[plugin angular-sass][0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUndefined variable.
+    ╷
+504 │         font-family: $font-title;
+    │                      ^^^^^^^^^^^
+    ╵
+  src\app\features\plantas\medicinales\una-de-gato\una-de-gato.component.scss 504:22  root stylesheet[0m [1m[35m[plugin angular-sass][0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUndefined variable.
+    ╷
+494 │         font-family: $font-title;
+    │                      ^^^^^^^^^^^
+    ╵
+  src\app\features\plantas\medicinales\sangre-de-grado\sangre-de-grado.component.scss 494:22  root stylesheet[0m [1m[35m[plugin angular-sass][0m
+
+[39m[22m
