@@ -252,17 +252,49 @@
                 "BODY_3": "For centuries, the Asháninka and other Amazonian ethnic groups have used the bark and roots to treat various ailments, from joint pain to digestive issues. Today, it is one of the most studied and appreciated medicinal plants in modern phytotherapy.",
                 "BODY_4": "Its presence in the understory is a reminder of the living pharmacy that is the Amazon. Each vine rising toward the sun is a link between the earth and health, a promise of well-being woven into the jungle's wood.",
                 "POEM": "\"Its vegetative claws do not wound, but rather sustain life, transmuting the jungle's strength into medicine for the soul and body.\"",
-                "VIDEO_TITLE": "Species Video",
-                "SOUND_TITLE": "Jungle Echo",
-                "MAP_TITLE": "Natural Habitat",
-                "MAP_LEGEND_TITLE": "Plant Presence",
-                "MAP_HIGH": "High Density",
-                "MAP_MEDIUM": "Moderate Presence",
-                "MAP_TYPE": "Tropical Primary Forest",
+                "VIDEO_TITLE": "WHAT IS CAT'S CLAW FOR? WHAT ARE ITS PROPERTIES AND HOW TO TAKE IT?",
+                "PROPERTIES_TITLE": "Medicinal Properties",
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Pain reduction in osteoarthritis",
+                        "DESC": "Helps decrease joint pain caused by cartilage wear during movement.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "NIH - National Center for Complementary and Integrative Health."
+                    },
+                    {
+                        "TITLE": "Immune system modulation",
+                        "DESC": "Its alkaloids stimulate white blood cells' ability to fight pathogens.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Memorial Sloan Kettering Cancer Center."
+                    },
+                    {
+                        "TITLE": "Rheumatoid arthritis relief",
+                        "DESC": "Used as a complementary treatment to reduce swelling and morning stiffness.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Journal of Rheumatology."
+                    },
+                    {
+                        "TITLE": "Antioxidant properties and DNA repair",
+                        "DESC": "Could help cells recover from oxidative damage, though more human trials are needed.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Phytomedicine Journal."
+                    },
+                    {
+                        "TITLE": "Treatment of digestive issues (gastritis)",
+                        "DESC": "Common use to cleanse the digestive tract, but clinical evidence is still limited.",
+                        "EVIDENCE": "2/5",
+                        "SOURCE": "World Journal of Gastroenterology."
+                    }
+                ],
+                "PROPERTIES_AMAZON_USE": "Local inhabitants consume it mainly as a decoction (tea) of the bark. It's used as a general tonic to \"clean the blood,\" treat urinary inflammations, and as a preventative against diseases when feeling weak or exhausted.",
+                "PROPERTIES_PHARMA_USE": "It is a best-seller in the dietary supplement market. It is processed into capsules, liquid extracts, and ointments. Although there are patents on its specific alkaloids, its main use remains as an adjuvant phytopharmaceutical in anti-inflammatory therapies.",
+                "EVIDENCE_LABEL": "Evidence:",
+                "SOURCE_LABEL": "Source:",
+                "AMAZON_USE_LABEL": "Current use in the Amazon",
+                "PHARMA_USE_LABEL": "Use in the pharmaceutical industry",
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sound",
-                    "MAP": "Map"
+                    "PROPERTIES": "Properties"
                 }
             },
             "SANGRE_DE_GRADO": {
@@ -272,17 +304,17 @@
                 "BODY_3": "Traditionally used to treat ulcers, hemorrhages, and various skin infections, the latex creates an instantaneous protective barrier over the skin, functioning as a \"liquid bandage.\" It is, in essence, a scarlet tear the tree offers to restore life.",
                 "BODY_4": "Dragon's Blood is a symbol of nature's resilience and generosity. Just as the tree heals its own incisions, it teaches us that in the heart of the forest lies the balm for our own wounds, both physical and spiritual.",
                 "POEM": "\"A crimson drop that springs from the heart of the wood, sealing skin and destiny with the earth's regenerative strength.\"",
-                "VIDEO_TITLE": "Species Video",
-                "SOUND_TITLE": "Jungle Echo",
-                "MAP_TITLE": "Natural Habitat",
-                "MAP_LEGEND_TITLE": "Tree Presence",
-                "MAP_HIGH": "High Density",
-                "MAP_MEDIUM": "Moderate Presence",
-                "MAP_TYPE": "Secondary Forest / Brushwood",
+                "VIDEO_TITLE": "The medicinal properties of Dragon's Blood | Green Health",
+                "PROPERTIES_TITLE": "Healing Virtues",
+                "PROPERTIES_LIST": [
+                    "<strong>Healing:</strong> Drastically accelerates wound healing.",
+                    "<strong>Antiseptic:</strong> Powerful natural barrier against infections.",
+                    "<strong>Anti-inflammatory:</strong> Reduces swelling and calms bites.",
+                    "<strong>Regenerative:</strong> Stimulates collagen formation in the skin."
+                ],
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sound",
-                    "MAP": "Map"
+                    "PROPERTIES": "Properties"
                 }
             },
             "AYAHUASCA": {
@@ -292,17 +324,49 @@
                 "BODY_3": "More than a drug, ayahuasca is considered a sentient being, a guiding spirit that facilitates the purging of physical and emotional toxins. Ceremonies led by master healers seek to restore the balance between the human being, nature, and the invisible.",
                 "BODY_4": "Its presence in the jungle structures the spiritual map of the Amazon. It is a living bridge that reminds us of our interconnection with everything that breathes, a mirror that reflects the vastness of the universe within ourselves.",
                 "POEM": "\"The rope that joins heaven and earth, drawing back the veil of the invisible to reveal the eternal symphony of the jungle.\"",
-                "VIDEO_TITLE": "Species Video",
-                "SOUND_TITLE": "Icaros and Jungle",
-                "MAP_TITLE": "Sacred Habitat",
-                "MAP_LEGEND_TITLE": "Vine Presence",
-                "MAP_HIGH": "High Density",
-                "MAP_MEDIUM": "Moderate Presence",
-                "MAP_TYPE": "Deep Virgin Rainforest",
+                "VIDEO_TITLE": "Ayahuasca Documentary, \"The medicine of the soul\"",
+                "PROPERTIES_TITLE": "Ethnobotanical Properties",
+                "PROPERTIES_CARDS": [
+                    {
+                        "TITLE": "Treatment of treatment-resistant depression",
+                        "DESC": "Produces rapid and lasting improvement in depression symptoms that do not respond to conventional drugs.",
+                        "EVIDENCE": "5/5",
+                        "SOURCE": "Scientific Reports - Nature."
+                    },
+                    {
+                        "TITLE": "Therapy for Post-Traumatic Stress Disorder (PTSD)",
+                        "DESC": "Facilitates the processing of traumatic memories by allowing a different emotional perspective.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Frontiers in Pharmacology."
+                    },
+                    {
+                        "TITLE": "Recovery from substance addiction",
+                        "DESC": "Helps reduce substance craving in patients with alcohol or cocaine dependency.",
+                        "EVIDENCE": "3/5",
+                        "SOURCE": "Current Drug Abuse Reviews."
+                    },
+                    {
+                        "TITLE": "Stimulation of neuroplasticity",
+                        "DESC": "Compounds such as dimethyltryptamine (N,N-DMT) promote the growth of new neurons.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Translational Psychiatry."
+                    },
+                    {
+                        "TITLE": "Emotional regulation and self-awareness",
+                        "DESC": "Improves introspective capacity and emotional acceptance through modification of neural networks.",
+                        "EVIDENCE": "4/5",
+                        "SOURCE": "Journal of Psychopharmacology."
+                    }
+                ],
+                "PROPERTIES_AMAZON_USE": "For tribes such as the Shipibo or the Asháninka, it is a sacred medicine. It is not used to \"cure\" isolated symptoms, but rather to cleanse the spirit, receive guidance from the ancestors, and allow the shaman to diagnose the spiritual root of a physical ailment.",
+                "PROPERTIES_PHARMA_USE": "It is currently at the center of a psychiatric revolution. Several biotechnology companies (such as ATAI Life Sciences) are conducting clinical trials to synthesize its compounds and create standardized medications that offer the therapeutic benefits without necessarily undergoing the prolonged psychedelic experience.",
+                "EVIDENCE_LABEL": "Evidence:",
+                "SOURCE_LABEL": "Source:",
+                "AMAZON_USE_LABEL": "Current use in the Amazon",
+                "PHARMA_USE_LABEL": "Use in the pharmaceutical industry",
                 "TABS": {
                     "VIDEO": "Video",
-                    "SOUND": "Sound",
-                    "MAP": "Map"
+                    "PROPERTIES": "Properties"
                 }
             }
         }
