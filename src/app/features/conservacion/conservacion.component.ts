@@ -7,9 +7,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   template: `
-    <div class="p-6">
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
   `
 })
 export class ConservacionComponent { }
