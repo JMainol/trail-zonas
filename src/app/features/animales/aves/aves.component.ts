@@ -40,7 +40,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.COTINGA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.COTINGA.WINGSPAN',
             wingspanCm: 35,
-            image: 'assets/images/birds/cotinga_de_lentejuelas.jpg',
+            image: 'assets/images/birds/cotinga_de_lentejuelas/cotinga_de_lentejuelas.jpg',
             link: 'cotinga'
         },
         {
@@ -49,7 +49,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.TANGARA.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TANGARA.WINGSPAN',
             wingspanCm: 22,
-            image: 'assets/images/birds/tangara_paraiso.jpg',
+            image: 'assets/images/birds/tangara_paraiso/tangara_paraiso.jpg',
             link: 'tangara-paraiso'
         }
     ];

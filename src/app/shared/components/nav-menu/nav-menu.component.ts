@@ -492,7 +492,7 @@ export class NavMenuComponent {
          id: 'conservacion',
          label: 'COMMON.CONSERVATION',
          items: [
-            { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria', disabled: true },
+            { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria' },
             { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico', disabled: true },
             { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones', disabled: true }
          ]

@@ -48,12 +48,12 @@
 
                 <!-- Fallback Image (Error or Timeout) -->
                 @if (videoStatus() === 'error' || videoStatus() === 'timed-out') {
-                    <img src="assets/images/birds/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
+                    <img src="assets/images/birds/tangara_paraiso/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
                         class="toucan-image fallback-visible">
                 }
             } @else {
                 <!-- Server-side fallback -->
-                <img src="assets/images/birds/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
+                <img src="assets/images/birds/tangara_paraiso/tangara_paraiso.jpg" [alt]="'BIRDS.TANGARA' | translate"
                     class="toucan-image">
             }
         </div>
@@ -162,7 +162,7 @@
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
                 <h3>{{ 'BIRDS.TANGARA_MAP_TITLE' | translate }}</h3>
                 <div class="map-container">
-                    <img src="assets/mapa-tangara-paraiso.png" alt="Mapa de probabilidad de Tangara chilensis"
+                    <img src="assets/images/birds/tangara_paraiso/mapa-tangara-paraiso.png" alt="Mapa de probabilidad de Tangara chilensis"
                         class="habitat-map">
                     <div class="map-legend">
                         <div class="legend-title">{{ 'BIRDS.TANGARA_MAP_LEGEND_TITLE' | translate }}</div>

@@ -90,6 +90,12 @@
                 </svg>
                 Fotos
             </button>
+            <button [class.active]="activeTab() === 'language'" (click)="setTab('language')">
+                <svg viewBox="0 0 24 24" class="lang-icon">
+                    <path fill="currentColor" d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07Z" />
+                </svg>
+                Lenguaje
+            </button>
         </div>
 
         <div class="multimedia-content-wrapper">
@@ -175,6 +181,232 @@
                         <img [src]="img" alt="Thumbnail">
                     </div>
                     }
+                </div>
+            </div>
+
+            <!-- Language Tab -->
+            <div class="multimedia-item language-container" [class.tab-hidden]="activeTab() !== 'language'">
+                <h3>Análisis etnolingüístico y antropológico de la lengua Wao Terero</h3>
+                <div class="language-content">
+                    
+                    <div class="lang-section">
+                        <p>
+                            La nacionalidad Waorani, asentada en la región amazónica del Ecuador, específicamente entre los ríos Napo y Curaray, representa uno de los enigmas lingüísticos y antropológicos más significativos de América del Sur. Su lengua, el <strong>Wao Terero</strong> (también denominada Wao Tededo o Huao Terero), se define técnicamente como una <strong>lengua aislada</strong>, lo que implica que no se ha podido establecer una relación genealógica con ninguna otra familia lingüística conocida en el continente. Esta condición de aislamiento no es solo un dato taxonómico, sino que constituye el pilar de una identidad cultural forjada en la resistencia y una autarquía sociopolítica que se mantuvo casi intacta hasta mediados del siglo XX. El estudio integral de esta lengua permite desentrañar una cosmovisión donde la palabra, el territorio (<em>ome</em>) y la estructura de parentesco (<em>nanicabo</em>) se entrelazan para definir quién es "gente verdadera" (<em>wao</em>) y quién es el "otro" (<em>cowode</em>), el extraño que tradicionalmente fue percibido como una amenaza existencial.
+                        </p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>Estatus sociolingüístico: Entre la oralidad ancestral y la escritura emergente</h4>
+                        <p>El Wao Terero es fundamentalmente una lengua de tradición oral. Durante milenios, la transmisión de conocimientos, mitos de origen, técnicas de caza y saberes etnobotánicos se ha realizado exclusivamente a través de la palabra hablada y el canto en el contexto de la convivencia familiar. La oralidad no es simplemente la ausencia de escritura, sino un sistema complejo de preservación de la memoria colectiva que permite una adaptabilidad cultural única frente a los cambios del entorno.</p>
+                        
+                        <h5>La transición hacia la escritura</h5>
+                        <p>El proceso de grafización del Wao Terero es un fenómeno reciente, iniciado principalmente a partir del contacto sostenido con el Instituto Lingüístico de Verano (ILV) en la década de 1950. Los misioneros, liderados por figuras como Catherine Peeke, desarrollaron un sistema de escritura basado en el alfabeto latino con el objetivo de facilitar la evangelización y la traducción de textos bíblicos. Este sistema, aunque técnicamente sólido, ha tenido una adopción limitada fuera de los ámbitos institucionales y escolares.</p>
+                        <p>En la actualidad, el estatus de la escritura frente a la oralidad presenta una dicotomía marcada por el contexto generacional y la interacción con el Estado ecuatoriano. Mientras que los ancianos o <em>pikenani</em> mantienen la oralidad como el vehículo sagrado de la tradición, las generaciones más jóvenes están inmersas en un sistema de educación bilingüe donde la escritura se utiliza como una herramienta de mediación cultural y política. Sin embargo, la lengua se considera en peligro debido a que el castellano está ganando terreno rápidamente, especialmente en comunidades cercanas a centros urbanos o áreas de explotación petrolera.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>Estructura fonológica y rasgos distintivos</h4>
+                        <p>La descripción fonológica del Wao Terero revela un sistema que prioriza la economía de sonidos y una distinción sutil entre formas orales y nasales, lo cual es característico de varias lenguas amazónicas pero llevado a una especificidad única en este idioma aislado.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tipo de Fonema</th>
+                                        <th>Descripción y Características</th>
+                                        <th>Ejemplos de Uso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Vocales Orales</td>
+                                        <td>Cinco fonemas básicos: /a/, /e/, /i/, /o/, /ae/.</td>
+                                        <td>Oto (canasto), ebo (avión).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vocales Nasales</td>
+                                        <td>Versiones nasales de las orales, marcadas por la virgulilla (˜).</td>
+                                        <td>Õmpɐ (flecha).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oclusivos Sordos</td>
+                                        <td>/p/ (bilabial), /t/ (dental), /k/ (velar).</td>
+                                        <td>Fundamentales en la distinción de significados.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oclusivos Sonoros</td>
+                                        <td>/b/ (bilabial), /d/ (dental), /g/ (velar).</td>
+                                        <td>En oposición constante con los sordos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nasales</td>
+                                        <td>/m/ (bilabial), /n/ (dental), /ŋ/ (velar), /ñ/ (palatal).</td>
+                                        <td>El fonema /ñ/ es central en el sistema.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Semivocales</td>
+                                        <td>/w/ y /y/.</td>
+                                        <td>Utilizados en la formación de diptongos complejos.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p>La nasalidad en el Wao Terero no es solo un rasgo fonético, sino un motor semántico. La nasalización de una vocal puede cambiar completamente el sentido de una palabra, lo que exige una precisión articulatoria que solo los hablantes nativos dominan plenamente. La estructura silábica predominante es (C)V, permitiendo secuencias vocálicas frecuentes que otorgan a la lengua una sonoridad rítmica y fluida, adaptada a la comunicación en la selva donde la audibilidad es crucial ante la falta de visibilidad.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>La arquitectura de la alteridad: Wao, Huarani y Cowode</h4>
+                        <p>Uno de los aspectos más fascinantes de la lingüística Waorani es cómo el idioma estructura la realidad social a través de categorías que definen el grado de proximidad o distancia respecto al sujeto. Estos términos no son simples etiquetas, sino que cargan con una profunda herencia histórica de guerra, parentesco y supervivencia.</p>
+                        
+                        <h5>El concepto de Wao o Waorani</h5>
+                        <p>El término Wao (en singular) o Waorani/Waodani (en plural) se traduce comúnmente como "persona", "gente verdadera" o "ser humano". Esta autodenominación implica una distinción ontológica: para ser considerado un Wao, no basta con haber nacido de padres Waorani; es necesario hablar el Wao Terero y vivir bajo los códigos morales y sociales de la nacionalidad. Quien pierde la lengua o se asimila completamente a la cultura externa empieza a dejar de ser percibido como un "humano verdadero" en el sentido tradicional.</p>
+                        
+                        <h5>Huarani: La otredad interna</h5>
+                        <p>El término Huarani se refiere a "los otros", personas que comparten la lengua y la cultura pero con quienes no se tiene un vínculo de parentesco directo o un antepasado común reconocido. Tradicionalmente, la relación con los huarani era de una hostilidad controlada. Cada grupo familiar o nanicabo era autárquico y veía en otros grupos de la misma etnia a potenciales competidores por recursos o enemigos en ciclos de venganza. En la actualidad, este término se usa para diferenciar a comunidades distantes, manteniendo la noción de que la identidad Waorani no es un bloque monolítico, sino un archipiélago de linajes.</p>
+                        
+                        <h5>Cowode: El extraño y el peligro</h5>
+                        <p>En el extremo opuesto del espectro de identidad se encuentra el Cowode (o Cowori/Cowuri). Históricamente, este término designaba al "enemigo", al "caníbal" o al "no-humano". Los Waorani consideraban que quienes vivían fuera de su territorio, especialmente más allá de los grandes ríos como el Napo o el Curaray, eran seres peligrosos que venían a devorar su mundo.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Término</th>
+                                        <th>Clasificación Ontológica</th>
+                                        <th>Relación Social Tradicional</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Waomoni</strong></td>
+                                        <td>El nosotros íntimo</td>
+                                        <td>Solidaridad absoluta, endogamia, cooperación.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Waorani</strong></td>
+                                        <td>La gente verdadera</td>
+                                        <td>Identidad étnica compartida por lengua y origen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Huarani</strong></td>
+                                        <td>Los otros (Waorani externos)</td>
+                                        <td>Hostilidad latente, competencia, posibles alianzas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cowode</strong></td>
+                                        <td>No-humanos / Extranjeros</td>
+                                        <td>Guerra, defensa territorial, percepción de canibalismo.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p>Es crucial notar cómo el significado de Cowode ha evolucionado tras el contacto. Hoy en día, se aplica a colonos, petroleros, misioneros y funcionarios del Estado. Aunque la violencia física ha disminuido en la mayoría de los grupos contactados, la distancia semántica persiste: el cowode sigue siendo un ser que no pertenece al orden moral de la selva y cuya presencia debe ser gestionada mediante la negociación o la resistencia estratégica.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>Organización social y parentesco: El Nanicabo como núcleo del ser</h4>
+                        <p>La estructura social Waorani es inseparable de su lengua. La unidad básica de residencia y cooperación es el <em>nanicabo</em>, un término que describe la casa comunal o maloca donde habita una familia extendida. La vida en el nanicabo está regida por principios de autonomía y reciprocidad, donde cada miembro tiene funciones claras según su edad y género, bajo la guía de los <em>pikenani</em> (abuelos o ancianos sabios).</p>
+                        
+                        <h5>Alianzas matrimoniales y la guerra</h5>
+                        <p>El sistema de parentesco Waorani tradicionalmente favorece el matrimonio entre primos cruzados bilaterales, una práctica que busca consolidar el grupo familiar y evitar la dispersión del patrimonio cultural y territorial. Sin embargo, la historia Waorani es también una historia de guerras internas. Las incursiones guerreras o raids no eran solo actos de violencia, sino mecanismos para capturar mujeres y así diversificar el grupo genético, o para forzar alianzas con grupos huarani.</p>
+                        <p>La terminología de parentesco refleja esta complejidad. Antes del contacto misionero, existía una visión mucho más comunitaria de la crianza: los niños llamaban "padre" (<em>mempo</em>) a todos los tíos paternos y "madre" (<em>bara</em>) a todas las tías maternas, lo que reforzaba la cohesión del nanicabo frente al exterior. El proceso de sedentarización impulsado por el ILV y el Estado ha empezado a erosionar estas estructuras, promoviendo el modelo de familia nuclear occidental, lo que ha generado una especialización de los términos de parentesco que antes eran más inclusivos.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>Etnobiología y cultura material: El léxico del bosque y la supervivencia</h4>
+                        <p>La relación de los Waorani con su entorno natural, al que denominan <em>ome</em>, es de una profundidad tal que la distinción entre "naturaleza" y "cultura" resulta inapropiada. Para ellos, la selva es su hogar, un espacio lleno de seres con alma y agencia con los que se debe interactuar con respeto y conocimiento técnico.</p>
+                        
+                        <h5>La cerbatana y el curare: Ingeniería y simbolismo</h5>
+                        <p>La cerbatana (<em>ömë</em>) es el artefacto tecnológico más sofisticado de la cultura Waorani y su léxico técnico es extremadamente preciso. La fabricación de una cerbatana no es solo un proceso de manufactura, sino un ritual que involucra el conocimiento de especies botánicas específicas y la aplicación de leyes físicas que los Waorani dominan empíricamente.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Término Wao Terero</th>
+                                        <th>Significado Técnico</th>
+                                        <th>Material / Especie Botánica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Ömë</strong></td>
+                                        <td>Cerbatana (el arma)</td>
+                                        <td>Palma Iriartea deltoidea (Omi)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nënë</strong></td>
+                                        <td>Dardos</td>
+                                        <td>Madera de palma de chonta (Kewa)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Omi</strong></td>
+                                        <td>Curare (veneno)</td>
+                                        <td>Mezcla de Strychnos y otros componentes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Wii</strong></td>
+                                        <td>Algodón de ceibo</td>
+                                        <td>Fibra de Ceiba pentandra para el sello de aire</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bëi</strong></td>
+                                        <td>Mandíbula de piraña</td>
+                                        <td>Herramienta para muescar el dardo</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nënë tewe</strong></td>
+                                        <td>Carcaj</td>
+                                        <td>Contenedor hecho de bambú (Dowe)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p>El curare, también llamado <em>omi</em>, es una neurotoxina que los Waorani extraen de diversas plantas. El saber ancestral sobre el curare otorgaba gran prestigio a ciertos linajes, ya que la efectividad del veneno dependía de una receta secreta que permitía "matar como serpientes", transfiriendo la agencia de un depredador natural al proyectil del cazador. Este conocimiento es un ejemplo de cómo la lengua preserva saberes químicos y biológicos esenciales para la vida en aislamiento.</p>
+                        
+                        <h5>La Kewenkode o Chakra: El huerto afectivo</h5>
+                        <p>Aunque los Waorani son tradicionalmente cazadores-recolectores seminómadas, mantienen huertos familiares conocidos como <em>kewenkode</em> (o chakra, término de origen quichua adoptado por su conveniencia en el bilingüismo). A diferencia del concepto occidental de agricultura, la kewenkode es un espacio de sociabilidad y afectividad. Los Waorani consideran que las plantas (como la yuca, el plátano o el camote) tienen una relación personal con quien las siembra; si el cultivador está triste o enojado, la cosecha lo reflejará.</p>
+                        <p>Un elemento central de la temporalidad Waorani es la cosecha del morete (<em>nontoka</em>). Esta palma crece en zonas pantanosas y su fruto es la base para la elaboración de la chicha dulce o <em>tepe nontokape</em>. La producción de esta bebida es estacional, ocurriendo entre enero y abril, y marca un tiempo de paz, festivales y encuentros entre diferentes <em>nanicaboiri</em>.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>Conceptos de Tiempo y Espacio: Una visión no lineal</h4>
+                        <p>La percepción del tiempo y el espacio en la cultura Waorani se aleja de las métricas occidentales de minutos, horas o metros, centrándose en ciclos naturales y estados sociales.</p>
+                        
+                        <h5>Temporalidad de guerra y paz</h5>
+                        <p>El tiempo no se mide cronológicamente, sino a través de la calidad de las relaciones sociales y la disponibilidad de recursos:</p>
+                        <ul class="custom-list">
+                            <li><strong>Tiempos de Guerra:</strong> Caracterizados por la movilidad defensiva, la escasez, la vigilancia constante y la dependencia de la selva profunda. En este tiempo, el territorio se percibe como una serie de límites rígidos que deben ser defendidos con lanzas ante cualquier intrusión de huarani o cowode.</li>
+                            <li><strong>Tiempos de Paz:</strong> Marcados por la bonanza de los huertos, la abundancia de caza, las fiestas de chicha y la posibilidad de establecer alianzas. Es un tiempo de expansión social y reciprocidad.</li>
+                        </ul>
+                        
+                        <h5>Ome: El espacio relacional</h5>
+                        <p>Para un Waorani, el espacio no es una superficie abstracta, sino un tejido de significados. El bosque o <em>ome</em> no tiene fronteras trazadas con mapas, sino que se define por la memoria de los ancestros que recorrieron sus senderos. Los <em>pikenani</em> pueden identificar lugares sagrados o sitios de antiguas malocas solo por los sonidos del viento o la disposición de ciertos árboles, demostrando una intimidad con el paisaje que la cartografía moderna apenas puede esbozar.</p>
+                    </div>
+
+                    <div class="lang-section">
+                        <h4>El impacto del contacto y la lucha por la autodeterminación</h4>
+                        <p>Desde 1958, la nacionalidad Waorani ha pasado por cuatro etapas críticas de relación con la alteridad que han moldeado su lengua y su realidad política actual:</p>
+                        <ul class="custom-list numbered">
+                            <li><strong>Etapa Misionera / Época del Caucho:</strong> Marcada por la violencia externa y los intentos iniciales de reducción.</li>
+                            <li><strong>Etapa del Protectorado (ILV):</strong> Un periodo de sedentarización forzosa donde se intentó "domesticar" o "amansar" a los Waorani, pasándolos de una vida nómada a asentamientos permanentes en torno a escuelas y pistas de aterrizaje.</li>
+                            <li><strong>Etapa Petrolera:</strong> La incursión de empresas ha transformado la economía y ha introducido un léxico de transacción monetaria y contaminación ambiental.</li>
+                            <li><strong>Etapa de Autogestión y Resistencia:</strong> El surgimiento de organizaciones como la NAWE (Nacionalidad Waorani del Ecuador) y la AMWAE (Asociación de Mujeres Waorani de la Amazonía Ecuatoriana). Estas organizaciones utilizan el Wao Terero como un símbolo de soberanía, exigiendo el derecho al consentimiento previo e informado frente a la bioprospección y la extracción de recursos.</li>
+                        </ul>
+                        
+                        <h5>El conflicto entre lo tradicional y lo moderno</h5>
+                        <p>La investigación lingüística en comunidades como Yawepare o Toñampare muestra que, aunque el bilingüismo es una realidad, existe un esfuerzo consciente por revitalizar términos antiguos que se estaban perdiendo. La creación de la "Veeduría Waorani" es un ejemplo de cómo los conceptos de vigilancia territorial tradicional se están traduciendo a estructuras institucionales modernas para proteger el patrimonio genético y cultural de la nación.</p>
+                    </div>
+
+                    <div class="lang-section conclusion-section">
+                        <h4>Conclusiones: La lengua como refugio de la humanidad verdadera</h4>
+                        <p>El estudio del Wao Terero revela que el idioma es mucho más que un sistema de comunicación; es el alma de la cultura Waorani y el mecanismo fundamental para su supervivencia ontológica. En un mundo donde las lenguas indígenas enfrentan un silenciamiento sistemático, el Wao Terero persiste como un testimonio de la capacidad humana para crear formas únicas de entender la vida, la naturaleza y la alteridad.</p>
+                        <p>La distinción entre Waorani y Cowode sigue siendo la frontera más importante para este pueblo. Mientras el idioma siga vivo, los Waorani podrán seguir definiéndose como "gente verdadera" en sus propios términos, manteniendo el control sobre sus mitos, sus saberes botánicos y su territorio sagrado. El desafío futuro radica en equilibrar la necesidad de interactuar con el mundo globalizado sin permitir que la escritura y la educación bilingüe se conviertan en caballos de Troya que diluyan la riqueza de una oralidad que ha resistido milenios de aislamiento. La preservación de este idioma aislado no es solo un derecho de la nacionalidad Waorani, sino un imperativo para la humanidad, que encuentra en el Wao Terero una de sus expresiones más singulares y profundas.</p>
+                    </div>
+
                 </div>
             </div>
         </div>

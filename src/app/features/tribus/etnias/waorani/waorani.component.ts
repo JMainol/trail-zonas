@@ -27,7 +27,7 @@ export class WaoraniComponent {
     protected parallaxTransform = signal('');
 
     // Tab control
-    protected activeTab = signal('video'); // 'video', 'info', 'photos'
+    protected activeTab = signal('video'); // 'video', 'info', 'photos', 'language'
     protected isExpanded = signal(false);
 
     // Gallery Slider
