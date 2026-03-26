@@ -25,7 +25,7 @@ export class JaguarComponent {
 
     // Video URL
     protected videoUrl = signal<SafeResourceUrl>(
-        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XLOw4zHWIXM')
+        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/Tqzgxelf2YA')
     );
 
     // Signal for parallax

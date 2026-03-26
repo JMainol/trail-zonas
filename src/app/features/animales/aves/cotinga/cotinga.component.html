@@ -45,12 +45,12 @@
 
                 <!-- Fallback Image (Error or Timeout) -->
                 @if (videoStatus() === 'error' || videoStatus() === 'timed-out') {
-                    <img src="assets/images/birds/cotinga_de_lentejuelas.jpg" [alt]="'BIRDS.COTINGA' | translate"
+                    <img src="assets/images/birds/cotinga_de_lentejuelas/cotinga_de_lentejuelas.jpg" [alt]="'BIRDS.COTINGA' | translate"
                         class="toucan-image fallback-visible">
                 }
             } @else {
                 <!-- Server-side fallback -->
-                <img src="assets/images/birds/cotinga_de_lentejuelas.jpg" [alt]="'BIRDS.COTINGA' | translate"
+                <img src="assets/images/birds/cotinga_de_lentejuelas/cotinga_de_lentejuelas.jpg" [alt]="'BIRDS.COTINGA' | translate"
                     class="toucan-image">
             }
         </div>
@@ -160,7 +160,7 @@
             <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
                 <h3>{{ 'BIRDS.COTINGA_MAP_TITLE' | translate }}</h3>
                 <div class="map-container">
-                    <img src="assets/mapa-toucan-vitelado.png" alt="Mapa de probabilidad"
+                    <img src="assets/images/birds/cotinga_de_lentejuelas/mapa-cotinga_lentejuelas.png" alt="Mapa de probabilidad"
                         class="habitat-map">
                     <div class="map-legend">
                         <div class="legend-title">{{ 'BIRDS.COTINGA_MAP_LEGEND_TITLE' | translate }}</div>
