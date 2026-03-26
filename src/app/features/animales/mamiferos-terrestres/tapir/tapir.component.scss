@@ -239,6 +239,10 @@ $font-body: "Inter", sans-serif;
             margin-bottom: 2rem;
             backdrop-filter: blur(10px);
 
+            @media (min-width: 768px) {
+                display: none;
+            }
+
             .icon {
                 font-size: 0.8rem;
                 width: 0.8rem;
@@ -256,7 +260,9 @@ $font-body: "Inter", sans-serif;
 }
 
 .content-hidden {
-    display: none !important;
+    @media (max-width: 767px) {
+        display: none !important;
+    }
 }
 
 .multimedia-section {
