@@ -350,33 +350,36 @@ export class NavMenuComponent {
       // Home
       { title: 'Inicio', enTitle: 'Home', link: '/' },
 
-      // Animales - Mammals
+      // Animales - Mamíferos Terrestres
       { title: 'Listado Mamiferos Terrestres', enTitle: 'Terrestrial Mammals List', link: '/amazonia/animales/mamiferos-terrestres' },
-      { title: 'Jaguar', enTitle: 'Jaguar', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
-      { title: 'Pecari', enTitle: 'Peccary', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
-      { title: 'Tapir', enTitle: 'Tapir', link: '/amazonia/animales/mamiferos-terrestres/tapir' },
+      { title: 'Jaguar', enTitle: 'Jaguar', scientificName: 'Panthera onca', link: '/amazonia/animales/mamiferos-terrestres/jaguar' },
+      { title: 'Tapir Brasileño', enTitle: 'Brazilian Tapir', scientificName: 'Tapirus terrestris', link: '/amazonia/animales/mamiferos-terrestres/tapir' },
+      { title: 'Pecarí Labiado', enTitle: 'White-lipped Peccary', scientificName: 'Tayassu pecari', link: '/amazonia/animales/mamiferos-terrestres/pecari' },
 
       // Animales - Aves
       { title: 'Listado Aves', enTitle: 'Birds List', link: '/amazonia/animales/aves' },
-      { title: 'Tucan Vitelado', enTitle: 'Channel-billed Toucan', scientificName: 'Ramphastos vitellinus', link: '/amazonia/animales/aves/tucan' },
+      { title: 'Tucán Vitelado', enTitle: 'Channel-billed Toucan', scientificName: 'Ramphastos vitellinus', link: '/amazonia/animales/aves/tucan' },
       { title: 'Cotinga de Lentejuelas', enTitle: 'Spangled Cotinga', scientificName: 'Cotinga cayana', link: '/amazonia/animales/aves/cotinga' },
-      { title: 'Tangara del Paraiso', enTitle: 'Paradise Tanager', scientificName: 'Tangara chilensis', link: '/amazonia/animales/aves/tangara-paraiso' },
+      { title: 'Tangara Paraíso', enTitle: 'Paradise Tanager', scientificName: 'Tangara chilensis', link: '/amazonia/animales/aves/tangara-paraiso' },
 
       // Plantas - Medicinales
       { title: 'Listado Plantas Medicinales', enTitle: 'Medicinal Plants List', link: '/amazonia/plantas/medicinales' },
-      { title: 'Ayahuasca', enTitle: 'Ayahuasca', link: '/amazonia/plantas/medicinales/ayahuasca' },
-      { title: 'Sangre de Grado', enTitle: 'Dragons Blood', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
-      { title: 'Uña de Gato', enTitle: 'Cats Claw', link: '/amazonia/plantas/medicinales/una-de-gato' },
+      { title: 'Ayahuasca', enTitle: 'Ayahuasca', scientificName: 'Banisteriopsis caapi', link: '/amazonia/plantas/medicinales/ayahuasca' },
+      { title: 'Sangre de Grado', enTitle: "Dragon's Blood", scientificName: 'Croton lechleri', link: '/amazonia/plantas/medicinales/sangre-de-grado' },
+      { title: 'Uña de Gato', enTitle: "Cat's Claw", scientificName: 'Uncaria tomentosa', link: '/amazonia/plantas/medicinales/una-de-gato' },
 
-      // Geografia
-      { title: 'Mapa Amazonico', enTitle: 'Amazon Map', link: '/amazonia/reservas/mapa' },
+      // Geografía / Reservas
+      { title: 'Mapa Amazónico, Explorador de Reservas Naturales', enTitle: 'Amazon Map, Natural Reserves Explorer', link: '/amazonia/reservas/mapa' },
 
       // Tribus
-      { title: 'Etnias de la Amazonia', enTitle: 'Amazon Ethnicities', link: '/amazonia/tribus/etnias' },
+      { title: 'Etnias de la Amazonía', enTitle: 'Tribes of the Amazon', link: '/amazonia/tribus/etnias' },
       { title: 'Pueblo Waorani', enTitle: 'Waorani People', link: '/amazonia/tribus/etnias/waorani' },
 
-      // Exploracion
-      { title: 'Francisco de Orellana,Historia de la Exploracion Amazonica', enTitle: 'Francisco de Orellana, History of Amazonian Exploration', link: '/amazonia/exploracion/historia' },
+      // Exploración
+      { title: 'Francisco de Orellana, Historia de la Exploración Amazónica', enTitle: 'Francisco de Orellana, History of Amazonian Exploration', link: '/amazonia/exploracion/historia' },
+
+      // Conservación
+      { title: 'Conservación, Deforestación en la Amazonía', enTitle: 'Conservation, Deforestation in the Amazon', link: '/amazonia/conservacion/deforestacion-mineria' },
 
       // Contacto
       { title: 'Contacto', enTitle: 'Contact', link: '/amazonia/contacto' },
