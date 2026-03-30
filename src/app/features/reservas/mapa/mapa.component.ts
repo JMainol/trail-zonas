@@ -13,11 +13,12 @@ import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
 
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-mapa',
     standalone: true,
-    imports: [CommonModule, MatIconModule],
+    imports: [CommonModule, MatIconModule, TranslateModule],
     templateUrl: './mapa.component.html',
     styleUrls: ['./mapa.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
