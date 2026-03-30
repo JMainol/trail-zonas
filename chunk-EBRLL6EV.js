@@ -1,1 +1,0 @@
-import"./chunk-C6Q5SG76.js";var t=[{path:"historia",loadComponent:()=>import("./chunk-SOZ57Y3R.js").then(o=>o.HistoriaComponent)},{path:"",redirectTo:"historia",pathMatch:"full"}];export{t as EXPLORACION_ROUTES};
