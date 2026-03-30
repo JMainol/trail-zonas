@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component, HostListener, inject, signal } from
 import { CommonModule, Location } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-deforestacion-mineria',
   standalone: true,
-  imports: [CommonModule, MatIconModule, RouterModule],
+  imports: [CommonModule, MatIconModule, RouterModule, TranslateModule],
   templateUrl: './deforestacion-mineria.component.html',
   styleUrl: './deforestacion-mineria.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

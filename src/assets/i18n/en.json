@@ -75,6 +75,10 @@
         "CONTACT": "Contact",
         "CAPTION_BY": "by"
     },
+    "RESERVES_MAP": {
+        "TITLE": "Amazon",
+        "SUBTITLE": "Natural Reserves Explorer"
+    },
     "MAMMALS": {
         "SLIDER": {
             "TITLE": "Amazonian Terrestrial Mammals",
@@ -162,8 +166,8 @@
         "TOUCAN_BODY_4": "Its undulating flight—a choreography of rises and falls over the green ocean—guides the eye toward the secrets of the rainforest. Its presence serves as a barometer for forest health, a vibrant note on the staff of life that breathes spirit into the immense emerald carpet.",
         "TOUCAN_QUOTE": "\"Its robust bill, a master tool for seed dispersal, resonates through the stillness of the Amazonian morning—a vibrant echo within the symphony of the rainforest.\"",
         "TOUCAN_VIDEO_TITLE": "Species Video",
-        "TOUCAN_SOUND_TITLE": "Jungle Echo",
-        "TOUCAN_MAP_TITLE": "Amazonian Sanctuary",
+        "TOUCAN_SOUND_TITLE": "Bird Song",
+        "TOUCAN_MAP_TITLE": "Amazonian Distribution",
         "TOUCAN_MAP_LEGEND_TITLE": "Sighting Probability",
         "TOUCAN_MAP_HIGH": "High Probability",
         "TOUCAN_MAP_MEDIUM": "Medium Probability",
@@ -178,8 +182,8 @@
         "COTINGA_BODY_5": "To witness a male perched atop an emergent tree, its deep purple throat contrasting sharply against the turquoise, is to observe a moment of biological transcendence. It is the embodiment of both fragility and resilience; a fragment of the sky that has descended to dwell among the leaves. Its form encapsulates millions of years of evolutionary history, where natural selection has sculpted shapes and hues that defy human imagination, reminding us that life always finds a way to celebrate its own existence through pure art.",
         "COTINGA_BODY_6": "However, the persistence of this cerulean shimmer depends entirely on the integrity of its habitat. Habitat fragmentation and the loss of primary forests threaten to extinguish these \"spangles\" from the treetops. Protecting the cotinga is, in essence, preserving the chromatic palette of a rainforest that serves as the lungs and soul of our planet. Each time a cotinga takes flight, the Amazon sends a message of hope wrapped in sapphire feathers, reminding us of our responsibility to sustain the Earth's visual symphony.",
         "COTINGA_VIDEO_TITLE": "Species Video",
-        "COTINGA_SOUND_TITLE": "Jungle Echo",
-        "COTINGA_MAP_TITLE": "Amazonian Sanctuary",
+        "COTINGA_SOUND_TITLE": "Bird Song",
+        "COTINGA_MAP_TITLE": "Amazonian Distribution",
         "COTINGA_MAP_LEGEND_TITLE": "Sighting Probability",
         "COTINGA_MAP_HIGH": "High Probability",
         "COTINGA_MAP_MEDIUM": "Medium Probability",
@@ -193,8 +197,8 @@
         "TANGARA_BODY_5": "Ultimately, the Paradise Tanager serves as a silent reminder of its ecosystem's fragility. While its beauty invites poetic contemplation, its survival depends strictly upon the integrity of the primary and secondary forests it calls home. To protect its habitat is to ensure that future generations may still marvel at this \"brushstroke of paradise\".",
         "TANGARA_QUOTE": "\"-A masterpiece that, after millions of years of adaptation, continues to soar through the skies of the planet's greatest reservoir of life.\"",
         "TANGARA_VIDEO_TITLE": "Species Video",
-        "TANGARA_SOUND_TITLE": "Jungle Echo",
-        "TANGARA_MAP_TITLE": "Amazonian Sanctuary",
+        "TANGARA_SOUND_TITLE": "Bird Song",
+        "TANGARA_MAP_TITLE": "Amazonian Distribution",
         "TANGARA_MAP_LEGEND_TITLE": "Sighting Probability",
         "TANGARA_MAP_HIGH": "High Probability",
         "TANGARA_MAP_MEDIUM": "Medium Probability",
@@ -411,6 +415,136 @@
             }
         }
     },
+    "TRIBES": {
+        "TITLE": "Tribes of the Amazon",
+        "WAORANI": {
+            "TITLE": "Waorani",
+            "SUBTITLE": "Waorani Tribe",
+            "DESCRIPTION": "In the untamed heart of Yasuní, the Waorani stand as one of the last bastions of cultural resistance. Known for their lineage of master hunters and their unique language, Wao Terero, they fight to preserve their balance with the land against external pressures, protecting the freedom of their relatives in voluntary isolation.",
+            "REGION": "Yasuní",
+            "PAGE": {
+                "HERO_TITLE": "Waorani",
+                "HERO_BODY_1": "In the untamed heart of <strong>Yasuní</strong>, the <strong>Waorani</strong> stand as one of the last bastions of cultural resistance in the Amazon basin. Although official history marks them as the last contacted people of Ecuador after their complex missionary encounter in 1958, their lineage harbors an even deeper secret: the existence of the Tagaeri and Taromenane, relatives who have chosen to remain in voluntary isolation to this day, protecting their freedom the deep rainforest.",
+                "HERO_BODY_2": "In the twilight of the forest, the Waorani move with almost spectral agility, asserting themselves as master hunters who dominate the art of stealth. They craft blowguns and curare to hit prey such as the howler monkey high in the canopy with surgical precision, while their pambil-wood spears are reserved for tracking larger ground animals like the <a href=\"/amazonia/animales/mamiferos-terrestres/pecari\" class=\"highlight-link\">collared peccary</a>, symbolizing the strength of a people deeply respectful of every spirit that inhabits their territory.",
+                "HERO_BODY_3": "Their traditional attire is a statement of simplicity and dignity that challenges the outsider's gaze. The Waorani man wears only the <strong>komi</strong>, a plant-fiber cord tied around the waist securing his organ—a garment symbolizing maturity, protection, and passage into adulthood. In a world that now pressures them with oil drilling and deforestation, the Waorani struggle to preserve this way of life, reminding us that true wealth lies not in our possessions but in the balance we maintain with the earth we tread upon.",
+                "HERO_BODY_4": "Ultimately, the true essence of the Waorani lives within their language, <strong>Wao Terero</strong>, a \"language isolate\" with no known relatives worldwide, holding the worldview of a people where humanity and nature are one. They consider themselves the spiritual heirs of the jaguar and the harpy eagle, figures that populate their ancient chants and stories.",
+                "HERO_QUOTATION": "\"Spiritual heirs of the jaguar and the harpy eagle, where humanity and nature are one.\"",
+                "TABS": {
+                    "VIDEO": "Video",
+                    "INFO": "Characteristics",
+                    "PHOTOS": "Photos",
+                    "LANGUAGE": "Language"
+                },
+                "VIDEO_SECTION": {
+                    "TITLE": "Waorani Territory, in the heart of the Amazon"
+                },
+                "INFO_SECTION": {
+                    "TITLE": "Traits of Waorani Culture",
+                    "TRAITS": {
+                        "LANGUAGE": {
+                            "TITLE": "Unique Language",
+                            "DESC": "They speak Wao Terero, an isolated language completely unrelated to any other language on Earth."
+                        },
+                        "MASTERS": {
+                            "TITLE": "Masters of the Jungle",
+                            "DESC": "They possess extraordinary botanical and zoological knowledge, identifying hundreds of plants and animals."
+                        },
+                        "HUNTERS": {
+                            "TITLE": "Silent Hunters",
+                            "DESC": "Experts in using blowguns with curare-laced darts to hunt down prey without alerting the surroundings."
+                        },
+                        "HOUSING": {
+                            "TITLE": "Collective Housing",
+                            "DESC": "They live in communal homes called 'nanicabo', housing multiple generations of the same extended family."
+                        },
+                        "RESISTANCE": {
+                            "TITLE": "Resistance and Territory",
+                            "DESC": "They maintain a historic defense of their territory against external threats and mining pressures."
+                        }
+                    }
+                },
+                "PHOTOS_SECTION": {
+                    "TITLE": "Image Gallery"
+                },
+                "LANGUAGE_SECTION": {
+                    "TITLE": "Wao Terero",
+                    "HERO_TEXT": "The language of the Waorani nationality is an isolated <strong>linguistic enigma</strong>, wholly unrelated to any other language family in the world. It dictates their worldview, wherein the word itself, their territory (<em>ome</em>), and family (<em>nanicabo</em>) decide who is a \"true human\" (<em>wao</em>) and who is a stranger or visitor (<em>cowode</em>).",
+                    "MODULE_1": {
+                        "HEADER": "Sociolinguistic Status",
+                        "CARD_1_TITLE": "Ancestral Orality",
+                        "CARD_1_DESC": "A system of memory preservation through the original spoken word. Through chants and stories, millennia of myths, botany, and survival strategies have been passed down intact among families.",
+                        "CARD_2_TITLE": "Emerging Writing",
+                        "CARD_2_DESC": "Initiated in the 1950s by the SIL. While elders (<em>pikenani</em>) protect and honor their orality, younger generations employ a bilingual system based on the Latin alphabet as a form of cultural mediation."
+                    },
+                    "MODULE_2": {
+                        "HEADER": "Phonological Structure",
+                        "SUBTITLE": "An economy of sounds allowing highly fluid and precise auditory communication through the dense forest.",
+                        "TAGS": {
+                            "T1": {"TITLE": "Oral V.", "DESC": "/a/, /e/, /i/, /o/, /ae/"},
+                            "T2": {"TITLE": "Nasal V. (˜)", "DESC": "Semantic engine"},
+                            "T3": {"TITLE": "Voiceless", "DESC": "/p/, /t/, /k/"},
+                            "T4": {"TITLE": "Voiced", "DESC": "/b/, /d/, /g/"},
+                            "T5": {"TITLE": "Nasals", "DESC": "/m/, /n/, /ŋ/, /ñ/"},
+                            "T6": {"TITLE": "Semivowels", "DESC": "/w/, /y/"}
+                        }
+                    },
+                    "MODULE_3": {
+                        "HEADER": "Architecture of Alterity",
+                        "CARDS": {
+                            "C1": {"TITLE": "Waomoni", "DESC": "The intimate self", "REL": "Absolute solidarity, endogamy, and cooperation."},
+                            "C2": {"TITLE": "Waorani", "DESC": "The true people", "REL": "Shared ethnic identity unified by language and common origin."},
+                            "C3": {"TITLE": "Huarani", "DESC": "Other Waorani", "REL": "Latent hostility, competition, or potential alliances."},
+                            "C4": {"TITLE": "Cowode", "DESC": "Foreigners / Danger", "REL": "Originally the cannibal enemy. Today: settlers, oil workers, missionaries, or visitors."}
+                        }
+                    },
+                    "MODULE_4": {
+                        "HEADER": "Survival Lexicon: The Blowgun",
+                        "SUBTITLE": "The <em>ömë</em> is not just a weapon; it relies on engineering, empirical physics, and botany.",
+                        "ITEMS": {
+                            "I1": "<strong>Ömë</strong>: The primary blowgun, carved from the palm tree <em>Iriartea deltoidea</em>.",
+                            "I2": "<strong>Nënë</strong>: Darts meticulously whittled from chonta wood.",
+                            "I3": "<strong>Omi</strong>: Curare; a muscle-paralyzing neurotoxin extracted from various <em>Strychnos</em> sap mixtures.",
+                            "I4": "<strong>Wii</strong>: Kapok cotton, collected to ensure a proper air-pressure seal.",
+                            "I5": "<strong>Bëi</strong>: The sacred jawbone of a piranha, the main tool for notching and sharpening darts.",
+                            "I6": "<strong>Nënë tewe</strong>: A protective woven bamboo quiver (<em>Dowe</em>) to survive the humid environment."
+                        }
+                    },
+                    "MODULE_5": {
+                        "HEADER": "Worldview and Contact",
+                        "CARDS": {
+                            "C1_TITLE": "Non-linear Time",
+                            "C1_DESC": "Divided into <strong>Times of War</strong> (scarcity, defensive mobility) and <strong>Times of Peace</strong> (harvests, feasts, and alliances within the <em>nanicabo</em> longhouse).",
+                            "C2_TITLE": "Space (Ome)",
+                            "C2_DESC": "The forest knows no drawn Western borders; it is demarcated entirely by sacred memories laid by forefathers and subtle sounds carried by the wind."
+                        },
+                        "TIMELINE": {
+                            "T1_TITLE": "Missionary and Rubber Era",
+                            "T1_DESC": "External violence, enslavement, and defense of sovereignty.",
+                            "T2_TITLE": "Protectorate and SIL (1950s)",
+                            "T2_DESC": "A period of forced settlement and restructuring into the nuclear family model, abandoning ancient terms.",
+                            "T3_TITLE": "Oil Era",
+                            "T3_DESC": "Introduction of currency-based economies and the environmental struggle in indigenous reserves against exploitation.",
+                            "T4_TITLE": "Nationality Self-Management",
+                            "T4_DESC": "Full exercise of rights to resist bioprospecting and unify territories through organizations like the \"Waorani Observatory.\""
+                        }
+                    },
+                    "CONCLUSION": "In a world where danger encroaches upon their natural stillness, as long as <strong>Wao Terero</strong> breathes... the <strong>Waorani</strong> will confidently define themselves as the \"true human beings.\" They will sustain their ancestral authority over their origin myths, botany, and lives, deep within the unfettered heart of the Amazon Basin.<br><br>Their spoken word embodies their grandest temple and their most resilient armor."
+                }
+            }
+        },
+        "SHUAR": {
+            "TITLE": "Shuar",
+            "SUBTITLE": "People of the Sacred Waterfalls",
+            "DESCRIPTION": "The Shuar are historically known as one of the few peoples that neither the Inca Empire nor the conquerors managed to subordinate, leading one of the most successful rebellions against the Spanish crown. Their mystical ritual of shrunken heads, or \"Tzantza\", was not a mere trophy, but a ceremony to capture the enemy's spirit and restore spiritual balance.",
+            "REGION": "Amazon"
+        },
+        "COFAN": {
+            "TITLE": "Cofán",
+            "SUBTITLE": "Jaguar Men",
+            "DESCRIPTION": "The Cofán are an ancestral people of the northern Ecuadorian Amazon, known as the \"jaguar men\" and speakers of A'ingae, a unique language in the world. Their culture centers on spiritual connection with the jungle through Yagé and a historic defense of their territory against oil exploitation. As guardians of biodiversity, they have achieved key legal victories to protect their sacred lands, maintaining a vital balance between their ancient traditions and modern resistance.",
+            "REGION": "Northern Amazon"
+        }
+    },
     "EXPLORATION": {
         "HISTORY": {
             "TITLE": "Francisco de Orellana,<br><span class=\"subtitle-text\">History of Amazonian exploration.</span>",
@@ -434,6 +568,86 @@
             "SUBTITLE_WHY_ALIVE": "Why does this story endure?",
             "LEGACY": "Orellana’s expedition was not merely a territorial conquest; it was the first documented encounter with the complexity of Amazonian civilizations. Through Carvajal’s eyes, we now know that the Amazon they witnessed was not an empty wilderness, but a land inhabited by great chiefdoms and vibrant cultures that we strive to protect today.",
             "FINAL_QUOTE": "Orellana was not seeking the Amazon, but he had the courage not to turn his back when the river decided to claim him."
+        }
+    },
+    "CONSERVATION_SECTION": {
+        "DEFORESTATION": {
+            "PAGE": {
+                "HERO_TITLE": "Conservation",
+                "HERO_SUBTITLE": "Deforestation in the Amazon",
+                "HERO_DESC": "The Amazon has been through a defining decade (2016-2026) for its survival. This biome, essential for global climate stability, now evidences an <strong>18%</strong> cover loss, while an <strong>additional 38%</strong> suffers from some degree of degradation. This isn't just about trees disappearing, but a profound erosion of its ecological and sociocultural integrity affecting over <strong>47 million people</strong>.",
+                "IMAGE_CAPTION": "Deforestation and fires in the Amazon basin (2024)",
+                "SECTION_1_TITLE": "The Twilight of the Jungle — A Decade of Fragmentation (2016–2026)",
+                "BODY_1": "Over the past ten years, the destructive pattern has mutated into a harder-to-track form: progressive degradation fueled by fires. While clear-cutting was historically the main concern, fire—rarely a natural occurrence in humid rainforests—now erodes biomass from the understory, weakening system resilience even if the canopy appears intact from satellites.",
+                "BODY_2": "The year 2024 became a landmark for systemic fragility. Extreme droughts, exacerbated by climate change, transformed agricultural burns into an ecological disaster impacting <strong>4.5 million hectares</strong> of primary forest across the basin. Carbon emissions from these fires reached <strong>791 million tons of CO₂</strong>, equaling Germany's annual footprint.",
+                "BODY_3": "The cattle ranching industry remains the dominating force, responsible for <strong>78%</strong> of commodity-driven deforestation. With <strong>122 million hectares</strong> already turned into pastures, this extensive model depletes soil fertility and drives economic frontiers into areas that were until recently virgin biodiversity havens.",
+                "BODY_4": "Soy expansion has introduced indirect but catastrophic pressure. In Bolivia, this phenomenon manifested brutally in 2024, seeing a <strong>200%</strong> increase in primary forest loss driven by aggressive agricultural expansion policies feeding global grain demand.",
+                "BODY_5": "Simultaneously, mining has generated a silent contamination crisis flowing downrivers. Academic research reveals a \"halo effect\" where environmental impact stretches up to <strong>70 km</strong> from official concessions. By 2026, over 2,000 sites are projected to be affected, shedding annually <strong>4,500 tons of mercury</strong> that threaten the health of over 300 indigenous communities.",
+                "BODY_6": "Fragmentation accelerates through infrastructure like the <strong>BR-319</strong> highway. More than <strong>70%</strong> of historical logging occurs within a 50 km radius of paved roads. This degradation has caused the Amazon to lose its ability to \"recycle\" water, dangerously approaching a <strong>tipping point</strong>—situated between 20% and 25% of forest loss—after which the rainforest could collapse into an arid savanna.",
+                "TABLE_1": {
+                    "TITLE": "Industrial Impacts and Critical Phenomena",
+                    "DESC": "Analysis of industrial pressures in the Amazon.",
+                    "LINK": "View Study →",
+                    "H1": "Industry / Phenomenon",
+                    "H2": "Documented Impact",
+                    "H3": "Scope and Magnitude",
+                    "R1_C1": "Extensive Cattle Ranching",
+                    "R1_C2": "78% of commodity-driven deforestation",
+                    "R1_C3": "122 million hectares occupied",
+                    "R2_C1": "Mining (Gold & Minerals)",
+                    "R2_C2": "70 km destruction \"Halo\" effect",
+                    "R2_C3": "4,500 tons of mercury/year into rivers",
+                    "R3_C1": "Soy Expansion",
+                    "R3_C2": "200% loss scaling up in Bolivia (2024)",
+                    "R3_C3": "Aggressive agricultural boundary displacements [1, 2]",
+                    "R4_C1": "Infrastructure (BR-319)",
+                    "R4_C2": "Affecting 63 indigenous lands (Brazil only)",
+                    "R4_C3": "Vector for land grabbing and environmental crimes"
+                },
+                "TABLE_2": {
+                    "TITLE": "Fire and Deforestation Loss Statistics (2024)",
+                    "DESC": "Monitoring report on fire hotspots and deforestation (MAAP).",
+                    "LINK": "View Report →",
+                    "H1": "Loss Category",
+                    "H2": "Record Data 2024",
+                    "H3": "Atmospheric Consequence",
+                    "R1_C1": "Total Impact (Fire + Deforestation)",
+                    "R1_C2": "4.5 million hectares",
+                    "R1_C3": "Highest total recorded since 2002",
+                    "R2_C1": "Wildfires Alone",
+                    "R2_C2": "2.8 million hectares",
+                    "R2_C3": "Emissions equating those of Germany",
+                    "R3_C1": "Deforestation (Clear-cutting)",
+                    "R3_C2": "1.7 million hectares",
+                    "R3_C3": "34% increase regarding 2023"
+                },
+                "SECTION_2_TITLE": "Architectures of Hope",
+                "SECTION_2_SUBTITLE": "Towards a Standing Rainforest",
+                "BODY_7": "Facing this scenario, the last decade has also forged institutional responses of unprecedented scale. The <strong>ARPA</strong> program (Amazon Region Protected Areas) has consolidated itself as the world's largest conservation initiative, safeguarding over <strong>62 million hectares</strong>. Its success proves that effective management and sustained financial backing can insulate ecosystems from external damage, avoiding 104 million tons of CO₂ emissions.",
+                "BODY_8": "On the ground, the <strong>JungleKeepers</strong> organization, led by Paul Rosolie and Juan Julio Durand, offers a model of direct action intertwined with deep humanity. Their strategy revolves around purchasing logging concessions prior to their destruction and transforming former loggers and miners into rangers. This approach recognizes that jungle protection entails providing dignified economic alternatives to the people dwelling at the frontiers.",
+                "BODY_9": "JungleKeepers' efforts achieved an over <strong>90%</strong> reduction in illegal logging in their operational area within Madre de Dios, Peru. Currently protecting <strong>135,000 acres</strong> of virgin primary rainforest, they guarantee the longevity of critical species like jaguars and harpy eagles, along with safeguarding territories of uncontacted tribes such as the Mashco Piro from outside incursions.",
+                "BODY_10": "This localized effort is complemented by the resurgence of the <strong>Amazon Fund</strong>, which in 2025 quadrupled its project approvals after a period of political inactivity. With overall footing exceeding 1.2 billion USD funding 144 projects, the fund has been a keystone for Brazil to register its lowest deforestation rate in 11 years in 2025, halting prior destructive trends.",
+                "BODY_11": "Hope also sprouts from indigenous bioeconomy, where the <strong>Xingu Seed Network</strong> shines via its regenerative impact. Involving roughly 1,000 families, the structural network has harvested 390 tons of native seeds, accelerating the restoration of <strong>27 million trees</strong> on degraded lands. It demonstrates that ancestral know-how can effectively integrate into value chains generating community benefit without cutting down a single tree.",
+                "BODY_12": "Lastly, modern science matches indigenous wisdom: protected native territories are Earth's most efficient public health shields. A 2025 study manifested that saving these forests averts around <strong>15 million annual cases</strong> of cardiovascular and respiratory diseases. Securing the Amazon becomes, fundamentally, an act of pervasive love and collective survival that already aligns with the blueprints and manpower needed to prevail.",
+                "TABLE_3": {
+                    "TITLE": "Preservation Initiatives and Results",
+                    "H1": "Project / Initiative",
+                    "H2": "Impact and Key Breakthroughs",
+                    "H3": "Scope and Beneficiaries",
+                    "R1_C1": "ARPA (Protected Areas)",
+                    "R1_C2": "62.2 million hectares protected",
+                    "R1_C3": "120 conservation units supported",
+                    "R2_C1": "Amazon Fund",
+                    "R2_C2": "1.207 billion USD via financial backing",
+                    "R2_C3": "144 projects; 260,000 beneficiaries [6, 7]",
+                    "R3_C1": "JungleKeepers",
+                    "R3_C2": ">90% logging reduction in zone",
+                    "R3_C3": "135,000+ unblemished acres conserved",
+                    "R4_C1": "Xingu Seeds Network",
+                    "R4_C2": "27 million trees rehabilitated",
+                    "R4_C3": "1,000 families via renewable income [8]"
+                }
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
             </svg>
         </button>
     </div>
-    <h1 class="hero-title">Waorani</h1>
+    <h1 class="hero-title">{{ 'TRIBES.WAORANI.PAGE.HERO_TITLE' | translate }}</h1>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
@@ -18,14 +18,7 @@
     <div class="hero-content">
         <div class="hero-body">
             <div class="hero-column">
-                <p>
-                    En el corazón indómito del <strong>Yasuní</strong>, los <strong>Waorani</strong> se erigen como uno
-                    de los últimos bastiones de resistencia cultural en la cuenca amazónica. Aunque la historia oficial
-                    los sitúa como el último pueblo contactado del Ecuador tras el complejo encuentro misionero de 1958,
-                    su linaje guarda un secreto aún más profundo: la existencia de los Tagaeri y Taromenane, parientes
-                    que hasta el día de hoy han decidido permanecer en aislamiento voluntario, protegiendo su libertad
-                    en la espesura.
-                </p>
+                <p [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_1' | translate"></p>
 
                 <!-- Read more button - Mobile Only -->
                 <button class="read-more-btn" (click)="toggleExpanded()">
@@ -35,32 +28,13 @@
                     </mat-icon>
                 </button>
 
-                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content">
-                    En la penumbra del bosque, los Waorani se desplazan con una agilidad casi espectral, consolidándose
-                    como maestros cazadores que dominan el arte del sigilo. Utilizan la cerbatana y el curare para
-                    alcanzar con precisión quirúrgica a presas como el mono aullador en lo alto del dosel, mientras que
-                    sus lanzas de madera de pambil se reservan para el rastreo en tierra de animales mayores como el <a
-                        routerLink="/amazonia/animales/mamiferos-terrestres/pecari" class="highlight-link">pecarí de
-                        collar</a>, simbolizando la fuerza de un pueblo que respeta profundamente el espíritu de cada
-                    ser que habita su territorio.
-                </p>
+                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content" [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_2' | translate"></p>
             </div>
             <div class="hero-column" [class.mobile-hidden]="!isExpanded()" class="expandable-content">
+                <p [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_3' | translate"></p>
                 <p>
-                    Su vestimenta tradicional es una declaración de sencillez y dignidad que desafía la mirada externa.
-                    El hombre Waorani viste únicamente el <strong>komi</strong>, un cordón de fibra vegetal atado a la
-                    cintura que sujeta su miembro, una prenda que para ellos simboliza madurez, protección y el paso a
-                    la vida adulta. En un mundo que hoy los presiona con la explotación petrolera y la deforestación,
-                    los Waorani luchan por preservar este estilo de vida, recordándonos que la verdadera riqueza no
-                    reside en lo que poseemos, sino en el equilibrio que mantenemos con la tierra que pisamos.
-                </p>
-                <p>
-                    Finalmente, la verdadera esencia de los Waorani reside en su lengua, el <strong>Wao Terero</strong>,
-                    un idioma «aislado» sin parientes conocidos en el mundo, que actúa como el cofre de una cosmovisión
-                    donde el hombre y la naturaleza son uno solo. Se consideran herederos espirituales del jaguar y el
-                    águila harpía, figuras que pueblan sus cantos y relatos.
-                    <span class="poetic-touch">"Herederos espirituales del jaguar y el águila harpía, donde el hombre y
-                        la naturaleza son uno solo."</span>
+                    <span [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_4' | translate"></span>
+                    <span class="poetic-touch">{{ 'TRIBES.WAORANI.PAGE.HERO_QUOTATION' | translate }}</span>
                 </p>
             </div>
         </div>
@@ -74,34 +48,34 @@
                     <path fill="currentColor"
                         d="M21.58,7.19C21.35,6.33,20.67,5.65,19.81,5.42C18.25,5,12,5,12,5s-6.25,0-7.81,0.42c-0.86,0.23-1.54,0.91-1.77,1.77C2,8.75,2,12,2,12s0,3.25,0.42,4.81c0.23,0.86,0.91,1.54,1.77,1.77C5.75,19,12,19,12,19s6.25,0,7.81-0.42c0.86-0.23,1.54-0.91,1.77-1.77C22,15.25,22,12,22,12S22,8.75,21.58,7.19z M10,15.5v-7l6,3.5L10,15.5z" />
                 </svg>
-                Video
+                {{ 'TRIBES.WAORANI.PAGE.TABS.VIDEO' | translate }}
             </button>
             <button [class.active]="activeTab() === 'info'" (click)="setTab('info')">
                 <svg viewBox="0 0 24 24" class="info-icon">
                     <path fill="currentColor"
                         d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
                 </svg>
-                Características
+                {{ 'TRIBES.WAORANI.PAGE.TABS.INFO' | translate }}
             </button>
             <button [class.active]="activeTab() === 'photos'" (click)="setTab('photos')">
                 <svg viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="M20,5H4V19H20V5M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M5,16L8,12L10,15L13,11L17,17H5Z" />
                 </svg>
-                Fotos
+                {{ 'TRIBES.WAORANI.PAGE.TABS.PHOTOS' | translate }}
             </button>
             <button [class.active]="activeTab() === 'language'" (click)="setTab('language')">
                 <svg viewBox="0 0 24 24" class="lang-icon">
                     <path fill="currentColor" d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07Z" />
                 </svg>
-                Lenguaje
+                {{ 'TRIBES.WAORANI.PAGE.TABS.LANGUAGE' | translate }}
             </button>
         </div>
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
             <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>Territorio Waorani, en el corazón de Amazonas</h3>
+                <h3>{{ 'TRIBES.WAORANI.PAGE.VIDEO_SECTION.TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -112,54 +86,49 @@
 
             <!-- Characteristics Tab -->
             <div class="multimedia-item info-container" [class.tab-hidden]="activeTab() !== 'info'">
-                <h3>Rasgos de la Cultura Waorani</h3>
+                <h3>{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TITLE' | translate }}</h3>
                 <div class="traits-list">
                     <div class="trait-item">
                         <span class="trait-title">
                             <svg viewBox="0 0 24 24" class="trait-icon"><path fill="currentColor" d="M14 10H2V12H14V10M14 6H2V8H14V6M2 16H10V14H2V16M21.5 11.5L23 13L16.5 19.5L12.5 15.5L14 14L16.5 16.5L21.5 11.5Z"/></svg>
-                            Idioma Único
+                            {{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.LANGUAGE.TITLE' | translate }}
                         </span>
-                        <p class="trait-desc">Hablan Wao Terero, una lengua aislada que no tiene parentesco con ningún
-                            otro idioma del mundo.</p>
+                        <p class="trait-desc">{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.LANGUAGE.DESC' | translate }}</p>
                     </div>
                     <div class="trait-item">
                         <span class="trait-title">
                             <svg viewBox="0 0 24 24" class="trait-icon"><path fill="currentColor" d="M12,2C11.5,2 11,2.19 10.59,2.59L2.59,10.59C2.19,11 2,11.5 2,12C2,12.5 2.19,13 2.59,13.41L10.59,21.41C11,21.81 11.5,22 12,22C12.5,22 13,21.81 13.41,21.41L21.41,13.41C21.81,13 22,12.5 22,12C22,11.5 21.81,11 21.41,10.59L13.41,2.59C13,2.19 12.5,2 12,2M12,4L20,12L12,20L4,12L12,4M12,6V8H10V6H12M14,6H16V8H14V6M10,10H12V12H10V10M14,10H16V12H14V10M10,14H12V16H10V14M14,14H16V16H14V14Z"/></svg>
-                            Maestros de la Selva
+                            {{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.MASTERS.TITLE' | translate }}
                         </span>
-                        <p class="trait-desc">Poseen un conocimiento botánico y zoológico excepcional, identificando
-                            cientos de plantas y animales.</p>
+                        <p class="trait-desc">{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.MASTERS.DESC' | translate }}</p>
                     </div>
                     <div class="trait-item">
                         <span class="trait-title">
                             <svg viewBox="0 0 24 24" class="trait-icon"><path fill="currentColor" d="M21.5,2.5L19.5,4.5L15,9L11,13L11.5,13.5L13.5,11.5L21.5,3.5L22.5,2.5M10,14L4,20L3,21L2,22L3,21L4,20L10,14M11,14L12,13L13,14L12,15L11,14M9,12L10,11L11,12L10,13L9,12Z"/></svg>
-                            Cazadores Silenciosos
+                            {{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.HUNTERS.TITLE' | translate }}
                         </span>
-                        <p class="trait-desc">Expertos en el uso de cerbatanas con dardos bañados en curare para cazar
-                            sin alertar al entorno.</p>
+                        <p class="trait-desc">{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.HUNTERS.DESC' | translate }}</p>
                     </div>
                     <div class="trait-item">
                         <span class="trait-title">
                             <svg viewBox="0 0 24 24" class="trait-icon"><path fill="currentColor" d="M12,3L2,12H5V20H19V12H22L12,3M12,7.7C14.1,7.7 15.8,9.4 15.8,11.5C15.8,14.5 12,18.2 12,18.2C12,18.2 8.2,14.5 8.2,11.5C8.2,9.4 9.9,7.7 12,7.7M12,10A1.5,1.5 0 0,0 10.5,11.5A1.5,1.5 0 0,0 12,13A1.5,1.5 0 0,0 13.5,11.5A1.5,1.5 0 0,0 12,10Z"/></svg>
-                            Vivienda Colectiva
+                            {{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.HOUSING.TITLE' | translate }}
                         </span>
-                        <p class="trait-desc">Viven en casas comunales llamadas "nanicabo", donde conviven varias
-                            generaciones de una familia.</p>
+                        <p class="trait-desc">{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.HOUSING.DESC' | translate }}</p>
                     </div>
                     <div class="trait-item">
                         <span class="trait-title">
                             <svg viewBox="0 0 24 24" class="trait-icon"><path fill="currentColor" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"/></svg>
-                            Resistencia y Territorio
+                            {{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.RESISTANCE.TITLE' | translate }}
                         </span>
-                        <p class="trait-desc">Mantienen una defensa histórica de su territorio contra amenazas externas
-                            y presiones mineras.</p>
+                        <p class="trait-desc">{{ 'TRIBES.WAORANI.PAGE.INFO_SECTION.TRAITS.RESISTANCE.DESC' | translate }}</p>
                     </div>
                 </div>
             </div>
 
             <!-- Photos Tab -->
             <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'photos'">
-                <h3>Galería de Imágenes</h3>
+                <h3>{{ 'TRIBES.WAORANI.PAGE.PHOTOS_SECTION.TITLE' | translate }}</h3>
                 <div class="gallery-wrapper">
                     <button class="nav-btn prev" (click)="prevPhoto()">
                         <mat-icon>chevron_left</mat-icon>
@@ -193,26 +162,24 @@
                         <div class="icon-wrapper">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07Z" /></svg>
                         </div>
-                        <h3>Wao Terero</h3>
-                        <p class="hero-text">
-                            La lengua de la nacionalidad Waorani es un <strong>enigma lingüístico</strong> aislado, sin relación con ninguna otra familia en el mundo. Define su cosmovisión, donde la palabra, el territorio (<em>ome</em>) y la familia (<em>nanicabo</em>) deciden quién es "gente verdadera" (<em>wao</em>) y quién es un visitante o extraño (<em>cowode</em>).
-                        </p>
+                        <h3>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.TITLE' | translate }}</h3>
+                        <p class="hero-text" [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.HERO_TEXT' | translate"></p>
                     </div>
 
                     <!-- 1. Oralidad y Escritura -->
                     <div class="info-module">
                         <div class="module-header">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H6L4,18V4H20V16Z"/></svg>
-                            <h4>Estatus Sociolingüístico</h4>
+                            <h4>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_1.HEADER' | translate }}</h4>
                         </div>
                         <div class="module-grid half">
                             <div class="info-card">
-                                <h5>Oralidad Ancestral</h5>
-                                <p>Un sistema de preservación de la memoria a través de la palabra hablada originaria. Mediante el canto y las historias, milenios de mitos, botánica y técnicas de supervivencia se han transmitido intactos entre las familias.</p>
+                                <h5>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_1.CARD_1_TITLE' | translate }}</h5>
+                                <p>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_1.CARD_1_DESC' | translate }}</p>
                             </div>
                             <div class="info-card">
-                                <h5>Escritura Emergente</h5>
-                                <p>Iniciada en los años 50 con el ILV. Mientras los ancianos (<em>pikenani</em>) protegen y respetan la oralidad, las nuevas generaciones aplican un sistema bilingüe basado en el alfabeto latino como mediación cultural.</p>
+                                <h5>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_1.CARD_2_TITLE' | translate }}</h5>
+                                <p [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_1.CARD_2_DESC' | translate"></p>
                             </div>
                         </div>
                     </div>
@@ -221,33 +188,33 @@
                     <div class="info-module">
                         <div class="module-header">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3V12.26C11.5 12.09 11 12 10.5 12C8 12 6 14 6 16.5S8 21 10.5 21 15 19 15 16.5V6H19V3H12Z"/></svg>
-                            <h4>Estructura Fonológica</h4>
+                            <h4>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.HEADER' | translate }}</h4>
                         </div>
-                        <p class="module-subtitle">Economía de sonidos y gran fluidez para comunicarse auditivamente en el bosque denso de forma precisa.</p>
+                        <p class="module-subtitle">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.SUBTITLE' | translate }}</p>
                         <div class="tags-grid">
                             <div class="tag-card">
-                                <strong>V. Orales</strong>
-                                <span>/a/, /e/, /i/, /o/, /ae/</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T1.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T1.DESC' | translate }}</span>
                             </div>
                             <div class="tag-card">
-                                <strong>V. Nasales (˜)</strong>
-                                <span>Motor semántico</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T2.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T2.DESC' | translate }}</span>
                             </div>
                             <div class="tag-card">
-                                <strong>O. Sordos</strong>
-                                <span>/p/, /t/, /k/</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T3.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T3.DESC' | translate }}</span>
                             </div>
                             <div class="tag-card">
-                                <strong>O. Sonoros</strong>
-                                <span>/b/, /d/, /g/</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T4.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T4.DESC' | translate }}</span>
                             </div>
                             <div class="tag-card">
-                                <strong>Nasales</strong>
-                                <span>/m/, /n/, /ŋ/, /ñ/</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T5.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T5.DESC' | translate }}</span>
                             </div>
                             <div class="tag-card">
-                                <strong>Semivocales</strong>
-                                <span>/w/, /y/</span>
+                                <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T6.TITLE' | translate }}</strong>
+                                <span>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_2.TAGS.T6.DESC' | translate }}</span>
                             </div>
                         </div>
                     </div>
@@ -256,28 +223,28 @@
                     <div class="info-module full-bleed">
                         <div class="module-header center">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11M8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
-                            <h4>Arquitectura de la Alteridad</h4>
+                            <h4>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.HEADER' | translate }}</h4>
                         </div>
                         <div class="alterity-cards">
                             <div class="alt-card">
-                                <div class="alt-title">Waomoni</div>
-                                <div class="alt-desc">El nosotros íntimo</div>
-                                <div class="alt-relation">Solidaridad absoluta, endogamia y cooperación.</div>
+                                <div class="alt-title">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C1.TITLE' | translate }}</div>
+                                <div class="alt-desc">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C1.DESC' | translate }}</div>
+                                <div class="alt-relation">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C1.REL' | translate }}</div>
                             </div>
                             <div class="alt-card">
-                                <div class="alt-title">Waorani</div>
-                                <div class="alt-desc">La gente verdadera</div>
-                                <div class="alt-relation">Identidad étnica compartida por lengua y origen común.</div>
+                                <div class="alt-title">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C2.TITLE' | translate }}</div>
+                                <div class="alt-desc">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C2.DESC' | translate }}</div>
+                                <div class="alt-relation">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C2.REL' | translate }}</div>
                             </div>
                             <div class="alt-card">
-                                <div class="alt-title">Huarani</div>
-                                <div class="alt-desc">Los otros Waorani</div>
-                                <div class="alt-relation">Hostilidad latente, competencia o posibles alianzas.</div>
+                                <div class="alt-title">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C3.TITLE' | translate }}</div>
+                                <div class="alt-desc">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C3.DESC' | translate }}</div>
+                                <div class="alt-relation">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C3.REL' | translate }}</div>
                             </div>
                             <div class="alt-card coward">
-                                <div class="alt-title">Cowode</div>
-                                <div class="alt-desc">Extranjeros / Peligro</div>
-                                <div class="alt-relation">Originalmente el enemigo caníbal. Hoy en día: colonos, petroleros, misiones o visitantes.</div>
+                                <div class="alt-title">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C4.TITLE' | translate }}</div>
+                                <div class="alt-desc">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C4.DESC' | translate }}</div>
+                                <div class="alt-relation">{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_3.CARDS.C4.REL' | translate }}</div>
                             </div>
                         </div>
                     </div>
@@ -286,16 +253,16 @@
                     <div class="info-module">
                         <div class="module-header">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
-                            <h4>Léxico de Supervivencia: La Cerbatana</h4>
+                            <h4>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.HEADER' | translate }}</h4>
                         </div>
-                        <p class="module-subtitle">La <em>ömë</em> no es solo un arma, es ingeniería, física empírica y botánica.</p>
+                        <p class="module-subtitle" [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.SUBTITLE' | translate"></p>
                         <ul class="lexicon-list">
-                            <li><strong>Ömë</strong>: Cerbatana principal, elaborada de palma de <em>Iriartea deltoidea</em>.</li>
-                            <li><strong>Nënë</strong>: Dardos meticulosamente tallados en madera de chonta.</li>
-                            <li><strong>Omi</strong>: Curare; neurotoxina para inmovilizar músculos extraída de varias mezclas de <em>Strychnos</em>.</li>
-                            <li><strong>Wii</strong>: Algodón de ceibo, recolectado para asegurar el sello de presión de aire.</li>
-                            <li><strong>Bëi</strong>: Mandíbula de piraña sagrada, herramienta principal para muescar y afilar el dardo.</li>
-                            <li><strong>Nënë tewe</strong>: Carcaj protector tejido para un entorno húmedo en espeso bambú (<em>Dowe</em>).</li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I1' | translate"></li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I2' | translate"></li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I3' | translate"></li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I4' | translate"></li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I5' | translate"></li>
+                            <li [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_4.ITEMS.I6' | translate"></li>
                         </ul>
                     </div>
 
@@ -303,17 +270,17 @@
                     <div class="info-module">
                         <div class="module-header">
                             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 8H13V13.8L17.6 16.5L16.4 18.2L11 15V8M12 2C17.5 2 22 6.5 22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2M12 4C7.6 4 4 7.6 4 12C4 16.4 7.6 20 12 20C16.4 20 20 16.4 20 12C20 7.6 16.4 4 12 4Z"/></svg>
-                            <h4>Perspectiva del Mundo y Contacto</h4>
+                            <h4>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.HEADER' | translate }}</h4>
                         </div>
                         
                         <div class="module-grid time-space">
                             <div class="info-card">
-                                <h5>Tiempo no Lineal</h5>
-                                <p>Dividido en <strong>Tiempos de Guerra</strong> (escasez, movilidad en defensa) y <strong>Tiempos de Paz</strong> (cosechas y fiestas o alianzas en la maloca del <em>nanicabo</em>).</p>
+                                <h5>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.CARDS.C1_TITLE' | translate }}</h5>
+                                <p [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.CARDS.C1_DESC' | translate"></p>
                             </div>
                             <div class="info-card">
-                                <h5>El Espacio (Ome)</h5>
-                                <p>El bosque no tiene fronteras de mapas occidentales trazadas, se define por la memoria sagrada marcada por los abuelos y hasta los sutiles sonidos del viento.</p>
+                                <h5>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.CARDS.C2_TITLE' | translate }}</h5>
+                                <p>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.CARDS.C2_DESC' | translate }}</p>
                             </div>
                         </div>
 
@@ -321,25 +288,25 @@
                             <div class="timeline-item">
                                 <div class="tl-dot"></div>
                                 <div class="tl-content">
-                                    <strong>Época Misionera y del Caucho</strong> Violencia externa, esclavitud y defensa de la soberanía.
+                                    <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T1_TITLE' | translate }}</strong> {{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T1_DESC' | translate }}
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="tl-dot"></div>
                                 <div class="tl-content">
-                                    <strong>Protectorado e ILV (1950s)</strong> Época de sedentarización impuesta y alteración forzada hacia el modelo nuclear perdiendo los términos antiguos.
+                                    <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T2_TITLE' | translate }}</strong> {{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T2_DESC' | translate }}
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="tl-dot"></div>
                                 <div class="tl-content">
-                                    <strong>Era Petrolera</strong> Introducción de economías basadas en moneda y la lucha ambiental en las reservas frente a la explotación.
+                                    <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T3_TITLE' | translate }}</strong> {{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T3_DESC' | translate }}
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="tl-dot"></div>
                                 <div class="tl-content">
-                                    <strong>Autogestión de la Nacionalidad</strong> Ejercicio pleno de derechos para resistir bioprospección y unificar territorios bajo organizaciones y la "Veeduría Waorani".
+                                    <strong>{{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T4_TITLE' | translate }}</strong> {{ 'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.MODULE_5.TIMELINE.T4_DESC' | translate }}
                                 </div>
                             </div>
                         </div>
@@ -348,9 +315,7 @@
                     <!-- 6. Conclusión -->
                     <div class="conclusion-box">
                         <svg viewBox="0 0 24 24" class="quote-icon"><path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"/></svg>
-                        <p>
-                            En un mundo donde el peligro rodea su silencio natural, mientras el <strong>Wao Terero</strong> siga vivo... los <strong>Waorani</strong> podrán seguir definiéndose como "gente verdadera", manteniendo así el control ancestral sobre todos sus mitos de origen, botánica y vida en lo más recóndito y virgen de la Amazonía profunda.<br><br>Su oralidad es su mayor templo y defensa.
-                        </p>
+                        <p [innerHtml]="'TRIBES.WAORANI.PAGE.LANGUAGE_SECTION.CONCLUSION' | translate"></p>
                     </div>
 
                 </div>

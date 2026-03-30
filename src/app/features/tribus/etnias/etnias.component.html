@@ -1,12 +1,12 @@
 <div class="ps-container" id="ps-container">
     <div class="ps-main-title">
-        <h1>Etnias de la Amazonía</h1>
+        <h1>{{ 'TRIBES.TITLE' | translate }}</h1>
     </div>
 
     <!-- Animal Title (Mobile Only) -->
     <div class="ps-animal-title-mobile">
         @for (slide of slides; track slide.title; let i = $index) {
-        <h2 [style.z-index]="getZIndex(i)">{{ slide.title }}</h2>
+        <h2 [style.z-index]="getZIndex(i)">{{ slide.title | translate }}</h2>
         }
     </div>
 
@@ -28,22 +28,22 @@
         <div class="ps-content" [class.ps-move]="isAnimating()" [style.top]="getSlidePosition(i, 'item')"
             [style.z-index]="getZIndex(i)">
 
-            <h2>{{ slide.title }}</h2>
-            <span class="ps-price">{{ slide.weight }}</span>
+            <h2>{{ slide.title | translate }}</h2>
+            <span class="ps-price">{{ slide.weight | translate }}</span>
             <p>
-                <em class="scientific-name">{{ slide.scientificName }}</em><br><br>
-                {{ slide.description }}
+                <em class="scientific-name">{{ slide.scientificName | translate }}</em><br><br>
+                {{ slide.description | translate }}
             </p>
             @if (slide.link) {
                 @if (slide.link.startsWith('http')) {
                 <a [href]="slide.disabled ? null : slide.link" 
                    target="_blank" rel="noopener noreferrer" 
                    class="ps-button" 
-                   [class.disabled]="slide.disabled">Más información</a>
+                   [class.disabled]="slide.disabled">{{ 'COMMON.MORE_INFO' | translate }}</a>
                 } @else {
                 <a [routerLink]="slide.disabled ? null : [slide.link]" 
                    class="ps-button" 
-                   [class.disabled]="slide.disabled">Más información</a>
+                   [class.disabled]="slide.disabled">{{ 'COMMON.MORE_INFO' | translate }}</a>
                 }
             }
         </div>
