@@ -7,11 +7,14 @@
         </button>
     </div>
 
-    <h1 class="hero-title">{{ 'MAMMALS.TAPIR.TITLE' | translate }}</h1>
+    <div class="hero-header">
+        <h1 class="hero-title">{{ 'MAMMALS.TAPIR.TITLE' | translate }}</h1>
+        <span class="scientific-name">Tapirus terrestris</span>
+    </div>
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/mammals/tapir.png" alt="Tapirus terrestris - Tapir Brasileño" class="animal-image">
+            <img src="assets/mammals/tapir/tapir.png" alt="Tapirus terrestris - Tapir Brasileño" class="animal-image">
         </div>
     </div>
 
@@ -50,17 +53,56 @@
                 </svg>
                 {{ 'MAMMALS.TAPIR.TABS.VIDEO' | translate }}
             </button>
+            <button [class.active]="activeTab() === 'subspecies'" (click)="setTab('subspecies')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M21 5c-1.11 0-2 .89-2 2 0 .73.4 1.35 1 1.7V11c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2V8.7c.6-.35 1-.97 1-1.7 0-1.11-.89-2-2-2S4 5.89 4 7c0 .73.4 1.35 1 1.7V11c0 2.21 1.79 4 4 4h7c1.38 0 2.5.84 2.5 2.5V20h-7V17c0-1.1-.9-2-2-2" />
+                </svg>
+                {{ 'MAMMALS.TAPIR.TABS.SUBSPECIES' | translate }}
+            </button>
         </div>
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
-            <div class="multimedia-item video-container">
+            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
                 <h3>{{ 'MAMMALS.TAPIR.VIDEO_TITLE' | translate }}</h3>
                 <div class="video-container-iframe">
                     <iframe [src]="videoUrl()" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
+                </div>
+            </div>
+
+            <!-- Subspecies Tab -->
+            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                <h3>{{ 'MAMMALS.TAPIR.SUBSPECIES_TITLE' | translate }}</h3>
+                <div class="gallery-wrapper">
+                    <button class="nav-btn prev" (click)="prevPhoto()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+
+                    <div class="main-photo-view">
+                        <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                    </div>
+
+                    <button class="nav-btn next" (click)="nextPhoto()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+
+                <div class="subspecies-info">
+                    <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
+                    <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
+                </div>
+
+                <div class="thumbnails-track">
+                    @for (img of galleryImages; track img.url; let i = $index) {
+                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                        <img [src]="img.url" alt="Thumbnail">
+                    </div>
+                    }
                 </div>
             </div>
         </div>

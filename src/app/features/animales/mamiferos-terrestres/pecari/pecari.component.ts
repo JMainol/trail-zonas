@@ -25,7 +25,7 @@ export class PecariComponent {
 
     // Video URL
     protected videoUrl = signal<SafeResourceUrl>(
-        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XLOw4zHWIXM')
+        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/379FNePF1Y4')
     );
 
     // Signal for parallax

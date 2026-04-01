@@ -11,6 +11,7 @@ $avatar-blue-glow: #00f2ff; // Cyan bioluminiscente
 $avatar-magenta-glow: #bc13fe; // Púrpura/Magenta neón
 $avatar-green-glow: #39ff14; // Verde neón (Naturaleza viva)
 $avatar-teal-glow: #2dd4bf; // Teal místico
+$font-body: "Inter", sans-serif;
 
 $dark-theme: mat.define-theme((color: (theme-type: dark,
         primary: mat.$cyan-palette,
@@ -94,4 +95,20 @@ app-root {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--avatar-cyan);
   box-shadow: 0 0 10px var(--avatar-cyan);
+}
+
+.scientific-name {
+  display: block;
+  font-family: $font-body;
+  font-size: 1.1rem;
+  color: #ffd700;
+  font-style: italic;
+  text-transform: none;
+  font-weight: 500;
+  position: relative;
+  text-align: inherit;
+
+  @media (min-width: 768px) {
+    font-size: 1.35rem;
+  }
 }
