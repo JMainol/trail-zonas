@@ -241,6 +241,7 @@ $font-body: "Inter", sans-serif;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     max-width: 1200px;
+    margin: 0 auto;
 
     .hero-column {
         font-family: $font-body;
@@ -253,6 +254,7 @@ $font-body: "Inter", sans-serif;
             line-height: 1.8;
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.9);
+            text-align: justify;
             &:last-child { margin-bottom: 0; }
             strong { color: $accent-gold; text-shadow: 0 0 10px rgba($accent-gold, 0.3); }
             em { color: #d1d5db; font-style: italic; }
@@ -291,7 +293,7 @@ $font-body: "Inter", sans-serif;
         
         table {
             width: 100%;
-            min-width: 600px; // Evita que se colapsen mucho en movil
+            min-width: 600px;
             text-align: left;
             border-collapse: collapse;
             font-family: $font-body;
@@ -355,6 +357,71 @@ $font-body: "Inter", sans-serif;
                 }
             }
         }
+
+        // ===== MOBILE RESPONSIVE: Card layout =====
+        @media (max-width: 767px) {
+            overflow-x: visible; // Eliminamos scroll horizontal
+
+            table {
+                min-width: unset; // Quitamos el ancho mínimo forzado
+                width: 100%;
+
+                // Ocultamos cabecera en mobile
+                thead {
+                    display: none;
+                }
+
+                // Cada fila se convierte en una tarjeta
+                tbody tr {
+                    display: block;
+                    margin-bottom: 1rem;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    background: rgba(2, 6, 23, 0.5);
+                    overflow: hidden;
+
+                    &:last-child { margin-bottom: 0; }
+
+                    // Última fila sin borde inferior
+                    border-bottom: none;
+                }
+
+                // Cada celda se convierte en una fila label + valor
+                tbody td {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0.75rem 1rem;
+                    font-size: 0.95rem;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                    gap: 0.2rem;
+
+                    &:last-child { border-bottom: none; }
+
+                    // Label de columna (del atributo data-label)
+                    &::before {
+                        content: attr(data-label);
+                        display: block;
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: rgba($accent-gold, 0.7);
+                    }
+
+                    // Celda destacada (primera columna / nombre)
+                    &.highlight-cell {
+                        background: rgba($accent-gold, 0.05);
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 700;
+
+                        &::before {
+                            color: rgba($accent-gold, 0.5);
+                        }
+                    }
+                }
+            }
+        }
         
         &.green-theme {
             border-color: rgba($accent-emeralds, 0.3);
@@ -368,6 +435,17 @@ $font-body: "Inter", sans-serif;
                     }
                 }
                 tbody tr:hover { background: rgba($accent-emeralds, 0.05); }
+            }
+
+            // Green theme mobile labels
+            @media (max-width: 767px) {
+                table tbody td::before {
+                    color: rgba($accent-emeralds, 0.7);
+                }
+                table tbody td.highlight-cell {
+                    background: rgba($accent-emeralds, 0.05);
+                    &::before { color: rgba($accent-emeralds, 0.5); }
+                }
             }
         }
     }
