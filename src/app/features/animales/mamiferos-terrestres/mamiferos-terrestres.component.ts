@@ -39,7 +39,7 @@ export class MamiferosTerrestresComponent implements AfterViewInit {
       scientificName: 'Tapirus terrestris',
       description: 'MAMMALS.SLIDER.TAPIR.DESCRIPTION',
       weight: 'MAMMALS.SLIDER.TAPIR.WEIGHT',
-      image: 'assets/mammals/tapir.png',
+      image: 'assets/mammals/tapir/tapir.png',
       link: 'tapir'
     },
     {

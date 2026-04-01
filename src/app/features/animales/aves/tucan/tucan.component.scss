@@ -127,22 +127,6 @@ $font-body: "Inter", sans-serif;
     }
 }
 
-.scientific-name {
-    display: block;
-    font-family: $font-body;
-    font-size: 1.1rem;
-    color: #ffd700;
-    font-style: italic;
-    text-transform: none;
-    font-weight: 500;
-    position: relative;
-    text-align: inherit;
-
-    @media (min-width: 768px) {
-        font-size: 1.35rem;
-    }
-}
-
 .hero-visual {
     position: relative;
     display: flex;
@@ -850,4 +834,4 @@ $font-body: "Inter", sans-serif;
         opacity: 1;
         transform: scale(1);
     }
-}
+}

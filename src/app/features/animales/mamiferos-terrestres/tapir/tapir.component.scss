@@ -81,35 +81,45 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+.hero-header {
+    width: 100%;
+    z-index: 30;
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+}
+
 .hero-title {
     font-family: $font-heading;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
-    line-height: 0.9;
-    letter-spacing: -2px;
-    margin-bottom: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
+    word-break: break-word;
     position: relative;
-    z-index: 30;
-    text-align: center;
+    text-align: inherit;
 
     &::before {
         content: '';
         display: block;
         width: 60px;
         height: 4px;
-        background-color: $tapir-gray;
+        background-color: $cyan-accent;
         margin: 0 auto 1rem;
-        box-shadow: 0 0 10px $tapir-gray;
+        box-shadow: 0 0 10px $cyan-accent;
     }
 
     @media (min-width: 768px) {
-        grid-column: 2;
-        grid-row: 1;
-        text-align: left;
         font-size: 3.0625rem;
-        margin-bottom: 3rem;
 
         &::before {
             margin: 0 0 1rem 0;
@@ -625,5 +635,175 @@ $font-body: "Inter", sans-serif;
             color: rgba(255, 255, 255, 0.5);
             font-weight: 500;
         }
+    }
+}
+
+/* Photos/Gallery Tab Style for Subspecies */
+.photos-container {
+    width: 100%;
+    max-width: 630px;
+    margin: 0 auto;
+
+    .gallery-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        .nav-btn {
+            background: rgba($avatar-blue-deep, 0.6);
+            border: 1px solid rgba($avatar-cyan, 0.2);
+            color: $avatar-cyan;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            z-index: 5;
+
+            &:hover {
+                background: rgba($avatar-cyan, 0.1);
+                border-color: rgba($avatar-cyan, 0.5);
+                box-shadow: 0 0 15px rgba($avatar-cyan, 0.2);
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                background: rgba($avatar-blue-deep, 0.8);
+
+                &.prev {
+                    left: 10px;
+                }
+
+                &.next {
+                    right: 10px;
+                }
+            }
+        }
+    }
+
+    .main-photo-view {
+        position: relative;
+        flex-grow: 1;
+        border-radius: 16px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 55vh;
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            max-height: 55vh;
+            object-fit: contain;
+            display: block;
+            animation: imgFade 0.4s ease-out;
+        }
+
+        .img-counter {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+            background: rgba(0, 0, 0, 0.6);
+            color: $avatar-cyan;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-family: $font-heading;
+            font-size: 0.8rem;
+            font-weight: 700;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba($avatar-cyan, 0.3);
+            letter-spacing: 1px;
+        }
+    }
+
+    .subspecies-info {
+        margin-bottom: 2rem;
+        animation: imgFade 0.4s ease-out;
+
+        .subspecies-name {
+            font-family: $font-heading;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .subspecies-sci {
+            font-family: $font-body;
+            font-size: 1rem;
+            color: #ffd700;
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+
+    .thumbnails-track {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumb {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:hover {
+                opacity: 0.8;
+                border-color: rgba($avatar-cyan, 0.3);
+            }
+
+            &.active {
+                opacity: 1;
+                border-color: $avatar-cyan;
+                transform: scale(1.1);
+                box-shadow: 0 0 10px rgba($avatar-cyan, 0.4);
+            }
+        }
+    }
+}
+
+@keyframes imgFade {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

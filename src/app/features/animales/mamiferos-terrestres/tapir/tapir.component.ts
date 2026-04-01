@@ -25,7 +25,7 @@ export class TapirComponent {
 
     // Video URL
     protected videoUrl = signal<SafeResourceUrl>(
-        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/XLOw4zHWIXM')
+        this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/PF4LuV2KIG0')
     );
 
     // Signal for parallax
@@ -36,8 +36,28 @@ export class TapirComponent {
     protected currentTime = signal(0);
     protected duration = signal(0);
     protected progress = signal(0);
-    protected activeTab = signal('video'); // 'video', 'sound', 'map'
+    protected activeTab = signal('video'); // 'video', 'sound', 'map', 'subspecies'
     protected isExpanded = signal(false);
+
+    // Gallery Slider
+    protected galleryImages = [
+        {
+            url: 'assets/mammals/tapir/malayan-tapir.jpg',
+            nameKey: 'MAMMALS.TAPIR.SUBSPECIES_1_NAME',
+            sciKey: 'MAMMALS.TAPIR.SUBSPECIES_1_SCI'
+        },
+        {
+            url: 'assets/mammals/tapir/malayan-tapir-baby.jpg',
+            nameKey: 'MAMMALS.TAPIR.SUBSPECIES_2_NAME',
+            sciKey: 'MAMMALS.TAPIR.SUBSPECIES_2_SCI'
+        },
+        {
+            url: 'assets/mammals/tapir/malayan-tapir-with-baby.png',
+            nameKey: 'MAMMALS.TAPIR.SUBSPECIES_3_NAME',
+            sciKey: 'MAMMALS.TAPIR.SUBSPECIES_3_SCI'
+        }
+    ];
+    protected currentPhotoIndex = signal(0);
 
     toggleExpanded() {
         this.isExpanded.set(!this.isExpanded());
@@ -95,6 +115,14 @@ export class TapirComponent {
         const mins = Math.floor(seconds / 60);
         const secs = Math.floor(seconds % 60);
         return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    nextPhoto() {
+        this.currentPhotoIndex.update(i => (i + 1) % this.galleryImages.length);
+    }
+
+    prevPhoto() {
+        this.currentPhotoIndex.update(i => (i - 1 + this.galleryImages.length) % this.galleryImages.length);
     }
 
     goBack() {
