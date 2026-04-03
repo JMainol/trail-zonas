@@ -396,10 +396,13 @@ export class NavMenuComponent {
             (p.enTitle && p.enTitle.toLowerCase().includes(q)) ||
             (p.scientificName && p.scientificName.toLowerCase().includes(q))
          )
-         .map(p => ({
-            ...p,
-            displayTitle: currentLang === 'es' ? p.title : (p.enTitle || p.title)
-         }));
+         .map(p => {
+            const baseTitle = currentLang === 'es' ? p.title : (p.enTitle || p.title);
+            return {
+               ...p,
+               displayTitle: p.scientificName ? `${baseTitle} - ${p.scientificName}` : baseTitle
+            };
+         });
    });
 
    menuItems: any[] = [
