@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, computed, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, CommonModule, NgOptimizedImage } from '@angular/common';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubePlayer } from '@angular/youtube-player';
@@ -14,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-tucan',
   standalone: true,
-  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent, MatIconModule],
+  imports: [CommonModule, YouTubePlayer, TranslateModule, MediaCaptionComponent, MatIconModule, NgOptimizedImage],
   templateUrl: './tucan.component.html',
   styleUrl: './tucan.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -49,7 +48,10 @@ export class TucanComponent implements OnInit {
   protected isPlaying = signal(false);
   protected currentTime = signal(0);
   protected duration = signal(0);
-  protected progress = signal(0);
+  protected progress = computed(() => {
+    const d = this.duration();
+    return d > 0 ? (this.currentTime() / d) * 100 : 0;
+  });
   protected activeTab = signal('video'); // 'video', 'sound', 'map', 'subspecies'
 
   // Gallery Slider
@@ -92,7 +94,6 @@ export class TucanComponent implements OnInit {
   onTimeUpdate() {
     const audio = this.audioPlayer.nativeElement;
     this.currentTime.set(audio.currentTime);
-    this.progress.set((audio.currentTime / audio.duration) * 100);
   }
 
   onLoadedMetadata() {
@@ -103,7 +104,6 @@ export class TucanComponent implements OnInit {
   onAudioEnded() {
     this.isPlaying.set(false);
     this.currentTime.set(0);
-    this.progress.set(0);
   }
 
   seek(event: MouseEvent) {

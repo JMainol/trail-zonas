@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
@@ -14,6 +14,9 @@ import { routes } from './app.routes';
  */
 export const appConfig: ApplicationConfig = {
   providers: [
+    // Modo Zoneless: Elimina zone.js para un rendimiento ultra-eficiente basado en Signals.
+    provideZonelessChangeDetection(),
+
     // Manejo global de errores en el navegador
     provideBrowserGlobalErrorListeners(),
 

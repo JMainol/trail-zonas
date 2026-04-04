@@ -1,5 +1,5 @@
 
-import { Component, signal, computed, ElementRef, ViewChild, HostListener, inject } from '@angular/core';
+import { Component, signal, computed, ElementRef, ViewChild, HostListener, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -320,7 +320,8 @@ interface SearchResult {
       </div>
     </nav>
   `,
-   styleUrl: './nav-menu.component.scss'
+   styleUrl: './nav-menu.component.scss',
+   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenuComponent {
    isMobileMenuOpen = false;
