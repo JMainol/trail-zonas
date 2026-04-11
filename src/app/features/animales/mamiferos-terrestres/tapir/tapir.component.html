@@ -64,47 +64,64 @@
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
-            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>{{ 'MAMMALS.TAPIR.VIDEO_TITLE' | translate }}</h3>
-                <div class="video-container-iframe">
-                    <iframe [src]="videoUrl()" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+            @defer (when activeTab() === 'video'; prefetch on idle) {
+                <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <h3>{{ 'MAMMALS.TAPIR.VIDEO_TITLE' | translate }}</h3>
+                    <div class="video-container-iframe">
+                        <iframe [src]="videoUrl()" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item video-container placeholder-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="loading-shimmer video-placeholder"></div>
+                </div>
+            } @loading (after 100ms; minimum 500ms) {
+                <div class="multimedia-item video-container loading-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="spinner"></div>
+                    <p>{{ 'COMMON.LOADING_VIDEO' | translate }}</p>
+                </div>
+            }
 
             <!-- Subspecies Tab -->
-            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
-                <h3>{{ 'MAMMALS.TAPIR.SUBSPECIES_TITLE' | translate }}</h3>
-                <div class="gallery-wrapper">
-                    <button class="nav-btn prev" (click)="prevPhoto()">
-                        <mat-icon>chevron_left</mat-icon>
-                    </button>
+            @defer (when activeTab() === 'subspecies'; prefetch on idle) {
+                <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                    <h3>{{ 'MAMMALS.TAPIR.SUBSPECIES_TITLE' | translate }}</h3>
+                    <div class="gallery-wrapper">
+                        <button class="nav-btn prev" (click)="prevPhoto()">
+                            <mat-icon>chevron_left</mat-icon>
+                        </button>
 
-                    <div class="main-photo-view">
-                        <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
-                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                        <div class="main-photo-view">
+                            <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                            <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                        </div>
+
+                        <button class="nav-btn next" (click)="nextPhoto()">
+                            <mat-icon>chevron_right</mat-icon>
+                        </button>
                     </div>
 
-                    <button class="nav-btn next" (click)="nextPhoto()">
-                        <mat-icon>chevron_right</mat-icon>
-                    </button>
-                </div>
-
-                <div class="subspecies-info">
-                    <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
-                    <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
-                </div>
-
-                <div class="thumbnails-track">
-                    @for (img of galleryImages; track img.url; let i = $index) {
-                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
-                        <img [src]="img.url" alt="Thumbnail">
+                    <div class="subspecies-info">
+                        <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
+                        <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
                     </div>
-                    }
+
+                    <div class="thumbnails-track">
+                        @for (img of galleryImages; track img.url; let i = $index) {
+                        <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                            <img [src]="img.url" alt="Thumbnail">
+                        </div>
+                        }
+                    </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item photos-container placeholder-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                    <div class="loading-shimmer gallery-placeholder"></div>
+                </div>
+            }
         </div>
     </div>
 

@@ -54,89 +54,95 @@
     </div>
 
     <!-- ===== TABLAS 1 y 2 ===== -->
-    <div class="tables-full-width-container">
+    @defer (on viewport; prefetch on idle) {
+        <div class="tables-full-width-container">
 
-        <!-- Tabla 1 -->
-        <div class="table-wrapper">
-            <table>
-                <caption>
-                    <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.TITLE' | translate }}</div>
-                    <div class="caption-desc">
-                        {{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.DESC' | translate }} &nbsp;
-                        <a href="https://www.amazoniazasbajosupresion.org" target="_blank" rel="noopener">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.LINK' | translate }}</a>
-                    </div>
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C3' | translate }}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Tabla 1 -->
+            <div class="table-wrapper">
+                <table>
+                    <caption>
+                        <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.TITLE' | translate }}</div>
+                        <div class="caption-desc">
+                            {{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.DESC' | translate }} &nbsp;
+                            <a href="https://www.amazoniazasbajosupresion.org" target="_blank" rel="noopener">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.LINK' | translate }}</a>
+                        </div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R1_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R2_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R3_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_1.R4_C3' | translate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla 2 -->
+            <div class="table-wrapper">
+                <table>
+                    <caption>
+                        <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.TITLE' | translate }}</div>
+                        <div class="caption-desc">
+                            {{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.DESC' | translate }} &nbsp;
+                            <a href="https://www.maapprogram.org/amazon-deforestation-fire-hotspots-2024/" target="_blank"
+                                rel="noopener">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.LINK' | translate }}</a>
+                        </div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C3' | translate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-
-        <!-- Tabla 2 -->
-        <div class="table-wrapper">
-            <table>
-                <caption>
-                    <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.TITLE' | translate }}</div>
-                    <div class="caption-desc">
-                        {{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.DESC' | translate }} &nbsp;
-                        <a href="https://www.maapprogram.org/amazon-deforestation-fire-hotspots-2024/" target="_blank"
-                            rel="noopener">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.LINK' | translate }}</a>
-                    </div>
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R1_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R2_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_2.R3_C3' | translate }}</td>
-                    </tr>
-                </tbody>
-            </table>
+    } @placeholder {
+        <div class="tables-full-width-container placeholder-container">
+            <div class="loading-shimmer table-placeholder"></div>
         </div>
-
-    </div>
+    }
 
     <!-- ===== TÍTULO SECCIÓN 2: Arquitecturas de Esperanza ===== -->
     <div class="full-col">
@@ -148,28 +154,34 @@
     </div>
 
     <!-- ===== IMÁGENES Proyectos ===== -->
-    <div class="images-grid-full">
-        <div class="logo-container">
-            <a href="https://www.funbio.org.br/en/programas_e_projetos/arpa-program/" target="_blank" rel="noopener">
-                <img src="assets/images/conservation/projects/ARPA_logo.jpg" alt="ARPA" class="project-logo" />
-            </a>
+    @defer (on viewport; prefetch on idle) {
+        <div class="images-grid-full">
+            <div class="logo-container">
+                <a href="https://www.funbio.org.br/en/programas_e_projetos/arpa-program/" target="_blank" rel="noopener">
+                    <img src="assets/images/conservation/projects/ARPA_logo.jpg" alt="ARPA" class="project-logo" />
+                </a>
+            </div>
+            <div class="logo-container">
+                <a href="https://www.fundoamazonia.gov.br/pt/home/" target="_blank" rel="noopener">
+                    <img src="assets/images/conservation/projects/fundo_amazonia.jpg" alt="Fundo Amazônia" class="project-logo" />
+                </a>
+            </div>
+            <div class="logo-container">
+                <a href="https://www.junglekeepers.org/" target="_blank" rel="noopener">
+                    <img src="assets/images/conservation/projects/junglekeepers_logo.png" alt="JungleKeepers" class="project-logo" />
+                </a>
+            </div>
+            <div class="logo-container">
+                <a href="https://www.sementesdoxingu.org.br/" target="_blank" rel="noopener">
+                    <img src="assets/images/conservation/projects/rede_de_sementes_do_xingu.png" alt="Rede de Sementes do Xingu" class="project-logo" />
+                </a>
+            </div>
         </div>
-        <div class="logo-container">
-            <a href="https://www.fundoamazonia.gov.br/pt/home/" target="_blank" rel="noopener">
-                <img src="assets/images/conservation/projects/fundo_amazonia.jpg" alt="Fundo Amazônia" class="project-logo" />
-            </a>
+    } @placeholder {
+        <div class="images-grid-full placeholder-container">
+            <div class="loading-shimmer grid-placeholder"></div>
         </div>
-        <div class="logo-container">
-            <a href="https://www.junglekeepers.org/" target="_blank" rel="noopener">
-                <img src="assets/images/conservation/projects/junglekeepers_logo.png" alt="JungleKeepers" class="project-logo" />
-            </a>
-        </div>
-        <div class="logo-container">
-            <a href="https://www.sementesdoxingu.org.br/" target="_blank" rel="noopener">
-                <img src="assets/images/conservation/projects/rede_de_sementes_do_xingu.png" alt="Rede de Sementes do Xingu" class="project-logo" />
-            </a>
-        </div>
-    </div>
+    }
 
     <!-- ===== SECCIÓN 2: Texto Esperanza ===== -->
     <div class="full-col">
@@ -190,53 +202,59 @@
     </div>
 
     <!-- ===== TABLA 3: Iniciativas de preservación (tema verde) ===== -->
-    <div class="tables-full-width-container" style="margin-top: 0;">
-        <div class="table-wrapper green-theme">
-            <table>
-                <caption>
-                    <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.TITLE' | translate }}</div>
-                    <div class="caption-desc">
-                        <a href="https://www.funbio.org.br/programas/arpa/" target="_blank" rel="noopener">Programa ARPA</a>
-                        &nbsp;·&nbsp;
-                        <a href="https://www.fundoamazonia.gov.br/es/home/" target="_blank" rel="noopener">Fundo Amazônia</a>
-                        &nbsp;·&nbsp;
-                        <a href="https://www.junglekeepers.org" target="_blank" rel="noopener">JungleKeepers</a>
-                        &nbsp;·&nbsp;
-                        <a href="https://www.wri.org/insights/brazilian-amazon-indigenous-bioeconomy-takes-root"
-                            target="_blank" rel="noopener">WRI Bioeconomía</a>
-                    </div>
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate }}</th>
-                        <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C3' | translate }}</td>
-                    </tr>
-                    <tr>
-                        <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C1' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C2' | translate }}</td>
-                        <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C3' | translate }}</td>
-                    </tr>
-                </tbody>
-            </table>
+    @defer (on viewport; prefetch on idle) {
+        <div class="tables-full-width-container" style="margin-top: 0;">
+            <div class="table-wrapper green-theme">
+                <table>
+                    <caption>
+                        <div class="caption-title">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.TITLE' | translate }}</div>
+                        <div class="caption-desc">
+                            <a href="https://www.funbio.org.br/programas/arpa/" target="_blank" rel="noopener">Programa ARPA</a>
+                            &nbsp;·&nbsp;
+                            <a href="https://www.fundoamazonia.gov.br/es/home/" target="_blank" rel="noopener">Fundo Amazônia</a>
+                            &nbsp;·&nbsp;
+                            <a href="https://www.junglekeepers.org" target="_blank" rel="noopener">JungleKeepers</a>
+                            &nbsp;·&nbsp;
+                            <a href="https://www.wri.org/insights/brazilian-amazon-indigenous-bioeconomy-takes-root"
+                                target="_blank" rel="noopener">WRI Bioeconomía</a>
+                        </div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate }}</th>
+                            <th scope="col">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R1_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R2_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R3_C3' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td class="highlight-cell" [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H1' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C1' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H2' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C2' | translate }}</td>
+                            <td [attr.data-label]="'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.H3' | translate">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.TABLE_3.R4_C3' | translate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+    } @placeholder {
+        <div class="tables-full-width-container placeholder-container">
+            <div class="loading-shimmer table-placeholder"></div>
+        </div>
+    }
 
 </section>

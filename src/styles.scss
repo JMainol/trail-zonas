@@ -112,3 +112,64 @@ app-root {
     font-size: 1.35rem;
   }
 }
+
+// Estilos para @defer y estados de carga
+.placeholder-container, .loading-container, .error-container {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.loading-shimmer {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 12px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: var(--avatar-cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.video-placeholder { min-height: 450px; }
+.sound-placeholder { min-height: 100px; }
+.map-placeholder { min-height: 400px; }
+.gallery-placeholder { min-height: 500px; }
+.table-placeholder { min-height: 200px; }
+.grid-placeholder { min-height: 150px; }
+.language-placeholder { min-height: 600px; }
+.info-placeholder { min-height: 300px; }
+
+.tab-hidden {
+  display: none !important;
+}

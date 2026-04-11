@@ -59,15 +59,26 @@
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
-            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>La Tierra del Jaguar | Vida Salvaje | Documental de Animales HD</h3>
-                <div class="video-container-iframe">
-                    <iframe [src]="videoUrl()" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+            @defer (on viewport; prefetch on idle) {
+                <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <h3>{{ 'MAMMALS.JAGUAR.VIDEO_TITLE' | translate }}</h3>
+                    <div class="video-container-iframe">
+                        <iframe [src]="videoUrl()" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item video-container placeholder-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="loading-shimmer video-placeholder"></div>
+                </div>
+            } @loading (after 100ms; minimum 500ms) {
+                <div class="multimedia-item video-container loading-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="spinner"></div>
+                    <p>{{ 'COMMON.LOADING_VIDEO' | translate }}</p>
+                </div>
+            }
         </div>
     </div>
 

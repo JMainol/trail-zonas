@@ -1,12 +1,17 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection, TransferState } from '@angular/core';
 import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
-import { provideTranslateHttpLoader, TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateBrowserLoader } from './core/loaders/translate-browser.loader';
 
 import { routes } from './app.routes';
+
+// Factory function for TranslateBrowserLoader
+export function HttpLoaderFactory(http: HttpClient, transferState: TransferState) {
+  return new TranslateBrowserLoader(transferState, http);
+}
 
 /**
  * Configuración principal de la aplicación.
@@ -32,18 +37,14 @@ export const appConfig: ApplicationConfig = {
     // Animaciones cargadas de forma asíncrona para no bloquear el renderizado inicial
     provideAnimationsAsync(),
 
-    // Configuración de i18n (ngx-translate)
+    // Configuración de i18n (ngx-translate) con TransferState
     provideHttpClient(withFetch()),
     provideTranslateService({
       loader: {
-
         provide: TranslateLoader,
-        useClass: TranslateHttpLoader
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient, TransferState]
       }
-    }),
-    provideTranslateHttpLoader({
-      prefix: './assets/i18n/',
-      suffix: '.json'
     })
   ]
 };

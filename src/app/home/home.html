@@ -16,18 +16,18 @@
     <!-- Sección de Texto con Efecto Scroll (Discover Amazon) -->
     <section class="content">
 
-        <div class="content__title" [innerHTML]="contentTitle">
+        <div class="content__title" [innerHTML]="contentTitle()">
         </div>
 
         <!-- Indicador de Scroll / Botón Volver Arriba -->
-        <div class="scroll-indicator" [class.is-back-to-top]="showBackToTop" (click)="showBackToTop && scrollToTop()">
-            <span class="scroll-text">{{ (showBackToTop ? 'HOME.BACK_TO_TOP' : 'HOME.SCROLL') | translate }}</span>
+        <div class="scroll-indicator" [class.is-back-to-top]="showBackToTop()" (click)="showBackToTop() && scrollToTop()">
+            <span class="scroll-text">{{ (showBackToTop() ? 'HOME.BACK_TO_TOP' : 'HOME.SCROLL') | translate }}</span>
             <div class="scroll-line">
                 <div class="scroll-dot"></div>
             </div>
         </div>
 
-        <div *ngFor="let text of contentTexts" class="content__text" [innerHTML]="text">
+        <div *ngFor="let text of contentTexts()" class="content__text" [innerHTML]="text">
         </div>
 
     </section>
