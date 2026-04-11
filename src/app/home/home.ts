@@ -1,18 +1,28 @@
-import { ChangeDetectionStrategy, Component, ElementRef, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy,
+  PLATFORM_ID,
+  ViewEncapsulation,
+  signal,
+  inject
+} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Subject, takeUntil, delay } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
-// ImportaciÃ³n de librerÃ­as externas
+// Importación de librerías externas
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 import Lenis from 'lenis';
 
 /**
- * Componente de PÃ¡gina de Inicio.
+ * Componente de Página de Inicio.
  */
 @Component({
   selector: 'app-home',
@@ -29,45 +39,44 @@ import Lenis from 'lenis';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
-  private lenis: Lenis | null = null;
-  private destroy$ = new Subject<void>();
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly translate = inject(TranslateService);
+  private readonly el = inject(ElementRef);
 
-  contentTitle: string = '';
-  contentTexts: string[] = [];
-  showBackToTop = false;
+  private lenis: Lenis | null = null;
+
+  readonly contentTitle = signal<string>('');
+  readonly contentTexts = signal<string[]>([]);
+  readonly showBackToTop = signal<boolean>(false);
+  
   private splitInstances: SplitType[] = [];
 
-  featuredAnimals = [
-    { title: 'Rana de Cristal', description: 'Guardianes translÃºcidos de los arroyos mÃ¡gicos.', color: '#39ff14' },
-    { title: 'Jaguar MÃ­stico', description: 'El depredador alfa bajo la luz de Pandora.', color: '#bc13fe' },
+  readonly featuredAnimals = [
+    { title: 'Rana de Cristal', description: 'Guardianes translúcidos de los arroyos mágicos.', color: '#39ff14' },
+    { title: 'Jaguar Místico', description: 'El depredador alfa bajo la luz de Pandora.', color: '#bc13fe' },
     { title: 'Hongo Bioluminiscente', description: 'Faros naturales en las profundidades de la selva.', color: '#00f2ff' }
   ];
 
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private el: ElementRef,
-    private translate: TranslateService,
-    private cdr: ChangeDetectorRef
-  ) { }
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Re-inicializar cuando el idioma cambie
+      this.translate.onLangChange
+        .pipe(takeUntilDestroyed())
+        .subscribe(() => {
+          this.refreshPageContent();
+        });
+    }
+  }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.initSmoothScroll();
-      // Re-inicializar cuando el idioma cambie
-      this.translate.onLangChange
-        .pipe(takeUntil(this.destroy$))
-        .subscribe(() => {
-          this.refreshPageContent();
-        });
-
       // Carga inicial
       this.refreshPageContent();
     }
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
     if (this.lenis) {
       this.lenis.destroy();
     }
@@ -91,14 +100,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
     // Combinamos todas las claves para una sola suscripción
     this.translate.get([titleKey, ...textKeys]).subscribe(translations => {
-      this.contentTitle = translations[titleKey];
-      this.contentTexts = textKeys.map(key => translations[key]);
-
-      // 3. Forzar actualización del DOM
-      this.cdr.detectChanges();
+      this.contentTitle.set(translations[titleKey]);
+      this.contentTexts.set(textKeys.map(key => translations[key]));
 
       // 4. Inicializar animaciones
-      // Pequeño delay para asegurar que el DOM está listo
+      // Pequeño delay para asegurar que el DOM está listo tras la actualización de signals
       setTimeout(() => {
         this.initTextRevealAnimation();
         ScrollTrigger.refresh();
@@ -132,9 +138,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.lenis.on('scroll', ScrollTrigger.update);
     this.lenis.on('scroll', (scroll: any) => {
       const shouldShowBackToTop = scroll.progress >= 0.5;
-      if (shouldShowBackToTop !== this.showBackToTop) {
-        this.showBackToTop = shouldShowBackToTop;
-        this.cdr.detectChanges();
+      if (shouldShowBackToTop !== this.showBackToTop()) {
+        this.showBackToTop.set(shouldShowBackToTop);
       }
     });
     gsap.ticker.add((time) => {

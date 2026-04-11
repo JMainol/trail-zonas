@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map, startWith } from 'rxjs';
 
 interface SearchResult {
    title: string;
@@ -19,7 +21,7 @@ interface SearchResult {
    standalone: true,
    imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule, FormsModule],
    template: `
-    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="MenÃº Principal">
+    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           
@@ -38,9 +40,9 @@ interface SearchResult {
               <ng-container *ngFor="let section of menuItems">
                 <li class="relative group" (mouseenter)="section.items ? onMouseEnter(section.id) : null" (mouseleave)="onMouseLeave()">
                     
-                    <!-- Si tiene Ã­tems (Dropdown) -->
+                    <!-- Si tiene ítems (Dropdown) -->
                     <button *ngIf="section.items" class="nav-item group-hover:glow-cyan focus:outline-none"
-                            [attr.aria-expanded]="activeDropdown === section.id"
+                            [attr.aria-expanded]="activeDropdown() === section.id"
                             [class.nav-disabled]="section.disabled">
                         {{ section.label | translate }}
                         <mat-icon class="icon transition-transform duration-300 group-hover:rotate-180">expand_more</mat-icon>
@@ -113,9 +115,9 @@ interface SearchResult {
 
               <!-- Language Switcher Desktop -->
               <div class="language-switcher">
-                 <button (click)="switchLanguage('es')" [class.active]="currentLang === 'es'" class="lang-btn">ES</button>
+                 <button (click)="switchLanguage('es')" [class.active]="currentLang() === 'es'" class="lang-btn">ES</button>
                  <div class="divider"></div>
-                 <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'" class="lang-btn">EN</button>
+                 <button (click)="switchLanguage('en')" [class.active]="currentLang() === 'en'" class="lang-btn">EN</button>
               </div>
             </div>
           </div>
@@ -124,7 +126,7 @@ interface SearchResult {
           <div class="flex md:hidden items-center gap-1.5 sm:gap-2">
              <!-- Language Switcher Mobile -->
              <button (click)="toggleLanguage()" class="mobile-lang-btn">
-                {{ currentLang | uppercase }}
+                {{ currentLang() | uppercase }}
              </button>
 
              <!-- Search Button Mobile -->
@@ -139,24 +141,24 @@ interface SearchResult {
              </button>
 
             <!-- Hamburger Button -->
-            <button (click)="toggleMobileMenu()" type="button" class="mobile-menu-btn" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen">
+            <button (click)="toggleMobileMenu()" type="button" class="mobile-menu-btn" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen()">
               <span class="sr-only">Abrir menú principal</span>
-              <mat-icon>{{ isMobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+              <mat-icon>{{ isMobileMenuOpen() ? 'close' : 'menu' }}</mat-icon>
             </button>
           </div>
         </div>
       </div>
 
       <!-- Mobile Menu Panel -->
-      <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen" [class.max-h-screen]="isMobileMenuOpen" [class.opacity-0]="!isMobileMenuOpen" [class.overflow-hidden]="!isMobileMenuOpen" id="mobile-menu">
+      <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen()" [class.max-h-screen]="isMobileMenuOpen()" [class.opacity-0]="!isMobileMenuOpen()" [class.overflow-hidden]="!isMobileMenuOpen()" id="mobile-menu">
         <div class="px-4 pt-4 pb-8 space-y-2">
             <div *ngFor="let section of menuItems" class="space-y-1">
-                <!-- Si tiene Ã­tems (Mobile Dropdown) -->
+                <!-- Si tiene ítems (Mobile Dropdown) -->
                 <ng-container *ngIf="section.items">
                     <button *ngIf="!section.disabled" (click)="toggleMobileSection(section.id)" 
                             class="w-full text-left flex justify-between nav-item-mobile">
                         {{ section.label | translate }}
-                        <mat-icon>{{ activeMobileSection === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+                        <mat-icon>{{ activeMobileSection() === section.id ? 'expand_less' : 'expand_more' }}</mat-icon>
                     </button>
                     <div *ngIf="section.disabled" class="w-full text-left flex justify-between nav-item-mobile nav-disabled">
                         {{ section.label | translate }}
@@ -175,7 +177,7 @@ interface SearchResult {
                     </div>
                 </ng-container>
                 
-                <div *ngIf="section.items && activeMobileSection === section.id && !section.disabled" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
+                <div *ngIf="section.items && activeMobileSection() === section.id && !section.disabled" class="pl-4 space-y-1 mt-1 border-l-2 border-cyan-500/30">
                     <ng-container *ngFor="let item of section.items">
                         <!-- Regular Mobile Item -->
                         <ng-container *ngIf="!item.items">
@@ -203,7 +205,7 @@ interface SearchResult {
                                         {{ item.label | translate }}
                                     </span>
                                     <button (click)="toggleMobileSubSection(item.label)" class="p-2 hover:bg-cyan-500/10 rounded-lg transition-all">
-                                        <mat-icon class="text-xl">{{ activeMobileSubSection === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
+                                        <mat-icon class="text-xl">{{ activeMobileSubSection() === item.label ? 'expand_less' : 'expand_more' }}</mat-icon>
                                     </button>
                                 </ng-container>
                                 <ng-container *ngIf="item.disabled">
@@ -213,7 +215,7 @@ interface SearchResult {
                                 </ng-container>
                             </div>
                             
-                            <div *ngIf="activeMobileSubSection === item.label && !item.disabled" 
+                            <div *ngIf="activeMobileSubSection() === item.label && !item.disabled" 
                                  class="pl-4 border-l-2 border-cyan-800/30 space-y-1 mt-1">
                                 <ng-container *ngFor="let subItem of item.items">
                                     <a *ngIf="!subItem.disabled"
@@ -324,25 +326,29 @@ interface SearchResult {
    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenuComponent {
-   isMobileMenuOpen = false;
-   activeDropdown: string | null = null;
-   activeMobileSection: string | null = null;
-   activeMobileSubSection: string | null = null;
+   private readonly translate = inject(TranslateService);
+   private readonly sanitizer = inject(DomSanitizer);
+   private readonly router = inject(Router);
+
+   readonly isMobileMenuOpen = signal(false);
+   readonly activeDropdown = signal<string | null>(null);
+   readonly activeMobileSection = signal<string | null>(null);
+   readonly activeMobileSubSection = signal<string | null>(null);
 
    // Search state
-   isSearchOpen = signal(false);
-   searchQuery = signal('');
-   selectedIndex = signal(-1);
-
-   private sanitizer = inject(DomSanitizer);
+   readonly isSearchOpen = signal(false);
+   readonly searchQuery = signal('');
+   readonly selectedIndex = signal(-1);
 
    @ViewChild('searchInput') searchInputRef!: ElementRef<HTMLInputElement>;
 
-   private router = inject(Router);
-
-   get currentLang() {
-      return this.translate.currentLang || 'es';
-   }
+   readonly currentLang = toSignal(
+      this.translate.onLangChange.pipe(
+         map(event => event.lang),
+         startWith(this.translate.currentLang || 'es')
+      ),
+      { initialValue: this.translate.currentLang || 'es' }
+   );
 
    // -------------------------------------------------------
    // Searchable pages catalog (Spanish titles + routes)
@@ -386,10 +392,10 @@ export class NavMenuComponent {
       { title: 'Contacto', enTitle: 'Contact', link: '/amazonia/contacto' },
    ];
 
-   filteredResults = computed(() => {
+   readonly filteredResults = computed(() => {
       const q = this.searchQuery().trim().toLowerCase();
       if (!q) return [];
-      const currentLang = this.currentLang;
+      const currentLang = this.currentLang();
       
       return this.searchablePages
          .filter(p => 
@@ -406,7 +412,7 @@ export class NavMenuComponent {
          });
    });
 
-   menuItems: any[] = [
+   readonly menuItems: any[] = [
       {
          id: 'animales',
          label: 'COMMON.ANIMALS',
@@ -529,15 +535,13 @@ export class NavMenuComponent {
       }
    ];
 
-   constructor(private translate: TranslateService) { }
-
    // ===================== Search methods =====================
 
    toggleSearch() {
       if (this.isSearchOpen()) {
          this.closeSearch();
       } else {
-         this.isMobileMenuOpen = false;
+         this.isMobileMenuOpen.set(false);
          this.isSearchOpen.set(true);
          // Focus input after animation frame
          setTimeout(() => {
@@ -642,46 +646,45 @@ export class NavMenuComponent {
    }
 
    toggleLanguage() {
-      const newLang = this.currentLang === 'es' ? 'en' : 'es';
+      const newLang = this.currentLang() === 'es' ? 'en' : 'es';
       this.translate.use(newLang);
    }
 
    onMouseEnter(id: string) {
-      this.activeDropdown = id;
+      this.activeDropdown.set(id);
    }
 
    onMouseLeave() {
-      this.activeDropdown = null;
+      this.activeDropdown.set(null);
    }
 
    toggleMobileMenu() {
-      if (!this.isMobileMenuOpen) {
+      if (!this.isMobileMenuOpen()) {
          this.closeSearch();
       }
-      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+      this.isMobileMenuOpen.update(v => !v);
    }
 
    toggleMobileSection(id: string) {
-      if (this.activeMobileSection === id) {
-         this.activeMobileSection = null;
+      if (this.activeMobileSection() === id) {
+         this.activeMobileSection.set(null);
       } else {
-         this.activeMobileSection = id;
-         this.activeMobileSubSection = null;
+         this.activeMobileSection.set(id);
+         this.activeMobileSubSection.set(null);
       }
    }
 
    toggleMobileSubSection(label: string) {
-      if (this.activeMobileSubSection === label) {
-         this.activeMobileSubSection = null;
+      if (this.activeMobileSubSection() === label) {
+         this.activeMobileSubSection.set(null);
       } else {
-         this.activeMobileSubSection = label;
+         this.activeMobileSubSection.set(label);
       }
    }
 
    closeMobileMenu() {
-      this.isMobileMenuOpen = false;
-      this.activeMobileSection = null;
-      this.activeMobileSubSection = null;
+      this.isMobileMenuOpen.set(false);
+      this.activeMobileSection.set(null);
+      this.activeMobileSubSection.set(null);
    }
 }
-// search-feature

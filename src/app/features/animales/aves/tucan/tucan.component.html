@@ -95,107 +95,140 @@
 
         <div class="multimedia-content-wrapper">
             <!-- Video Tab -->
-            <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
-                <h3>{{ 'BIRDS.TOUCAN_VIDEO_TITLE' | translate }}</h3>
-                <div class="video-container-iframe">
-                    <iframe [src]="videoUrl()" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+            @defer (when activeTab() === 'video'; prefetch on idle) {
+                <div class="multimedia-item video-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <h3>{{ 'BIRDS.TOUCAN_VIDEO_TITLE' | translate }}</h3>
+                    <div class="video-container-iframe">
+                        <iframe [src]="videoUrl()" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item video-container placeholder-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="loading-shimmer video-placeholder"></div>
+                </div>
+            } @loading (after 100ms; minimum 500ms) {
+                <div class="multimedia-item video-container loading-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <div class="spinner"></div>
+                    <p>{{ 'COMMON.LOADING_VIDEO' | translate }}</p>
+                </div>
+            } @error {
+                <div class="multimedia-item video-container error-container" [class.tab-hidden]="activeTab() !== 'video'">
+                    <p>{{ 'COMMON.ERROR_LOADING_VIDEO' | translate }}</p>
+                </div>
+            }
 
             <!-- Sound Tab -->
-            <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
-                <h3>{{ 'BIRDS.TOUCAN_SOUND_TITLE' | translate }}</h3>
-                <div class="avatar-audio-player">
-                    <audio #audioPlayer src="assets/sounds/toucan-call.mp3" (timeupdate)="onTimeUpdate()"
-                        (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
-                    </audio>
+            @defer (when activeTab() === 'sound'; prefetch on idle) {
+                <div class="multimedia-item sound-container" [class.tab-hidden]="activeTab() !== 'sound'">
+                    <h3>{{ 'BIRDS.TOUCAN_SOUND_TITLE' | translate }}</h3>
+                    <div class="avatar-audio-player">
+                        <audio #audioPlayer src="assets/sounds/toucan-call.mp3" (timeupdate)="onTimeUpdate()"
+                            (loadedmetadata)="onLoadedMetadata()" (ended)="onAudioEnded()">
+                        </audio>
 
-                    <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
-                        <div class="icon">
-                            @if (!isPlaying()) {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-                            </svg>
-                            } @else {
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
-                            </svg>
-                            }
-                        </div>
-                    </button>
+                        <button class="play-btn" (click)="togglePlay()" [class.playing]="isPlaying()">
+                            <div class="icon">
+                                @if (!isPlaying()) {
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>
+                                } @else {
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+                                </svg>
+                                }
+                            </div>
+                        </button>
 
-                    <div class="player-controls">
-                        <div class="progress-container" (click)="seek($event)">
-                            <div class="progress-bar" [style.width.%]="progress()">
-                                <div class="progress-glow"></div>
+                        <div class="player-controls">
+                            <div class="progress-container" (click)="seek($event)">
+                                <div class="progress-bar" [style.width.%]="progress()">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                            <div class="time-info">
+                                <span>{{ formatTime(currentTime()) }}</span>
+                                <span>{{ formatTime(duration()) }}</span>
                             </div>
                         </div>
-                        <div class="time-info">
-                            <span>{{ formatTime(currentTime()) }}</span>
-                            <span>{{ formatTime(duration()) }}</span>
-                        </div>
                     </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item sound-container placeholder-container" [class.tab-hidden]="activeTab() !== 'sound'">
+                    <div class="loading-shimmer sound-placeholder"></div>
+                </div>
+            }
 
             <!-- Map Tab -->
-            <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
-                <h3>{{ 'BIRDS.TOUCAN_MAP_TITLE' | translate }}</h3>
-                <div class="map-container">
-                    <img src="assets/images/birds/tucan/mapa-toucan-vitelado.png" alt="Mapa de probabilidad de Ramphastos vitellinus"
-                        class="habitat-map">
-                    <div class="map-legend">
-                        <div class="legend-title">{{ 'BIRDS.TOUCAN_MAP_LEGEND_TITLE' | translate }}</div>
-                        <div class="legend-item">
-                            <span class="color-dot high"></span>
-                            <span>{{ 'BIRDS.TOUCAN_MAP_HIGH' | translate }}</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="color-dot medium"></span>
-                            <span>{{ 'BIRDS.TOUCAN_MAP_MEDIUM' | translate }}</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="color-dot jungle"></span>
-                            <span>{{ 'BIRDS.TOUCAN_MAP_TYPE' | translate }}</span>
+            @defer (when activeTab() === 'map'; prefetch on idle) {
+                <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
+                    <h3>{{ 'BIRDS.TOUCAN_MAP_TITLE' | translate }}</h3>
+                    <div class="map-container">
+                        <img src="assets/images/birds/tucan/mapa-toucan-vitelado.png" alt="Mapa de probabilidad de Ramphastos vitellinus"
+                            class="habitat-map">
+                        <div class="map-legend">
+                            <div class="legend-title">{{ 'BIRDS.TOUCAN_MAP_LEGEND_TITLE' | translate }}</div>
+                            <div class="legend-item">
+                                <span class="color-dot high"></span>
+                                <span>{{ 'BIRDS.TOUCAN_MAP_HIGH' | translate }}</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="color-dot medium"></span>
+                                <span>{{ 'BIRDS.TOUCAN_MAP_MEDIUM' | translate }}</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="color-dot jungle"></span>
+                                <span>{{ 'BIRDS.TOUCAN_MAP_TYPE' | translate }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item map-container-tab placeholder-container" [class.tab-hidden]="activeTab() !== 'map'">
+                    <div class="loading-shimmer map-placeholder"></div>
+                </div>
+            }
 
             <!-- Subspecies Tab -->
-            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
-                <h3>{{ 'BIRDS.SUBSPECIES_TITLE' | translate }}</h3>
-                <div class="gallery-wrapper">
-                    <button class="nav-btn prev" (click)="prevPhoto()">
-                        <mat-icon>chevron_left</mat-icon>
-                    </button>
+            @defer (when activeTab() === 'subspecies'; prefetch on idle) {
+                <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                    <h3>{{ 'BIRDS.SUBSPECIES_TITLE' | translate }}</h3>
+                    <div class="gallery-wrapper">
+                        <button class="nav-btn prev" (click)="prevPhoto()">
+                            <mat-icon>chevron_left</mat-icon>
+                        </button>
 
-                    <div class="main-photo-view">
-                        <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
-                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                        <div class="main-photo-view">
+                            <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                            <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                        </div>
+
+                        <button class="nav-btn next" (click)="nextPhoto()">
+                            <mat-icon>chevron_right</mat-icon>
+                        </button>
                     </div>
 
-                    <button class="nav-btn next" (click)="nextPhoto()">
-                        <mat-icon>chevron_right</mat-icon>
-                    </button>
-                </div>
-
-                <div class="subspecies-info">
-                    <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
-                    <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
-                </div>
-
-                <div class="thumbnails-track">
-                    @for (img of galleryImages; track img.url; let i = $index) {
-                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
-                        <img [src]="img.url" alt="Thumbnail">
+                    <div class="subspecies-info">
+                        <h4 class="subspecies-name">{{ galleryImages[currentPhotoIndex()].nameKey | translate }}</h4>
+                        <span class="subspecies-sci">{{ galleryImages[currentPhotoIndex()].sciKey | translate }}</span>
                     </div>
-                    }
+
+                    <div class="thumbnails-track">
+                        @for (img of galleryImages; track img.url; let i = $index) {
+                        <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                            <img [src]="img.url" alt="Thumbnail">
+                        </div>
+                        }
+                    </div>
                 </div>
-            </div>
+            } @placeholder {
+                <div class="multimedia-item photos-container placeholder-container" [class.tab-hidden]="activeTab() !== 'subspecies'">
+                    <div class="loading-shimmer gallery-placeholder"></div>
+                </div>
+            }
         </div>
     </div>
 </section>

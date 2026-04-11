@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,14 +13,15 @@ export type MediaIconType = 'web' | 'instagram' | 'youtube' | 'ai';
   styleUrl: './media-caption.component.scss'
 })
 export class MediaCaptionComponent {
-  @Input() title: string = '';
-  @Input() author: string = '';
-  @Input() authorUrl: string = '';
-  @Input() iconType: MediaIconType = 'web';
+  title = input<string>('');
+  author = input<string>('');
+  authorUrl = input<string>('');
+  iconType = input<MediaIconType>('web');
 
   onNavigate() {
-    if (this.authorUrl) {
-      window.open(this.authorUrl, '_blank', 'noopener,noreferrer');
+    const url = this.authorUrl();
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   }
 }
