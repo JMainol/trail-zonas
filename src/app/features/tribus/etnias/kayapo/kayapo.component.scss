@@ -1347,3 +1347,170 @@ $font-body: "Inter", sans-serif;
         }
     }
 }
+
+/* ===== Lifecycle Tab ===== */
+.lifecycle-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    animation: tabFadeIn 0.5s ease-out forwards;
+}
+
+.lifecycle-intro {
+    font-family: $font-body;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid $avatar-cyan;
+    background: rgba($avatar-cyan, 0.04);
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+
+    @media (min-width: 768px) {
+        font-size: 1.1rem;
+        text-align: center;
+        border-left: none;
+        border-top: 3px solid $avatar-cyan;
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+/* ===== Tables (Lifecycle & Bioeconomy tabs) ===== */
+.tables-full-width-container {
+    width: 100%;
+    margin-top: 1rem;
+
+    .table-wrapper {
+        border-radius: 12px;
+        background: rgba($avatar-blue-deep, 0.8);
+        border: 1px solid rgba($avatar-cyan, 0.2);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        overflow-x: auto;
+
+        table {
+            width: 100%;
+            min-width: 560px;
+            text-align: left;
+            border-collapse: collapse;
+            font-family: $font-body;
+            color: #d1d5db;
+
+            thead th {
+                padding: 1.1rem 1.4rem;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $avatar-cyan;
+                background: rgba(0, 0, 0, 0.3);
+                border-bottom: 1px solid rgba($avatar-cyan, 0.2);
+            }
+
+            tbody tr {
+                transition: background 0.3s ease;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+                &:hover {
+                    background: rgba($avatar-cyan, 0.05);
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                td {
+                    padding: 1.1rem 1.4rem;
+                    font-size: 1rem;
+                    color: rgba(255, 255, 255, 0.8);
+                    line-height: 1.6;
+                }
+
+                td.highlight-cell {
+                    font-weight: 700;
+                    color: #fff;
+                    font-family: $font-heading;
+                    font-size: 1rem;
+                    letter-spacing: 0.3px;
+                }
+            }
+        }
+
+        // ===== MOBILE: Card layout =====
+        @media (max-width: 767px) {
+            overflow-x: visible;
+
+            table {
+                min-width: unset;
+                width: 100%;
+
+                thead {
+                    display: none;
+                }
+
+                tbody tr {
+                    display: block;
+                    margin-bottom: 1rem;
+                    border-radius: 10px;
+                    border: 1px solid rgba($avatar-cyan, 0.1);
+                    background: rgba(0, 0, 0, 0.3);
+                    overflow: hidden;
+                    border-bottom: none;
+                }
+
+                tbody td {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0.75rem 1rem;
+                    font-size: 0.95rem;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                    gap: 0.2rem;
+
+                    &:last-child { border-bottom: none; }
+
+                    &::before {
+                        content: attr(data-label);
+                        display: block;
+                        font-size: 0.65rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: rgba($avatar-cyan, 0.7);
+                    }
+
+                    &.highlight-cell {
+                        background: rgba($avatar-cyan, 0.06);
+                        color: white;
+                        font-weight: 700;
+                        font-size: 0.95rem;
+
+                        &::before {
+                            color: rgba($avatar-cyan, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ===== Bioeconomy Tab placeholder ===== */
+.bioeconomy-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    animation: tabFadeIn 0.5s ease-out forwards;
+
+    .placeholder-content {
+        padding: 3rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: $font-body;
+        font-size: 1.1rem;
+        font-style: italic;
+        border: 1px dashed rgba($avatar-cyan, 0.2);
+        border-radius: 12px;
+    }
+}

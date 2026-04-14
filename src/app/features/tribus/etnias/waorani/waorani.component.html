@@ -30,12 +30,10 @@
 
                 <p [class.mobile-hidden]="!isExpanded()" class="expandable-content" [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_2' | translate"></p>
             </div>
-            <div class="hero-column" [class.mobile-hidden]="!isExpanded()" class="expandable-content">
+            <div class="hero-column" [class.mobile-hidden]="!isExpanded()" [class.expandable-content]="true">
                 <p [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_3' | translate"></p>
-                <p>
-                    <span [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_4' | translate"></span>
-                    <span class="poetic-touch">{{ 'TRIBES.WAORANI.PAGE.HERO_QUOTATION' | translate }}</span>
-                </p>
+                <p [innerHtml]="'TRIBES.WAORANI.PAGE.HERO_BODY_4' | translate"></p>
+                <p class="poetic-touch">{{ 'TRIBES.WAORANI.PAGE.HERO_QUOTATION' | translate }}</p>
             </div>
         </div>
     </div>

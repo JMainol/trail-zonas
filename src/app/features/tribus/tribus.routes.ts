@@ -19,6 +19,11 @@ export const TRIBUS_ROUTES: Routes = [
                         path: 'waorani',
                         loadComponent: () => import('./etnias/waorani/waorani.component').then(m => m.WaoraniComponent),
                         title: 'Tribu Waorani'
+                    },
+                    {
+                        path: 'kayapo',
+                        loadComponent: () => import('./etnias/kayapo/kayapo.component').then(m => m.KayapoComponent),
+                        title: 'Tribu Kayapó'
                     }
                 ]
             },
