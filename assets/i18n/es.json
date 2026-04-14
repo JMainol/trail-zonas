@@ -17,7 +17,6 @@
     "BRAND": {
         "NAME": "SELVA AMAZONAS 2.0"
     },
-
     "COMMON": {
         "CLOSE": "Cerrar",
         "BACK": "Volver",
@@ -63,7 +62,10 @@
         "MORE_INFO": "Más información",
         "READ_MORE": "Leer más",
         "READ_LESS": "Leer menos",
+        "LOADING_VIDEO": "Cargando video de la selva...",
+        "COMING_SOON": "Próximamente...",
         "WAORANI": "Waorani",
+        "KAYAPO": "Kayapó",
         "RESOURCES": "Recursos",
         "BOOKS": "Libros",
         "DOCUMENTARIES": "Documentales",
@@ -491,21 +493,55 @@
                         "HEADER": "Estructura Fonológica",
                         "SUBTITLE": "Economía de sonidos y gran fluidez para comunicarse auditivamente en el bosque denso de forma precisa.",
                         "TAGS": {
-                            "T1": {"TITLE": "V. Orales", "DESC": "/a/, /e/, /i/, /o/, /ae/"},
-                            "T2": {"TITLE": "V. Nasales (˜)", "DESC": "Motor semántico"},
-                            "T3": {"TITLE": "O. Sordos", "DESC": "/p/, /t/, /k/"},
-                            "T4": {"TITLE": "O. Sonoros", "DESC": "/b/, /d/, /g/"},
-                            "T5": {"TITLE": "Nasales", "DESC": "/m/, /n/, /ŋ/, /ñ/"},
-                            "T6": {"TITLE": "Semivocales", "DESC": "/w/, /y/"}
+                            "T1": {
+                                "TITLE": "V. Orales",
+                                "DESC": "/a/, /e/, /i/, /o/, /ae/"
+                            },
+                            "T2": {
+                                "TITLE": "V. Nasales (˜)",
+                                "DESC": "Motor semántico"
+                            },
+                            "T3": {
+                                "TITLE": "O. Sordos",
+                                "DESC": "/p/, /t/, /k/"
+                            },
+                            "T4": {
+                                "TITLE": "O. Sonoros",
+                                "DESC": "/b/, /d/, /g/"
+                            },
+                            "T5": {
+                                "TITLE": "Nasales",
+                                "DESC": "/m/, /n/, /ŋ/, /ñ/"
+                            },
+                            "T6": {
+                                "TITLE": "Semivocales",
+                                "DESC": "/w/, /y/"
+                            }
                         }
                     },
                     "MODULE_3": {
                         "HEADER": "Arquitectura de la Alteridad",
                         "CARDS": {
-                            "C1": {"TITLE": "Waomoni", "DESC": "El nosotros íntimo", "REL": "Solidaridad absoluta, endogamia y cooperación."},
-                            "C2": {"TITLE": "Waorani", "DESC": "La gente verdadera", "REL": "Identidad étnica compartida por lengua y origen común."},
-                            "C3": {"TITLE": "Huarani", "DESC": "Los otros Waorani", "REL": "Hostilidad latente, competencia o posibles alianzas."},
-                            "C4": {"TITLE": "Cowode", "DESC": "Extranjeros / Peligro", "REL": "Originalmente el enemigo caníbal. Hoy en día: colonos, petroleros, misiones o visitantes."}
+                            "C1": {
+                                "TITLE": "Waomoni",
+                                "DESC": "El nosotros íntimo",
+                                "REL": "Solidaridad absoluta, endogamia y cooperación."
+                            },
+                            "C2": {
+                                "TITLE": "Waorani",
+                                "DESC": "La gente verdadera",
+                                "REL": "Identidad étnica compartida por lengua y origen común."
+                            },
+                            "C3": {
+                                "TITLE": "Huarani",
+                                "DESC": "Los otros Waorani",
+                                "REL": "Hostilidad latente, competencia o posibles alianzas."
+                            },
+                            "C4": {
+                                "TITLE": "Cowode",
+                                "DESC": "Extranjeros / Peligro",
+                                "REL": "Originalmente el enemigo caníbal. Hoy en día: colonos, petroleros, misiones o visitantes."
+                            }
                         }
                     },
                     "MODULE_4": {
@@ -554,6 +590,71 @@
             "SUBTITLE": "Hombres Jaguar",
             "DESCRIPTION": "Los Cofán son un pueblo ancestral del norte de la Amazonía ecuatoriana, conocidos como los \"hombres jaguar\" y hablantes del A'ingae, una lengua única en el mundo. Su cultura se centra en la conexión espiritual con la selva a través del Yagé y en una histórica defensa de su territorio frente a la explotación petrolera. Como guardianes de la biodiversidad, han logrado victorias legales clave para proteger sus tierras sagradas, manteniendo un equilibrio vital entre sus tradiciones milenarias y la resistencia moderna.",
             "REGION": "Norte Amazonía"
+        },
+        "KAYAPO": {
+            "TITLE": "Kayapó",
+            "SUBTITLE": "Guardianes de la Selva",
+            "DESCRIPTION": "La identidad del pueblo Kayapó se articula a través de una cosmovisión donde lo social y lo espiritual convergen en ritos ancestrales de gran calado simbólico. Para esta comunidad, la pertenencia comienza con el Bemp, un ritual de nombramiento que otorga riqueza social al vincular al niño con su linaje, y se consolida mediante ritos de pasaje que marcan la madurez y la responsabilidad colectiva. Su estrecho vínculo con el entorno amazónico se manifiesta en el Ritual del Jaguar, tótem de fuerza y protección de la selva, mientras que las danzas de máscaras (Kokô) actúan como un canal de comunicación para invocar a los espíritus y héroes de sus mitos, preservando así una herencia cultural profundamente conectada con sus raíces y su evolución social.",
+            "REGION": "Trascendencia",
+            "PAGE": {
+                "HERO_TITLE": "Mebêngôkre-Kayapó",
+                "HERO_BODY_1": "La nación Mebêngôkre, conocidos por el mundo como Kayapó, no son solo habitantes de la selva, sino sus arquitectos y defensores más feroces. Autodenominados \"Gente del pozo de agua\", su identidad está tejida con los ríos Iriri y Xingu, en un territorio que se extiende por millones de hectáreas de selva tropical y sabana. Para ellos, la supervivencia no es un acto pasivo; es una resistencia continua que fusiona la memoria de sus ancestros con una visión de vanguardia sobre la protección de la vida en la Tierra.",
+                "HERO_BODY_2": "El diseño circular de sus aldeas es un espejo del cosmos, donde cada hogar se dispone en armonía con el movimiento del sol y la luna. En el corazón de esta estructura late la \"Casa de los Guerreros\" (ngà-be), el núcleo de la vida política y ritual donde se forja el destino de la comunidad. Esta disposición espacial honra un equilibrio vital: mientras el centro es el dominio de la oratoria y la asamblea masculina, el anillo exterior es el santuario de las mujeres, quienes bajo un sistema matrilocal sostienen la continuidad del linaje y la estabilidad del hogar.",
+                "HERO_BODY_3": "Para un Mebêngôkre, el cuerpo es un lienzo de sabiduría y el lenguaje una forma de arte. Se enorgullecen de ser quienes \"hablan bellamente\" (Kaben mei), valorando la oratoria como la máxima expresión de estatus y humanidad. Esta búsqueda de la belleza se extiende a la piel, decorada con patrones geométricos en negro de jenipapo y rojo de urucum que imitan la perfección de los insectos y animales de la selva. Cada trazo y cada pluma en sus tocados es una declaración de su conexión indestructible con el espíritu que habita en todas las cosas.",
+                "HERO_BODY_4": "Su relación con la naturaleza trasciende la mera subsistencia; es una ingeniería ecológica llena de propósito. Mediante la creación de apêtê o \"islas de bosque\", los Kayapó han demostrado que la mano humana puede enriquecer la biodiversidad en lugar de destruirla, transportando nutrientes y semillas para crear oasis de medicina y alimento en la sabana abierta. Este conocimiento ancestral, que identifica cientos de plantas medicinales y gestiona el suelo con precisión milimétrica, posiciona a su cultura como un modelo global de bioeconomía sostenible.",
+                "HERO_BODY_5": "La historia contemporánea de los Kayapó es una crónica de invencibilidad frente a las amenazas del progreso desmedido. Liderados por figuras legendarias como el Jefe Raoni Metuktire y la Cacique Tuíre Kayapó, han llevado el clamor de la Amazonía a los foros internacionales, transformando su cultura guerrera en un activismo político que protege el clima del planeta entero. Su legado nos recuerda que proteger la selva es proteger la raíz misma de nuestra humanidad.",
+                "HERO_QUOTATION": "\"Guardianes del Pulso de la Amazonía, donde la verdadera riqueza reside en la capacidad de vivir en simbiosis con el mundo natural.\"",
+                "PHOTOS_SECTION": {
+                    "TITLE": "Galería de Imágenes"
+                },
+                "TABS": {
+                    "PHOTOS": "Fotos",
+                    "LIFE_CYCLE": "Ciclo Vida",
+                    "BIOECONOMY": "Bioeconomía"
+                },
+                "LIFECYCLE_SECTION": {
+                    "TITLE": "El Ciclo Sagrado de la Vida y los Ritos",
+                    "DESC": "La vida de los Mebêngôkre es un flujo constante de ceremonias que marcan el crecimiento del alma y la conexión con el plano espiritual, celebrando la transición de cada individuo dentro de la gran comunidad.",
+                    "TABLE": {
+                        "H1": "Ceremonia / Ritual",
+                        "H2": "Propósito Espiritual",
+                        "H3": "Simbolismo Destacado",
+                        "R1_C1": "Nombramiento (Bemp)",
+                        "R1_C2": "Otorgar riqueza social",
+                        "R1_C3": "El valor de los \"nombres hermosos\" que vinculan al niño con su linaje.",
+                        "R2_C1": "Ritual del Jaguar",
+                        "R2_C2": "Iniciación del guerrero",
+                        "R2_C3": "El jaguar como tótem de fuerza absoluta y protección de la selva.",
+                        "R3_C1": "Danzas de Máscaras (Kokô)",
+                        "R3_C2": "Comunicación ancestral",
+                        "R3_C3": "Uso de máscaras para invocar a los espíritus y héroes de los mitos.",
+                        "R4_C1": "Ritos de Pasaje",
+                        "R4_C2": "Evolución social",
+                        "R4_C3": "Eventos solemnes que marcan la madurez y la responsabilidad comunitaria."
+                    }
+                },
+                "BIOECONOMY_SECTION": {
+                    "TITLE": "Bioeconomía y Sustentabilidad Territorial",
+                    "DESC": "A través de un modelo de aprovechamiento respetuoso, los Kayapó generan bienestar para sus comunidades sin comprometer la integridad de la selva, convirtiéndose en referentes de la economía del bosque en pie.",
+                    "TABLE": {
+                        "H1": "Recurso",
+                        "H2": "Temporada de Cosecha",
+                        "H3": "Significado y Aplicación",
+                        "R1_C1": "Nuez de Brasil (Pi'y)",
+                        "R1_C2": "Diciembre a Marzo",
+                        "R1_C3": "Pilar de soberanía alimentaria y motor de comercio justo global.",
+                        "R2_C1": "Semilla de Cumaru",
+                        "R2_C2": "Verano (estación seca)",
+                        "R2_C3": "Tesoro aromático valorado por la alta gastronomía y la cosmética natural.",
+                        "R3_C1": "Aceite de Babusú",
+                        "R3_C2": "Producción continua",
+                        "R3_C3": "Elíxir tradicional para el cuidado de la piel y la medicina ritual.",
+                        "R4_C1": "Artesanía de Burití",
+                        "R4_C2": "Todo el año",
+                        "R4_C3": "Expresión de identidad cultural a través del tejido de cestas mantiteka."
+                    }
+                }
+            }
         }
     },
     "EXPLORATION": {
