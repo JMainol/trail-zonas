@@ -50,6 +50,15 @@ export class EtniasComponent implements AfterViewInit {
             image: 'assets/images/tribes/cofan/hombre_tribu_cofan.png',
             link: 'cofan',
             disabled: true
+        },
+        {
+            title: 'TRIBES.KAYAPO.TITLE',
+            scientificName: 'TRIBES.KAYAPO.SUBTITLE',
+            description: 'TRIBES.KAYAPO.DESCRIPTION',
+            weight: 'TRIBES.KAYAPO.REGION',
+            image: 'assets/images/tribes/kayapo/kayapo_tribe_child.jpg',
+            link: 'kayapo',
+            disabled: false
         }
     ];
 

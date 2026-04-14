@@ -63,7 +63,10 @@
         "MORE_INFO": "More information",
         "READ_MORE": "Read more",
         "READ_LESS": "Read less",
+        "LOADING_VIDEO": "Loading jungle video...",
+        "COMING_SOON": "Coming soon...",
         "WAORANI": "Waorani",
+        "KAYAPO": "Kayapó",
         "RESOURCES": "Resources",
         "BOOKS": "Books",
         "DOCUMENTARIES": "Documentaries",
@@ -554,6 +557,71 @@
             "SUBTITLE": "Jaguar Men",
             "DESCRIPTION": "The Cofán are an ancestral people of the northern Ecuadorian Amazon, known as the \"jaguar men\" and speakers of A'ingae, a unique language in the world. Their culture centers on spiritual connection with the jungle through Yagé and a historic defense of their territory against oil exploitation. As guardians of biodiversity, they have achieved key legal victories to protect their sacred lands, maintaining a vital balance between their ancient traditions and modern resistance.",
             "REGION": "Northern Amazon"
+        },
+        "KAYAPO": {
+            "TITLE": "Kayapó",
+            "SUBTITLE": "Guardians of the Forest",
+            "DESCRIPTION": "The identity of the Kayapó people is articulated through a worldview where the social and spiritual converge in ancestral rites of profound symbolic significance. For this community, belonging begins with the Bemp, a naming ritual that grants social wealth by linking the child to their lineage, and is consolidated through rites of passage that mark maturity and collective responsibility. Their close connection to the Amazonian environment is manifested in the Jaguar Ritual, a totem of strength and jungle protection, while the mask dances (Kokô) act as a communication channel to summon spirits and mythical heroes, thus preserving a cultural heritage deeply connected to its roots and social evolution.",
+            "REGION": "Transcendence",
+            "PAGE": {
+                "HERO_TITLE": "Mebêngôkre-Kayapó: Guardians of the Amazon's Pulse",
+                "HERO_BODY_1": "The Mebêngôkre nation, known to the world as the Kayapó, are not merely inhabitants of the jungle, but its fiercest architects and defenders. Calling themselves the \"People of the Water Well\", their identity is woven with the Iriri and Xingu rivers, in a territory spanning millions of hectares of rainforest and savanna. For them, survival is not passive; it is a continuous resistance fusing ancestral memory with a vanguard vision of protecting life on Earth.",
+                "HERO_BODY_2": "The circular design of their villages mirrors the cosmos, with each home arranged in harmony with the sun and moon's movement. At the absolute heart of this structure beats the \"Warriors' House\" (ngà-be), the nucleus of political and ritual life where the community's destiny is forged. This spatial arrangement honors a vital balance: while the center is the male domain of assembly and oratory, the outer ring is the sanctuary of women, who under a matrilocal system maintain lineage continuity and domestic stability.",
+                "HERO_BODY_3": "For a Mebêngôkre, the body is a canvas of wisdom and language is an art form. They pride themselves on being those who \"speak beautifully\" (Kaben mei), valuing oratory as the ultimate expression of status and humanity. This pursuit of beauty extends to their skin, adorned with geometric patterns in black jenipapo and red urucum mimicking the perfection of jungle animals and insects. Every stroke and feather in their headdresses declares an indestructible connection to the spirit dwelling in all things.",
+                "HERO_BODY_4": "Their relationship with nature eclipses mere subsistence; it is purposeful ecological engineering. Through the creation of apêtê or \"forest islands\", the Kayapó have proven that human hands can enrich biodiversity rather than destroy it, transporting nutrients and seeds to forge oases of medicine and food in the open savanna. This ancestral knowledge, identifying hundreds of medicinal plants and managing soil with millimeter precision, establishes their culture as a global model for sustainable bioeconomy.",
+                "HERO_BODY_5": "The contemporary history of the Kayapó chronicles their invincibility against the threats of unbridled progress. Led by legendary figures like Chief Raoni Metuktire and female Chief Tuíre Kayapó, they have carried the Amazon's cry to international forums, transforming their warrior culture into a political activism protecting the global climate. Their legacy reminds us that to protect the rainforest is to protect the very root of human existence.",
+                "HERO_QUOTATION": "\"Guardians of the Amazon's Pulse, where true wealth lies in the capacity to live in symbiosis with the natural world.\"",
+                "PHOTOS_SECTION": {
+                    "TITLE": "Image Gallery"
+                },
+                "TABS": {
+                    "PHOTOS": "Photos",
+                    "LIFE_CYCLE": "Life Cycle",
+                    "BIOECONOMY": "Bioeconomy"
+                },
+                "LIFECYCLE_SECTION": {
+                    "TITLE": "The Sacred Cycle of Life and Rites",
+                    "DESC": "The life of the Mebêngôkre is a constant flow of ceremonies that mark the growth of the soul and the connection with the spiritual plane, celebrating each individual's transition within the great community.",
+                    "TABLE": {
+                        "H1": "Ceremony / Ritual",
+                        "H2": "Spiritual Purpose",
+                        "H3": "Key Symbolism",
+                        "R1_C1": "Naming (Bemp)",
+                        "R1_C2": "Grant social wealth",
+                        "R1_C3": "The value of \"beautiful names\" that link the child to their lineage.",
+                        "R2_C1": "Jaguar Ritual",
+                        "R2_C2": "Warrior initiation",
+                        "R2_C3": "The jaguar as a totem of absolute strength and jungle protection.",
+                        "R3_C1": "Mask Dances (Kokô)",
+                        "R3_C2": "Ancestral communication",
+                        "R3_C3": "Use of masks to invoke spirits and heroes from the myths.",
+                        "R4_C1": "Rites of Passage",
+                        "R4_C2": "Social evolution",
+                        "R4_C3": "Solemn events that mark maturity and community responsibility."
+                    }
+                },
+                "BIOECONOMY_SECTION": {
+                    "TITLE": "Bioeconomy and Territorial Sustainability",
+                    "DESC": "Through a respectful model of resource use, the Kayapó generate well-being for their communities without compromising the integrity of the jungle, becoming benchmarks of the standing-forest economy.",
+                    "TABLE": {
+                        "H1": "Resource",
+                        "H2": "Harvest Season",
+                        "H3": "Meaning and Application",
+                        "R1_C1": "Brazil Nut (Pi'y)",
+                        "R1_C2": "December to March",
+                        "R1_C3": "A pillar of food sovereignty and driver of global fair trade.",
+                        "R2_C1": "Cumaru Seed",
+                        "R2_C2": "Summer (dry season)",
+                        "R2_C3": "Aromatic treasure valued by haute cuisine and natural cosmetics.",
+                        "R3_C1": "Babassu Oil",
+                        "R3_C2": "Continuous production",
+                        "R3_C3": "Traditional elixir for skin care and ritual medicine.",
+                        "R4_C1": "Buriti Crafts",
+                        "R4_C2": "Year-round",
+                        "R4_C3": "Expression of cultural identity through the weaving of mantiteka baskets."
+                    }
+                }
+            }
         }
     },
     "EXPLORATION": {
