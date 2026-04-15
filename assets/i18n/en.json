@@ -17,7 +17,6 @@
     "BRAND": {
         "NAME": "AMAZON JUNGLE 2.0"
     },
-
     "COMMON": {
         "CLOSE": "Close",
         "BACK": "Back",
@@ -494,21 +493,55 @@
                         "HEADER": "Phonological Structure",
                         "SUBTITLE": "An economy of sounds allowing highly fluid and precise auditory communication through the dense forest.",
                         "TAGS": {
-                            "T1": {"TITLE": "Oral V.", "DESC": "/a/, /e/, /i/, /o/, /ae/"},
-                            "T2": {"TITLE": "Nasal V. (˜)", "DESC": "Semantic engine"},
-                            "T3": {"TITLE": "Voiceless", "DESC": "/p/, /t/, /k/"},
-                            "T4": {"TITLE": "Voiced", "DESC": "/b/, /d/, /g/"},
-                            "T5": {"TITLE": "Nasals", "DESC": "/m/, /n/, /ŋ/, /ñ/"},
-                            "T6": {"TITLE": "Semivowels", "DESC": "/w/, /y/"}
+                            "T1": {
+                                "TITLE": "Oral V.",
+                                "DESC": "/a/, /e/, /i/, /o/, /ae/"
+                            },
+                            "T2": {
+                                "TITLE": "Nasal V. (˜)",
+                                "DESC": "Semantic engine"
+                            },
+                            "T3": {
+                                "TITLE": "Voiceless",
+                                "DESC": "/p/, /t/, /k/"
+                            },
+                            "T4": {
+                                "TITLE": "Voiced",
+                                "DESC": "/b/, /d/, /g/"
+                            },
+                            "T5": {
+                                "TITLE": "Nasals",
+                                "DESC": "/m/, /n/, /ŋ/, /ñ/"
+                            },
+                            "T6": {
+                                "TITLE": "Semivowels",
+                                "DESC": "/w/, /y/"
+                            }
                         }
                     },
                     "MODULE_3": {
                         "HEADER": "Architecture of Alterity",
                         "CARDS": {
-                            "C1": {"TITLE": "Waomoni", "DESC": "The intimate self", "REL": "Absolute solidarity, endogamy, and cooperation."},
-                            "C2": {"TITLE": "Waorani", "DESC": "The true people", "REL": "Shared ethnic identity unified by language and common origin."},
-                            "C3": {"TITLE": "Huarani", "DESC": "Other Waorani", "REL": "Latent hostility, competition, or potential alliances."},
-                            "C4": {"TITLE": "Cowode", "DESC": "Foreigners / Danger", "REL": "Originally the cannibal enemy. Today: settlers, oil workers, missionaries, or visitors."}
+                            "C1": {
+                                "TITLE": "Waomoni",
+                                "DESC": "The intimate self",
+                                "REL": "Absolute solidarity, endogamy, and cooperation."
+                            },
+                            "C2": {
+                                "TITLE": "Waorani",
+                                "DESC": "The true people",
+                                "REL": "Shared ethnic identity unified by language and common origin."
+                            },
+                            "C3": {
+                                "TITLE": "Huarani",
+                                "DESC": "Other Waorani",
+                                "REL": "Latent hostility, competition, or potential alliances."
+                            },
+                            "C4": {
+                                "TITLE": "Cowode",
+                                "DESC": "Foreigners / Danger",
+                                "REL": "Originally the cannibal enemy. Today: settlers, oil workers, missionaries, or visitors."
+                            }
                         }
                     },
                     "MODULE_4": {
@@ -564,7 +597,7 @@
             "DESCRIPTION": "The identity of the Kayapó people is articulated through a worldview where the social and spiritual converge in ancestral rites of profound symbolic significance. For this community, belonging begins with the Bemp, a naming ritual that grants social wealth by linking the child to their lineage, and is consolidated through rites of passage that mark maturity and collective responsibility. Their close connection to the Amazonian environment is manifested in the Jaguar Ritual, a totem of strength and jungle protection, while the mask dances (Kokô) act as a communication channel to summon spirits and mythical heroes, thus preserving a cultural heritage deeply connected to its roots and social evolution.",
             "REGION": "Transcendence",
             "PAGE": {
-                "HERO_TITLE": "Mebêngôkre-Kayapó: Guardians of the Amazon's Pulse",
+                "HERO_TITLE": "Mebêngôkre-Kayapó",
                 "HERO_BODY_1": "The Mebêngôkre nation, known to the world as the Kayapó, are not merely inhabitants of the jungle, but its fiercest architects and defenders. Calling themselves the \"People of the Water Well\", their identity is woven with the Iriri and Xingu rivers, in a territory spanning millions of hectares of rainforest and savanna. For them, survival is not passive; it is a continuous resistance fusing ancestral memory with a vanguard vision of protecting life on Earth.",
                 "HERO_BODY_2": "The circular design of their villages mirrors the cosmos, with each home arranged in harmony with the sun and moon's movement. At the absolute heart of this structure beats the \"Warriors' House\" (ngà-be), the nucleus of political and ritual life where the community's destiny is forged. This spatial arrangement honors a vital balance: while the center is the male domain of assembly and oratory, the outer ring is the sanctuary of women, who under a matrilocal system maintain lineage continuity and domestic stability.",
                 "HERO_BODY_3": "For a Mebêngôkre, the body is a canvas of wisdom and language is an art form. They pride themselves on being those who \"speak beautifully\" (Kaben mei), valuing oratory as the ultimate expression of status and humanity. This pursuit of beauty extends to their skin, adorned with geometric patterns in black jenipapo and red urucum mimicking the perfection of jungle animals and insects. Every stroke and feather in their headdresses declares an indestructible connection to the spirit dwelling in all things.",
@@ -621,7 +654,10 @@
                         "R4_C3": "Expression of cultural identity through the weaving of mantiteka baskets."
                     }
                 }
-            }
+            },
+            "CAPTION_BOOK_TITLE": "Kayapó tribe child",
+            "CAPTION_BOOK_AUTHOR": "Joan Riera, founder of <a href=\"https://www.lastplaces.com\" target=\"_blank\">www.lastplaces.com</a> and <a href=\"https://www.nativesofamerica.com\" target=\"_blank\">www.nativesofamerica.com</a>",
+            "CAPTION_BOOK_URL": ""
         }
     },
     "EXPLORATION": {
