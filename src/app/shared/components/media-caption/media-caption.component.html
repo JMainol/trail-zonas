@@ -5,7 +5,7 @@
      [title]="authorUrl() ? ('Ir a la web de ' + author()) : ''">
 
     <!-- Dynamic Icon -->
-    <div class="link-icon" *ngIf="authorUrl() || iconType() === 'ai'">
+    <div class="link-icon" *ngIf="iconType()">
         <!-- AI Icon -->
         <mat-icon *ngIf="iconType() === 'ai'">auto_awesome</mat-icon>
 
@@ -26,6 +26,6 @@
     <span class="caption-title">{{ title() }}</span>
     <ng-container *ngIf="author()">
         <span class="caption-separator"> {{ 'COMMON.CAPTION_BY' | translate }} </span>
-        <span class="caption-author">{{ author() }}</span>
+        <span class="caption-author" [innerHTML]="author() | safeHtml" (click)="handleContentClick($event)"></span>
     </ng-container>
 </div>

@@ -2,13 +2,14 @@ import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
+import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
 
 export type MediaIconType = 'web' | 'instagram' | 'youtube' | 'ai';
 
 @Component({
   selector: 'app-media-caption',
   standalone: true,
-  imports: [CommonModule, MatIconModule, TranslateModule],
+  imports: [CommonModule, MatIconModule, TranslateModule, SafeHtmlPipe],
   templateUrl: './media-caption.component.html',
   styleUrl: './media-caption.component.scss'
 })
@@ -22,6 +23,13 @@ export class MediaCaptionComponent {
     const url = this.authorUrl();
     if (url) {
       window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  }
+
+  handleContentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (target.tagName === 'A') {
+      event.stopPropagation();
     }
   }
 }

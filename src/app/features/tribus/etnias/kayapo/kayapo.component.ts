@@ -3,11 +3,12 @@ import { CommonModule, Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MediaCaptionComponent } from '../../../../shared/components/media-caption/media-caption.component';
 
 @Component({
     selector: 'app-kayapo',
     standalone: true,
-    imports: [CommonModule, RouterModule, TranslateModule, MatIconModule],
+    imports: [CommonModule, RouterModule, TranslateModule, MatIconModule, MediaCaptionComponent],
     templateUrl: './kayapo.component.html',
     styleUrl: './kayapo.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush

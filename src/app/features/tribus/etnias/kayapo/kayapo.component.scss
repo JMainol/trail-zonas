@@ -301,6 +301,12 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+.desktop-hidden {
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}
+
 @keyframes slideDown {
     from {
         opacity: 0;
