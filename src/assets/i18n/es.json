@@ -66,6 +66,7 @@
         "COMING_SOON": "Próximamente...",
         "WAORANI": "Waorani",
         "KAYAPO": "Kayapó",
+        "MEHINAKU": "Mehinaku",
         "RESOURCES": "Recursos",
         "BOOKS": "Libros",
         "DOCUMENTARIES": "Documentales",
@@ -658,6 +659,78 @@
             "CAPTION_BOOK_TITLE": "Niño de la tribu Kayapó",
             "CAPTION_GALLERY_TITLE": "Tribu Kayapó",
             "CAPTION_BOOK_AUTHOR": "Joan Riera, fundador de <a href=\"https://www.lastplaces.com\" target=\"_blank\">www.lastplaces.com</a> y <a href=\"https://www.nativesofamerica.com\" target=\"_blank\">www.nativesofamerica.com</a>",
+            "CAPTION_BOOK_URL": ""
+        },
+        "MEHINAKU": {
+            "TITLE": "Mehinaku",
+            "SUBTITLE": "Hijos del Camino del Sol",
+            "DESCRIPTION": "Los Mehinaku son un pilar esencial del Alto Xingu, conocidos por sus aldeas circulares que reflejan su cosmología y una vida social de transparencia radical. Como maestros en la gestión de lo público y lo sagrado, preservan su identidad Arawak a través de rituales ancestrales y una profunda conexión con el ciclo celestial.",
+            "REGION": "Alto Xingu",
+            "PAGE": {
+                "HERO_TITLE": "Mehinaku",
+                "HERO_BODY_1": "Los <strong>Mehinaku</strong>, pertenecientes a la familia lingüística Arawak, conforman un pilar esencial del complejo multiétnico del <strong>Alto Xingu</strong> en el Mato Grosso brasileño. Su historia se inscribe en la geografía de los ríos Tuatuari y Kurisevo, donde sus aldeas circulares actúan como una materialización de su cosmología. El diseño de la comunidad no es azaroso; el denominado \"camino del sol\" cruza la aldea de oriente a occidente, dividiendo el espacio en un eje sagrado que garantiza que la vida cotidiana transcurra en armonía con el ciclo celestial.",
+                "HERO_BODY_2": "La vida social de esta etnia se define por una <strong>transparencia radical</strong>, descrita con frecuencia como un teatro circular donde la privacidad es un concepto casi inexistente. En el interior de las casas comunales, la ausencia de muros convierte cada acto en una representación compartida, mientras que en el exterior, la capacidad de los aldeanos para identificar a cada miembro por sus huellas plantares elimina cualquier rastro de anonimato. Esta visibilidad forzada ha forjado una cultura experta en la gestión de la impresión pública.",
+                "HERO_BODY_3": "La subsistencia Mehinaku se fundamenta en una división sexual del trabajo estrictamente complementaria, donde el matrimonio constituye la unidad básica de supervivencia económica. Mientras los hombres se ocupan de la pesca y el desmonte de la selva para los jardines de mandioca, las mujeres asumen la laboriosa tarea de procesar el tubérculo para producir el <strong>beiju</strong>, el pan que sostiene la vida. Sin embargo, esta interdependencia convive con un antagonismo ritualizado y una política del secreto centrada en las <strong>flautas sagradas</strong>, instrumentos que las mujeres tienen prohibido ver.",
+                "HERO_BODY_4": "En su cosmovisión, el universo está saturado de agencia y habitado por los <strong>apapaatai</strong>, espíritus poderosos que pueden traer tanto la enfermedad como la curación. El ritual del <strong>Kwarup</strong> representa la culminación de esta espiritualidad, un momento en el que troncos de madera bellamente adornados personifican a los ancestros fallecidos para cerrar los ciclos de luto. Bajo el fragor de la lucha huka-huka y el humo del tabaco chamánico, los Mehinaku conectan el mundo visible con el de las sombras.",
+                "HERO_BODY_5": "En la actualidad, los Mehinaku enfrentan con pragmatismo los desafíos de la globalización y el cambio climático dentro de los límites del Parque Indígena del Xingu. A pesar de que la deforestación externa y la contaminación de las aguas amenazan recursos vitales como el pequi y los peces, la tribu ha demostrado una resiliencia notable al integrar la economía de mercado y las nuevas tecnologías sin sacrificar sus fundamentos ontológicos. Su capacidad para proteger sus ritos de pasaje y su lengua ancestral asegura que el \"camino del sol\" siga guiando a una sociedad soberana.",
+                "HERO_QUOTATION": "\"Donde la arquitectura terrestre se convierte en un espejo del firmamento, anclando la identidad a un territorio sagrado desde tiempos míticos.\"",
+                "PHOTOS_SECTION": {
+                    "TITLE": "Galería de Imágenes"
+                },
+                "TABS": {
+                    "PHOTOS": "Fotos",
+                    "ALDEA": "Aldea",
+                    "DRAMA": "Vida Diaria",
+                    "GENERO": "Género"
+                },
+                "ALDEA_SECTION": {
+                    "TITLE": "Estructura de la Aldea y Visibilidad",
+                    "DESC": "La aldea Mehinaku, <strong>Uyapiyuku</strong>, está diseñada como un microcosmos que refleja la arquitectura del cielo. Su disposición circular se organiza en torno al <strong>\"camino del sol\"</strong>, un eje este-oeste que conecta los ríos Kurisevo y Tuatuari. En el centro exacto se sitúa la Casa de los Hombres, dividiendo la ruta solar y sirviendo como epicentro de la vida pública y ritual.",
+                    "TABLE": {
+                        "H1": "Elemento Espacial",
+                        "H2": "Función y Significado",
+                        "R1_C1": "Camino del Sol",
+                        "R1_C2": "Eje que alinea la aldea con el ciclo solar de oriente a occidente.",
+                        "R2_C1": "Casa de los Hombres",
+                        "R2_C2": "Espacio central restringido a varones; núcleo político y ritual de la comunidad.",
+                        "R3_C1": "Plaza (Wenekutaku)",
+                        "R3_C2": "\"Lugar a menudo usado\": escenario de discursos, luchas rituales y ceremonias colectivas.",
+                        "R4_C1": "Viviendas",
+                        "R4_C2": "Estructuras comunales sin muros internos que albergan entre 10 y 12 personas, eliminando la privacidad."
+                    }
+                },
+                "DRAMA_SECTION": {
+                    "TITLE": "Drama de la Vida Diaria: Sociología y Comportamiento",
+                    "DESC_1": "La vida Mehinaku es descrita como un <strong>\"teatro circular\"</strong> debido a la extrema visibilidad de los actos individuales. Al no existir muros internos en las casas y ser capaces de reconocer las huellas plantares de cada vecino, el anonimato es virtualmente imposible. Esta falta de privacidad ha convertido a los individuos en maestros de la <strong>\"gestión de la impresión\"</strong>.",
+                    "DESC_2": "Bajo este sistema, los Mehinaku proyectan públicamente una imagen de generosidad y ciudadanía ejemplar mientras desarrollan complejas estrategias de ocultamiento para sus asuntos privados. El chisme y la observación constante actúan como mecanismos de control social, obligando a los habitantes a interpretar sus roles con suma cautela para proteger su estatus en la comunidad.",
+                    "CARD1_TITLE": "Teatro Circular",
+                    "CARD1_DESC": "Sin muros ni anonimato, cada acto cotidiano se convierte en una actuación pública ante toda la aldea.",
+                    "CARD2_TITLE": "Gestión de la Impresión",
+                    "CARD2_DESC": "Los individuos proyectan generosidad y virtud en público mientras gestionan estrategias de ocultamiento para su vida privada.",
+                    "CARD3_TITLE": "Control Social",
+                    "CARD3_DESC": "El chisme y la observación constante funcionan como mecanismos de orden que regulan el estatus y el comportamiento de cada miembro."
+                },
+                "GENERO_SECTION": {
+                    "TITLE": "Antagonismo de Género y Política del Secreto",
+                    "DESC": "La sociedad Mehinaku se rige por una <strong>\"cultura de la exclusión\"</strong> que separa tajantemente los dominios de poder masculino y femenino. El pilar de esta estructura es el secreto de las <strong>flautas sagradas</strong>, custodiadas en la Casa de los Hombres, cuya visión está terminantemente prohibida a las mujeres bajo amenaza de sanciones rituales históricamente severas.",
+                    "TABLE": {
+                        "H1": "Concepto Clave",
+                        "H2": "Descripción y Significado",
+                        "R1_C1": "Flautas Sagradas",
+                        "R1_C2": "Instrumentos que simbolizan el dominio político de los hombres; prohibidas a la vista femenina.",
+                        "R2_C1": "Mito del Matriarcado",
+                        "R2_C2": "Relato fundacional que justifica el orden social alegando que las mujeres perdieron el poder en el tiempo mítico.",
+                        "R3_C1": "Makatsiki",
+                        "R3_C2": "Concepto de \"pérdida de fuerza masculina\" por contaminación sexual femenina; sustenta los rituales de purificación.",
+                        "R4_C1": "Geografía de Género",
+                        "R4_C2": "División espacial: la plaza y la Casa de los Hombres frente al ámbito doméstico y los jardines femeninos."
+                    },
+                    "CONCLUSION": "Esta división genera una profunda <strong>ansiedad sexual masculina</strong>, donde el deseo convive con el temor a la contaminación por fluidos femeninos, lo que refuerza los rituales de purificación y el aislamiento en la Casa de los Hombres."
+                }
+            },
+            "CAPTION_BOOK_TITLE": "Aldea Mehinaku en el Alto Xingu",
+            "CAPTION_GALLERY_TITLE": "Cultura Mehinaku",
+            "CAPTION_BOOK_AUTHOR": "Exploración del Xingu",
             "CAPTION_BOOK_URL": ""
         }
     },

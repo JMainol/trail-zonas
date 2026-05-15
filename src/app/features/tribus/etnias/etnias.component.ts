@@ -59,6 +59,15 @@ export class EtniasComponent implements AfterViewInit {
             image: 'assets/images/tribes/kayapo/kayapo_tribe_child.jpg',
             link: 'kayapo',
             disabled: false
+        },
+        {
+            title: 'TRIBES.MEHINAKU.TITLE',
+            scientificName: 'TRIBES.MEHINAKU.SUBTITLE',
+            description: 'TRIBES.MEHINAKU.DESCRIPTION',
+            weight: 'TRIBES.MEHINAKU.REGION',
+            image: 'assets/images/tribes/mehinaku/mehinaku_mujer.jpg',
+            link: 'mehinaku',
+            disabled: false
         }
     ];
 

@@ -382,6 +382,7 @@ export class NavMenuComponent {
       { title: 'Etnias de la Amazonía', enTitle: 'Tribes of the Amazon', link: '/amazonia/tribus/etnias' },
       { title: 'Pueblo Waorani', enTitle: 'Waorani People', link: '/amazonia/tribus/etnias/waorani' },
       { title: 'Pueblo Kayapó', enTitle: 'Kayapó People', link: '/amazonia/tribus/etnias/kayapo' },
+      { title: 'Pueblo Mehinaku', enTitle: 'Mehinaku People', link: '/amazonia/tribus/etnias/mehinaku' },
 
       // Exploración
       { title: 'Francisco de Orellana, Historia de la Exploración Amazónica', enTitle: 'Francisco de Orellana, History of Amazonian Exploration', link: '/amazonia/exploracion/historia' },
@@ -494,6 +495,7 @@ export class NavMenuComponent {
                   { label: 'COMMON.ETHNIC_LIST', link: '/amazonia/tribus/etnias', icon: 'format_list_bulleted' },
                   { label: 'COMMON.WAORANI', link: '/amazonia/tribus/etnias/waorani' },
                   { label: 'COMMON.KAYAPO', link: '/amazonia/tribus/etnias/kayapo' },
+                  { label: 'COMMON.MEHINAKU', link: '/amazonia/tribus/etnias/mehinaku' },
                   { label: 'Cofán', link: '/amazonia/tribus/etnias/cofan', disabled: true },
                   { label: 'Shuar', link: '/amazonia/tribus/etnias/shuar', disabled: true }
                ]
