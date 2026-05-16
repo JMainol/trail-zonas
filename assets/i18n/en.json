@@ -66,6 +66,7 @@
         "COMING_SOON": "Coming soon...",
         "WAORANI": "Waorani",
         "KAYAPO": "Kayapó",
+        "MEHINAKU": "Mehinaku",
         "RESOURCES": "Resources",
         "BOOKS": "Books",
         "DOCUMENTARIES": "Documentaries",
@@ -657,6 +658,78 @@
             },
             "CAPTION_BOOK_TITLE": "Kayapó tribe child",
             "CAPTION_GALLERY_TITLE": "Kayapó Tribe",
+            "CAPTION_BOOK_AUTHOR": "Joan Riera, founder of <a href=\"https://www.lastplaces.com\" target=\"_blank\">www.lastplaces.com</a> and <a href=\"https://www.nativesofamerica.com\" target=\"_blank\">www.nativesofamerica.com</a>",
+            "CAPTION_BOOK_URL": ""
+        },
+        "MEHINAKU": {
+            "TITLE": "Mehinaku",
+            "SUBTITLE": "Children of the Sun Path",
+            "DESCRIPTION": "The Mehinaku are an essential pillar of the Upper Xingu, known for their circular villages that reflect their cosmology and a social life of radical transparency. As masters in managing the public and the sacred, they preserve their Arawak identity through ancestral rituals and a deep connection with the celestial cycle.",
+            "REGION": "Upper Xingu",
+            "PAGE": {
+                "HERO_TITLE": "Mehinaku",
+                "HERO_BODY_1": "The <strong>Mehinaku</strong>, belonging to the Arawak linguistic family, form an essential pillar of the multi-ethnic complex of the <strong>Upper Xingu</strong> in the Brazilian Mato Grosso. Their history is inscribed in the geography of the Tuatuari and Kurisevo rivers, where their circular villages act as a materialization of their cosmology. The design of the community is not random; the so-called \"path of the sun\" crosses the village from east to west, dividing the space into a sacred axis that ensures that daily life unfolds in harmony with the celestial cycle.",
+                "HERO_BODY_2": "The social life of this ethnic group is defined by a <strong>radical transparency</strong>, frequently described as a circular theater where privacy is an almost non-existent concept. Inside the communal houses, the absence of walls turns every act into a shared performance, while outside, the villagers' ability to identify each member by their footprints eliminates any trace of anonymity. This forced visibility has forged a culture expert in managing public impression.",
+                "HERO_BODY_3": "Mehinaku subsistence is based on a strictly complementary sexual division of labor, where marriage constitutes the basic unit of economic survival. While men take care of fishing and clearing the jungle for cassava gardens, women assume the laborious task of processing the tuber to produce <strong>beiju</strong>, the bread that sustains life. However, this interdependence coexists with a ritualized antagonism and a policy of secrecy centered on the <strong>sacred flutes</strong>, instruments that women are forbidden to see.",
+                "HERO_BODY_4": "In their worldview, the universe is saturated with agency and inhabited by the <strong>apapaatai</strong>, powerful spirits that can bring both illness and healing. The <strong>Kwarup</strong> ritual represents the culmination of this spirituality, a moment when beautifully adorned wooden trunks personify deceased ancestors to close the cycles of mourning. Under the din of the huka-huka fight and the smoke of shamanic tobacco, the Mehinaku connect the visible world with that of the shadows.",
+                "HERO_BODY_5": "Currently, the Mehinaku face the challenges of globalization and climate change within the limits of the Xingu Indigenous Park with pragmatism. Although external deforestation and water pollution threaten vital resources like pequi and fish, the tribe has shown remarkable resilience by integrating the market economy and new technologies without sacrificing their ontological foundations. Their ability to protect their rites of passage and their ancestral language ensures that the \"path of the sun\" continues to guide a sovereign society.",
+                "HERO_QUOTATION": "\"Where terrestrial architecture becomes a mirror of the firmament, anchoring identity to a territory sacred since mythical times.\"",
+                "PHOTOS_SECTION": {
+                    "TITLE": "Image Gallery"
+                },
+                "TABS": {
+                    "PHOTOS": "Photos",
+                    "ALDEA": "Village",
+                    "DRAMA": "Daily Life",
+                    "GENERO": "Gender"
+                },
+                "ALDEA_SECTION": {
+                    "TITLE": "Village Structure and Visibility",
+                    "DESC": "The Mehinaku village, <strong>Uyapiyuku</strong>, is designed as a microcosm reflecting the architecture of the sky. Its circular layout is organized around the <strong>\"path of the sun\"</strong>, an east-west axis connecting the Kurisevo and Tuatuari rivers. At its exact center stands the Men's House, bisecting the solar route and serving as the epicenter of public and ritual life.",
+                    "TABLE": {
+                        "H1": "Spatial Element",
+                        "H2": "Function and Meaning",
+                        "R1_C1": "Path of the Sun",
+                        "R1_C2": "Axis aligning the village with the solar cycle from east to west.",
+                        "R2_C1": "Men's House",
+                        "R2_C2": "Central space restricted to males; the political and ritual nucleus of the community.",
+                        "R3_C1": "Plaza (Wenekutaku)",
+                        "R3_C2": "\"Often-used place\": stage for speeches, ritual wrestling, and collective ceremonies.",
+                        "R4_C1": "Dwellings",
+                        "R4_C2": "Communal structures without internal walls housing between 10 and 12 people, eliminating privacy."
+                    }
+                },
+                "DRAMA_SECTION": {
+                    "TITLE": "Drama of Daily Life: Sociology and Behavior",
+                    "DESC_1": "Mehinaku life is described as a <strong>\"circular theater\"</strong> due to the extreme visibility of individual acts. With no internal walls in the houses, and being able to recognize each neighbor's footprints, anonymity is virtually impossible. This lack of privacy has turned individuals into masters of <strong>\"impression management\"</strong>.",
+                    "DESC_2": "Under this system, the Mehinaku publicly project an image of generosity and exemplary citizenship while developing complex concealment strategies for their private affairs. Gossip and constant observation act as mechanisms of social control, obliging inhabitants to interpret their roles with great care to protect their status in the community.",
+                    "CARD1_TITLE": "Circular Theater",
+                    "CARD1_DESC": "With no walls and no anonymity, every daily act becomes a public performance before the entire village.",
+                    "CARD2_TITLE": "Impression Management",
+                    "CARD2_DESC": "Individuals project generosity and virtue in public while managing concealment strategies for their private lives.",
+                    "CARD3_TITLE": "Social Control",
+                    "CARD3_DESC": "Gossip and constant observation function as ordering mechanisms that regulate the status and behavior of every member."
+                },
+                "GENERO_SECTION": {
+                    "TITLE": "Gender Antagonism and the Politics of Secrecy",
+                    "DESC": "Mehinaku society is governed by a <strong>\"culture of exclusion\"</strong> that sharply separates the domains of male and female power. The pillar of this structure is the secret of the <strong>sacred flutes</strong>, kept in the Men's House, whose sight is strictly forbidden to women under the threat of historically severe ritual sanctions.",
+                    "TABLE": {
+                        "H1": "Key Concept",
+                        "H2": "Description and Meaning",
+                        "R1_C1": "Sacred Flutes",
+                        "R1_C2": "Instruments that symbolize men's political dominion; forbidden from women's sight.",
+                        "R2_C1": "Matriarchy Myth",
+                        "R2_C2": "A foundational narrative justifying the social order by claiming women lost power in mythical time.",
+                        "R3_C1": "Makatsiki",
+                        "R3_C2": "Concept of \"loss of male strength\" through female sexual contamination; underpins purification rituals.",
+                        "R4_C1": "Gender Geography",
+                        "R4_C2": "Spatial division: the plaza and Men's House versus the domestic sphere and women's gardens."
+                    },
+                    "CONCLUSION": "This division generates a profound <strong>masculine sexual anxiety</strong>, where desire coexists with the fear of contamination by female fluids, reinforcing purification rituals and isolation in the Men's House."
+                }
+            },
+            "CAPTION_BOOK_TITLE": "Mehinaku tribe woman",
+            "CAPTION_GALLERY_TITLE": "Mehinaku Tribe",
             "CAPTION_BOOK_AUTHOR": "Joan Riera, founder of <a href=\"https://www.lastplaces.com\" target=\"_blank\">www.lastplaces.com</a> and <a href=\"https://www.nativesofamerica.com\" target=\"_blank\">www.nativesofamerica.com</a>",
             "CAPTION_BOOK_URL": ""
         }
