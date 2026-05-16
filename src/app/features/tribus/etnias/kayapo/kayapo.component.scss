@@ -166,6 +166,7 @@ $font-body: "Inter", sans-serif;
     justify-content: center;
     padding: 1rem;
     margin-left: 0;
+    text-align: justify;
 
     @media (min-width: 768px) {
         grid-column: 2;
