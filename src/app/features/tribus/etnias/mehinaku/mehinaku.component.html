@@ -1,0 +1,225 @@
+<section class="hero-section">
+    <div class="back-nav-container">
+        <button class="back-btn" (click)="goBack()">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+    </div>
+    <h1 class="hero-title">{{ 'TRIBES.MEHINAKU.PAGE.HERO_TITLE' | translate }}</h1>
+
+    <div class="hero-visual">
+        <div class="parallax-container" [style.transform]="parallaxTransform()">
+            <div class="book-container">
+                <img src="assets/images/tribes/mehinaku/mehinaku_mujer.jpg" alt="Mujer de la tribu Mehinaku"
+                    class="plant-image">
+                <app-media-caption [title]="'TRIBES.MEHINAKU.CAPTION_BOOK_TITLE' | translate"
+                    [author]="'TRIBES.MEHINAKU.CAPTION_BOOK_AUTHOR' | translate"
+                    [authorUrl]="'TRIBES.MEHINAKU.CAPTION_BOOK_URL' | translate" [iconType]="'web'">
+                </app-media-caption>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-body">
+            <div class="hero-column">
+                <p [innerHtml]="'TRIBES.MEHINAKU.PAGE.HERO_BODY_1' | translate"></p>
+                <p [innerHtml]="'TRIBES.MEHINAKU.PAGE.HERO_BODY_2' | translate"></p>
+
+                <!-- Read more button - Mobile Only -->
+                <button class="read-more-btn" (click)="toggleExpanded()">
+                    {{ (isExpanded() ? 'COMMON.READ_LESS' : 'COMMON.READ_MORE') | translate }}
+                    <mat-icon class="icon transition-transform duration-300" [class.rotate-180]="isExpanded()">
+                        expand_more
+                    </mat-icon>
+                </button>
+
+                <p [class.mobile-hidden]="!isExpanded()" class="expandable-content"
+                    [innerHtml]="'TRIBES.MEHINAKU.PAGE.HERO_BODY_3' | translate"></p>
+            </div>
+            <div class="hero-column" [class.mobile-hidden]="!isExpanded()" [class.expandable-content]="true">
+                <p [innerHtml]="'TRIBES.MEHINAKU.PAGE.HERO_BODY_4' | translate"></p>
+                <p [innerHtml]="'TRIBES.MEHINAKU.PAGE.HERO_BODY_5' | translate"></p>
+                <p class="poetic-touch">{{ 'TRIBES.MEHINAKU.PAGE.HERO_QUOTATION' | translate }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="multimedia-section">
+        <!-- Tabs Header -->
+        <div class="multimedia-tabs-header">
+            <button [class.active]="activeTab() === 'photos'" (click)="setTab('photos')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M20,5H4V19H20V5M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M5,16L8,12L10,15L13,11L17,17H5Z" />
+                </svg>
+                <span class="tab-label">{{ 'TRIBES.MEHINAKU.PAGE.TABS.PHOTOS' | translate }}</span>
+            </button>
+            <button [class.active]="activeTab() === 'aldea'" (click)="setTab('aldea')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12,3L2,12H5V20H19V12H22L12,3M12,8.5A1.5,1.5 0 0,1 13.5,10A1.5,1.5 0 0,1 12,11.5A1.5,1.5 0 0,1 10.5,10A1.5,1.5 0 0,1 12,8.5M12,13C13.5,13 16,13.75 16,15.25V16H8V15.25C8,13.75 10.5,13 12,13Z" />
+                </svg>
+                <span class="tab-label">{{ 'TRIBES.MEHINAKU.PAGE.TABS.ALDEA' | translate }}</span>
+            </button>
+            <button [class.active]="activeTab() === 'drama'" (click)="setTab('drama')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M17.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,9A1.5,1.5 0 0,1 19,10.5A1.5,1.5 0 0,1 17.5,12M14.5,8A1.5,1.5 0 0,1 13,6.5A1.5,1.5 0 0,1 14.5,5A1.5,1.5 0 0,1 16,6.5A1.5,1.5 0 0,1 14.5,8M9.5,8A1.5,1.5 0 0,1 8,6.5A1.5,1.5 0 0,1 9.5,5A1.5,1.5 0 0,1 11,6.5A1.5,1.5 0 0,1 9.5,8M6.5,12A1.5,1.5 0 0,1 5,10.5A1.5,1.5 0 0,1 6.5,9A1.5,1.5 0 0,1 8,10.5A1.5,1.5 0 0,1 6.5,12M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3Z" />
+                </svg>
+                <span class="tab-label">{{ 'TRIBES.MEHINAKU.PAGE.TABS.DRAMA' | translate }}</span>
+            </button>
+            <button [class.active]="activeTab() === 'genero'" (click)="setTab('genero')">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6A2,2 0 0,1 10,4A2,2 0 0,1 12,2M10.5,7H13.5A1,1 0 0,1 14.5,8V14H13V21H11V14H9.5V8A1,1 0 0,1 10.5,7Z" />
+                </svg>
+                <span class="tab-label">{{ 'TRIBES.MEHINAKU.PAGE.TABS.GENERO' | translate }}</span>
+            </button>
+        </div>
+
+        <div class="multimedia-content-wrapper">
+            <!-- Photos Tab -->
+            @defer (when activeTab() === 'photos'; prefetch on idle) {
+            <div class="multimedia-item photos-container" [class.tab-hidden]="activeTab() !== 'photos'">
+                <h3>{{ 'TRIBES.MEHINAKU.PAGE.PHOTOS_SECTION.TITLE' | translate }}</h3>
+                <div class="gallery-wrapper">
+                    <button class="nav-btn prev" (click)="prevPhoto()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+
+                    <div class="main-photo-view">
+                        <img [src]="galleryImages[currentPhotoIndex()]" alt="Mehinaku Culture" class="gallery-img">
+                        <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
+                    </div>
+
+                    <button class="nav-btn next" (click)="nextPhoto()">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+
+                <div class="thumbnails-track">
+                    @for (img of galleryImages; track img; let i = $index) {
+                    <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
+                        <img [src]="img" alt="Thumbnail">
+                    </div>
+                    }
+                </div>
+                <app-media-caption [title]="'TRIBES.MEHINAKU.CAPTION_GALLERY_TITLE' | translate"
+                    [author]="'TRIBES.MEHINAKU.CAPTION_BOOK_AUTHOR' | translate"
+                    [authorUrl]="'TRIBES.MEHINAKU.CAPTION_BOOK_URL' | translate" [iconType]="'web'">
+                </app-media-caption>
+            </div>
+            } @placeholder {
+            <div class="multimedia-item photos-container placeholder-container"
+                [class.tab-hidden]="activeTab() !== 'photos'">
+                <div class="loading-shimmer gallery-placeholder"></div>
+            </div>
+            }
+
+            <!-- Aldea y Visibilidad Tab -->
+            @if (activeTab() === 'aldea') {
+            <div class="multimedia-item info-container">
+                <h3>{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TITLE' | translate }}</h3>
+                <p class="info-intro" [innerHtml]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.DESC' | translate"></p>
+                <div class="tables-full-width-container">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H1' | translate }}</th>
+                                    <th scope="col">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H2' | translate }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R1_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R1_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R2_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R2_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R3_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R3_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R4_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.ALDEA_SECTION.TABLE.R4_C2' | translate }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            }
+
+            <!-- Drama Social Tab -->
+            @if (activeTab() === 'drama') {
+            <div class="multimedia-item info-container">
+                <h3>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.TITLE' | translate }}</h3>
+                <p class="info-intro" [innerHtml]="'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.DESC_1' | translate"></p>
+                <p class="info-body" [innerHtml]="'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.DESC_2' | translate"></p>
+                <div class="concept-highlight">
+                    <div class="concept-card">
+                        <div class="concept-icon">👁</div>
+                        <h4>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD1_TITLE' | translate }}</h4>
+                        <p>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD1_DESC' | translate }}</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">🎭</div>
+                        <h4>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD2_TITLE' | translate }}</h4>
+                        <p>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD2_DESC' | translate }}</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">💬</div>
+                        <h4>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD3_TITLE' | translate }}</h4>
+                        <p>{{ 'TRIBES.MEHINAKU.PAGE.DRAMA_SECTION.CARD3_DESC' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            }
+
+            <!-- Antagonismo de Género Tab -->
+            @if (activeTab() === 'genero') {
+            <div class="multimedia-item info-container">
+                <h3>{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TITLE' | translate }}</h3>
+                <p class="info-intro" [innerHtml]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.DESC' | translate"></p>
+                <div class="tables-full-width-container">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H1' | translate }}</th>
+                                    <th scope="col">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H2' | translate }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R1_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R1_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R2_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R2_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R3_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R3_C2' | translate }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="highlight-cell" [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H1' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R4_C1' | translate }}</td>
+                                    <td [attr.data-label]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.H2' | translate">{{ 'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.TABLE.R4_C2' | translate }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="info-conclusion" [innerHtml]="'TRIBES.MEHINAKU.PAGE.GENERO_SECTION.CONCLUSION' | translate"></p>
+            </div>
+            }
+        </div>
+    </div>
+</section>

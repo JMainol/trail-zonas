@@ -24,6 +24,11 @@ export const TRIBUS_ROUTES: Routes = [
                         path: 'kayapo',
                         loadComponent: () => import('./etnias/kayapo/kayapo.component').then(m => m.KayapoComponent),
                         title: 'Tribu Kayapó'
+                    },
+                    {
+                        path: 'mehinaku',
+                        loadComponent: () => import('./etnias/mehinaku/mehinaku.component').then(m => m.MehinakuComponent),
+                        title: 'Tribu Mehinaku'
                     }
                 ]
             },
