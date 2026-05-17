@@ -1,6 +1,6 @@
 
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild, inject, signal, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, Location, isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -18,7 +18,15 @@ import { MatIconModule } from '@angular/material/icon';
     styleUrl: './tapir.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TapirComponent {
+export class TapirComponent implements OnInit {
+    private platformId = inject(PLATFORM_ID);
+
+    ngOnInit(): void {
+        if (isPlatformBrowser(this.platformId)) {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+    }
+
     private sanitizer = inject(DomSanitizer);
     private location = inject(Location);
     @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;

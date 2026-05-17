@@ -57,6 +57,7 @@
         "LAKES": "Lagos",
         "CONSERVATION": "Conservación",
         "DEFORESTATION": "Deforestación",
+        "EMPTY_FOREST": "Selva Vacía",
         "CLIMATE_CHANGE": "Cambio Climático",
         "PROJECTS": "Proyectos",
         "MORE_INFO": "Más información",
@@ -837,6 +838,35 @@
                     "R4_C3": "1,000 familias con ingresos sostenibles [8]"
                 }
             }
+        },
+        "EMPTY_FOREST": {
+            "TITLE": "El Síndrome de la Selva Vacía",
+            "SUBTITLE": "El silencio oculto de la Amazonía",
+            "PARA_1": "A simple vista, el verde infinito de la Amazonía puede engañarnos. Un bosque con árboles gigantescos y hojas exuberantes parece el pináculo de la vida salvaje. Sin embargo, el ornitólogo José Álvarez Alonso, tras vivir casi tres décadas en la selva peruana, documenta un fenómeno silencioso y alarmante.",
+            "PARA_2": "A este fenómeno se le conoce como el \"síndrome de la selva vacía\". Consiste en que, debido a la caza indiscriminada y la sobreexplotación, los animales han desaparecido casi por completo en vastas regiones. Aunque la flora parezca intacta, estos bosques sufren una extinción ecológica y económica, ya que han perdido la fauna que los mantiene vivos y que alimenta a las comunidades locales.",
+            "SUBTITLE_FRUITS": "¿Por qué se pudren los frutos en el paraíso?",
+            "PARA_3": "En 1984, durante una expedición en la comunidad indígena de Intuto, el investigador notó miles de frutos de <em>shimbillo</em> pudriéndose en el suelo del bosque. Intrigado, le preguntó a su guía achuar la razón de este desperdicio. La respuesta del guía resumió el colapso ecológico en una frase:",
+            "QUOTE": "\"Porque no hay monos que lo coman... nos los hemos comido toditos. Por este monte yo solito he baleado cantidad de monos y sajinos... Ahora ya no queda nada.\"",
+            "LIST_INTRO_1": "La ausencia de estos animales detona una reacción en cadena catastrófica:",
+            "ITEM_1_1": "<strong>Pérdida de sembradores naturales:</strong> Más de tres cuartas partes de los árboles amazónicos dependen de los animales para dispersar sus semillas.",
+            "ITEM_1_2_BEFORE": "<strong>Cambios en el ecosistema:</strong> Especies clave como el",
+            "ITEM_1_2_LINK": "tapir",
+            "ITEM_1_2_AFTER": ", los pecaríes y los grandes monos son los jardineros del bosque. Sin ellos, los árboles de semillas grandes (como el cedro y la caoba) no pueden reproducirse frente a especies invasivas de crecimiento rápido.",
+            "SUBTITLE_WATER": "El drama del agua: El misterio de las \"Cochas Muertas\"",
+            "PARA_4": "El impacto no se limita a la tierra firme; los ecosistemas acuáticos también están muriendo. Los grandes lagos amazónicos (conocidos como <em>cochas</em>) dependen de herbívoros gigantes. Un solo manatí amazónico puede devorar hasta 40 kg de vegetación acuática al día, fertilizando además el agua con sus desechos.",
+            "ITEM_2_1": "<strong>¿Qué pasa cuando desaparecen el manatí y las tortugas acuáticas?</strong> El agua se asfixia.",
+            "ITEM_2_2": "Miles de hectáreas se cubren por una alfombra densa de plantas flotantes que bloquea la luz solar y el oxígeno.",
+            "ITEM_2_3": "El resultado son las <strong>\"cochas muertas\"</strong>, cuerpos de agua donde la productividad colapsa y los peces desaparecen por completo.",
+            "SUBTITLE_ABUNDANCE": "De la abundancia histórica a la fiebre extractiva",
+            "PARA_5": "Es difícil imaginar esta escasez cuando revisamos las crónicas del siglo XVI. Exploradores como Francisco de Orellana o Cristóbal de Acuña describían una abundancia incalculable: miles de tortugas <em>charapas</em>, manatíes y peces que garantizaban alimento de sobra para cientos de personas durante años. En el siglo XIX, se llegaron a recolectar hasta cinco millones de huevos de tortuga en una sola playa para exportar su aceite a Europa.",
+            "PARA_6": "Sin embargo, las fiebres extractivas modernas cambiaron la historia. La caza comercial masacró a la fauna amazónica para abastecer mercados globales de pieles y cueros.",
+            "ITEM_3_1": "Solo desde Perú se exportaron más de <strong>5.5 millones de pieles</strong> entre 1965 y 1976 (incluyendo jaguares, caimanes negros y ocelotes).",
+            "ITEM_3_2": "Para cazar un solo jaguar, los furtivos utilizaban pecaríes o monos enteros como cebo, multiplicando la matanza.",
+            "SUBTITLE_GUARDIANS": "Las tribus indígenas: Los nuevos guardianes",
+            "PARA_7": "A pesar de este panorama sombrío, hay un rayo de esperanza para la biodiversidad. En los lugares donde existen áreas protegidas y territorios gestionados eficazmente, se aplica un modelo de \"fuente-sumidero\": los animales se refugian y reproducen en zonas seguras, repoblando gradualmente las áreas adyacentes.",
+            "PARA_8": "Las comunidades indígenas y campesinas que viven en zonas remotas, donde gestionan bionegocios y organizan labores de vigilancia contra madereros ilegales, están logrando recuperar notoriamente la fauna local. Para ellos, un bosque lleno de vida vuelve a ser un activo invaluable que vale la pena proteger con su vida.",
+            "FOOTER": "<em>* Nota de transparencia y autoría: Este artículo es una adaptación divulgativa publicada con la autorización expresa del investigador y ornitólogo José Álvarez Alonso. Los datos históricos y biológicos provienen de su investigación original \"El síndrome de la selva vacía\", publicado en la revista Argutorio. Puedes consultar el estudio completo aquí: </em>",
+            "FOOTER_LINK_TEXT": "Descargar investigación original (PDF)"
         }
     }
 }
