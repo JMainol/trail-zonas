@@ -1,0 +1,80 @@
+<section class="history-section">
+
+  <!-- Botón Atrás -->
+  <div class="back-nav-container">
+    <button class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+      <svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="history-content">
+    <div class="history-body">
+      <div class="hero-column">
+        
+        <h1 class="history-title">
+          {{ 'CONSERVATION_SECTION.EMPTY_FOREST.TITLE' | translate }}
+          <br>
+          <span class="subtitle-text">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.SUBTITLE' | translate }}</span>
+        </h1>
+
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.PARA_1' | translate }}</p>
+
+        <p [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.PARA_2' | translate"></p>
+
+        <h3 class="section-subtitle">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.SUBTITLE_FRUITS' | translate }}</h3>
+        <p [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.PARA_3' | translate"></p>
+
+        <blockquote class="cita-destacada">
+          {{ 'CONSERVATION_SECTION.EMPTY_FOREST.QUOTE' | translate }}
+        </blockquote>
+
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.LIST_INTRO_1' | translate }}</p>
+        <ul>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_1_1' | translate"></li>
+          <li>
+            <span [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_1_2_BEFORE' | translate"></span>
+            <a routerLink="/amazonia/animales/mamiferos-terrestres/tapir" class="enlace-articulo">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_1_2_LINK' | translate }}</a><span [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_1_2_AFTER' | translate"></span>
+          </li>
+        </ul>
+
+        <h3 class="section-subtitle">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.SUBTITLE_WATER' | translate }}</h3>
+        <p [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.PARA_4' | translate"></p>
+
+        <ul>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_2_1' | translate"></li>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_2_2' | translate"></li>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_2_3' | translate"></li>
+        </ul>
+
+        <h3 class="section-subtitle">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.SUBTITLE_ABUNDANCE' | translate }}</h3>
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.PARA_5' | translate }}</p>
+
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.PARA_6' | translate }}</p>
+        <ul>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_3_1' | translate"></li>
+          <li [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.ITEM_3_2' | translate"></li>
+        </ul>
+
+        <h3 class="section-subtitle">{{ 'CONSERVATION_SECTION.EMPTY_FOREST.SUBTITLE_GUARDIANS' | translate }}</h3>
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.PARA_7' | translate }}</p>
+
+        <p>{{ 'CONSERVATION_SECTION.EMPTY_FOREST.PARA_8' | translate }}</p>
+
+        <hr class="separador-notas">
+
+        <footer class="nota-atribucion">
+          <p>
+            <span [innerHTML]="'CONSERVATION_SECTION.EMPTY_FOREST.FOOTER' | translate"></span>
+            <a href="https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=El+sindrome+de+la+selva+vacia+Jose+Alvarez+Alonso" target="_blank" rel="noopener noreferrer" class="enlace-fuente">
+              {{ 'CONSERVATION_SECTION.EMPTY_FOREST.FOOTER_LINK_TEXT' | translate }}
+            </a>
+          </p>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+</section>

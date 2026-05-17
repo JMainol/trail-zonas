@@ -389,6 +389,7 @@ export class NavMenuComponent {
 
       // Conservación
       { title: 'Conservación, Deforestación en la Amazonía', enTitle: 'Conservation, Deforestation in the Amazon', link: '/amazonia/conservacion/deforestacion-mineria' },
+      { title: 'El Síndrome de la Selva Vacía, Conservación', enTitle: 'The Empty Forest Syndrome, Conservation', link: '/amazonia/conservacion/selva-vacia' },
 
       // Contacto
       { title: 'Contacto', enTitle: 'Contact', link: '/amazonia/contacto' },
@@ -510,6 +511,7 @@ export class NavMenuComponent {
          label: 'COMMON.CONSERVATION',
          items: [
             { label: 'COMMON.DEFORESTATION', link: '/amazonia/conservacion/deforestacion-mineria' },
+            { label: 'COMMON.EMPTY_FOREST', link: '/amazonia/conservacion/selva-vacia' },
             { label: 'COMMON.CLIMATE_CHANGE', link: '/amazonia/conservacion/cambio-climatico', disabled: true },
             { label: 'COMMON.PROJECTS', link: '/amazonia/conservacion/proyectos-soluciones', disabled: true }
          ]

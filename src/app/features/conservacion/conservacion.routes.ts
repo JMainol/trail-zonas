@@ -23,6 +23,11 @@ export const CONSERVACION_ROUTES: Routes = [
                 title: 'Proyectos y Soluciones'
             },
             {
+                path: 'selva-vacia',
+                loadComponent: () => import('./selva-vacia/selva-vacia.component').then(m => m.SelvaVaciaComponent),
+                title: 'El Síndrome de la Selva Vacía'
+            },
+            {
                 path: '',
                 redirectTo: 'deforestacion-mineria',
                 pathMatch: 'full'

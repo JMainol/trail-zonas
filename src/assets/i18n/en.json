@@ -57,6 +57,7 @@
         "LAKES": "Lagos",
         "CONSERVATION": "Conservation",
         "DEFORESTATION": "Deforestation",
+        "EMPTY_FOREST": "Empty Forest",
         "CLIMATE_CHANGE": "Climate Change",
         "PROJECTS": "Projects",
         "MORE_INFO": "More information",
@@ -837,6 +838,35 @@
                     "R4_C3": "1,000 families via renewable income [8]"
                 }
             }
+        },
+        "EMPTY_FOREST": {
+            "TITLE": "The Empty Forest Syndrome",
+            "SUBTITLE": "The Hidden Silence of the Amazon",
+            "PARA_1": "At first glance, the endless green of the Amazon can be deceiving. A forest boasting colossal trees and exuberant foliage appears to be the absolute pinnacle of wild life. However, ornithologist José Álvarez Alonso, after living for nearly three decades in the Peruvian rainforest, documents a silent and alarming phenomenon.",
+            "PARA_2": "This phenomenon is known as the \"empty forest syndrome.\" It lies in the fact that, due to indiscriminate hunting and overexploitation, animals have almost entirely vanished across vast regions. Although the flora remains seemingly intact, these forests suffer an ecological and economic extinction, having lost the very fauna that keeps them alive and sustains local communities.",
+            "SUBTITLE_FRUITS": "Why Do Fruits Rot in Paradise?",
+            "PARA_3": "In 1984, during an expedition in the indigenous community of Intuto, the researcher noticed thousands of <em>shimbillo</em> fruits rotting on the forest floor. Intrigued, he asked his Achuar guide the reason behind this waste. The guide's response encapsulated the ecological collapse in a single sentence:",
+            "QUOTE": "\"Because there are no monkeys left to eat them... we have eaten them all. In this forest, I alone have shot plenty of monkeys and peccaries... Now, nothing remains.\"",
+            "LIST_INTRO_1": "The absence of these animals triggers a catastrophic chain reaction:",
+            "ITEM_1_1": "<strong>Loss of natural seed sowers:</strong> Over three-quarters of Amazonian tree species depend on animals to disperse their seeds.",
+            "ITEM_1_2_BEFORE": "<strong>Ecosystem shifts:</strong> Keystone species such as the",
+            "ITEM_1_2_LINK": "tapir",
+            "ITEM_1_2_AFTER": ", peccaries, and large monkeys are the true gardeners of the forest. Without them, large-seeded trees (such as cedar and mahogany) cannot reproduce successfully against fast-growing invasive species.",
+            "SUBTITLE_WATER": "The Drama of Water: The Mystery of \"Dead Oxbow Lakes\"",
+            "PARA_4": "The impact is not restricted to dry land; aquatic ecosystems are dying as well. Large Amazonian lakes (locally known as <em>cochas</em>) depend on giant herbivores. A single Amazonian manatee can consume up to 40 kg of aquatic vegetation daily, while also fertilizing the water with its waste.",
+            "ITEM_2_1": "<strong>What happens when the manatee and aquatic turtles disappear?</strong> The water suffocates.",
+            "ITEM_2_2": "Thousands of hectares become carpeted by a dense layer of floating plants that blocks sunlight and oxygen.",
+            "ITEM_2_3": "The result is <strong>\"dead oxbow lakes\"</strong> (cochas muertas), bodies of water where ecological productivity collapses and fish vanish entirely.",
+            "SUBTITLE_ABUNDANCE": "From Historical Abundance to the Extraction Fevers",
+            "PARA_5": "It is difficult to fathom this scarcity when examining 16th-century chronicles. Explorers like Francisco de Orellana or Cristóbal de Acuña described an incalculable abundance: thousands of <em>charapa</em> turtles, manatees, and fish that guaranteed surplus food for hundreds of people over years. In the 19th century, up to five million turtle eggs were harvested from a single beach just to export their oil to Europe.",
+            "PARA_6": "However, modern extractive fevers rewritten history. Commercial hunting decimated Amazonian fauna to supply global leather and fur markets.",
+            "ITEM_3_1": "From Peru alone, over <strong>5.5 million animal skins</strong> were exported between 1965 and 1976 (including jaguars, black caimans, and ocelots).",
+            "ITEM_3_2": "To hunt a single jaguar, poachers used entire peccaries or monkeys as bait, multiplying the slaughter.",
+            "SUBTITLE_GUARDIANS": "Indigenous Tribes: The New Guardians",
+            "PARA_7": "Despite this somber outlook, there is a ray of hope for biodiversity. In areas where protected spaces and effectively managed territories exist, a \"source-sink\" model applies: animals take refuge and reproduce in safe zones, gradually repopulating the adjacent areas.",
+            "PARA_8": "Indigenous and rural communities living in remote areas, where they manage bio-businesses and organize community patrols against illegal loggers, are successfully restoring local fauna. For them, a forest teeming with life becomes once again an invaluable asset worth protecting with their lives.",
+            "FOOTER": "<em>* Note on transparency and authorship: This article is an informative adaptation published with the express authorization of researcher and ornithologist José Álvarez Alonso. Historical and biological data derive from his original research \"El síndrome de la selva vacía\" (The Empty Forest Syndrome), published in the journal Argutorio. You can access the complete study here: </em>",
+            "FOOTER_LINK_TEXT": "Download original research (PDF)"
         }
     }
 }
