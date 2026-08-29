@@ -1,10 +1,7 @@
 <section class="contact-section">
     <div class="contact-header">
-        <h1 class="contact-title">Conecta con la <span class="highlight">Selva</span></h1>
-        <p class="contact-subtitle">
-            Esta es una plataforma open source, sin ánimo de lucro. Una wiki 2.0 creada para compartir conocimiento,
-            inspirar, concienciar y disfrutar de uno de los lugares más mágicos del mundo.
-        </p>
+        <h1 class="contact-title" [innerHTML]="'CONTACT_PAGE.TITLE' | translate"></h1>
+        <p class="contact-subtitle">{{ 'CONTACT_PAGE.SUBTITLE' | translate }}</p>
     </div>
 
     <div class="form-container">
@@ -12,23 +9,23 @@
             <!-- Nombre y Email -->
             <div class="form-row">
                 <div class="form-group">
-                    <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" formControlName="nombre" placeholder="Ej: Maria Silva"
+                    <label for="nombre">{{ 'CONTACT_PAGE.FORM.FULL_NAME' | translate }}</label>
+                    <input type="text" id="nombre" formControlName="nombre" [placeholder]="'CONTACT_PAGE.FORM.NAME_PLACEHOLDER' | translate"
                         [class.is-invalid]="f['nombre'].invalid && f['nombre'].touched">
                     <div class="error-msg" *ngIf="f['nombre'].invalid && f['nombre'].touched">
-                        <span *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio.</span>
-                        <span *ngIf="f['nombre'].errors?.['pattern']">Sólo se permiten letras y espacios.</span>
-                        <span *ngIf="f['nombre'].errors?.['minlength']">Mínimo 2 caracteres.</span>
+                        <span *ngIf="f['nombre'].errors?.['required']">{{ 'CONTACT_PAGE.ERRORS.NAME_REQUIRED' | translate }}</span>
+                        <span *ngIf="f['nombre'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.NAME_PATTERN' | translate }}</span>
+                        <span *ngIf="f['nombre'].errors?.['minlength']">{{ 'CONTACT_PAGE.ERRORS.NAME_MIN' | translate }}</span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" formControlName="email" placeholder="ejemplo@correo.com"
+                    <label for="email">{{ 'CONTACT_PAGE.FORM.EMAIL' | translate }}</label>
+                    <input type="email" id="email" formControlName="email" [placeholder]="'CONTACT_PAGE.FORM.EMAIL_PLACEHOLDER' | translate"
                         [class.is-invalid]="f['email'].invalid && f['email'].touched">
                     <div class="error-msg" *ngIf="f['email'].invalid && f['email'].touched">
-                        <span *ngIf="f['email'].errors?.['required']">El email es obligatorio.</span>
-                        <span *ngIf="f['email'].errors?.['email']">Debes introducir un email válido.</span>
+                        <span *ngIf="f['email'].errors?.['required']">{{ 'CONTACT_PAGE.ERRORS.EMAIL_REQUIRED' | translate }}</span>
+                        <span *ngIf="f['email'].errors?.['email']">{{ 'CONTACT_PAGE.ERRORS.EMAIL_INVALID' | translate }}</span>
                     </div>
                 </div>
             </div>
@@ -36,23 +33,43 @@
             <!-- Profesion y Plataforma -->
             <div class="form-row">
                 <div class="form-group">
-                    <label for="profesion">Profesión / Especialidad *</label>
+                    <label for="profesion">{{ 'CONTACT_PAGE.FORM.PROFESSION' | translate }}</label>
                     <input type="text" id="profesion" formControlName="profesion"
-                        placeholder="Ej: Bióloga, Estudiante..."
+                        [placeholder]="'CONTACT_PAGE.FORM.PROFESSION_PLACEHOLDER' | translate"
                         [class.is-invalid]="f['profesion'].invalid && f['profesion'].touched">
                     <div class="error-msg" *ngIf="f['profesion'].invalid && f['profesion'].touched">
-                        <span *ngIf="f['profesion'].errors?.['required']">La profesión es obligatoria.</span>
-                        <span *ngIf="f['profesion'].errors?.['pattern']">Formato no válido.</span>
+                        <span *ngIf="f['profesion'].errors?.['required']">{{ 'CONTACT_PAGE.ERRORS.PROFESSION_REQUIRED' | translate }}</span>
+                        <span *ngIf="f['profesion'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.PROFESSION_PATTERN' | translate }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enlaces Sociales -->
+            <div class="form-row-3">
+                <div class="form-group">
+                    <label for="web">{{ 'CONTACT_PAGE.FORM.WEB' | translate }}</label>
+                    <input type="text" id="web" formControlName="web" [placeholder]="'CONTACT_PAGE.FORM.WEB_PLACEHOLDER' | translate"
+                        [class.is-invalid]="f['web'].invalid && f['web'].touched">
+                    <div class="error-msg" *ngIf="f['web'].invalid && f['web'].touched">
+                        <span *ngIf="f['web'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.WEB_PATTERN' | translate }}</span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="plataforma">Web, Instagram o Plataforma</label>
-                    <input type="text" id="plataforma" formControlName="plataforma" placeholder="Link o @usuario"
+                    <label for="instagram">{{ 'CONTACT_PAGE.FORM.INSTAGRAM' | translate }}</label>
+                    <input type="text" id="instagram" formControlName="instagram" [placeholder]="'CONTACT_PAGE.FORM.INSTA_PLACEHOLDER' | translate"
+                        [class.is-invalid]="f['instagram'].invalid && f['instagram'].touched">
+                    <div class="error-msg" *ngIf="f['instagram'].invalid && f['instagram'].touched">
+                        <span *ngIf="f['instagram'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.INSTA_PATTERN' | translate }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="plataforma">{{ 'CONTACT_PAGE.FORM.OTHER_PLATFORM' | translate }}</label>
+                    <input type="text" id="plataforma" formControlName="plataforma" [placeholder]="'CONTACT_PAGE.FORM.OTHER_PLACEHOLDER' | translate"
                         [class.is-invalid]="f['plataforma'].invalid && f['plataforma'].touched">
                     <div class="error-msg" *ngIf="f['plataforma'].invalid && f['plataforma'].touched">
-                        <span *ngIf="f['plataforma'].errors?.['pattern']">Caracteres no válidos para una URL o
-                            usuario.</span>
+                        <span *ngIf="f['plataforma'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.OTHER_PATTERN' | translate }}</span>
                     </div>
                 </div>
             </div>
@@ -60,106 +77,70 @@
             <!-- Interes y Como nos conociste -->
             <div class="form-row">
                 <div class="form-group custom-dropdown-group">
-                    <label for="interes">Interés principal en el Amazonas *</label>
+                    <label for="interes">{{ 'CONTACT_PAGE.FORM.INTEREST' | translate }}</label>
 
                     <div class="custom-select" [class.is-invalid]="f['interes'].invalid && f['interes'].touched">
                         <div class="select-selected" (click)="toggleDropdown()" [class.has-value]="f['interes'].value">
-                            {{ selectedInteresText }}
+                            {{ selectedInteresText | translate }}
                             <mat-icon>{{ isDropdownOpen() ? 'expand_less' : 'expand_more' }}</mat-icon>
                         </div>
                         <div class="dropdown-backdrop" *ngIf="isDropdownOpen()" (click)="isDropdownOpen.set(false)">
                         </div>
                         <div class="select-items" *ngIf="isDropdownOpen()">
                             <div (click)="selectInteres('conservacion')"
-                                [class.selected]="f['interes'].value === 'conservacion'">Conservación y Medio Ambiente
+                                [class.selected]="f['interes'].value === 'conservacion'">{{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.CONSERVATION' | translate }}
                             </div>
                             <div (click)="selectInteres('investigacion')"
-                                [class.selected]="f['interes'].value === 'investigacion'">Investigación Científica</div>
+                                [class.selected]="f['interes'].value === 'investigacion'">{{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.RESEARCH' | translate }}</div>
                             <div (click)="selectInteres('tribus')" [class.selected]="f['interes'].value === 'tribus'">
-                                Cultura y Tribus Indígenas</div>
+                                {{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.TRIBES' | translate }}</div>
                             <div (click)="selectInteres('fotografia')"
-                                [class.selected]="f['interes'].value === 'fotografia'">Fotografía / Documental</div>
+                                [class.selected]="f['interes'].value === 'fotografia'">{{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.PHOTO' | translate }}</div>
                             <div (click)="selectInteres('turismo')" [class.selected]="f['interes'].value === 'turismo'">
-                                Viaje y Exploración</div>
-                            <div (click)="selectInteres('otro')" [class.selected]="f['interes'].value === 'otro'">Otro
+                                {{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.TOURISM' | translate }}</div>
+                            <div (click)="selectInteres('otro')" [class.selected]="f['interes'].value === 'otro'">{{ 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.OTHER' | translate }}
                             </div>
                         </div>
                     </div>
 
                     <div class="error-msg" *ngIf="f['interes'].invalid && f['interes'].touched">
-                        <span>Por favor selecciona tu interés.</span>
+                        <span>{{ 'CONTACT_PAGE.ERRORS.INTEREST_REQUIRED' | translate }}</span>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="conociste">¿Cómo nos conociste? *</label>
+                    <label for="conociste">{{ 'CONTACT_PAGE.FORM.HOW_DID_YOU_HEAR' | translate }}</label>
                     <input type="text" id="conociste" formControlName="conociste"
-                        placeholder="Ej: Google, Recomendación..."
+                        [placeholder]="'CONTACT_PAGE.FORM.HOW_PLACEHOLDER' | translate"
                         [class.is-invalid]="f['conociste'].invalid && f['conociste'].touched">
                     <div class="error-msg" *ngIf="f['conociste'].invalid && f['conociste'].touched">
-                        <span>Este campo es obligatorio.</span>
+                        <span>{{ 'CONTACT_PAGE.ERRORS.HOW_REQUIRED' | translate }}</span>
                     </div>
                 </div>
             </div>
 
             <!-- Mensaje -->
             <div class="form-group">
-                <label for="mensaje">Tu Mensaje o Aporte *</label>
+                <label for="mensaje">{{ 'CONTACT_PAGE.FORM.MESSAGE' | translate }}</label>
                 <textarea id="mensaje" formControlName="mensaje" rows="5"
-                    placeholder="Escribe aquí tu mensaje, links a documentales, propuestas..."
+                    [placeholder]="'CONTACT_PAGE.FORM.MESSAGE_PLACEHOLDER' | translate"
                     [class.is-invalid]="f['mensaje'].invalid && f['mensaje'].touched"></textarea>
                 <div class="error-msg" *ngIf="f['mensaje'].invalid && f['mensaje'].touched">
-                    <span *ngIf="f['mensaje'].errors?.['required']">El mensaje es obligatorio.</span>
-                    <span *ngIf="f['mensaje'].errors?.['minlength']">Mensaje demasiado corto (mín. 10
-                        caracteres).</span>
-                    <span *ngIf="f['mensaje'].errors?.['pattern']">El uso de corchetes angulares o llaves no está
-                        permitido por seguridad.</span>
-                </div>
-            </div>
-
-            <!-- Seccion Archivos -->
-            <div class="form-section upload-section">
-                <h3>Aportar Material a la Wiki</h3>
-                <p class="upload-desc">
-                    Compártenos fotos en <strong>alta calidad (Máx. 25MB por foto)</strong> para incluirlas en la web.
-                    Añadiremos la correspondiente declaración de autoría y el link a tu web o plataforma elegida.
-                    ¡Ayúdanos a
-                    mostrar la belleza del Amazonas!
-                </p>
-                <div class="file-drop-area">
-                    <mat-icon class="upload-icon">cloud_upload</mat-icon>
-                    <span class="fake-btn">Elegir fotos (JPG, PNG, WEBP)</span>
-                    <span class="file-msg">{{ selectedFiles().length > 0 ? selectedFiles().length + ' archivos
-                        seleccionados' : 'o arrastra y suelta aquí' }}</span>
-                    <input class="file-input" type="file" multiple accept="image/jpeg, image/png, image/webp"
-                        (change)="onFileChange($event)">
-                </div>
-
-                <div class="selected-files" *ngIf="selectedFiles().length > 0">
-                    <div class="file-item" *ngFor="let file of selectedFiles(); let i = index">
-                        <span class="file-name">{{ file.name }}</span>
-                        <button type="button" class="remove-btn" (click)="removeFile(i)">
-                            <mat-icon>close</mat-icon>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="info-box mt-4">
-                    <mat-icon>info</mat-icon>
-                    <p>También estamos abiertos a recibir otro tipo de documentos. Puedes incluir links a vídeos, textos
-                        largos o trabajos de investigación en el campo de mensaje superior.</p>
+                    <span *ngIf="f['mensaje'].errors?.['required']">{{ 'CONTACT_PAGE.ERRORS.MESSAGE_REQUIRED' | translate }}</span>
+                    <span *ngIf="f['mensaje'].errors?.['minlength']">{{ 'CONTACT_PAGE.ERRORS.MESSAGE_MIN' | translate }}</span>
+                    <span *ngIf="f['mensaje'].errors?.['pattern']">{{ 'CONTACT_PAGE.ERRORS.MESSAGE_PATTERN' | translate }}</span>
                 </div>
             </div>
 
             <div class="form-actions">
                 <button type="button" class="cancel-btn" (click)="clearForm()" [disabled]="isSubmitting()">
-                    <span>Cancelar</span>
+                    <span>{{ 'CONTACT_PAGE.FORM.CANCEL' | translate }}</span>
                     <mat-icon>clear</mat-icon>
                 </button>
 
                 <button type="submit" class="submit-btn" [disabled]="isSubmitting()">
                     <ng-container *ngIf="!isSubmitting()">
-                        <span>Enviar</span>
+                        <span>{{ 'CONTACT_PAGE.FORM.SUBMIT' | translate }}</span>
                         <mat-icon>eco</mat-icon>
                     </ng-container>
                     <span *ngIf="isSubmitting()" class="spinner-loader"></span>
@@ -172,7 +153,7 @@
     <div class="notification-popup" [class.show]="showPopup()" [class.success]="popupType() === 'success'"
         [class.error]="popupType() === 'error'">
         <mat-icon class="status-icon">{{ popupType() === 'success' ? 'check_circle' : 'error' }}</mat-icon>
-        <span class="message">{{ popupMessage() }}</span>
+        <span class="message">{{ popupMessage() | translate }}</span>
         <button class="close-popup-btn" (click)="closePopup()">
             <mat-icon>close</mat-icon>
         </button>

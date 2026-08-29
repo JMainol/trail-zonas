@@ -68,7 +68,7 @@ $font-body: "Inter", sans-serif;
 
 .form-container {
     width: 100%;
-    max-width: 850px;
+    max-width: 950px;
     z-index: 2;
     background: rgba(10, 14, 20, 0.6);
     backdrop-filter: blur(20px);
@@ -98,9 +98,20 @@ $font-body: "Inter", sans-serif;
     }
 }
 
+.form-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     label {
         font-family: $font-body;
@@ -114,6 +125,8 @@ $font-body: "Inter", sans-serif;
     input,
     select,
     textarea {
+        width: 100%;
+        box-sizing: border-box;
         background: rgba(0, 0, 0, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 10px;

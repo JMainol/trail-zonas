@@ -13,20 +13,24 @@ export const TRIBUS_ROUTES: Routes = [
                 children: [
                     {
                         path: '',
+                        data: { description: 'Descubre las etnias indígenas que habitan y protegen la selva amazónica.' },
                         loadComponent: () => import('./etnias/etnias.component').then(m => m.EtniasComponent),
                     },
                     {
                         path: 'waorani',
+                        data: { description: 'Conoce a la tribu Waorani, legendarios guerreros de la selva.' },
                         loadComponent: () => import('./etnias/waorani/waorani.component').then(m => m.WaoraniComponent),
                         title: 'Tribu Waorani'
                     },
                     {
                         path: 'kayapo',
+                        data: { description: 'Descubre a los Kayapó, guardianes del Amazonas en Brasil.' },
                         loadComponent: () => import('./etnias/kayapo/kayapo.component').then(m => m.KayapoComponent),
                         title: 'Tribu Kayapó'
                     },
                     {
                         path: 'mehinaku',
+                        data: { description: 'La cultura y vida de la tribu Mehinaku en la cuenca del Xingu.' },
                         loadComponent: () => import('./etnias/mehinaku/mehinaku.component').then(m => m.MehinakuComponent),
                         title: 'Tribu Mehinaku'
                     }

@@ -23,38 +23,20 @@ export class ContactoComponent {
   popupType = signal<'success' | 'error'>('success');
   isSubmitting = signal(false);
 
-  // Lista de archivos seleccionados
-  selectedFiles = signal<File[]>([]);
-
   // Formulario Seguro (Validadores para evitar inyección y asegurar formato)
   // Utilizamos regex para limitar los caracteres permitidos y prevenir XSS básico.
   contactForm: FormGroup = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(100)]],
     profesion: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50), Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s\-\.,]+$/)]],
+    web: ['', [Validators.maxLength(100), Validators.pattern(/^[a-zA-Z0-9\.\-\_\/\:\@]+$/)]], // URLs
+    instagram: ['', [Validators.maxLength(100), Validators.pattern(/^[a-zA-Z0-9\.\-\_\/\:\@]+$/)]], // @handles
     plataforma: ['', [Validators.maxLength(100), Validators.pattern(/^[a-zA-Z0-9\.\-\_\/\:\@]+$/)]], // URLs, @handles
     conociste: ['', [Validators.required]],
     interes: ['', [Validators.required]],
     mensaje: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(1000), Validators.pattern(/^[^<>{}]+$/)]] // Evita etiquetas HTML
   });
 
-  onFileChange(event: any) {
-    const files: FileList = event.target.files;
-    if (files) {
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-      const maxSizeBytes = 25 * 1024 * 1024; // max 25MB para alta calidad
-      const validFiles = Array.from(files).filter(f => allowedTypes.includes(f.type) && f.size <= maxSizeBytes);
-
-      if (validFiles.length !== files.length) {
-        this.showNotification('Algunos archivos no son imágenes válidas (JPG, PNG, WEBP) o superan los 25MB permitidos.', 'error');
-      }
-      this.selectedFiles.update(current => [...current, ...validFiles]);
-    }
-  }
-
-  removeFile(index: number) {
-    this.selectedFiles.update(files => files.filter((_, i) => i !== index));
-  }
 
   onSubmit() {
     if (this.contactForm.invalid) {
@@ -70,30 +52,17 @@ export class ContactoComponent {
       formData.append(key, this.contactForm.get(key)?.value);
     });
 
-    // Adjuntar archivos si existen
-    this.selectedFiles().forEach((file, index) => {
-      formData.append(`foto_${index}`, file);
-    });
-
-    // Añadir configuración para formsubmit
-    formData.append('_subject', 'Nuevo mensaje de contacto - Amazonas Jungle');
-    formData.append('_template', 'table');
-    // Para no redirigir
-    formData.append('_captcha', 'false');
-
-    // Email destino (jmcharrogarcia@gmail.com)
-    // Usamos el endpoint ajax de formsubmit para enviar sin recargar página
-    this.http.post('https://formsubmit.co/ajax/jmcharrogarcia@gmail.com', formData)
+    // Enviar al nuevo backend PHP local
+    this.http.post('/api/contacto.php', formData)
       .subscribe({
-        next: (response) => {
+        next: (response: any) => {
           this.isSubmitting.set(false);
           this.contactForm.reset();
-          this.selectedFiles.set([]);
-          this.showNotification('¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.', 'success');
+          this.showNotification('CONTACT_PAGE.NOTIFICATIONS.SUCCESS', 'success');
         },
         error: (error) => {
           this.isSubmitting.set(false);
-          this.showNotification('Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+          this.showNotification('CONTACT_PAGE.NOTIFICATIONS.ERROR', 'error');
           console.error('Error sending form', error);
         }
       });
@@ -116,12 +85,12 @@ export class ContactoComponent {
   isDropdownOpen = signal(false);
 
   interesesMap: { [key: string]: string } = {
-    'conservacion': 'Conservación y Medio Ambiente',
-    'investigacion': 'Investigación Científica',
-    'tribus': 'Cultura y Tribus Indígenas',
-    'fotografia': 'Fotografía / Documental',
-    'turismo': 'Viaje y Exploración',
-    'otro': 'Otro'
+    'conservacion': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.CONSERVATION',
+    'investigacion': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.RESEARCH',
+    'tribus': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.TRIBES',
+    'fotografia': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.PHOTO',
+    'turismo': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.TOURISM',
+    'otro': 'CONTACT_PAGE.FORM.INTEREST_OPTIONS.OTHER'
   };
 
   toggleDropdown() {
@@ -136,12 +105,11 @@ export class ContactoComponent {
 
   get selectedInteresText(): string {
     const val = this.contactForm.get('interes')?.value;
-    return val ? this.interesesMap[val] : 'Selecciona un interés...';
+    return val ? this.interesesMap[val] : 'CONTACT_PAGE.FORM.INTEREST_PLACEHOLDER';
   }
 
   clearForm() {
     this.contactForm.reset();
-    this.selectedFiles.set([]);
     this.isSubmitting.set(false);
   }
 

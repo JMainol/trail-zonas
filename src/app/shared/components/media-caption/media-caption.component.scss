@@ -26,20 +26,20 @@
     }
 
     &.type-youtube {
-        color: #ef4444; // intense red
+        // Solo el hover en rojo corporativo de YouTube
         &:hover {
-            color: #dc2626; // even more saturated red
-            background: rgba(239, 68, 68, 0.08);
-            .link-icon { color: #dc2626; }
+            color: #ff0000;
+            background: rgba(255, 0, 0, 0.08);
+            .link-icon { color: #ff0000; }
         }
     }
 
     &.type-instagram {
-        color: #ec4899; // intense pink
+        // Solo el hover en color corporativo de Instagram
         &:hover {
-            color: #db2777; // even more saturated pink
-            background: rgba(236, 72, 153, 0.08);
-            .link-icon { color: #db2777; }
+            color: #E1306C;
+            background: rgba(225, 48, 108, 0.08);
+            .link-icon { color: #E1306C; }
         }
     }
 
@@ -99,7 +99,7 @@
         font-weight: 500;
         transition: all 0.3s ease;
 
-        a {
+        ::ng-deep a {
             color: inherit;
             text-decoration: none;
             font-weight: 600;
@@ -121,7 +121,7 @@
 
             &:hover {
                 opacity: 1;
-                color: #fff;
+                color: inherit;
                 border-bottom-style: solid;
                 background: rgba(255, 255, 255, 0.1);
                 border-radius: 2px;
