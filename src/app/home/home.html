@@ -19,6 +19,12 @@
         <div class="content__title" [innerHTML]="contentTitle()">
         </div>
 
+        <div class="home-marquee-container">
+            <div class="home-marquee-text">
+                {{ 'HOME.MARQUEE' | translate }}
+            </div>
+        </div>
+
         <!-- Indicador de Scroll / Botón Volver Arriba -->
         <div class="scroll-indicator" [class.is-back-to-top]="showBackToTop()" (click)="showBackToTop() && scrollToTop()">
             <span class="scroll-text">{{ (showBackToTop() ? 'HOME.BACK_TO_TOP' : 'HOME.SCROLL') | translate }}</span>

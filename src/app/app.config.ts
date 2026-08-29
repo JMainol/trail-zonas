@@ -1,10 +1,11 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection, TransferState } from '@angular/core';
-import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
+import { provideRouter, withViewTransitions, withComponentInputBinding, TitleStrategy, PreloadAllModules, withPreloading } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateBrowserLoader } from './core/loaders/translate-browser.loader';
+import { CustomTitleStrategy } from './core/strategies/custom-title.strategy';
 
 import { routes } from './app.routes';
 
@@ -28,7 +29,7 @@ export const appConfig: ApplicationConfig = {
     // Configuración del Router:
     // - withViewTransitions: Habilita transiciones nativas del navegador entre rutas.
     // - withComponentInputBinding: Permite recibir parámetros de ruta como inputs en componentes.
-    provideRouter(routes, withViewTransitions(), withComponentInputBinding()),
+    provideRouter(routes, withViewTransitions(), withComponentInputBinding(), withPreloading(PreloadAllModules)),
 
     // Hidratación del lado del cliente (SSR):
     // - withEventReplay: Reproduce eventos capturados antes de la hidratación completa.
@@ -45,6 +46,9 @@ export const appConfig: ApplicationConfig = {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient, TransferState]
       }
-    })
+    }),
+
+    // Estrategia personalizada de títulos y SEO
+    { provide: TitleStrategy, useClass: CustomTitleStrategy }
   ]
 };

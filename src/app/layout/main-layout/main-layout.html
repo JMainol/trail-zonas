@@ -8,11 +8,27 @@
     <ng-content></ng-content>
   </main>
 
-  <!-- Pie de Página (oculto en páginas de slider fullscreen) -->
-  @if (!hideFooter()) {
   <footer class="main-footer">
-    <p>&copy; 2025 <span class="footer-highlight">Amazonas Jungle</span>. Todos los derechos reservados.</p>
-    <p>Bio-diseñado para la inmersión total en la naturaleza.</p>
+    <div class="footer-top-line"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">{{ 'BRAND.NAME' | translate }}</span>
+        <p class="footer-tagline">{{ 'LAYOUT.FOOTER.SUBTITLE' | translate }}</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a routerLink="/mision" class="footer-nav-link" id="footer-link-mision">
+          <span class="footer-nav-dot"></span>
+          {{ 'LAYOUT.FOOTER.NAV_MISION' | translate }}
+        </a>
+        <a routerLink="/amazonia/contacto" class="footer-nav-link" id="footer-link-colaboradores">
+          <span class="footer-nav-dot"></span>
+          {{ 'LAYOUT.FOOTER.NAV_COLABORADORES' | translate }}
+        </a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="footer-highlight">Amazonas Jungle</span>. {{ 'LAYOUT.FOOTER.COPYRIGHT' | translate }}</p>
+    </div>
   </footer>
-  }
+
 </div>

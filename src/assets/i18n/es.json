@@ -12,7 +12,8 @@
             "TEXT_6": "Proteger el Amazonas es proteger el equilibrio del planeta. Y también, nuestro propio <span class=\"hx hx-7\">futuro</span>."
         },
         "SCROLL": "DESPLAZAR",
-        "BACK_TO_TOP": "SUBIR"
+        "BACK_TO_TOP": "SUBIR",
+        "MARQUEE": "Buscamos colaboradores para este proyecto open source: desarrolladores con IA, diseñadores, expertos en SEO, biólogos, antropólogos, aventureros...."
     },
     "BRAND": {
         "NAME": "SELVA AMAZONAS 2.0"
@@ -868,5 +869,102 @@
             "FOOTER": "<em>* Nota de transparencia y autoría: Este artículo es una adaptación divulgativa publicada con la autorización expresa del investigador y ornitólogo José Álvarez Alonso. Los datos históricos y biológicos provienen de su investigación original \"El síndrome de la selva vacía\", publicado en la revista Argutorio. Puedes consultar el estudio completo aquí: </em>",
             "FOOTER_LINK_TEXT": "Descargar investigación original (PDF)"
         }
+    },
+    "CONTACT_PAGE": {
+        "TITLE": "Conecta con la <span class=\"highlight\">Selva</span>",
+        "SUBTITLE": "Esta es una plataforma open source, sin ánimo de lucro. Una wiki 2.0 creada para compartir conocimiento, inspirar, concienciar y disfrutar de uno de los lugares más mágicos del mundo.",
+        "FORM": {
+            "FULL_NAME": "Nombre Completo *",
+            "NAME_PLACEHOLDER": "Ej: Maria Silva",
+            "EMAIL": "Email *",
+            "EMAIL_PLACEHOLDER": "ejemplo@correo.com",
+            "PROFESSION": "Profesión / Especialidad *",
+            "PROFESSION_PLACEHOLDER": "Ej: Bióloga, Estudiante...",
+            "WEB": "Web",
+            "WEB_PLACEHOLDER": "tu-web.com",
+            "INSTAGRAM": "Instagram",
+            "INSTA_PLACEHOLDER": "@usuario",
+            "OTHER_PLATFORM": "Otra Plataforma",
+            "OTHER_PLACEHOLDER": "Link o @usuario",
+            "INTEREST": "Interés principal en el Amazonas *",
+            "INTEREST_PLACEHOLDER": "Selecciona una opción",
+            "INTEREST_OPTIONS": {
+                "CONSERVATION": "Conservación y Medio Ambiente",
+                "RESEARCH": "Investigación Científica",
+                "TRIBES": "Cultura y Tribus Indígenas",
+                "PHOTO": "Fotografía / Documental",
+                "TOURISM": "Viaje y Exploración",
+                "OTHER": "Otro"
+            },
+            "HOW_DID_YOU_HEAR": "¿Cómo nos conociste? *",
+            "HOW_PLACEHOLDER": "Ej: Google, Recomendación...",
+            "MESSAGE": "Mensaje *",
+            "MESSAGE_PLACEHOLDER": "Escribe aquí tu mensaje, links a documentales, propuestas...",
+            "CANCEL": "Cancelar",
+            "SUBMIT": "Enviar"
+        },
+        "ERRORS": {
+            "NAME_REQUIRED": "El nombre es obligatorio.",
+            "NAME_PATTERN": "Sólo se permiten letras y espacios.",
+            "NAME_MIN": "Mínimo 2 caracteres.",
+            "EMAIL_REQUIRED": "El email es obligatorio.",
+            "EMAIL_INVALID": "Debes introducir un email válido.",
+            "PROFESSION_REQUIRED": "La profesión es obligatoria.",
+            "PROFESSION_PATTERN": "Formato no válido.",
+            "WEB_PATTERN": "Caracteres no válidos para una URL.",
+            "INSTA_PATTERN": "Caracteres no válidos.",
+            "OTHER_PATTERN": "Caracteres no válidos.",
+            "INTEREST_REQUIRED": "Por favor selecciona tu interés.",
+            "HOW_REQUIRED": "Este campo es obligatorio.",
+            "MESSAGE_REQUIRED": "El mensaje es obligatorio.",
+            "MESSAGE_MIN": "Mensaje demasiado corto (mín. 10 caracteres).",
+            "MESSAGE_PATTERN": "El uso de corchetes angulares o llaves no está permitido por seguridad."
+        },
+        "NOTIFICATIONS": {
+            "SUCCESS": "¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.",
+            "ERROR": "Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        }
+    },
+    "LAYOUT": {
+        "FOOTER": {
+            "COPYRIGHT": "Todos los derechos reservados.",
+            "SUBTITLE": "Bio-diseñado para la inmersión total en la naturaleza.",
+            "NAV_MISION": "Misión",
+            "NAV_COLABORADORES": "Colaboradores"
+        }
+    },
+    "MISION": {
+        "BADGE": "PROYECTO OPEN SOURCE · SIN ÁNIMO DE LUCRO",
+        "TITLE": "Nuestra Misión",
+        "SUBTITLE": "Construir la enciclopedia visual más completa y bella sobre la selva amazónica y todos sus seres vivos.",
+        "CORE_STATEMENT": "Somos una <strong>Wikipedia 2.0</strong> sobre el Amazonas: <em>moderna, audiovisual y colaborativa</em>. Un proyecto que nace del amor por la naturaleza y el compromiso de preservar el conocimiento sobre el ecosistema más biodiverso del planeta.",
+        "PILLARS_TITLE": "Tres pilares que nos definen",
+        "PILLAR_OPENSOURCE_TITLE": "Open Source",
+        "PILLAR_OPENSOURCE_DESC": "Todo el código es abierto y accesible para cualquier persona. Creemos en la transparencia y en la colaboración sin barreras.",
+        "PILLAR_NONPROFIT_TITLE": "Sin ánimo de lucro",
+        "PILLAR_NONPROFIT_DESC": "Este proyecto no persigue beneficio económico. Nació para compartir conocimiento libre y gratuito sobre el Amazonas con el mundo.",
+        "PILLAR_COLLABORATIVE_TITLE": "Proyecto colaborativo",
+        "PILLAR_COLLABORATIVE_DESC": "Biólogos, diseñadores, desarrolladores, fotógrafos y exploradores trabajando juntos para construir algo único.",
+        "VISION_LABEL": "LA VISIÓN",
+        "VISION_TITLE": "Una Wikipedia moderna, bella y audiovisual",
+        "VISION_BODY_1": "Wikipedia revolucionó el acceso al conocimiento. Nosotros queremos dar ese mismo salto para la selva amazónica: crear una enciclopedia que sea tan impresionante visualmente como rigurosa científicamente.",
+        "VISION_BODY_2": "El Amazonas alberga cerca de una de cada diez especies conocidas en la Tierra. Merece un espacio digital a la altura de su grandeza: con vídeo, sonido, mapas interactivos y textos escritos por expertos.",
+        "FEATURE_AUDIOVISUAL_TITLE": "Audiovisual",
+        "FEATURE_AUDIOVISUAL_DESC": "Vídeos, sonidos y galerías fotográficas de cada especie, no solo texto.",
+        "FEATURE_COMPLETE_TITLE": "Completa",
+        "FEATURE_COMPLETE_DESC": "Todos los tipos de seres vivos: mamíferos, aves, reptiles, insectos, plantas, hongos, tribus...",
+        "FEATURE_MODERN_TITLE": "Moderna y bella",
+        "FEATURE_MODERN_DESC": "Un diseño que hace justicia a la belleza del Amazonas. No una enciclopedia gris.",
+        "FEATURE_SCIENCE_TITLE": "Científicamente rigurosa",
+        "FEATURE_SCIENCE_DESC": "Fuentes verificadas, nombres científicos y revisión por expertos en biología y ecología.",
+        "CTA_TITLE": "¿Quieres ser parte de esto?",
+        "CTA_BODY": "Buscamos colaboradores apasionados por la naturaleza y la tecnología. Cualquier talento tiene cabida en este proyecto.",
+        "TAG_BIOLOGISTS": "Biólogos",
+        "TAG_DEVELOPERS": "Desarrolladores",
+        "TAG_DESIGNERS": "Diseñadores",
+        "TAG_PHOTOGRAPHERS": "Fotógrafos",
+        "TAG_EXPLORERS": "Exploradores",
+        "TAG_RESEARCHERS": "Investigadores",
+        "CTA_BUTTON": "Contáctanos"
     }
 }

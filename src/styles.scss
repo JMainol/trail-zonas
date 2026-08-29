@@ -25,6 +25,7 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
 // Aplicar tema globalmente
 html {
   @include mat.all-component-themes($dark-theme);
+  overflow-x: hidden;
 
   // Variables CSS para el ecosistema bioluminiscente de Pandora
   --avatar-bg: #040d04; // Verde jungla profundo
@@ -46,6 +47,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #f0fff4;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 // Asegurar que el componente raíz de Angular sea transparente
@@ -173,3 +175,23 @@ app-root {
 .tab-hidden {
   display: none !important;
 }
+
+// Estilos específicos para enlaces sociales (ej. inyectados dinámicamente)
+.guide__social-link {
+  transition: color 0.3s ease;
+
+  // Instagram: morado/rosa corporativo
+  &[href*="instagram"]:hover,
+  &.instagram:hover,
+  &.type-instagram:hover {
+    color: #E1306C !important;
+  }
+
+  // YouTube: rojo corporativo
+  &[href*="youtube"]:hover,
+  &[href*="youtu"]:hover,
+  &.youtube:hover,
+  &.type-youtube:hover {
+    color: #ff0000 !important;
+  }
+}
