@@ -1,0 +1,165 @@
+<article class="mision-container">
+  <!-- Hero Section -->
+  <section class="mision-hero">
+    <div class="hero-bg-animated">
+      <div class="glow-orb orb-cyan"></div>
+      <div class="glow-orb orb-green"></div>
+      <div class="glow-orb orb-magenta"></div>
+      <div class="noise-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="badge-glass fade-in-up">
+        <span class="pulse-dot"></span>
+        <span>{{ 'MISION.BADGE' | translate }}</span>
+      </div>
+      <h1 class="hero-title fade-in-up delay-1">{{ 'MISION.TITLE' | translate }}</h1>
+      <p class="hero-subtitle fade-in-up delay-2">{{ 'MISION.SUBTITLE' | translate }}</p>
+      
+      <div class="scroll-prompt fade-in-up delay-3">
+        <span class="scroll-text">Descubre</span>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Statement -->
+  <section class="core-statement-section">
+    <div class="glass-panel core-panel">
+      <div class="quote-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 11L8 15H11V19H5V15L7 11H5V7H11V11H10ZM20 11L18 15H21V19H15V15L17 11H15V7H21V11H20Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <p class="core-text" [innerHTML]="'MISION.CORE_STATEMENT' | translate"></p>
+    </div>
+  </section>
+
+  <!-- Pillars (Bento Grid) -->
+  <section class="pillars-section">
+    <div class="section-header">
+      <h2 class="section-title text-glow">{{ 'MISION.PILLARS_TITLE' | translate }}</h2>
+      <div class="title-underline"></div>
+    </div>
+    
+    <div class="bento-grid">
+      <!-- Open Source -->
+      <div class="bento-card card-open-source">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper cyan-glow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="card-title">{{ 'MISION.PILLAR_OPENSOURCE_TITLE' | translate }}</h3>
+          <p class="card-desc">{{ 'MISION.PILLAR_OPENSOURCE_DESC' | translate }}</p>
+        </div>
+        <div class="card-border"></div>
+      </div>
+
+      <!-- Non-profit -->
+      <div class="bento-card card-non-profit">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper magenta-glow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <h3 class="card-title">{{ 'MISION.PILLAR_NONPROFIT_TITLE' | translate }}</h3>
+          <p class="card-desc">{{ 'MISION.PILLAR_NONPROFIT_DESC' | translate }}</p>
+        </div>
+        <div class="card-border"></div>
+      </div>
+
+      <!-- Collaborative -->
+      <div class="bento-card card-collaborative">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-icon-wrapper green-glow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="card-title">{{ 'MISION.PILLAR_COLLABORATIVE_TITLE' | translate }}</h3>
+          <p class="card-desc">{{ 'MISION.PILLAR_COLLABORATIVE_DESC' | translate }}</p>
+        </div>
+        <div class="card-border"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Timeline / Features -->
+  <section class="vision-section">
+    <div class="vision-grid">
+      <div class="vision-header">
+        <div class="vision-label-wrapper">
+          <span class="vision-line"></span>
+          <span class="vision-label">{{ 'MISION.VISION_LABEL' | translate }}</span>
+        </div>
+        <h2 class="vision-title">{{ 'MISION.VISION_TITLE' | translate }}</h2>
+        <p class="vision-intro">{{ 'MISION.VISION_BODY_1' | translate }}</p>
+        <p class="vision-intro">{{ 'MISION.VISION_BODY_2' | translate }}</p>
+      </div>
+      
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-marker cyan-marker"></div>
+          <div class="feature-content glass-card">
+            <h4>{{ 'MISION.FEATURE_AUDIOVISUAL_TITLE' | translate }}</h4>
+            <p>{{ 'MISION.FEATURE_AUDIOVISUAL_DESC' | translate }}</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-marker green-marker"></div>
+          <div class="feature-content glass-card">
+            <h4>{{ 'MISION.FEATURE_COMPLETE_TITLE' | translate }}</h4>
+            <p>{{ 'MISION.FEATURE_COMPLETE_DESC' | translate }}</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-marker magenta-marker"></div>
+          <div class="feature-content glass-card">
+            <h4>{{ 'MISION.FEATURE_MODERN_TITLE' | translate }}</h4>
+            <p>{{ 'MISION.FEATURE_MODERN_DESC' | translate }}</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-marker teal-marker"></div>
+          <div class="feature-content glass-card">
+            <h4>{{ 'MISION.FEATURE_SCIENCE_TITLE' | translate }}</h4>
+            <p>{{ 'MISION.FEATURE_SCIENCE_DESC' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section class="cta-section">
+    <div class="cta-container glass-morphism">
+      <div class="cta-radial-glow"></div>
+      
+      <div class="cta-content">
+        <h2 class="cta-title">{{ 'MISION.CTA_TITLE' | translate }}</h2>
+        <p class="cta-body">{{ 'MISION.CTA_BODY' | translate }}</p>
+        
+        <div class="tag-cloud">
+          <span class="skill-tag hover-cyan"><span class="tag-icon">🧬</span> {{ 'MISION.TAG_BIOLOGISTS' | translate }}</span>
+          <span class="skill-tag hover-magenta"><span class="tag-icon">💻</span> {{ 'MISION.TAG_DEVELOPERS' | translate }}</span>
+          <span class="skill-tag hover-green"><span class="tag-icon">🎨</span> {{ 'MISION.TAG_DESIGNERS' | translate }}</span>
+          <span class="skill-tag hover-cyan"><span class="tag-icon">📸</span> {{ 'MISION.TAG_PHOTOGRAPHERS' | translate }}</span>
+          <span class="skill-tag hover-magenta"><span class="tag-icon">🌿</span> {{ 'MISION.TAG_EXPLORERS' | translate }}</span>
+          <span class="skill-tag hover-green"><span class="tag-icon">🔬</span> {{ 'MISION.TAG_RESEARCHERS' | translate }}</span>
+        </div>
+
+        <a routerLink="/amazonia/contacto" class="btn-primary-glow">
+          <span class="btn-bg"></span>
+          <span class="btn-text">{{ 'MISION.CTA_BUTTON' | translate }}</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</article>

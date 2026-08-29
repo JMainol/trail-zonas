@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirigir a HTTPS si no lo está
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Si el archivo o directorio existe, sírvelo directamente
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^ - [L]
+
+  # Si no existe, asume que es una ruta de Angular SPA y sirve index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  # Habilitar compresión GZIP para archivos de texto
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  # Habilitar caché en navegador (Leverage Browser Caching)
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
