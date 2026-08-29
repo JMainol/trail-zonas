@@ -12,7 +12,8 @@
             "TEXT_6": "Protecting the Amazon means protecting the balance of our planet. And ultimately, our own <span class=\"hx hx-7\">future</span>."
         },
         "SCROLL": "SCROLL",
-        "BACK_TO_TOP": "TOP"
+        "BACK_TO_TOP": "TOP",
+        "MARQUEE": "We are looking for collaborators for this open source project: AI developers, designers, SEO experts, biologists, anthropologists, adventurers...."
     },
     "BRAND": {
         "NAME": "AMAZON JUNGLE 2.0"
@@ -868,5 +869,102 @@
             "FOOTER": "<em>* Note on transparency and authorship: This article is an informative adaptation published with the express authorization of researcher and ornithologist José Álvarez Alonso. Historical and biological data derive from his original research \"El síndrome de la selva vacía\" (The Empty Forest Syndrome), published in the journal Argutorio. You can access the complete study here: </em>",
             "FOOTER_LINK_TEXT": "Download original research (PDF)"
         }
+    },
+    "CONTACT_PAGE": {
+        "TITLE": "Connect with the <span class=\"highlight\">Jungle</span>",
+        "SUBTITLE": "This is a non-profit open-source platform. A wiki 2.0 created to share knowledge, inspire, raise awareness, and enjoy one of the most magical places in the world.",
+        "FORM": {
+            "FULL_NAME": "Full Name *",
+            "NAME_PLACEHOLDER": "e.g., Maria Silva",
+            "EMAIL": "Email *",
+            "EMAIL_PLACEHOLDER": "example@email.com",
+            "PROFESSION": "Profession / Specialty *",
+            "PROFESSION_PLACEHOLDER": "e.g., Biologist, Student...",
+            "WEB": "Website",
+            "WEB_PLACEHOLDER": "your-website.com",
+            "INSTAGRAM": "Instagram",
+            "INSTA_PLACEHOLDER": "@user",
+            "OTHER_PLATFORM": "Other Platform",
+            "OTHER_PLACEHOLDER": "Link or @user",
+            "INTEREST": "Main interest in the Amazon *",
+            "INTEREST_PLACEHOLDER": "Select an option",
+            "INTEREST_OPTIONS": {
+                "CONSERVATION": "Conservation & Environment",
+                "RESEARCH": "Scientific Research",
+                "TRIBES": "Indigenous Culture & Tribes",
+                "PHOTO": "Photography / Documentary",
+                "TOURISM": "Travel & Exploration",
+                "OTHER": "Other"
+            },
+            "HOW_DID_YOU_HEAR": "How did you hear about us? *",
+            "HOW_PLACEHOLDER": "e.g., Google, Recommendation...",
+            "MESSAGE": "Message *",
+            "MESSAGE_PLACEHOLDER": "Write your message here, links to documentaries, proposals...",
+            "CANCEL": "Cancel",
+            "SUBMIT": "Submit"
+        },
+        "ERRORS": {
+            "NAME_REQUIRED": "Name is required.",
+            "NAME_PATTERN": "Only letters and spaces are allowed.",
+            "NAME_MIN": "Minimum 2 characters.",
+            "EMAIL_REQUIRED": "Email is required.",
+            "EMAIL_INVALID": "You must enter a valid email.",
+            "PROFESSION_REQUIRED": "Profession is required.",
+            "PROFESSION_PATTERN": "Invalid format.",
+            "WEB_PATTERN": "Invalid characters for a URL.",
+            "INSTA_PATTERN": "Invalid characters.",
+            "OTHER_PATTERN": "Invalid characters.",
+            "INTEREST_REQUIRED": "Please select your interest.",
+            "HOW_REQUIRED": "This field is required.",
+            "MESSAGE_REQUIRED": "Message is required.",
+            "MESSAGE_MIN": "Message is too short (min 10 characters).",
+            "MESSAGE_PATTERN": "Angle brackets or braces are not allowed for security reasons."
+        },
+        "NOTIFICATIONS": {
+            "SUCCESS": "Message sent successfully! We will get in touch with you soon.",
+            "ERROR": "An error occurred while sending the message. Please try again."
+        }
+    },
+    "LAYOUT": {
+        "FOOTER": {
+            "COPYRIGHT": "All rights reserved.",
+            "SUBTITLE": "Bio-designed for total immersion in nature.",
+            "NAV_MISION": "Mission",
+            "NAV_COLABORADORES": "Collaborators"
+        }
+    },
+    "MISION": {
+        "BADGE": "OPEN SOURCE PROJECT · NON-PROFIT",
+        "TITLE": "Our Mission",
+        "SUBTITLE": "Building the most complete and beautiful visual encyclopedia of the Amazon rainforest and all its living beings.",
+        "CORE_STATEMENT": "We are a <strong>Wikipedia 2.0</strong> for the Amazon: <em>modern, audiovisual and collaborative</em>. A project born from a love of nature and a commitment to preserving knowledge about the most biodiverse ecosystem on the planet.",
+        "PILLARS_TITLE": "Three pillars that define us",
+        "PILLAR_OPENSOURCE_TITLE": "Open Source",
+        "PILLAR_OPENSOURCE_DESC": "All code is open and accessible to everyone. We believe in transparency and barrier-free collaboration.",
+        "PILLAR_NONPROFIT_TITLE": "Non-profit",
+        "PILLAR_NONPROFIT_DESC": "This project does not pursue economic gain. It was born to share free knowledge about the Amazon with the world.",
+        "PILLAR_COLLABORATIVE_TITLE": "Collaborative project",
+        "PILLAR_COLLABORATIVE_DESC": "Biologists, designers, developers, photographers and explorers working together to build something unique.",
+        "VISION_LABEL": "THE VISION",
+        "VISION_TITLE": "A modern, beautiful and audiovisual Wikipedia",
+        "VISION_BODY_1": "Wikipedia revolutionized access to knowledge. We want to make that same leap for the Amazon rainforest: to create an encyclopedia that is as visually impressive as it is scientifically rigorous.",
+        "VISION_BODY_2": "The Amazon is home to nearly one in ten known species on Earth. It deserves a digital space worthy of its greatness: with video, sound, interactive maps and expert-written content.",
+        "FEATURE_AUDIOVISUAL_TITLE": "Audiovisual",
+        "FEATURE_AUDIOVISUAL_DESC": "Videos, sounds and photo galleries for each species, not just text.",
+        "FEATURE_COMPLETE_TITLE": "Complete",
+        "FEATURE_COMPLETE_DESC": "All types of living beings: mammals, birds, reptiles, insects, plants, fungi, tribes...",
+        "FEATURE_MODERN_TITLE": "Modern and beautiful",
+        "FEATURE_MODERN_DESC": "A design that does justice to the beauty of the Amazon. Not a grey encyclopedia.",
+        "FEATURE_SCIENCE_TITLE": "Scientifically rigorous",
+        "FEATURE_SCIENCE_DESC": "Verified sources, scientific names and review by experts in biology and ecology.",
+        "CTA_TITLE": "Want to be part of this?",
+        "CTA_BODY": "We are looking for collaborators passionate about nature and technology. Any talent is welcome in this project.",
+        "TAG_BIOLOGISTS": "Biologists",
+        "TAG_DEVELOPERS": "Developers",
+        "TAG_DESIGNERS": "Designers",
+        "TAG_PHOTOGRAPHERS": "Photographers",
+        "TAG_EXPLORERS": "Explorers",
+        "TAG_RESEARCHERS": "Researchers",
+        "CTA_BUTTON": "Contact us"
     }
 }
