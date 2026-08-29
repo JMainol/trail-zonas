@@ -53,7 +53,7 @@
 }
 
 .main-footer {
-    padding: 4rem 2rem 2rem;
+    padding: 2rem 1.5rem 1.5rem;
     background-color: var(--avatar-blue-deep);
     color: #64748b;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -82,16 +82,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 1.5rem;
     max-width: 960px;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
 
     @media (max-width: 640px) {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
@@ -164,7 +164,7 @@
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
