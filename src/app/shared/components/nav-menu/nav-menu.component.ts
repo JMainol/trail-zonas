@@ -114,10 +114,32 @@ interface SearchResult {
               </button>
 
               <!-- Language Switcher Desktop -->
-              <div class="language-switcher">
-                 <button (click)="switchLanguage('es')" [class.active]="currentLang() === 'es'" class="lang-btn">ES</button>
-                 <div class="divider"></div>
-                 <button (click)="switchLanguage('en')" [class.active]="currentLang() === 'en'" class="lang-btn">EN</button>
+              <div class="language-switcher group/lang" (mouseenter)="langDropdownOpen = true" (mouseleave)="langDropdownOpen = false">
+                <!-- Active language pill -->
+                <button class="lang-active-btn" [attr.aria-expanded]="langDropdownOpen" aria-haspopup="listbox">
+                  <span class="lang-flag">{{ currentLanguage().flag }}</span>
+                  <span class="lang-label">{{ currentLanguage().label }}</span>
+                  <mat-icon class="lang-chevron" [class.rotated]="langDropdownOpen">expand_more</mat-icon>
+                </button>
+
+                <!-- Dropdown Panel -->
+                <div class="lang-dropdown-panel" role="listbox" [class.open]="langDropdownOpen">
+                  <button
+                    *ngFor="let lang of languages"
+                    class="lang-dropdown-item"
+                    [class.active]="currentLang() === lang.code"
+                    (click)="switchLanguage(lang.code)"
+                    role="option"
+                    [attr.aria-selected]="currentLang() === lang.code"
+                  >
+                    <div class="lang-item-content">
+                      <span class="lang-flag">{{ lang.flag }}</span>
+                      <span class="lang-abbr">{{ lang.abbr }}</span>
+                      <span class="lang-label-text">{{ lang.label }}</span>
+                    </div>
+                    <mat-icon *ngIf="currentLang() === lang.code" class="lang-check">check</mat-icon>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -125,8 +147,8 @@ interface SearchResult {
           <!-- Mobile Controls (Language + Search + Hamburger) -->
           <div class="flex md:hidden items-center gap-1.5 sm:gap-2">
              <!-- Language Switcher Mobile -->
-             <button (click)="toggleLanguage()" class="mobile-lang-btn">
-                {{ currentLang() | uppercase }}
+             <button (click)="toggleLanguage()" class="mobile-lang-btn" [attr.aria-label]="'Idioma: ' + currentLanguage().label">
+                {{ currentLanguage().flag }} {{ currentLanguage().abbr }}
              </button>
 
              <!-- Search Button Mobile -->
@@ -335,6 +357,9 @@ export class NavMenuComponent {
    readonly activeMobileSection = signal<string | null>(null);
    readonly activeMobileSubSection = signal<string | null>(null);
 
+   /** Controla la visibilidad del dropdown de idiomas en desktop */
+   langDropdownOpen = false;
+
    // Search state
    readonly isSearchOpen = signal(false);
    readonly searchQuery = signal('');
@@ -348,6 +373,21 @@ export class NavMenuComponent {
          startWith(this.translate.currentLang || 'es')
       ),
       { initialValue: this.translate.currentLang || 'es' }
+   );
+
+   /**
+    * Lista de idiomas disponibles en la aplicación.
+    * Para añadir un nuevo idioma, basta con agregar una entrada aquí.
+    */
+   readonly languages = [
+      { code: 'es', label: 'Español',    flag: '🇪🇸', abbr: 'ES' },
+      { code: 'en', label: 'English',    flag: '🇬🇧', abbr: 'EN' },
+      { code: 'pt-BR', label: 'Português', flag: '🇧🇷', abbr: 'PT' },
+   ];
+
+   /** Computed: objeto del idioma activo */
+   readonly currentLanguage = computed(() =>
+      this.languages.find(l => l.code === this.currentLang()) ?? this.languages[0]
    );
 
    // -------------------------------------------------------
@@ -651,9 +691,13 @@ export class NavMenuComponent {
       this.translate.use(lang);
    }
 
+   /**
+    * Para mobile: cicla entre todos los idiomas disponibles en orden.
+    */
    toggleLanguage() {
-      const newLang = this.currentLang() === 'es' ? 'en' : 'es';
-      this.translate.use(newLang);
+      const currentIndex = this.languages.findIndex(l => l.code === this.currentLang());
+      const nextIndex = (currentIndex + 1) % this.languages.length;
+      this.translate.use(this.languages[nextIndex].code);
    }
 
    onMouseEnter(id: string) {
