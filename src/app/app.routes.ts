@@ -4,7 +4,7 @@ export const routes: Routes = [
     {
         path: '',
         title: 'Amazonas Jungle - Inicio',
-        data: { description: 'Descubre la Amazonía: su fauna increíble, plantas medicinales ancestrales y comunidades originarias.' },
+        data: { description: 'Descubre el corazón de la selva amazónica: una guía profunda sobre su increíble fauna salvaje, plantas medicinales ancestrales y comunidades originarias.' },
         loadComponent: () => import('./home/home').then(m => m.HomeComponent)
     },
     {

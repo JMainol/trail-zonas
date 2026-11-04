@@ -9,6 +9,18 @@
     }
     .dropdown-panel {
         @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[1000] pt-3;
+        top: 100%;
+
+        /* Bridge invisible más ancho para evitar perder el hover en movimientos diagonales */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20px;
+            right: -20px;
+            height: 16px;
+            background: transparent;
+        }
     }
     .dropdown-content {
         @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] bg-[#020617]/95 backdrop-blur-2xl border border-white/10;
@@ -55,45 +67,194 @@
         user-select: none;
     }
 
-    /* Language Switcher Avatar Style */
+    /* Language Switcher — Dropdown Style */
     .language-switcher {
+       position: relative;
        display: flex;
        align-items: center;
-       background: rgba(10, 14, 20, 0.4);
-       padding: 0.25rem 0.5rem;
-       border-radius: 50px;
-       border: 1px solid rgba(0, 242, 255, 0.2);
-       backdrop-filter: blur(15px);
-       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .lang-btn {
-       background: transparent;
-       border: none;
-       color: rgba(255, 255, 255, 0.5);
-       padding: 0.25rem 0.75rem;
+    .lang-active-btn {
+       display: flex;
+       align-items: center;
+       gap: 0.4rem;
+       background: rgba(10, 14, 20, 0.4);
+       padding: 0.3rem 0.65rem 0.3rem 0.5rem;
+       border-radius: 50px;
+       border: 1px solid rgba(0, 242, 255, 0.25);
+       backdrop-filter: blur(15px);
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+       cursor: pointer;
+       transition: all 0.25s ease;
+       color: rgba(255, 255, 255, 0.85);
+
+       &:hover {
+         border-color: rgba(0, 242, 255, 0.5);
+         background: rgba(0, 242, 255, 0.08);
+         box-shadow: 0 0 14px rgba(0, 242, 255, 0.15), 0 4px 20px rgba(0, 0, 0, 0.4);
+       }
+    }
+
+    .lang-flag {
+       font-size: 1.1rem;
+       line-height: 1;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .lang-label {
        font-size: 0.75rem;
        font-weight: 700;
-       cursor: pointer;
-       transition: all 0.3s ease;
-       border-radius: 50px;
+       letter-spacing: 0.01em;
+       color: rgba(255, 255, 255, 0.85);
+       display: flex;
+       align-items: center;
+       line-height: 1;
+       transform: translateY(1px); /* Slight adjustment to match the baseline of the icon/flag */
+    }
 
-       &.active {
-          color: #00f2ff;
-          text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
-          background: rgba(0, 242, 255, 0.1);
-       }
+    .lang-chevron {
+       font-size: 16px !important;
+       width: 16px !important;
+       height: 16px !important;
+       display: flex !important;
+       align-items: center;
+       justify-content: center;
+       opacity: 0.6;
+       transition: transform 0.25s ease;
+       color: rgba(0, 242, 255, 0.7);
 
-       &:hover:not(.active) {
-          color: rgba(255, 255, 255, 0.9);
+       &.rotated {
+         transform: rotate(180deg);
+         opacity: 1;
        }
     }
 
-    .divider {
-       width: 1px;
-       height: 12px;
-       background: rgba(255, 255, 255, 0.1);
-       margin: 0 0.25rem;
+    /* Dropdown Panel */
+    .lang-dropdown-panel {
+       position: absolute;
+       top: calc(100% + 8px);
+       right: 0;
+       
+       /* Bridge invisible para evitar perder el hover al pasar por el espacio de 8px */
+       &::before {
+         content: '';
+         position: absolute;
+         top: -12px;
+         left: -10px;
+         right: -10px;
+         height: 12px;
+         background: transparent;
+       }
+       min-width: 155px;
+       background: rgba(2, 6, 23, 0.95);
+       backdrop-filter: blur(20px);
+       border: 1px solid rgba(0, 242, 255, 0.15);
+       border-radius: 14px;
+       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 242, 255, 0.05);
+       padding: 0.4rem;
+       display: flex;
+       flex-direction: column;
+       gap: 2px;
+       z-index: 1100;
+
+       /* Hidden by default */
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(-6px) scale(0.97);
+       transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+       pointer-events: none;
+
+       &.open {
+         opacity: 1;
+         visibility: visible;
+         transform: translateY(0) scale(1);
+         pointer-events: all;
+       }
+    }
+
+    .lang-dropdown-item {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 0.5rem 0.8rem;
+       border-radius: 9px;
+       border: none;
+       background: transparent;
+       color: rgba(255, 255, 255, 0.6);
+       font-size: 0.82rem;
+       font-weight: 600;
+       cursor: pointer;
+       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+       width: 100%;
+       text-align: left;
+
+       .lang-item-content {
+         display: flex;
+         align-items: center;
+         gap: 0.6rem;
+       }
+
+       .lang-flag {
+         font-size: 1.1rem;
+       }
+
+       .lang-abbr {
+         font-size: 0.7rem;
+         font-weight: 800;
+         color: rgba(255, 255, 255, 0.4);
+         background: rgba(255, 255, 255, 0.08);
+         padding: 0.15rem 0.35rem;
+         border-radius: 4px;
+         letter-spacing: 0.5px;
+         transition: all 0.2s ease;
+       }
+
+       .lang-label-text {
+         letter-spacing: 0.3px;
+       }
+
+       .lang-check {
+         font-size: 16px !important;
+         width: 16px !important;
+         height: 16px !important;
+         color: #00f2ff;
+         margin-left: auto;
+         animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+       }
+
+       &:hover {
+         background: rgba(0, 242, 255, 0.08);
+         color: rgba(255, 255, 255, 0.95);
+
+         .lang-abbr {
+           color: #00f2ff;
+           background: rgba(0, 242, 255, 0.15);
+         }
+       }
+
+       &.active {
+         background: rgba(0, 242, 255, 0.1);
+         color: #00f2ff;
+         text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+
+         .lang-abbr {
+           color: #00f2ff;
+           background: rgba(0, 242, 255, 0.2);
+         }
+       }
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .mobile-lang-btn {

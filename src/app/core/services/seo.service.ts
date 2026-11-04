@@ -1,23 +1,28 @@
 import { Injectable, Inject } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-  constructor(private meta: Meta, @Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    private titleService: Title,
+    private meta: Meta, 
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
   updateMetaTags(title: string, description?: string, imageUrl?: string): void {
+    if (title) {
+      this.titleService.setTitle(title);
+      this.meta.updateTag({ property: 'og:title', content: title });
+      this.meta.updateTag({ property: 'twitter:title', content: title });
+    }
+
     if (description) {
       this.meta.updateTag({ name: 'description', content: description });
       this.meta.updateTag({ property: 'og:description', content: description });
       this.meta.updateTag({ property: 'twitter:description', content: description });
-    }
-
-    if (title) {
-      this.meta.updateTag({ property: 'og:title', content: title });
-      this.meta.updateTag({ property: 'twitter:title', content: title });
     }
 
     if (imageUrl) {
