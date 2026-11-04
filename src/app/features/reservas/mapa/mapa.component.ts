@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import * as L from 'leaflet';
+import type * as Leaflet from 'leaflet';
 
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
@@ -27,18 +27,24 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
     private http = inject(HttpClient);
     private platformId = inject(PLATFORM_ID);
 
-    private map?: L.Map;
+    /** Leaflet se importa de forma diferida y solo en el navegador (accede a `window` al cargarse). */
+    private L!: typeof Leaflet;
+    private map?: Leaflet.Map;
+    private destroyed = false;
     // Signal para manejar la reserva seleccionada de forma ultra-eficiente
     public selectedReserve = signal<any>(null);
 
-    ngAfterViewInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            this.initMap();
-            this.loadReservesFromJson();
-        }
+    async ngAfterViewInit(): Promise<void> {
+        if (!isPlatformBrowser(this.platformId)) return;
+        const mod: any = await import('leaflet');
+        this.L = (mod.default ?? mod) as typeof Leaflet;
+        if (this.destroyed) return;
+        this.initMap();
+        this.loadReservesFromJson();
     }
 
     private initMap(): void {
+        const L = this.L;
         this.map = L.map('map', {
             center: [-8.0, -65.0],
             zoom: 5,
@@ -56,7 +62,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         setTimeout(() => this.map?.invalidateSize(), 100);
     }
 
-    getFeatureStyle(feature: any): L.PathOptions {
+    getFeatureStyle(feature: any): Leaflet.PathOptions {
         const colors: { [key: string]: string } = {
             Peru: '#FFEB3B', Brazil: '#00E676', Bolivia: '#FF5252',
             Colombia: '#29B6F6', Ecuador: '#FF9800', Venezuela: '#E91E63',
@@ -74,7 +80,8 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
     private loadReservesFromJson(): void {
         this.http.get('assets/reserves.json').subscribe({
             next: (data: any) => {
-                const geoLayer = L.geoJSON(undefined, {
+                if (!this.map) return;
+                const geoLayer = this.L.geoJSON(undefined, {
                     style: (f) => this.getFeatureStyle(f),
                     onEachFeature: (feature, layer) => {
                         this.setupFeatureEvents(feature, layer, geoLayer);
@@ -92,7 +99,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         });
     }
 
-    private setupFeatureEvents(feature: any, layer: L.Layer, parentLayer: L.GeoJSON): void {
+    private setupFeatureEvents(feature: any, layer: Leaflet.Layer, parentLayer: Leaflet.GeoJSON): void {
         // Tooltip elegante
         layer.bindTooltip(feature.properties.name, {
             sticky: true,
@@ -101,7 +108,7 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         });
 
         layer.on('mouseover', (e) => {
-            const poly = e.target as L.Polygon;
+            const poly = e.target as Leaflet.Polygon;
             poly.setStyle({ fillOpacity: 0.7, weight: 1.5, color: '#FFFFFF' });
             poly.bringToFront();
         });
@@ -111,13 +118,14 @@ export class MapaComponent implements AfterViewInit, OnDestroy {
         });
 
         layer.on('click', (e) => {
-            const poly = e.target as L.Polygon;
+            const poly = e.target as Leaflet.Polygon;
             this.selectedReserve.set(feature.properties); // Actualiza Signal
             this.map?.flyToBounds(poly.getBounds(), { padding: [50, 50], duration: 1.5 });
         });
     }
 
     ngOnDestroy(): void {
+        this.destroyed = true;
         if (this.map) this.map.remove(); // Limpieza de memoria crítica
     }
 }

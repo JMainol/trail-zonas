@@ -3,7 +3,7 @@
     <!-- Botón Atrás -->
     <div class="back-nav-container">
         <button class="back-btn" (click)="goBack()" aria-label="Volver">
-            <svg viewBox="0 0 24 24">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
             </svg>
         </button>
@@ -26,7 +26,7 @@
         <div class="hero-visual">
             <div class="parallax-container" [style.transform]="parallaxTransform()">
                 <div class="book-container">
-                    <img src="assets/images/conservation/incendios_talas_arboles_amazonas.png"
+                    <img decoding="async" src="assets/images/conservation/incendios_talas_arboles_amazonas.webp"
                         alt="Incendios y talas en el Amazonas" class="book-image" />
                     <p class="caption">{{ 'CONSERVATION_SECTION.DEFORESTATION.PAGE.IMAGE_CAPTION' | translate }}</p>
                 </div>
@@ -158,22 +158,22 @@
         <div class="images-grid-full">
             <div class="logo-container">
                 <a href="https://www.funbio.org.br/en/programas_e_projetos/arpa-program/" target="_blank" rel="noopener">
-                    <img src="assets/images/conservation/projects/ARPA_logo.jpg" alt="ARPA" class="project-logo" />
+                    <img loading="lazy" decoding="async" src="assets/images/conservation/projects/ARPA_logo.jpg" alt="ARPA" class="project-logo" />
                 </a>
             </div>
             <div class="logo-container">
                 <a href="https://www.fundoamazonia.gov.br/pt/home/" target="_blank" rel="noopener">
-                    <img src="assets/images/conservation/projects/fundo_amazonia.jpg" alt="Fundo Amazônia" class="project-logo" />
+                    <img loading="lazy" decoding="async" src="assets/images/conservation/projects/fundo_amazonia.jpg" alt="Fundo Amazônia" class="project-logo" />
                 </a>
             </div>
             <div class="logo-container">
                 <a href="https://www.junglekeepers.org/" target="_blank" rel="noopener">
-                    <img src="assets/images/conservation/projects/junglekeepers_logo.png" alt="JungleKeepers" class="project-logo" />
+                    <img loading="lazy" decoding="async" src="assets/images/conservation/projects/junglekeepers_logo.png" alt="JungleKeepers" class="project-logo" />
                 </a>
             </div>
             <div class="logo-container">
                 <a href="https://www.sementesdoxingu.org.br/" target="_blank" rel="noopener">
-                    <img src="assets/images/conservation/projects/rede_de_sementes_do_xingu.png" alt="Rede de Sementes do Xingu" class="project-logo" />
+                    <img loading="lazy" decoding="async" src="assets/images/conservation/projects/rede_de_sementes_do_xingu.png" alt="Rede de Sementes do Xingu" class="project-logo" />
                 </a>
             </div>
         </div>

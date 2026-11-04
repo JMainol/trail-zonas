@@ -25,9 +25,9 @@ export class KayapoComponent {
 
     // Gallery Slider
     protected galleryImages = [
-        'assets/images/tribes/kayapo/kayapo_tribe.jpg',
+        'assets/images/tribes/kayapo/kayapo_tribe.webp',
         'assets/images/tribes/kayapo/kayapo_tribe_child2.jpg',
-        'assets/images/tribes/kayapo/kayapo_tribe_child3.jpg',
+        'assets/images/tribes/kayapo/kayapo_tribe_child3.webp',
         'assets/images/tribes/kayapo/kayapo_tribe_earrings.jpg',
         'assets/images/tribes/kayapo/kayapo_tribe_mother_and_her_daugther.jpg',
         'assets/images/tribes/kayapo/kayapo_tribe_young_man.jpg'

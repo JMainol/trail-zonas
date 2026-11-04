@@ -31,7 +31,7 @@ export class MedicinalesComponent implements AfterViewInit {
             scientificName: 'Uncaria tomentosa',
             description: 'PLANTS.MEDICINAL.SLIDES.UNA_DE_GATO.DESCRIPTION',
             weight: 'PLANTS.MEDICINAL.SLIDES.UNA_DE_GATO.USAGE',
-            image: 'assets/plants/una-de-gato.png',
+            image: 'assets/plants/una-de-gato.webp',
             link: 'una-de-gato'
         },
         {
@@ -39,7 +39,7 @@ export class MedicinalesComponent implements AfterViewInit {
             scientificName: 'Croton lechleri',
             description: 'PLANTS.MEDICINAL.SLIDES.SANGRE_DE_GRADO.DESCRIPTION',
             weight: 'PLANTS.MEDICINAL.SLIDES.SANGRE_DE_GRADO.USAGE',
-            image: 'assets/plants/sangre-de-grado.png',
+            image: 'assets/plants/sangre-de-grado.webp',
             link: 'sangre-de-grado'
         },
         {
@@ -47,7 +47,7 @@ export class MedicinalesComponent implements AfterViewInit {
             scientificName: 'Banisteriopsis caapi',
             description: 'PLANTS.MEDICINAL.SLIDES.AYAHUASCA.DESCRIPTION',
             weight: 'PLANTS.MEDICINAL.SLIDES.AYAHUASCA.USAGE',
-            image: 'assets/plants/ayahuasca.png',
+            image: 'assets/plants/ayahuasca.webp',
             link: 'ayahuasca'
         }
     ];

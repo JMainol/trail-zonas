@@ -1,10 +1,13 @@
 <div class="app-layout">
 
+  <!-- Enlace de salto para usuarios de teclado y lectores de pantalla -->
+  <a class="skip-link" href="#contenido-principal">{{ 'LAYOUT.SKIP_TO_CONTENT' | translate }}</a>
+
   <!-- Menú de Navegación Principal (Header) -->
   <app-nav-menu></app-nav-menu>
 
   <!-- Contenido Principal (Proyección) -->
-  <main class="content-container">
+  <main class="content-container" id="contenido-principal" tabindex="-1">
     <ng-content></ng-content>
   </main>
 
@@ -20,6 +23,10 @@
           <span class="footer-nav-dot"></span>
           {{ 'LAYOUT.FOOTER.NAV_MISION' | translate }}
         </a>
+        <a routerLink="/amazonia/recursos" class="footer-nav-link" id="footer-link-recursos">
+          <span class="footer-nav-dot"></span>
+          {{ 'COMMON.RESOURCES' | translate }}
+        </a>
         <a routerLink="/amazonia/contacto" class="footer-nav-link" id="footer-link-colaboradores">
           <span class="footer-nav-dot"></span>
           {{ 'LAYOUT.FOOTER.NAV_COLABORADORES' | translate }}
@@ -27,7 +34,7 @@
       </nav>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 <span class="footer-highlight">Amazonas Jungle</span>. {{ 'LAYOUT.FOOTER.COPYRIGHT' | translate }}</p>
+      <p>&copy; {{ currentYear }} <span class="footer-highlight">{{ 'BRAND.NAME' | translate }}</span>. {{ 'LAYOUT.FOOTER.COPYRIGHT' | translate }}</p>
     </div>
   </footer>
 

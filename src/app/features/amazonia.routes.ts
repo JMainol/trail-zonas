@@ -39,6 +39,10 @@ export const AMAZONIA_ROUTES: Routes = [
         loadChildren: () => import('./exploracion/exploracion.routes').then(m => m.EXPLORACION_ROUTES)
     },
     {
+        path: 'recursos',
+        loadChildren: () => import('./recursos/recursos.routes').then(m => m.RECURSOS_ROUTES)
+    },
+    {
         path: 'contacto',
         loadChildren: () => import('./contacto/contacto.routes').then(m => m.CONTACTO_ROUTES)
     },

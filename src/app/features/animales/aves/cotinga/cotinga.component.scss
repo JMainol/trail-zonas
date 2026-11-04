@@ -323,9 +323,6 @@ $font-body: "Inter", sans-serif;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             text-align: justify;
 
-            @media (min-width: 768px) {
-                text-align: left;
-            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -339,7 +336,7 @@ $font-body: "Inter", sans-serif;
             border-left: 3px solid #ffd700;
             font-style: italic;
             color: #ffd700;
-            font-family: 'Times New Roman', serif;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
             font-size: 1.2rem;
             box-sizing: border-box;
             width: 100%;

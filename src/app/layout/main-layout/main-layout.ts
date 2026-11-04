@@ -34,5 +34,8 @@ export class MainLayoutComponent {
   /**
    * Título de la aplicación mostrado en la barra de herramientas.
    */
-  title = 'Amazonas Jungle';
+  title = 'Selva Amazonas 2.0';
+
+  /** Año en curso para el aviso de copyright. */
+  readonly currentYear = new Date().getFullYear();
 }

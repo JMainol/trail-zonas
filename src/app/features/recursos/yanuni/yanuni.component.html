@@ -1,0 +1,124 @@
+<article class="resource" itemscope itemtype="https://schema.org/Movie">
+  <div class="resource__inner">
+
+    <div class="resource__topbar">
+      <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </button>
+      <ol class="breadcrumb" [attr.aria-label]="'RESOURCES.BREADCRUMB' | translate">
+        <li><a routerLink="/">{{ 'COMMON.HOME' | translate }}</a></li>
+        <li><a routerLink="/amazonia/recursos">{{ 'COMMON.RESOURCES' | translate }}</a></li>
+        <li>{{ 'COMMON.DOCUMENTARIES' | translate }}</li>
+        <li aria-current="page">Yanuni</li>
+      </ol>
+    </div>
+
+    <header class="resource__header">
+      <span class="eyebrow"><mat-icon aria-hidden="true">movie</mat-icon>{{ 'RESOURCES.YANUNI.EYEBROW' | translate }}</span>
+      <h1 class="resource__title" itemprop="name">{{ 'RESOURCES.YANUNI.TITLE' | translate }}</h1>
+      <p class="resource__subtitle">{{ 'RESOURCES.YANUNI.SUBTITLE' | translate }}</p>
+      <p class="resource__lead" itemprop="description" [innerHTML]="'RESOURCES.YANUNI.LEAD' | translate"></p>
+      <ul class="chips" [attr.aria-label]="'RESOURCES.KEY_FACTS' | translate">
+        @for (chip of ('RESOURCES.YANUNI.CHIPS' | translate); track $index) {
+          <li>{{ chip }}</li>
+        }
+      </ul>
+    </header>
+
+    <!-- Tráiler: la API de YouTube solo se carga cuando el usuario pulsa reproducir -->
+    <figure class="video-card">
+      <div class="video-frame">
+        <youtube-player
+          [videoId]="trailerId"
+          [width]="1280"
+          [height]="720"
+          [playerVars]="playerVars"
+          placeholderImageQuality="high"
+          [placeholderButtonLabel]="'RESOURCES.YANUNI.PLAY_TRAILER' | translate">
+        </youtube-player>
+      </div>
+      <figcaption class="video-caption">
+        <span>{{ 'RESOURCES.YANUNI.TRAILER_CAPTION' | translate }}</span>
+        <a [href]="'https://www.youtube.com/watch?v=' + trailerId" target="_blank" rel="noopener noreferrer">
+          {{ 'RESOURCES.WATCH_ON_YOUTUBE' | translate }} ↗
+        </a>
+      </figcaption>
+    </figure>
+
+    <div class="resource__grid">
+      <div class="prose">
+
+        <section aria-labelledby="yanuni-film">
+          <h2 id="yanuni-film">{{ 'RESOURCES.YANUNI.FILM_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.YANUNI.FILM_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <blockquote class="pull-quote">
+          <p>{{ 'RESOURCES.YANUNI.QUOTE' | translate }}</p>
+          <cite>{{ 'RESOURCES.YANUNI.QUOTE_AUTHOR' | translate }}</cite>
+        </blockquote>
+
+        <section aria-labelledby="yanuni-juma">
+          <h2 id="yanuni-juma">{{ 'RESOURCES.YANUNI.JUMA_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.YANUNI.JUMA_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section aria-labelledby="yanuni-why">
+          <h2 id="yanuni-why">{{ 'RESOURCES.YANUNI.WHY_TITLE' | translate }}</h2>
+          <ul>
+            @for (item of ('RESOURCES.YANUNI.WHY_ITEMS' | translate); track $index) {
+              <li [innerHTML]="item"></li>
+            }
+          </ul>
+        </section>
+
+        <section aria-labelledby="yanuni-awards">
+          <h2 id="yanuni-awards">{{ 'RESOURCES.YANUNI.AWARDS_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.YANUNI.AWARDS_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section class="sources" aria-labelledby="yanuni-sources">
+          <h2 id="yanuni-sources">{{ 'RESOURCES.SOURCES' | translate }}</h2>
+          <ol>
+            <li><a href="https://malaikapictures.com/portfolio/yanuni" target="_blank" rel="noopener noreferrer">Malaika Pictures — YANUNI</a></li>
+            <li><a href="https://www.rollingstone.com/tv-movies/tv-movie-news/yanuni-trailer-indigenous-rights-climate-justice-1235446338/" target="_blank" rel="noopener noreferrer">Rolling Stone — «Yanuni» Trailer</a></li>
+            <li><a href="https://www.democracynow.org/2026/1/13/yanuni" target="_blank" rel="noopener noreferrer">Democracy Now! — Entrevista a Juma Xipaia y Richard Ladkani</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Yanuni" target="_blank" rel="noopener noreferrer">Wikipedia — Yanuni</a></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="aside" [attr.aria-label]="'RESOURCES.FACT_SHEET' | translate">
+        <div class="fact-sheet">
+          <h2>{{ 'RESOURCES.FACT_SHEET' | translate }}</h2>
+          <dl>
+            <div><dt>{{ 'RESOURCES.FIELDS.ORIGINAL_TITLE' | translate }}</dt><dd>Yanuni</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.DIRECTOR' | translate }}</dt><dd itemprop="director">Richard Ladkani</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.PRODUCERS' | translate }}</dt><dd>{{ 'RESOURCES.YANUNI.SHEET.PRODUCERS' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.YEAR' | translate }}</dt><dd itemprop="dateCreated">2025</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.DURATION' | translate }}</dt><dd>112 min</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.COUNTRIES' | translate }}</dt><dd>{{ 'RESOURCES.YANUNI.SHEET.COUNTRIES' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.PREMIERE' | translate }}</dt><dd>{{ 'RESOURCES.YANUNI.SHEET.PREMIERE' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.WHERE' | translate }}</dt><dd>{{ 'RESOURCES.YANUNI.SHEET.WHERE' | translate }}</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn--primary" [href]="'https://www.youtube.com/watch?v=' + trailerId" target="_blank" rel="noopener noreferrer">
+              <mat-icon aria-hidden="true">play_arrow</mat-icon>{{ 'RESOURCES.YANUNI.CTA_TRAILER' | translate }}
+            </a>
+            <a class="btn btn--ghost" href="https://www.youtube.com/results?search_query=Yanuni+Leonardo+DiCaprio+full+film" target="_blank" rel="noopener noreferrer">
+              <mat-icon aria-hidden="true">smart_display</mat-icon>{{ 'RESOURCES.YANUNI.CTA_CHANNEL' | translate }}
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <app-resource-related current="yanuni" />
+  </div>
+</article>

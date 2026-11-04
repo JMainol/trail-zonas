@@ -32,10 +32,10 @@ export class WaoraniComponent {
 
     // Gallery Slider
     protected galleryImages = [
-        'assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.jpg',
-        'assets/images/tribes/waorani/miembros_tribu_waorani.jpg',
-        'assets/images/tribes/waorani/hombre_waorani_cerbatana.png',
-        'assets/images/tribes/waorani/hombre_waorani_con_mono.png'
+        'assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.webp',
+        'assets/images/tribes/waorani/miembros_tribu_waorani.webp',
+        'assets/images/tribes/waorani/hombre_waorani_cerbatana.webp',
+        'assets/images/tribes/waorani/hombre_waorani_con_mono.webp'
     ];
     protected currentPhotoIndex = signal(0);
 

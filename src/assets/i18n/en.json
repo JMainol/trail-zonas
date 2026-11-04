@@ -3,17 +3,17 @@
         "TITLE": "Amazonas Jungle",
         "SUBTITLE": "Discover the wildest wildlife",
         "DISCOVER_AMAZON": {
-            "TITLE": "The Amazon is not just a rainforest; it is a living organism that breathes and beats.",
-            "TEXT_1": "Imagine a place where life doesn't just exist—it overflows. The Amazon is far more than a forest: it is the <span class=\"hx hx-7\">planet's lungs</span> and one of the great engines that sustain our climate. Every breath you take, part of that air is born here, among millions of trees that regulate the Earth's temperature and store vast amounts of carbon.",
-            "TEXT_2": "Spanning over 7 million square kilometers, this is the largest continuous <span class=\"hx hx-7\">natural paradise</span> on Earth. A territory where biodiversity reaches staggering numbers: nearly <span class=\"hx hx-7\">one in every ten known species</span> calls these lands home. To grasp its magnitude, consider this surprising fact: a single hectare of the Amazon rainforest can harbor more tree species than the entirety of Europe.",
-            "TEXT_3": "The Amazon River, the mightiest in the world, carries roughly <span class=\"hx hx-7\">20% of the fresh water reaching the oceans</span>, weaving together jungles, wildlife, and cultures for millennia. Everything in this ecosystem is bound by a balance as powerful as it is delicate.",
-            "TEXT_4": "This is a true <span class=\"hx hx-7\">natural sanctuary</span>. Every insect, every medicinal plant, and every species yet to be discovered holds secrets that modern science is still striving to understand. Here, nature does not simply reveal itself: it manifests.",
-            "TEXT_5": "To walk through the jungle is to encounter <span class=\"hx hx-7\">untouched wilderness</span> in its purest state. From the jaguar's roar to the whisper of the rivers, from the treetops to the pulsing ground beneath your feet, everything serves as a reminder of one essential truth: we are not separate from nature; we are part of it.",
-            "TEXT_6": "Protecting the Amazon means protecting the balance of our planet. And ultimately, our own <span class=\"hx hx-7\">future</span>."
+            "TITLE": "The Amazon is not just a rainforest: it is a living organism that breathes and beats.",
+            "TEXT_1": "Imagine a place where life does not simply exist but overflows. The Amazon is far more than a forest: it is South America's great <span class=\"hx hx-7\">climate regulator</span> and one of the engines that keep the planet's climate stable. Its roughly 400 billion trees release water vapour, generate rainfall thousands of kilometres away and store a colossal amount of carbon.",
+            "TEXT_2": "Covering more than seven million square kilometres, it is the largest continuous <span class=\"hx hx-7\">tropical forest</span> on Earth. Its biodiversity reaches astonishing figures: around <span class=\"hx hx-7\">one in every ten known species</span> lives in this region. A single fact conveys its richness: one hectare of Amazon rainforest can hold more tree species than the whole of Europe.",
+            "TEXT_3": "The Amazon River, the largest in the world by discharge, delivers about <span class=\"hx hx-7\">20% of the fresh water that reaches the oceans</span>. For millennia it has connected forests, wildlife and cultures, sustaining a balance as powerful as it is delicate.",
+            "TEXT_4": "This is a true <span class=\"hx hx-7\">natural sanctuary</span>. Every insect, every medicinal plant and every species yet to be described holds secrets that science is only beginning to understand. Here, nature does not put itself on display: it reveals itself.",
+            "TEXT_5": "To step into the rainforest is to meet <span class=\"hx hx-7\">primary nature</span> in its purest state. From the jaguar's roar to the murmur of rivers, from the treetops to the soil teeming with life beneath your feet, everything recalls an essential truth: we are not separate from nature; we are part of it.",
+            "TEXT_6": "Protecting the Amazon means protecting the planet's balance and, with it, our own <span class=\"hx hx-7\">future</span>."
         },
         "SCROLL": "SCROLL",
         "BACK_TO_TOP": "TOP",
-        "MARQUEE": "We are looking for collaborators for this open source project: AI developers, designers, SEO experts, biologists, anthropologists, adventurers...."
+        "MARQUEE": "We are looking for collaborators for this open-source project: developers, designers, SEO specialists, biologists, anthropologists, photographers and explorers."
     },
     "BRAND": {
         "NAME": "AMAZON JUNGLE 2.0"
@@ -46,7 +46,7 @@
         "CULTURE_SOCIETY": "Culture",
         "ANCESTRAL_KNOWLEDGE": "Ancestral Knowledge",
         "CHALLENGES": "Challenges",
-        "GEOGRAPHY": "Reserve",
+        "GEOGRAPHY": "Reserves",
         "MAP": "Map",
         "MANU": "Manu National Park",
         "YASUNI": "Yasuní National Park",
@@ -73,12 +73,13 @@
         "BOOKS": "Books",
         "DOCUMENTARIES": "Documentaries",
         "MOVIES": "Movies",
-        "RESEARCH": "Research Papers",
+        "RESEARCH": "Research and projects",
         "EXPLORATION": "Exploration",
         "HISTORY": "History",
         "SURVIVAL": "Survival",
         "CONTACT": "Contact",
-        "CAPTION_BY": "by"
+        "CAPTION_BY": "by",
+        "RESOURCES_ALL": "All resources"
     },
     "RESERVES_MAP": {
         "TITLE": "Amazon",
@@ -105,9 +106,9 @@
             "SCI": "Panthera onca",
             "POEM": "\"Obsidian eyes that see in the dark, a golden breath that roams the thicket, the indomitable heartbeat of the jungle's core.\"",
             "BODY_1": "The <strong>Panthera onca</strong>, absolute sovereign of the Amazonian shadows, is the largest feline in the Americas. Its coat, a masterpiece of camouflage with rosettes that mimic the play of light and shadow in the primary forest, envelops a body of pure power and agility.",
-            "BODY_2": "As an alpha predator, the jaguar plays a vital role in regulating the populations of other species, maintaining the balance of biodiversity. Its bite, the strongest among all large felines, is capable of piercing even the toughest shells.",
+            "BODY_2": "As an apex predator, the jaguar regulates the populations of its prey and so helps keep the entire food web in balance. Relative to its size, its bite is the most powerful of all the big cats: it can pierce the skulls of its prey and even the shells of turtles.",
             "BODY_3": "Unlike other felines, the jaguar is an exceptional swimmer that patrols riverbanks in search of caimans and capybaras. Its presence is an indicator of the ecosystem's health; where the jaguar roars, the jungle pulses with ancestral strength.",
-            "BODY_4": "In the worldview of Amazonian peoples, the jaguar is a guardian of wisdom and nocturnal power. It is the spirit that protects the earth's secrets, moving with the same elegance and silence as time itself through the Emerald Carpet.",
+            "BODY_4": "In the worldview of many Amazonian peoples, the jaguar is a guardian of wisdom and nocturnal power, and the animal into which shamans are often said to transform. It is the spirit that keeps the secrets of the earth, gliding through the forest with the same elegance and silence as time itself.",
             "VIDEO_TITLE": "Species Video",
             "SOUND_TITLE": "Roar of the Amazon",
             "MAP_TITLE": "Hunting Territory",
@@ -125,7 +126,7 @@
             "TITLE": "Brazilian Tapir",
             "SCI": "Tapirus terrestris",
             "POEM": "\"A trail of life in the fertile mud, a trunk that caresses the green leaf, the quiet step that sows the eternal forest.\"",
-            "BODY_1": "The <strong>Tapirus terrestris</strong>, affectionately known as the \"gardener of the jungle,\" is the largest land mammal in South America. With its characteristic flexible trunk, an appendage it uses to reach fresh leaves and fruits, the tapir is a distant relative of rhinoceroses and horses.",
+            "BODY_1": "<strong>Tapirus terrestris</strong>, affectionately known as the “gardener of the forest”, is the largest land mammal in South America. Its distinctive proboscis, a flexible trunk formed by the nose and upper lip, lets it reach tender leaves and fruit. It belongs to the order Perissodactyla, which also includes horses and rhinoceroses.",
             "BODY_2": "Its role in the ecosystem is irreplaceable: by consuming a vast diversity of fruits, it disperses seeds over great distances, ensuring the regeneration and vitality of the forest. It is a silent architect that plants the future of the jungle with every step.",
             "BODY_3": "Mainly crepuscular and nocturnal in its habits, the tapir is a shy animal that seeks the coolness of water, where it is an excellent swimmer and diver. Its thick skin and robust build allow it to move through dense vegetation with surprising agility.",
             "BODY_4": "For the guardians of the jungle, the tapir symbolizes perseverance and connection with the deep earth. Its presence is a reminder of the importance of the slow and steady processes that sustain life in the heart of the Amazon, far from the bustle of the upper canopy.",
@@ -154,11 +155,11 @@
             "TITLE": "White-lipped Peccary",
             "SCI": "Tayassu pecari",
             "POEM": "\"A thunder of hooves in the leaf litter, a tide of life flowing between the trunks, the collective pulse of the jungle in motion.\"",
-            "BODY_1": "The <strong>Tayassu pecari</strong>, or white-lipped peccary, is the social architect of the Amazon rainforest. These relatives of pigs, recognizable by their dark fur and characteristic white lip, live in massive herds that can exceed 300 individuals, creating a collective force that shapes the forest landscape.",
+            "BODY_1": "<strong>Tayassu pecari</strong>, the white-lipped peccary, is the great social architect of the Amazon rainforest. A distant relative of pigs, it is recognisable by its dark coat and the distinctive white patch on its jaw. It lives in herds that can exceed 300 individuals and that, together, shape the forest landscape.",
             "BODY_2": "Their movement through the forest is a seismic event for biodiversity: their trampling and foraging on the ground open gaps in the understory, allowing light to reach new seedlings and regulating populations of invertebrates and small vertebrates.",
             "BODY_3": "Endowed with a strong sense of hierarchy and communication, peccaries use tactile and olfactory signals to maintain group cohesion. They are brave animals that, together, can face even large predators like the jaguar to protect their young.",
             "BODY_4": "In the ecology of the Amazon, the peccary represents the power of the collective. Its presence is vital for maintaining the structure and composition of the primary forest, reminding us that even the smallest animals, when acting in harmony, can transform the world they inhabit.",
-            "VIDEO_TITLE": "The Red List, Endangered Species - White-lipped Peccary",
+            "VIDEO_TITLE": "The Red Book of threatened species: the white-lipped peccary",
             "SOUND_TITLE": "Echo of the Herd",
             "MAP_TITLE": "Migratory Routes",
             "MAP_LEGEND_TITLE": "Peccary Presence",
@@ -166,7 +167,7 @@
             "MAP_MEDIUM": "Foraging Zones",
             "MAP_TYPE": "Primary Tropical Forest",
             "TABS": {
-                "VIDEO": "VIDEO:",
+                "VIDEO": "Video",
                 "SOUND": "Sound",
                 "MAP": "Map"
             }
@@ -177,7 +178,7 @@
         "TOUCAN": "Channel-billed Toucan",
         "TOUCAN_SCI": "Ramphastos vitellinus",
         "TOUCAN_BODY_1": "<strong>Ramphastos vitellinus</strong>, a jewel of the Amazonian canopy, is distinguished by its vibrant vitelline-yellow throat and the bluish base of its bill. As an architect of the rainforest, it plays a crucial role as an efficient seed disperser, weaving the threads of biodiversity with every flight through the upper canopy.",
-        "TOUCAN_BODY_2": "An inhabitant of the Amazon Basin lowlands, its characteristic vocalization pierces the thicket, setting the rhythm of the morning. Its skeletal structure and bill—though massive in appearance—are surprisingly lightweight, allowing it to reach fruits on the thinnest branch tips.",
+        "TOUCAN_BODY_2": "It inhabits the lowlands of the Amazon Basin, where its characteristic call pierces the undergrowth and sets the rhythm of the morning. Its bill, though large, is surprisingly light thanks to an inner structure of keratin and spongy bone, allowing it to reach fruit on the thinnest branches.",
         "TOUCAN_BODY_3": "As a living emblem, the toucan transcends its biological role to become the quintessential symbol of the Amazon. This vast basin serves as the ultimate sanctuary for the <strong>Ramphastidae</strong> family, sheltering the greatest diversity of toucan species on the planet.",
         "TOUCAN_BODY_4": "Its undulating flight—a choreography of rises and falls over the green ocean—guides the eye toward the secrets of the rainforest. Its presence serves as a barometer for forest health, a vibrant note on the staff of life that breathes spirit into the immense emerald carpet.",
         "TOUCAN_QUOTE": "\"Its robust bill, a master tool for seed dispersal, resonates through the stillness of the Amazonian morning—a vibrant echo within the symphony of the rainforest.\"",
@@ -270,7 +271,7 @@
                 "AYAHUASCA": {
                     "TITLE": "Ayahuasca",
                     "USAGE": "Ritual",
-                    "DESCRIPTION": "Ayahuasca is the 'vine of the soul,' a master plant and ritual axis for spiritual cleansing and connection with the forest's spirit. Rich in beta-carbolinas, its pharmacology allows for a deep purge and expansion of consciousness. It is a visionary bridge that merges the self with the pulse of the jungle, drawing back the veil of the invisible with millenary wisdom."
+                    "DESCRIPTION": "Ayahuasca, the “vine of the soul”, is a master plant and ritual cornerstone of traditional Amazonian medicine. Rich in beta-carbolines, it is the basis of a ceremonial brew used for purging, introspection and connection with the spirit world. Today it is also the subject of intense scientific research."
                 }
             },
             "UNA_DE_GATO": {
@@ -367,7 +368,7 @@
                     }
                 ],
                 "PROPERTIES_AMAZON_USE": "It is the \"first aid\" remedy par excellence. Local inhabitants always carry a vial of the liquid resin. It is applied directly on any cut or insect bite; as it dries, it forms a reddish crust that acts as a natural, waterproof bandage.",
-                "PROPERTIES_PHARMA_USE": "It is the most successful example of a plant transitioning from the jungle to the modern pharmacy. The drug Crofelemer (Mytesi) is an FDA-approved medication extracted directly from this plant, used to treat chronic diarrhea in patients undergoing antiretroviral therapy.",
+                "PROPERTIES_PHARMA_USE": "It is one of the most successful examples of the journey from rainforest to modern pharmacy. Crofelemer (marketed as Mytesi), an FDA-approved drug derived from this plant, is used to treat non-infectious diarrhoea in people with HIV on antiretroviral therapy.",
                 "EVIDENCE_LABEL": "Evidence:",
                 "SOURCE_LABEL": "Source:",
                 "AMAZON_USE_LABEL": "Current use in the Amazon",
@@ -380,9 +381,9 @@
             "AYAHUASCA": {
                 "TITLE": "Ayahuasca",
                 "BODY_1": "<strong>Banisteriopsis caapi</strong>, known as ayahuasca or \"vine of the soul,\" is the preeminent master plant of the Amazon. This giant vine is the base of a sacred brew that has been used for millennia by indigenous peoples for spiritual healing and connection with the cosmos.",
-                "BODY_2": "Its pharmacology is fascinating: rich in beta-carbolines such as harmine and tetrahydroharmine, it acts by allowing other visionary compounds to be processed by the body. It is, in essence, the key that opens the doors of perception and deep introspection.",
+                "BODY_2": "Its pharmacology is fascinating. Rich in beta-carbolines such as harmine and tetrahydroharmine, it inhibits the enzyme monoamine oxidase, allowing the body to absorb the DMT contained in other plants with which it is usually combined, such as chacruna (<em>Psychotria viridis</em>). This combination produces its profound effects on perception and introspection.",
                 "BODY_3": "More than a drug, ayahuasca is considered a sentient being, a guiding spirit that facilitates the purging of physical and emotional toxins. Ceremonies led by master healers seek to restore the balance between the human being, nature, and the invisible.",
-                "BODY_4": "Its presence in the jungle structures the spiritual map of the Amazon. It is a living bridge that reminds us of our interconnection with everything that breathes, a mirror that reflects the vastness of the universe within ourselves.",
+                "BODY_4": "Its use shapes much of the spiritual map of the Amazon. It is a living bridge that reminds us of our interdependence with everything that breathes. It should be stressed, however, that its consumption carries medical and psychological risks and should always be approached with rigorous information and in safe settings.",
                 "POEM": "\"The rope that joins heaven and earth, drawing back the veil of the invisible to reveal the eternal symphony of the jungle.\"",
                 "VIDEO_TITLE": "Ayahuasca Documentary, \"The medicine of the soul\"",
                 "PROPERTIES_TITLE": "Ethnobotanical Properties",
@@ -441,7 +442,7 @@
             "PAGE": {
                 "HERO_TITLE": "Waorani",
                 "HERO_BODY_1": "In the untamed heart of <strong>Yasuní</strong>, the <strong>Waorani</strong> stand as one of the last bastions of cultural resistance in the Amazon basin. Although official history marks them as the last contacted people of Ecuador after their complex missionary encounter in 1958, their lineage harbors an even deeper secret: the existence of the Tagaeri and Taromenane, relatives who have chosen to remain in voluntary isolation to this day, protecting their freedom the deep rainforest.",
-                "HERO_BODY_2": "In the twilight of the forest, the Waorani move with almost spectral agility, asserting themselves as master hunters who dominate the art of stealth. They craft blowguns and curare to hit prey such as the howler monkey high in the canopy with surgical precision, while their pambil-wood spears are reserved for tracking larger ground animals like the <a href=\"/amazonia/animales/mamiferos-terrestres/pecari\" class=\"highlight-link\">collared peccary</a>, symbolizing the strength of a people deeply respectful of every spirit that inhabits their territory.",
+                "HERO_BODY_2": "In the half-light of the forest, the Waorani move with almost spectral agility; they are consummate hunters who have mastered the art of stealth. With blowguns and curare-tipped darts they strike prey such as the howler monkey high in the canopy, while their chonta-palm spears are reserved for tracking larger ground animals such as the <a href=\"/amazonia/animales/mamiferos-terrestres/pecari\" class=\"highlight-link\">peccary</a>. Their way of hunting reflects a deep respect for the spirit of every being that inhabits their territory.",
                 "HERO_BODY_3": "Their traditional attire is a statement of simplicity and dignity that challenges the outsider's gaze. The Waorani man wears only the <strong>komi</strong>, a plant-fiber cord tied around the waist securing his organ—a garment symbolizing maturity, protection, and passage into adulthood. In a world that now pressures them with oil drilling and deforestation, the Waorani struggle to preserve this way of life, reminding us that true wealth lies not in our possessions but in the balance we maintain with the earth we tread upon.",
                 "HERO_BODY_4": "Ultimately, the true essence of the Waorani lives within their language, <strong>Wao Terero</strong>, a \"language isolate\" with no known relatives worldwide, holding the worldview of a people where humanity and nature are one. They consider themselves the spiritual heirs of the jaguar and the harpy eagle, figures that populate their ancient chants and stories.",
                 "HERO_QUOTATION": "\"Spiritual heirs of the jaguar and the harpy eagle, where humanity and nature are one.\"",
@@ -585,13 +586,13 @@
         "SHUAR": {
             "TITLE": "Shuar",
             "SUBTITLE": "People of the Sacred Waterfalls",
-            "DESCRIPTION": "The Shuar are historically known as one of the few peoples that neither the Inca Empire nor the conquerors managed to subordinate, leading one of the most successful rebellions against the Spanish crown. Their mystical ritual of shrunken heads, or \"Tzantza\", was not a mere trophy, but a ceremony to capture the enemy's spirit and restore spiritual balance.",
+            "DESCRIPTION": "The Shuar are historically known as one of the few peoples that neither the Inca Empire nor the Spanish conquerors managed to subdue; in 1599 they led one of the most successful rebellions against the Crown. Their ritual of shrunken heads, or <em>tsantsa</em>, was not a mere war trophy but a ceremony intended to neutralise the enemy's vengeful spirit and restore spiritual balance.",
             "REGION": "Amazon"
         },
         "COFAN": {
             "TITLE": "Cofán",
             "SUBTITLE": "Jaguar Men",
-            "DESCRIPTION": "The Cofán are an ancestral people of the northern Ecuadorian Amazon, known as the \"jaguar men\" and speakers of A'ingae, a unique language in the world. Their culture centers on spiritual connection with the jungle through Yagé and a historic defense of their territory against oil exploitation. As guardians of biodiversity, they have achieved key legal victories to protect their sacred lands, maintaining a vital balance between their ancient traditions and modern resistance.",
+            "DESCRIPTION": "The Cofán are an ancestral people of the northern Ecuadorian Amazon and southern Colombia, speakers of A'ingae, a language considered an isolate. Their culture revolves around spiritual connection with the forest through yagé and a long defence of their territory against oil extraction. As guardians of biodiversity, they have won decisive legal victories to protect their lands, in a constant balance between age-old traditions and contemporary resistance.",
             "REGION": "Northern Amazon"
         },
         "KAYAPO": {
@@ -604,7 +605,7 @@
                 "HERO_BODY_1": "The Mebêngôkre nation, known to the world as the Kayapó, are not merely inhabitants of the jungle, but its fiercest architects and defenders. Calling themselves the \"People of the Water Well\", their identity is woven with the Iriri and Xingu rivers, in a territory spanning millions of hectares of rainforest and savanna. For them, survival is not passive; it is a continuous resistance fusing ancestral memory with a vanguard vision of protecting life on Earth.",
                 "HERO_BODY_2": "The circular design of their villages mirrors the cosmos, with each home arranged in harmony with the sun and moon's movement. At the absolute heart of this structure beats the \"Warriors' House\" (ngà-be), the nucleus of political and ritual life where the community's destiny is forged. This spatial arrangement honors a vital balance: while the center is the male domain of assembly and oratory, the outer ring is the sanctuary of women, who under a matrilocal system maintain lineage continuity and domestic stability.",
                 "HERO_BODY_3": "For a Mebêngôkre, the body is a canvas of wisdom and language is an art form. They pride themselves on being those who \"speak beautifully\" (Kaben mei), valuing oratory as the ultimate expression of status and humanity. This pursuit of beauty extends to their skin, adorned with geometric patterns in black jenipapo and red urucum mimicking the perfection of jungle animals and insects. Every stroke and feather in their headdresses declares an indestructible connection to the spirit dwelling in all things.",
-                "HERO_BODY_4": "Their relationship with nature eclipses mere subsistence; it is purposeful ecological engineering. Through the creation of apêtê or \"forest islands\", the Kayapó have proven that human hands can enrich biodiversity rather than destroy it, transporting nutrients and seeds to forge oases of medicine and food in the open savanna. This ancestral knowledge, identifying hundreds of medicinal plants and managing soil with millimeter precision, establishes their culture as a global model for sustainable bioeconomy.",
+                "HERO_BODY_4": "Their relationship with nature goes far beyond mere subsistence: it is true ecological engineering. Ethnobotanical studies describe the <em>apêtê</em>, or “forest islands”, which the Kayapó enrich with seeds and nutrients to create oases of food and medicine in the open savanna. This ancestral knowledge, able to identify hundreds of useful plants and manage soil with great precision, makes their culture a global reference for sustainable bioeconomy.",
                 "HERO_BODY_5": "The contemporary history of the Kayapó chronicles their invincibility against the threats of unbridled progress. Led by legendary figures like Chief Raoni Metuktire and female Chief Tuíre Kayapó, they have carried the Amazon's cry to international forums, transforming their warrior culture into a political activism protecting the global climate. Their legacy reminds us that to protect the rainforest is to protect the very root of human existence.",
                 "HERO_QUOTATION": "\"Guardians of the Amazon's Pulse, where true wealth lies in the capacity to live in symbiosis with the natural world.\"",
                 "PHOTOS_SECTION": {
@@ -745,12 +746,12 @@
             "CAPTION_BOOK_URL": "https://en.wikipedia.org/wiki/Theodor_de_Bry",
             "ORELLANA_STORY_1": "In February 1542, what began as a desperate search for sustenance transformed into the most extraordinary journey ever undertaken in the New World. <strong>Francisco de Orellana</strong>, accompanied by 57 men and the friar <strong>Gaspar de Carvajal</strong>, separated from Gonzalo Pizarro’s main expedition to venture into the depths of a jungle that no one had yet charted. They were not seeking glory; they were seeking survival. Yet, destiny had reserved for them a place in eternity.",
             "SUBTITLE_HUNGER": "Hunger and Timber: The Birth of the \"Victoria\"",
-            "CARVAJAL_CHRONICLE": "Carvajal’s chronicle, <em>Relación del nuevo descubrimiento del famoso río Grande</em> (Account of the Recent Discovery of the Famous Great River), recounts the sheer brutality of those early days. Weakened by famine, the men resorted to consuming the leather of their shoes and the soles of their scabbards, boiled with unknown herbs.",
-            "INGENUITY_VICTORIA": "In a remarkable feat of ingenuity and willpower, in the heart of the wilderness, they constructed a brigantine: the <strong>San Pedro</strong>, and later, the <strong>Victoria</strong>. Without forges, without nails, and working with the damp timber of the rainforest, Orellana led an impossible engineering endeavor that would allow them to navigate the currents of a river that seemed to have no end.",
+            "CARVAJAL_CHRONICLE": "Carvajal's chronicle, <em>Relación del nuevo descubrimiento del famoso río Grande</em> (Account of the Recent Discovery of the Famous Great River), recounts the harshness of those early days. Weakened by hunger, the men were reduced to eating the leather of their shoes and belts, boiled with unknown herbs.",
+            "INGENUITY_VICTORIA": "In a remarkable display of ingenuity and determination, in the middle of the rainforest, they built first the brigantine <strong>San Pedro</strong> and later the <strong>Victoria</strong>. With barely any tools, forging their own nails and working with damp timber, Orellana led an almost impossible feat of engineering that would allow them to navigate a river that seemed to have no end.",
             "SUBTITLE_WARRIORS": "The Encounter with the Warriors: The Myth of the Amazon",
             "WARRIORS_STORY": "The river’s name was not born in a Spanish office, but in the heat of battle. On June 24, 1542, Carvajal recorded an encounter that would change history. The expeditionaries were attacked by a tribe led by women of great stature, fair skin, and long, braided hair, who fought with a ferocity surpassing that of any man they had ever encountered.",
             "QUOTATION_WOMEN": "\"They fought with such intensity that it seemed each one of them was worth ten Indians,\" Carvajal noted.",
-            "NAME_BAPTISM": "Inspired by the Greek myth of the Amazons, Orellana bestowed this name upon the waters he had initially called the \"Rio de Orellana.\" Those women were real, and their resistance etched the river's name onto the map of the world forever.",
+            "NAME_BAPTISM": "Inspired by the Greek myth of the Amazons, the chroniclers gave that name to the river that had first been called the “Río de Orellana”. Whether or not those warriors were exactly as Carvajal described them, their resistance etched the river's name onto the map of the world forever.",
             "SUBTITLE_ROUTE": "From the Jungle to the Ocean: The Route",
             "ALT_MAP": "Map of Orellana's Expedition",
             "CAPTION_MAP": "Route of nearly 5,000 kilometers followed by Francisco de Orellana through the Amazon waterway.",
@@ -860,7 +861,7 @@
             "ITEM_2_3": "The result is <strong>\"dead oxbow lakes\"</strong> (cochas muertas), bodies of water where ecological productivity collapses and fish vanish entirely.",
             "SUBTITLE_ABUNDANCE": "From Historical Abundance to the Extraction Fevers",
             "PARA_5": "It is difficult to fathom this scarcity when examining 16th-century chronicles. Explorers like Francisco de Orellana or Cristóbal de Acuña described an incalculable abundance: thousands of <em>charapa</em> turtles, manatees, and fish that guaranteed surplus food for hundreds of people over years. In the 19th century, up to five million turtle eggs were harvested from a single beach just to export their oil to Europe.",
-            "PARA_6": "However, modern extractive fevers rewritten history. Commercial hunting decimated Amazonian fauna to supply global leather and fur markets.",
+            "PARA_6": "Modern extractive booms, however, changed the story. Commercial hunting decimated Amazonian wildlife to supply international markets for hides and furs.",
             "ITEM_3_1": "From Peru alone, over <strong>5.5 million animal skins</strong> were exported between 1965 and 1976 (including jaguars, black caimans, and ocelots).",
             "ITEM_3_2": "To hunt a single jaguar, poachers used entire peccaries or monkeys as bait, multiplying the slaughter.",
             "SUBTITLE_GUARDIANS": "Indigenous Tribes: The New Guardians",
@@ -872,7 +873,7 @@
     },
     "CONTACT_PAGE": {
         "TITLE": "Connect with the <span class=\"highlight\">Jungle</span>",
-        "SUBTITLE": "This is a non-profit open-source platform. A wiki 2.0 created to share knowledge, inspire, raise awareness, and enjoy one of the most magical places in the world.",
+        "SUBTITLE": "This is an open-source, non-profit platform: a wiki 2.0 created to share knowledge, inspire and raise awareness about one of the most extraordinary places on Earth.",
         "FORM": {
             "FULL_NAME": "Full Name *",
             "NAME_PLACEHOLDER": "e.g., Maria Silva",
@@ -928,10 +929,11 @@
     "LAYOUT": {
         "FOOTER": {
             "COPYRIGHT": "All rights reserved.",
-            "SUBTITLE": "Bio-designed for total immersion in nature.",
+            "SUBTITLE": "An open, collaborative visual encyclopedia of the Amazon.",
             "NAV_MISION": "Mission",
             "NAV_COLABORADORES": "Collaborators"
-        }
+        },
+        "SKIP_TO_CONTENT": "Skip to main content"
     },
     "MISION": {
         "BADGE": "OPEN SOURCE PROJECT · NON-PROFIT",
@@ -966,5 +968,273 @@
         "TAG_EXPLORERS": "Explorers",
         "TAG_RESEARCHERS": "Researchers",
         "CTA_BUTTON": "Contact us"
+    },
+    "SEARCH": {
+        "MAIN_NAV": "Main menu",
+        "OPEN": "Open search",
+        "MENU": "Open main menu",
+        "PLACEHOLDER": "Search pages, species or peoples…",
+        "FIELD": "Search the site",
+        "CLEAR": "Clear search",
+        "GO": "Go",
+        "GO_TITLE": "Go to the selected page",
+        "CLOSE": "Close search (Esc)",
+        "HINT_NAV": "Browse results",
+        "HINT_GO": "Open page",
+        "HINT_CLOSE": "Close",
+        "NO_RESULTS": "No results found for",
+        "SWITCH_LANG": "Change language: Español"
+    },
+    "RESOURCES": {
+        "BREADCRUMB": "Breadcrumb",
+        "RELATED": "Keep exploring",
+        "SOURCES": "Sources and references",
+        "FACT_SHEET": "Fact sheet",
+        "KEY_FACTS": "Key facts",
+        "WATCH_ON_YOUTUBE": "Watch on YouTube",
+        "FIELDS": {
+            "ORIGINAL_TITLE": "Original title",
+            "DIRECTOR": "Director",
+            "PRODUCERS": "Producers",
+            "YEAR": "Year",
+            "DURATION": "Running time",
+            "COUNTRIES": "Countries",
+            "PREMIERE": "World premiere",
+            "WHERE": "Where to watch",
+            "EXPLORER": "Explorer",
+            "ORIGIN": "Origin",
+            "EXPEDITION": "Expedition",
+            "DATE": "Date",
+            "ROUTE": "Route",
+            "RECORDS": "Records",
+            "SERIES": "Documentary series",
+            "TYPE": "Type",
+            "FOUNDED": "Founded",
+            "MEMBERS": "Founding members",
+            "PARTNERS": "Partners",
+            "AMAZON_LINK": "Amazon connection"
+        },
+        "HUB": {
+            "EYEBROW": "Open library",
+            "TITLE": "Resources",
+            "LEAD": "A curated selection of documentaries, expeditions and research projects that help us understand the Amazon from complementary perspectives: science, journalism, exploration and art. Each entry summarises the context, the essential facts and the sources for further reading.",
+            "DOCS_DESC": "Films and series that document, on the ground, life in the rainforest and the defence of its territories.",
+            "RESEARCH_DESC": "Initiatives that generate knowledge about the forest and its ecosystems, and share it with society.",
+            "SOON_TITLE": "Coming soon",
+            "SOON_DESC": "We keep expanding the library. If you know an essential work, write to us from the contact page.",
+            "SOON_LABEL": "In preparation",
+            "SOON_TEXT": "We are selecting and reviewing the most relevant titles about the Amazon.",
+            "READ_MORE": "Read the entry"
+        },
+        "YANUNI": {
+            "EYEBROW": "Documentary · 2025",
+            "TITLE": "Yanuni",
+            "SUBTITLE": "Juma Xipaia's fight for the Amazon, in a documentary produced by Leonardo DiCaprio",
+            "LEAD": "Directed by Austrian filmmaker <strong>Richard Ladkani</strong> and produced by <strong>Leonardo DiCaprio</strong>, <em>Yanuni</em> follows <strong>Juma Xipaia</strong>, chief of the Xipaya people, over several years as she confronts illegal gold mining, land grabbing and the powerful economic interests pressing on the Xingu River basin in the Brazilian state of Pará.",
+            "CHIPS": [
+                "Richard Ladkani",
+                "Leonardo DiCaprio",
+                "112 minutes",
+                "Oscar shortlist"
+            ],
+            "PLAY_TRAILER": "Play the Yanuni trailer",
+            "TRAILER_CAPTION": "Official trailer of “Yanuni”. The video only loads from YouTube when you press play.",
+            "FILM_TITLE": "The film",
+            "FILM_PARAS": [
+                "<em>Yanuni</em> traces Juma Xipaia's journey from her village in the Xipaya Indigenous Territory to the political arenas where the future of the climate is now decided. Ladkani's camera gives equal attention to the intimacy of community life and the tension of operations against the garimpeiros, the illegal miners who poison rivers with mercury and leave deep scars in the forest.",
+                "The documentary interweaves Juma's story with that of her partner, <strong>Hugo Loss</strong>, who works in environmental law enforcement in Brazil. Together they embody two sides of the same resistance: defending the land from within the community, and enforcing the law in one of the most watched — and most threatened — territories on Earth. Their life as a couple gives the film an intimate, human dimension that goes beyond denunciation.",
+                "The film premiered as the closing-night gala of the 2025 <strong>Tribeca Festival</strong> and, after its festival and theatrical run, has been available to watch for free on Leonardo DiCaprio's YouTube channel since 5 September 2026, Amazon Day."
+            ],
+            "QUOTE": "Defending the Amazon has a face and a name: those who risk their lives so that the forest keeps standing.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "JUMA_TITLE": "Who is Juma Xipaia?",
+            "JUMA_PARAS": [
+                "Juma Xipaia is a Brazilian Indigenous leader of the Xipaya people, whose territory lies along the Iriri River, a tributary of the Xingu. She was the first woman to serve as chief of her people and leads the village of Kaarimã. From a very young age she spoke out against the impacts of the Belo Monte hydroelectric dam and the advance of illegal mining into Indigenous lands.",
+                "Her activism has come at a high price: she has survived <strong>six assassination attempts</strong>. Far from silencing her, those threats led her to carry her voice from the village to institutional forums and international climate summits, where she argues that Indigenous peoples are the most effective guardians of the rainforest."
+            ],
+            "WHY_TITLE": "Why we recommend it",
+            "WHY_ITEMS": [
+                "<strong>It shows the Amazon from within:</strong> the story is told through the eyes and voice of an Indigenous protagonist, not as an exotic landscape seen from outside.",
+                "<strong>It explains real, current threats:</strong> gold mining, mercury in the rivers, deforestation and violence against environmental defenders — topics we also cover in our section on <a href=\"/amazonia/conservacion/deforestacion-mineria\">deforestation and mining</a>.",
+                "<strong>It is accessible to everyone:</strong> it is available for free on YouTube, which makes it an ideal resource for schools, associations and film clubs."
+            ],
+            "AWARDS_TITLE": "Recognition",
+            "AWARDS_PARAS": [
+                "<em>Yanuni</em> was shortlisted for the <strong>Academy Award for Best Documentary Feature</strong> in 2026. Along the way it has received, among other honours, the awards for Best Director and Best Documentary at the Savannah Film Festival, a special mention at the Palm Springs International Film Festival and an honourable mention at the International Documentary Association (IDA) Awards."
+            ],
+            "SHEET": {
+                "PRODUCERS": "Leonardo DiCaprio, Juma Xipaia and Malaika Pictures, among others",
+                "COUNTRIES": "Austria, Brazil, United States, Canada and Germany",
+                "PREMIERE": "Tribeca Festival (New York), June 2025",
+                "WHERE": "Free on YouTube, on Leonardo DiCaprio's channel"
+            },
+            "CTA_TRAILER": "Watch the trailer on YouTube",
+            "CTA_CHANNEL": "Find the full film",
+            "CARD": "Chief Juma Xipaia confronts illegal mining on the Xingu River. A documentary by Richard Ladkani produced by Leonardo DiCaprio, with trailer and fact sheet."
+        },
+        "ASH_DYKES": {
+            "EYEBROW": "Exploration · Documentary series",
+            "TITLE": "Ash Dykes",
+            "SUBTITLE": "Uncharted Amazon: the first source-to-sea descent of the Coppename River, in the Amazon of Suriname",
+            "LEAD": "Welsh explorer <strong>Ash Dykes</strong> has earned a worldwide reputation for completing journeys nobody had achieved before. In 2024 he brought that spirit to the Amazon of Suriname, one of the most remote and least mapped corners of the continent, to locate the source of the <strong>Coppename River</strong> and follow its course, on foot and by kayak, all the way to the Atlantic Ocean.",
+            "STATS": [
+                {
+                    "VALUE": "≈ 600 km",
+                    "LABEL": "along the Coppename River (373 miles)"
+                },
+                {
+                    "VALUE": "37 days",
+                    "LABEL": "from the river's source to the Atlantic"
+                },
+                {
+                    "VALUE": "2",
+                    "LABEL": "Guinness World Records set on the expedition"
+                },
+                {
+                    "VALUE": "5",
+                    "LABEL": "Guinness World Records in his career"
+                }
+            ],
+            "WHO_TITLE": "Who is Ash Dykes?",
+            "WHO_PARAS": [
+                "Ash Dykes is an explorer, endurance athlete, author and speaker from North Wales. His career has been built on long expeditions, often solo and unsupported, that combine physical hardship with a deep curiosity about the lands and cultures he travels through.",
+                "Before reaching the Amazon he had already crossed Mongolia on foot, traversed Madagascar from end to end and become the first person to walk the entire length of China's Yangtze River. Those feats earned him several Guinness World Records and an international audience that follows each of his projects closely."
+            ],
+            "AMAZON_TITLE": "The Uncharted Amazon expedition",
+            "AMAZON_PARAS": [
+                "In late August 2024, Dykes and his team ventured into the interior of the Surinamese rainforest, a roadless region where even finding a clearing for the helicopter to land was a challenge. After days of progress through dense vegetation, they managed to <strong>identify and map the source of the Coppename</strong>, one of the country's major rivers.",
+                "From there they began a descent of some 600 kilometres, alternating stretches on foot with kayaking through rapids, meanders and flooded forest. The challenge was not only physical: the team lived alongside jaguars, swarms of insects and the constant humidity of an almost untouched rainforest. In early October 2024 they reached the river mouth on the Atlantic after 37 days.",
+                "During the expedition the team also summited <strong>Julianatop</strong>, Suriname's highest mountain, in the fastest recorded ascent. Both the complete descent of the Coppename and that climb have been recognised by Guinness World Records."
+            ],
+            "QUOTE": "Even in the age of satellites, the Amazon still holds rivers whose source nobody had documented.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "STAGES_TITLE": "Stages of the journey",
+            "STAGES": [
+                {
+                    "WHEN": "August 2024",
+                    "TITLE": "Into the rainforest",
+                    "TEXT": "Helicopter approach into the interior of Suriname and search for a safe access point in the middle of primary forest."
+                },
+                {
+                    "WHEN": "First week",
+                    "TITLE": "The source of the Coppename",
+                    "TEXT": "After several days cutting a path by machete, the team locates and documents the river's headwaters."
+                },
+                {
+                    "WHEN": "Early days",
+                    "TITLE": "Julianatop summit",
+                    "TEXT": "Ascent of Suriname's highest mountain in the fastest time recorded to date."
+                },
+                {
+                    "WHEN": "September 2024",
+                    "TITLE": "Descent on foot and by kayak",
+                    "TEXT": "Hundreds of kilometres of rapids, waterfalls and flooded forest, following the river towards the coast."
+                },
+                {
+                    "WHEN": "October 2024",
+                    "TITLE": "Reaching the Atlantic",
+                    "TEXT": "The team reaches the river mouth, completing the first known source-to-sea journey of the Coppename."
+                }
+            ],
+            "CAREER_TITLE": "A career of firsts",
+            "CAREER": [
+                {
+                    "WHEN": "Mongolia",
+                    "TITLE": "Solo, unsupported crossing",
+                    "TEXT": "He crossed the country on foot, pulling his own gear through the Altai mountains and the Gobi Desert."
+                },
+                {
+                    "WHEN": "Madagascar",
+                    "TITLE": "The island from end to end",
+                    "TEXT": "He traversed the island along its mountainous spine, summiting its main peaks."
+                },
+                {
+                    "WHEN": "China",
+                    "TITLE": "The entire Yangtze",
+                    "TEXT": "He became the first person to walk from the source to the mouth of Asia's longest river, some 6,400 kilometres."
+                },
+                {
+                    "WHEN": "Suriname",
+                    "TITLE": "Uncharted Amazon",
+                    "TEXT": "First source-to-sea descent of the Coppename River and fastest ascent of Julianatop."
+                }
+            ],
+            "WHY_TITLE": "Why it is a valuable resource",
+            "WHY_PARAS": [
+                "The documentary series <em>Uncharted Amazon with Ash Dykes</em> offers an exceptional window onto a part of the Amazon rarely seen in the media: the Guiana Shield, with its blackwater rivers, roadless forests and granite massifs. Beyond the adventure, the expedition helped document the source of a previously unmapped river.",
+                "For anyone approaching the rainforest for the first time, Dykes's story is also a lesson in humility: even with satellite technology and a well-prepared team, the Amazon sets its own pace. It pairs well with our page on the <a href=\"/amazonia/exploracion/historia\">historical exploration of the Amazon</a> by Francisco de Orellana."
+            ],
+            "SHEET": {
+                "ORIGIN": "Wales (United Kingdom)",
+                "DATE": "August – October 2024",
+                "ROUTE": "Coppename River, from its source to the Atlantic Ocean (≈ 600 km)",
+                "RECORDS": "First source-to-sea descent of the Coppename · Fastest ascent of Julianatop"
+            },
+            "CTA_WEB": "Ash Dykes' official website",
+            "CTA_SERIES": "Watch the documentary series",
+            "CARD": "The Welsh explorer made the first journey along the Coppename River, in the Amazon of Suriname, from its source to the Atlantic. Expedition, records and documentary series."
+        },
+        "VOZTERRA": {
+            "EYEBROW": "Sound project · Colombia",
+            "TITLE": "VozTerra",
+            "SUBTITLE": "Soundscapes to help us listen to nature again",
+            "LEAD": "<strong>VozTerra</strong> is a Colombian multidisciplinary collective and audio platform that uses soundscape recording, music and environmental education to raise awareness of the climate crisis and biodiversity loss. Its approach starts from a simple yet powerful idea: what we learn to listen to, we also learn to care for.",
+            "WHAT_TITLE": "What VozTerra is",
+            "WHAT_PARAS": [
+                "The collective was founded in August 2019 by <strong>Lany Arévalo, Héctor Buitrago, Rafael Puyana, Diana Restrepo and Daniel Roa</strong>, in collaboration with the Museum for the United Nations – <strong>UN Live</strong>. Among its founders is Héctor Buitrago, co-founder of the band Aterciopelados and a well-known environmental activist.",
+                "Its work is organised into chapters: listening journeys to specific ecosystems in which the team records the sound of water, animals and wind, talks with the communities who live there and turns the material into albums, artworks and educational activities. To date, VozTerra has released several albums with musicians from around ten countries."
+            ],
+            "AMAZON_TITLE": "The Amazonian foothills of Caquetá",
+            "AMAZON_PARAS": [
+                "The project's second chapter took the collective to <strong>Caquetá</strong>, in the Colombian Amazonian foothills, the strip where the Andes descend towards the great forested plain. There, guided by sound, nature and community, they visited <strong>six different ecosystems</strong> and documented their acoustic richness.",
+                "The foothills are an area of enormous ecological value: rivers as important as the Caquetá and the Putumayo are recharged there, and Andean and Amazonian species live side by side. It is also one of the regions hardest hit by deforestation in Colombia. Recording its soundscape today is, in a sense, bearing witness to a living heritage that could be lost if it is not protected."
+            ],
+            "QUOTE": "The rainforest is not silence: it is a continuous conversation among thousands of species. Learning to listen to it is the first step towards defending it.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "CHAPTERS_TITLE": "Featured chapters",
+            "CHAPTERS_INTRO": "Each chapter combines field recording, artistic creation and community work. These are some of the most representative:",
+            "CHAPTERS": [
+                {
+                    "KICKER": "Chapter 1 · 2020",
+                    "TITLE": "Van der Hammen Reserve and La Conejera Wetland",
+                    "TEXT": "The first listening journey, to two strategic ecosystems in Bogotá threatened by urban sprawl."
+                },
+                {
+                    "KICKER": "Chapter 2",
+                    "TITLE": "Caquetá, Amazonian foothills",
+                    "TEXT": "Six ecosystems in southern Colombia, explored and recorded together with the communities who inhabit them."
+                },
+                {
+                    "KICKER": "Chapter 3",
+                    "TITLE": "Sounds from your window",
+                    "TEXT": "During the COVID-19 lockdown, people all over the world recorded the nature they could hear from home."
+                },
+                {
+                    "KICKER": "Chapter 5 · 2024",
+                    "TITLE": "Sounds Right",
+                    "TEXT": "A vision that gave rise to the global Sounds Right alliance, launched with UN Live, which recognises nature as an artist."
+                },
+                {
+                    "KICKER": "Chapter 6",
+                    "TITLE": "Ears to the Forest",
+                    "TEXT": "Environmental education and mindful listening with 23 teachers, 12 rural schools in Bogotá and 982 students aged 10 to 18."
+                }
+            ],
+            "WHY_TITLE": "Why we include it in Resources",
+            "WHY_PARAS": [
+                "<strong>Ecoacoustics</strong> — the study of the sound of ecosystems — has become a scientific tool for measuring forest health: a healthy rainforest sounds different from a degraded one or from an <a href=\"/amazonia/conservacion/selva-vacia\">empty forest</a>, where wildlife has vanished even though the trees are still standing. VozTerra brings that intuition into the cultural and educational sphere.",
+                "Its recordings are an excellent resource for teachers, science communicators and anyone who wants to experience the sonic richness of the Amazon and other Colombian ecosystems from home. We recommend listening with headphones in a quiet setting."
+            ],
+            "SHEET": {
+                "TYPE": "Multidisciplinary collective and audio platform",
+                "FOUNDED": "August 2019",
+                "ORIGIN": "Bogotá (Colombia)",
+                "PARTNERS": "Museum for the United Nations – UN Live",
+                "AMAZON": "Chapter devoted to the Amazonian foothills of Caquetá"
+            },
+            "CTA_WEB": "Visit vozterra.com",
+            "CTA_LISTEN": "Listen to the discography",
+            "CARD": "A Colombian collective that records soundscapes, such as those of the Amazonian foothills of Caquetá, to raise awareness of the climate crisis and biodiversity."
+        }
     }
 }

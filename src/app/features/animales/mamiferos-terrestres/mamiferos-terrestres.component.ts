@@ -31,7 +31,7 @@ export class MamiferosTerrestresComponent implements AfterViewInit {
       scientificName: 'Panthera onca',
       description: 'MAMMALS.SLIDER.JAGUAR.DESCRIPTION',
       weight: 'MAMMALS.SLIDER.JAGUAR.WEIGHT',
-      image: 'assets/mammals/jaguar.png',
+      image: 'assets/mammals/jaguar.webp',
       link: 'jaguar'
     },
     {
@@ -39,7 +39,7 @@ export class MamiferosTerrestresComponent implements AfterViewInit {
       scientificName: 'Tapirus terrestris',
       description: 'MAMMALS.SLIDER.TAPIR.DESCRIPTION',
       weight: 'MAMMALS.SLIDER.TAPIR.WEIGHT',
-      image: 'assets/mammals/tapir/tapir.png',
+      image: 'assets/mammals/tapir/tapir.webp',
       link: 'tapir'
     },
     {
@@ -47,7 +47,7 @@ export class MamiferosTerrestresComponent implements AfterViewInit {
       scientificName: 'Tayassu pecari',
       description: 'MAMMALS.SLIDER.PECARI.DESCRIPTION',
       weight: 'MAMMALS.SLIDER.PECARI.WEIGHT',
-      image: 'assets/mammals/peccary.png',
+      image: 'assets/mammals/peccary.webp',
       link: 'pecari'
     }
   ];

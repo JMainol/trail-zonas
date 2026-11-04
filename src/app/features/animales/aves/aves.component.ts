@@ -31,7 +31,7 @@ export class AvesComponent implements AfterViewInit {
             description: 'BIRDS.SLIDER.TOUCAN.DESCRIPTION',
             weight: 'BIRDS.SLIDER.TOUCAN.WINGSPAN',
             wingspanCm: 100,
-            image: 'assets/images/birds/tucan/tucan_vitelado.png',
+            image: 'assets/images/birds/tucan/tucan_vitelado.webp',
             link: 'tucan'
         },
         {

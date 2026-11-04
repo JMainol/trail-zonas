@@ -45,6 +45,16 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   private lenis: Lenis | null = null;
 
+  private static readonly TITLE_KEY = 'HOME.DISCOVER_AMAZON.TITLE';
+  private static readonly TEXT_KEYS = [
+    'HOME.DISCOVER_AMAZON.TEXT_1',
+    'HOME.DISCOVER_AMAZON.TEXT_2',
+    'HOME.DISCOVER_AMAZON.TEXT_3',
+    'HOME.DISCOVER_AMAZON.TEXT_4',
+    'HOME.DISCOVER_AMAZON.TEXT_5',
+    'HOME.DISCOVER_AMAZON.TEXT_6'
+  ];
+
   readonly contentTitle = signal<string>('');
   readonly contentTexts = signal<string[]>([]);
   readonly showBackToTop = signal<boolean>(false);
@@ -58,6 +68,13 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ];
 
   constructor() {
+    // Rellena el contenido también durante el prerenderizado (SSR), de modo que el
+    // <h1> y los párrafos de la portada lleguen indexables en el HTML inicial.
+    this.translate.get([HomeComponent.TITLE_KEY, ...HomeComponent.TEXT_KEYS]).subscribe(t => {
+      this.contentTitle.set(t[HomeComponent.TITLE_KEY]);
+      this.contentTexts.set(HomeComponent.TEXT_KEYS.map(key => t[key]));
+    });
+
     if (isPlatformBrowser(this.platformId)) {
       // Re-inicializar cuando el idioma cambie
       this.translate.onLangChange

@@ -24,7 +24,10 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
 
 // Aplicar tema globalmente
 html {
-  @include mat.all-component-themes($dark-theme);
+  // Solo se incluyen los temas de los componentes de Material que realmente se usan
+  // (antes all-component-themes): reduce notablemente el CSS inicial.
+  @include mat.icon-theme($dark-theme);
+  @include mat.button-theme($dark-theme);
   overflow-x: hidden;
 
   // Variables CSS para el ecosistema bioluminiscente de Pandora
@@ -37,7 +40,9 @@ html {
 
   background-color: var(--avatar-bg);
   color: #f0fff4; // Blanco con ligero toque fluorescente
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 8px rgba(57, 255, 20, 0.1);
+  scroll-padding-top: 6rem; // Los anclajes no quedan ocultos tras la cabecera fija
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -48,6 +53,107 @@ body {
   color: #f0fff4;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+// ===================== Tipografía de lectura =====================
+// Párrafos con guionado automático (respeta <html lang>) y cortes de línea equilibrados.
+.content-container {
+  :where(p, li, blockquote, figcaption) {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  :where(h1, h2, h3) {
+    text-wrap: balance;
+  }
+}
+
+// Texto justificado para bloques de lectura largos (añadir a cualquier contenedor de prosa)
+.prose-justify :where(p, li),
+p.prose-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+// Justificado para las columnas de lectura de las fichas (especies, plantas, historia, misión).
+// Selector con especificidad superior a la de los estilos encapsulados de cada componente.
+main.content-container {
+  .hero-column > p,
+  .hero-column > ul > li,
+  .vision-header > p.vision-intro {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+// ===================== Accesibilidad =====================
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--avatar-cyan);
+  color: #020617;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+
+  &:focus {
+    transform: translateY(0);
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+main:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--avatar-cyan);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+::selection {
+  background: rgba(0, 242, 255, 0.35);
+  color: #fff;
+}
+
+// Respeta la preferencia del sistema de reducir el movimiento
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 
 // Asegurar que el componente raíz de Angular sea transparente
@@ -194,4 +300,4 @@ app-root {
   &.type-youtube:hover {
     color: #ff0000 !important;
   }
-}
+}

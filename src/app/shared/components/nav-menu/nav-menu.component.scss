@@ -1,5 +1,5 @@
 .nav-item {
-        @apply px-3 py-2 rounded-full text-[10px] font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
+        @apply px-2 py-2 rounded-full text-[11.5px] 2xl:text-[13px] font-semibold tracking-wide text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2;
         &.active-link {
             @apply text-cyan-400 bg-cyan-500/10 shadow-[0_0_15px_rgba(34,211,238,0.2)];
         }
@@ -8,7 +8,7 @@
         @apply text-lg w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all;
     }
     .dropdown-panel {
-        @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-out origin-top z-[1000] pt-3;
+        @apply absolute left-1/2 transform -translate-x-1/2 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 ease-out origin-top z-[1000] pt-3;
     }
     .dropdown-content {
         @apply rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] bg-[#020617]/95 backdrop-blur-2xl border border-white/10;
@@ -20,7 +20,8 @@
     .nested-dropdown {
         @apply absolute left-full top-0 w-56 opacity-0 invisible transition-all duration-300 z-[1001] pl-2;
     }
-    .has-nested-dropdown:hover .nested-dropdown {
+    .has-nested-dropdown:hover .nested-dropdown,
+    .has-nested-dropdown:focus-within .nested-dropdown {
         @apply opacity-100 visible translate-x-1;
     }
     .dropdown-item {

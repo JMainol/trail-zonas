@@ -3,8 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        title: 'Amazonas Jungle - Inicio',
-        data: { description: 'Descubre la Amazonía: su fauna increíble, plantas medicinales ancestrales y comunidades originarias.' },
+        data: { description: 'Enciclopedia visual, abierta y colaborativa sobre la Amazonía: fauna, flora medicinal, pueblos indígenas, reservas naturales, conservación y recursos audiovisuales.' },
         loadComponent: () => import('./home/home').then(m => m.HomeComponent)
     },
     {
@@ -13,7 +12,7 @@ export const routes: Routes = [
     },
     {
         path: 'mision',
-        title: 'Misión - Amazonas Jungle',
+        title: 'Nuestra misión',
         data: { description: 'Conoce la misión del proyecto: una Wikipedia 2.0 colaborativa, open source y sin ánimo de lucro sobre la selva amazónica.' },
         loadComponent: () => import('./features/mision/mision.component').then(m => m.MisionComponent)
     },

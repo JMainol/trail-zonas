@@ -3,17 +3,17 @@
         "TITLE": "Amazonas Jungle",
         "SUBTITLE": "Descubre la fauna más salvaje",
         "DISCOVER_AMAZON": {
-            "TITLE": "El Amazonas no es solo una selva, es un organismo vivo que respira y late.",
-            "TEXT_1": "Imagina un lugar donde la vida no solo existe, sino que se desborda. La Amazonía es mucho más que un bosque: es el <span class=\"hx hx-7\">pulmón del planeta</span> y uno de los grandes motores que mantienen vivo nuestro clima. Cada vez que respiras, parte de ese aire nace aquí, entre millones de árboles que regulan la temperatura de la Tierra y almacenan enormes cantidades de carbono.",
-            "TEXT_2": "Con más de 7 millones de km², este es el mayor <span class=\"hx hx-7\">paraíso natural</span> continuo del planeta. Un territorio donde la biodiversidad alcanza cifras asombrosas: cerca de <span class=\"hx hx-7\">una de cada diez especies conocidas</span> vive en estas tierras. Para entender su magnitud basta un dato sorprendente: en una sola hectárea de selva amazónica pueden encontrarse más especies de árboles que en toda Europa.",
-            "TEXT_3": "El río Amazonas, el más caudaloso del mundo, transporta alrededor del <span class=\"hx hx-7\">20 % del agua dulce que llega a los océanos</span>, conectando selvas, animales y culturas desde hace miles de años. Todo en este ecosistema está unido por un equilibrio tan poderoso como delicado.",
-            "TEXT_4": "Este es un auténtico <span class=\"hx hx-7\">santuario natural</span>. Cada insecto, cada planta medicinal y cada especie aún desconocida guarda secretos que la ciencia moderna sigue intentando comprender. Aquí, la naturaleza no se muestra: se manifiesta.",
-            "TEXT_5": "Caminar por la selva es encontrarse con la <span class=\"hx hx-7\">naturaleza virgen</span> en su estado más puro. Desde el rugido del jaguar hasta el susurro de los ríos, desde las copas de los árboles hasta el suelo que late bajo los pies, todo recuerda una verdad esencial: no estamos separados de la naturaleza, somos parte de ella.",
-            "TEXT_6": "Proteger el Amazonas es proteger el equilibrio del planeta. Y también, nuestro propio <span class=\"hx hx-7\">futuro</span>."
+            "TITLE": "La Amazonía no es solo una selva: es un organismo vivo que respira y late.",
+            "TEXT_1": "Imagina un lugar donde la vida no solo existe, sino que se desborda. La Amazonía es mucho más que un bosque: es el <span class=\"hx hx-7\">gran regulador climático</span> de Sudamérica y uno de los motores que mantienen estable el clima del planeta. Sus cerca de 400.000 millones de árboles liberan vapor de agua, generan lluvias a miles de kilómetros y almacenan una cantidad colosal de carbono.",
+            "TEXT_2": "Con más de siete millones de kilómetros cuadrados, es el mayor <span class=\"hx hx-7\">bosque tropical</span> continuo de la Tierra. En él la biodiversidad alcanza cifras asombrosas: alrededor de <span class=\"hx hx-7\">una de cada diez especies conocidas</span> vive en esta región. Un solo dato basta para medir su riqueza: en una hectárea de selva amazónica pueden convivir más especies de árboles que en toda Europa.",
+            "TEXT_3": "El río Amazonas, el más caudaloso del mundo, aporta cerca del <span class=\"hx hx-7\">20 % del agua dulce que llega a los océanos</span>. Desde hace milenios conecta selvas, animales y culturas, y sostiene un equilibrio tan poderoso como delicado.",
+            "TEXT_4": "Es un auténtico <span class=\"hx hx-7\">santuario natural</span>. Cada insecto, cada planta medicinal y cada especie aún por describir guarda secretos que la ciencia apenas empieza a comprender. Aquí la naturaleza no se exhibe: se manifiesta.",
+            "TEXT_5": "Adentrarse en la selva es encontrarse con la <span class=\"hx hx-7\">naturaleza primaria</span> en su estado más puro. Del rugido del jaguar al murmullo de los ríos, de las copas de los árboles al suelo que bulle de vida bajo los pies, todo recuerda una verdad esencial: no estamos separados de la naturaleza; formamos parte de ella.",
+            "TEXT_6": "Proteger la Amazonía es proteger el equilibrio del planeta y, con él, nuestro propio <span class=\"hx hx-7\">futuro</span>."
         },
         "SCROLL": "DESPLAZAR",
         "BACK_TO_TOP": "SUBIR",
-        "MARQUEE": "Buscamos colaboradores para este proyecto open source: desarrolladores con IA, diseñadores, expertos en SEO, biólogos, antropólogos, aventureros...."
+        "MARQUEE": "Buscamos colaboradores para este proyecto de código abierto: desarrolladores, diseñadores, especialistas en SEO, biólogos, antropólogos, fotógrafos y exploradores."
     },
     "BRAND": {
         "NAME": "SELVA AMAZONAS 2.0"
@@ -46,7 +46,7 @@
         "CULTURE_SOCIETY": "Cultura",
         "ANCESTRAL_KNOWLEDGE": "Saber Ancestral",
         "CHALLENGES": "Desafíos",
-        "GEOGRAPHY": "Reserva",
+        "GEOGRAPHY": "Reservas",
         "MAP": "Mapa",
         "MANU": "Parque Nacional del Manu",
         "YASUNI": "Parque Nacional Yasuní",
@@ -73,12 +73,13 @@
         "BOOKS": "Libros",
         "DOCUMENTARIES": "Documentales",
         "MOVIES": "Películas",
-        "RESEARCH": "Trabajos de investigación",
+        "RESEARCH": "Investigación y proyectos",
         "EXPLORATION": "Exploración",
         "HISTORY": "Historia",
         "SURVIVAL": "Supervivencia",
         "CONTACT": "Contacto",
-        "CAPTION_BY": "de"
+        "CAPTION_BY": "de",
+        "RESOURCES_ALL": "Todos los recursos"
     },
     "RESERVES_MAP": {
         "TITLE": "Amazonas",
@@ -88,26 +89,26 @@
         "SLIDER": {
             "TITLE": "Mamíferos Terrestres Amazónicos",
             "JAGUAR": {
-                "DESCRIPTION": "El depredador supremo del Amazonas, el jaguar es el felino más grande de América y el tercero del mundo. Con su distintivo pelaje dorado decorado con rosetas negras, este cazador nocturno domina su territorio con mordidas poderosas capaces de perforar cráneos y caparazones. Excelente nadador, caza tanto en tierra como en agua, siendo fundamental para el equilibrio del ecosistema amazónico.",
+                "DESCRIPTION": "Superdepredador de la Amazonía, el jaguar es el mayor felino de América y el tercero del mundo, solo por detrás del tigre y el león. Su pelaje dorado, salpicado de rosetas negras, envuelve a un cazador sigiloso cuya mordida es capaz de perforar cráneos y caparazones. Excelente nadador, caza tanto en tierra como en el agua y resulta fundamental para el equilibrio del ecosistema.",
                 "WEIGHT": "96 kg"
             },
             "TAPIR": {
-                "DESCRIPTION": "El jardinero del bosque, el tapir brasileño es uno de los mamíferos herbívoros más grandes de Sudamérica. Con su distintiva trompa flexible y cuerpo robusto, este pariente lejano de los rinocerontes y caballos dispersa semillas a través del bosque, siendo crucial para la regeneración forestal. Animal tímido y principalmente nocturno, prefiere áreas cercanas al agua donde puede sumergirse para escapar de depredadores.",
+                "DESCRIPTION": "Conocido como el «jardinero del bosque», el tapir amazónico es el mayor mamífero terrestre de Sudamérica. Su trompa flexible y su cuerpo robusto delatan su parentesco lejano con caballos y rinocerontes. Dispersa las semillas de innumerables árboles, por lo que es clave para la regeneración de la selva. Tímido y de hábitos sobre todo nocturnos, prefiere las zonas cercanas al agua, donde se sumerge para escapar de los depredadores.",
                 "WEIGHT": "250 kg"
             },
             "PECARI": {
-                "DESCRIPTION": "El arquitecto social de la selva, el pecarí labiado vive en manadas de hasta 300 individuos que se desplazan ruidosamente por el bosque. Reconocible por su característico labio blanco, este omnívoro juega un rol esencial en la dispersión de semillas y el control de invertebrados. Sus grandes grupos pueden modificar significativamente el sotobosque, creando claros que benefician a otras especies.",
+                "DESCRIPTION": "El pecarí labiado vive en manadas que pueden superar los 300 individuos y que recorren el bosque de forma ruidosa y coordinada. Reconocible por la mancha blanca de su mandíbula, este omnívoro dispersa semillas, controla poblaciones de invertebrados y, al remover el suelo, abre claros en el sotobosque que benefician a otras especies.",
                 "WEIGHT": "40 kg"
             }
         },
         "JAGUAR": {
             "TITLE": "Jaguar",
             "SCI": "Panthera onca",
-            "POEM": "\"Ojos de obsidiana que ven en la oscuridad, un aliento dorado que recorre la espesura, el latido indomable del corazón de la selva.\"",
-            "BODY_1": "El <strong>Panthera onca</strong>, soberano absoluto de las sombras amazónicas, es el felino más grande del continente americano. Su pelaje, una obra maestra de camuflaje con rosetas que imitan el juego de luces y sombras del bosque primario, envuelve un cuerpo de pura potencia y agilidad.",
-            "BODY_2": "Como depredador alfa, el jaguar cumple un rol vital en la regulación de las poblaciones de otras especies, manteniendo el equilibrio de la biodiversidad. Su mordida, la más fuerte entre todos los grandes felinos, es capaz de perforar incluso los caparazones más resistentes.",
-            "BODY_3": "A diferencia de otros felinos, el jaguar es un nadador excepcional que patrulla las riberas de los ríos en busca de caimanes y capibaras. Su presencia es un indicativo de la salud del ecosistema; donde el jaguar ruge, la selva palpita con fuerza ancestral.",
-            "BODY_4": "En la cosmovisión de los pueblos amazónicos, el jaguar es un guardián de la sabiduría y el poder nocturno. Es el espíritu que protege los secretos de la tierra, moviéndose con la misma elegancia y silencio que el tiempo mismo a través de la Alfombra Esmeralda.",
+            "POEM": "«Ojos de obsidiana que ven en la oscuridad, un aliento dorado que recorre la espesura: el latido indomable del corazón de la selva.»",
+            "BODY_1": "<strong>Panthera onca</strong>, el jaguar, es el soberano de las sombras amazónicas y el mayor felino del continente americano. Su pelaje, una obra maestra del camuflaje, dibuja rosetas que imitan el juego de luces y sombras del bosque primario y envuelve un cuerpo compacto, de pura potencia y agilidad.",
+            "BODY_2": "Como superdepredador, el jaguar regula las poblaciones de sus presas y contribuye así a mantener el equilibrio de toda la cadena trófica. En proporción a su tamaño, su mordida es la más potente de los grandes felinos: le permite atravesar el cráneo de sus presas e incluso el caparazón de las tortugas.",
+            "BODY_3": "A diferencia de la mayoría de los felinos, el jaguar es un nadador excepcional que patrulla las riberas en busca de caimanes, capibaras y peces. Su presencia es un indicador de la buena salud del ecosistema: allí donde el jaguar ruge, la selva conserva intacta su fuerza.",
+            "BODY_4": "En la cosmovisión de numerosos pueblos amazónicos, el jaguar es guardián de la sabiduría y del poder nocturno, y en él se transforman a menudo los chamanes. Es el espíritu que custodia los secretos de la tierra y se desliza por el bosque con la misma elegancia y el mismo silencio con que transcurre el tiempo.",
             "VIDEO_TITLE": "Video de la Especie",
             "SOUND_TITLE": "Rugido del Amazonas",
             "MAP_TITLE": "Territorio de Caza",
@@ -124,11 +125,11 @@
         "TAPIR": {
             "TITLE": "Tapir Brasileño",
             "SCI": "Tapirus terrestris",
-            "POEM": "\"Un rastro de vida en el lodo fértil, una trompa que acaricia la hoja verde, el paso tranquilo que siembra el bosque eterno.\"",
-            "BODY_1": "El <strong>Tapirus terrestris</strong>, cariñosamente conocido como el \"jardinero de la selva\", es el mamífero terrestre más grande de Sudamérica. Con su característica trompa moscilar, un apéndice flexible que utiliza para alcanzar hojas frescas y frutos, el tapir es un pariente lejano de los rinocerontes y los caballos.",
-            "BODY_2": "Su rol en el ecosistema es insustituible: al consumir una vasta diversidad de frutos, dispersa semillas a través de grandes distancias, garantizando la regeneración y la vitalidad del bosque. Es un arquitecto silencioso que planta el futuro de la selva con cada paso.",
-            "BODY_3": "De hábitos principalmente crepusculares y nocturnos, el tapir es un animal tímido que busca la frescura del agua, donde es un excelente nadador y buceador. Su piel gruesa y su robusta contextura le permiten moverse a través de la densa vegetación con sorprendente agilidad.",
-            "BODY_4": "Para los guardianes de la selva, el tapir simboliza la perseverancia y la conexión con la tierra profunda. Su presencia es un recordatorio de la importancia de los procesos lentos y constantes que sostienen la vida en el corazón del Amazonas, lejos del bullicio del dosel superior.",
+            "POEM": "«Un rastro de vida en el lodo fértil, una trompa que acaricia la hoja verde: el paso tranquilo que siembra el bosque eterno.»",
+            "BODY_1": "<strong>Tapirus terrestris</strong>, conocido con cariño como el «jardinero de la selva», es el mayor mamífero terrestre de Sudamérica. Su característica probóscide, una trompa flexible formada por la nariz y el labio superior, le permite alcanzar hojas tiernas y frutos. Pertenece al orden de los perisodáctilos, el mismo que reúne a caballos y rinocerontes.",
+            "BODY_2": "Su papel en el ecosistema es insustituible: al alimentarse de una enorme variedad de frutos, dispersa sus semillas a grandes distancias y favorece la regeneración y la diversidad del bosque. Es un arquitecto silencioso que siembra el futuro de la selva a cada paso.",
+            "BODY_3": "De hábitos principalmente crepusculares y nocturnos, el tapir es un animal tímido que busca la frescura del agua, donde se desenvuelve como un excelente nadador y buceador. Su piel gruesa y su complexión robusta le permiten abrirse paso entre la vegetación más densa con sorprendente agilidad.",
+            "BODY_4": "Para muchos pueblos de la selva, el tapir simboliza la perseverancia y el vínculo con la tierra. Su presencia recuerda la importancia de los procesos lentos y constantes que sostienen la vida en el corazón de la Amazonía, lejos del bullicio del dosel.",
             "VIDEO_TITLE": "Tapir Amazónico | Documental de Animales",
             "SOUND_TITLE": "Susurros de la Ribera",
             "MAP_TITLE": "Senda del Jardinero",
@@ -153,12 +154,12 @@
         "PECARI": {
             "TITLE": "Pecarí Labiado",
             "SCI": "Tayassu pecari",
-            "POEM": "\"Un estruendo de pezuñas en la hojarasca, una marea de vida que fluye entre los troncos, el pulso colectivo de la selva en movimiento.\"",
-            "BODY_1": "El <strong>Tayassu pecari</strong>, o pecarí labiado, es el arquitecto social de la selva amazónica. Estos parientes de los cerdos, reconocibles por su pelaje oscuro y su característico labio blanco, viven en manadas masivas que pueden superar los 300 individuos, creando una fuerza colectiva que modela el paisaje forestal.",
-            "BODY_2": "Su movimiento a través del bosque es un evento sísmico de biodiversidad: su pisoteo y búsqueda de alimento en el suelo abren claros en el sotobosque, permitiendo que la luz llegue a nuevas plántulas y regulando las poblaciones de invertebrados y pequeños vertebrados.",
-            "BODY_3": "Dotados de un fuerte sentido de la jerarquía y la comunicación, los pecaríes utilizan señales táctiles y olfativas para mantener la cohesión del grupo. Son animales valientes que, en conjunto, pueden enfrentarse incluso a grandes depredadores como el jaguar para proteger a sus crías.",
-            "BODY_4": "En la ecología del Amazonas, el pecarí representa la fuerza del colectivo. Su presencia es vital para mantener la estructura y la composición del bosque primario, recordándonos que incluso los animales más pequeños, cuando actúan en armonía, pueden transformar el mundo que habitan.",
-            "VIDEO_TITLE": "El libro rojo, Especies amenazadas - Jabalí de labios blancos",
+            "POEM": "«Un estruendo de pezuñas sobre la hojarasca, una marea de vida que fluye entre los troncos: el pulso colectivo de la selva en movimiento.»",
+            "BODY_1": "<strong>Tayassu pecari</strong>, el pecarí labiado, es el gran arquitecto social de la selva amazónica. Emparentado de lejos con los cerdos, se reconoce por su pelaje oscuro y la característica mancha blanca de la mandíbula. Vive en manadas que pueden superar los 300 individuos y que, en conjunto, modelan el paisaje forestal.",
+            "BODY_2": "El paso de una manada por el bosque es un auténtico acontecimiento ecológico: al pisotear y remover el suelo en busca de alimento, abren claros en el sotobosque que permiten que la luz llegue a nuevas plántulas, y regulan las poblaciones de invertebrados y pequeños vertebrados.",
+            "BODY_3": "Dotados de una marcada jerarquía y de un complejo sistema de comunicación, los pecaríes recurren a señales sonoras, táctiles y olfativas para mantener la cohesión del grupo. Son animales valientes que, unidos, llegan a hacer frente a grandes depredadores como el jaguar para proteger a sus crías.",
+            "BODY_4": "En la ecología amazónica, el pecarí representa la fuerza de lo colectivo. Su presencia es vital para mantener la estructura y la composición del bosque primario, y nos recuerda que la cooperación puede transformar por completo el mundo que habitamos.",
+            "VIDEO_TITLE": "El libro rojo de las especies amenazadas: el pecarí labiado",
             "SOUND_TITLE": "Eco de la Manada",
             "MAP_TITLE": "Rutas Migratorias",
             "MAP_LEGEND_TITLE": "Presencia del Pecarí",
@@ -166,7 +167,7 @@
             "MAP_MEDIUM": "Zonas de Forrajeo",
             "MAP_TYPE": "Bosque Tropical Primario",
             "TABS": {
-                "VIDEO": "VIDEO:",
+                "VIDEO": "Video",
                 "SOUND": "Sonido",
                 "MAP": "Mapa"
             }
@@ -176,11 +177,11 @@
         "TITLE": "Aves Amazónicas",
         "TOUCAN": "Tucán Vitelado",
         "TOUCAN_SCI": "Ramphastos vitellinus",
-        "TOUCAN_BODY_1": "El <strong>Ramphastos vitellinus</strong>, joya del dosel amazónico, destaca por su garganta de intenso amarillo vitelino y la base azulada de su pico. Este arquitecto de la selva desempeña un rol crucial como eficiente dispersor de semillas, tejiendo la biodiversidad con cada vuelo en el dosel superior.",
-        "TOUCAN_BODY_2": "Habitante de las tierras bajas de la cuenca del Amazonas, su vocalización característica atraviesa la espesura, marcando el ritmo de la mañana. Su estructura ósea ligera y su pico, aunque masivo, es sorprendentemente liviano, permitiéndole alcanzar frutos en las puntas más finas de las ramas.",
-        "TOUCAN_BODY_3": "Como emblema viviente, el tucán trasciende su rol biológico para convertirse en el símbolo por excelencia de la Amazonía. Esta vasta cuenca es el santuario definitivo de la familia <strong>Ramphastidae</strong>, albergando la mayor diversidad de especies de tucanes en el planeta.",
-        "TOUCAN_BODY_4": "Su vuelo ondulante, una coreografía de altibajos sobre el océano verde, guía la mirada hacia los secretos de la selva. Su presencia es un termómetro de la salud del bosque, una nota vibrante en el pentagrama de la vida que insufla aliento a la inmensa alfombra esmeralda.",
-        "TOUCAN_QUOTE": "\"Su pico robusto, herramienta maestra en la dispersión de semillas, resuena en la quietud de la mañana amazónica, un eco vibrante en la sinfonía de la selva.\"",
+        "TOUCAN_BODY_1": "<strong>Ramphastos vitellinus</strong>, el tucán vitelado, es una de las joyas del dosel amazónico. Destaca por su garganta de un amarillo intenso, del color de la yema de huevo, y por la base azulada de su pico. Desempeña un papel crucial como dispersor de semillas: con cada vuelo entre las copas, contribuye a tejer la biodiversidad del bosque.",
+        "TOUCAN_BODY_2": "Habita las tierras bajas de la cuenca amazónica, donde su canto característico atraviesa la espesura y marca el ritmo de la mañana. Su pico, aunque de gran tamaño, es sorprendentemente ligero gracias a una estructura interna de queratina y hueso esponjoso, lo que le permite alcanzar frutos en las ramas más finas.",
+        "TOUCAN_BODY_3": "Más allá de su función biológica, el tucán se ha convertido en el símbolo por excelencia de la Amazonía. Esta inmensa cuenca es el principal refugio de la familia <strong>Ramphastidae</strong> y alberga la mayor diversidad de tucanes y arasaríes del planeta.",
+        "TOUCAN_BODY_4": "Su vuelo ondulante, una coreografía de altibajos sobre el océano verde, guía la mirada hacia los secretos de la selva. Su presencia actúa como termómetro de la salud del bosque: una nota vibrante en la partitura de la vida amazónica.",
+        "TOUCAN_QUOTE": "«Su pico robusto, herramienta maestra en la dispersión de semillas, resuena en la quietud de la mañana amazónica como un eco vibrante en la sinfonía de la selva.»",
         "TOUCAN_VIDEO_TITLE": "Video de la Especie",
         "TOUCAN_SOUND_TITLE": "Canto Ave",
         "TOUCAN_MAP_TITLE": "Distribución Amazónica",
@@ -190,13 +191,13 @@
         "TOUCAN_MAP_TYPE": "Bosque Tropical / Ríos",
         "COTINGA": "Cotinga de Lentejuelas",
         "COTINGA_SCI": "Cotinga cayana",
-        "COTINGA_BODY_1": "<strong>El Cotinga de Lentejuelas</strong> es, para muchos ornitólogos y exploradores, la máxima expresión estética de la cuenca amazónica. Este paseriforme destaca por un plumaje de un azul turquesa tan vibrante que parece emitir una luminiscencia propia entre la penumbra del bosque. Lo que percibimos como color es, en realidad, un prodigio de la biofísica: el azul en sus plumas no proviene de pigmentos, sino de una coloración estructural. Las microestructuras de las plumas refractan la luz de tal manera que solo el espectro azul regresa a nuestros ojos, creando un efecto visual de \"joya\" que contrasta de forma dramática con el denso y eterno verde de la selva.",
-        "COTINGA_BODY_2": "Habitante silencioso de los estratos más altos del bosque, el cotinga desempeña un papel ecológico fundamental como \"jardinero\" del Amazonas. Al ser una especie eminentemente frugívora, se alimenta de una vasta variedad de frutos silvestres, cuyas semillas dispersa a grandes distancias tras su paso por el tracto digestivo. Esta relación simbiótica asegura la regeneración de especies botánicas que, de otro modo, quedarían confinadas a la sombra de sus progenitores. Así, la belleza del ave no es un mero adorno, sino el motor de una ingeniería natural que mantiene la compleja arquitectura del ecosistema.",
-        "COTINGA_BODY_3": "A diferencia de otras aves ruidosas como los guacamayos, el cotinga de lentejuelas es un maestro de la discreción y el misterio. Carece de un canto complejo, comunicándose a menudo mediante sutiles sonidos mecánicos producidos por sus alas durante el vuelo.",
-        "COTINGA_QUOTE": "\"Su presencia es un recordatorio de que la naturaleza no siempre necesita gritar para imponer su majestuosidad.\"",
-        "COTINGA_BODY_4": "Esta timidez natural lo convierte en un tesoro difícil de hallar, una suerte de espíritu etéreo que prefiere la seguridad del dosel, donde el sol golpea con más fuerza y permite que su plumaje cobalto brille con toda su intensidad. Su presencia es un recordatorio de que la naturaleza no siempre necesita gritar para imponer su majestuosidad.",
-        "COTINGA_BODY_5": "Contemplar a un macho posado en la cima de un árbol emergente, con su garganta de color púrpura profundo resaltando sobre el turquesa, es asistir a un momento de trascendencia biológica. Es la encarnación de la fragilidad y la resiliencia; un fragmento de cielo que ha descendido para vivir entre las hojas. En su figura se resume la historia evolutiva de millones de años, donde la selección ha esculpido formas y tonalidades que desafían la imaginación humana, recordándonos que la vida siempre encuentra una forma de celebrar su propia existencia a través del arte puro.",
-        "COTINGA_BODY_6": "Sin embargo, la persistencia de este destello azul depende enteramente de la integridad de su hogar. La fragmentación del hábitat y la pérdida de los bosques primarios amenazan con apagar estas \"lentejuelas\" de las copas de los árboles. Proteger al cotinga es, en esencia, preservar la paleta cromática de una selva que funciona como el pulmón y el alma de nuestro planeta. Cada vez que un cotinga alza el vuelo, el Amazonas nos envía un mensaje de esperanza envuelto en plumas de color zafiro, recordándonos nuestra responsabilidad de mantener viva la sinfonía visual de la Tierra.",
+        "COTINGA_BODY_1": "<strong>La cotinga de lentejuelas</strong> es, para muchos ornitólogos y exploradores, la máxima expresión estética de la cuenca amazónica. Este paseriforme luce un plumaje de un azul turquesa tan intenso que parece emitir luz propia en la penumbra del bosque. Lo que percibimos como color es, en realidad, un prodigio de la física: el azul no procede de pigmentos, sino de una coloración estructural. Las microestructuras de las plumas dispersan la luz de tal modo que solo las longitudes de onda azules llegan a nuestros ojos, lo que crea un efecto de joya que contrasta de forma espectacular con el verde de la selva.",
+        "COTINGA_BODY_2": "Habitante discreto de los estratos más altos del bosque, la cotinga cumple una función ecológica fundamental como «jardinera» de la Amazonía. Al ser una especie eminentemente frugívora, consume una gran variedad de frutos silvestres y dispersa sus semillas a gran distancia del árbol de origen. Esta relación mutualista garantiza la regeneración de especies vegetales que, de otro modo, quedarían confinadas a la sombra de sus progenitoras. Su belleza, por tanto, no es un mero adorno: es parte del engranaje natural que sostiene la compleja arquitectura del ecosistema.",
+        "COTINGA_BODY_3": "A diferencia de aves bulliciosas como los guacamayos, la cotinga de lentejuelas es una maestra de la discreción. Carece de un canto elaborado y se comunica a menudo mediante sutiles sonidos mecánicos que producen sus alas durante el vuelo.",
+        "COTINGA_QUOTE": "«Su presencia nos recuerda que la naturaleza no siempre necesita alzar la voz para imponer su majestuosidad.»",
+        "COTINGA_BODY_4": "Esa timidez natural la convierte en un tesoro difícil de observar, una suerte de espíritu etéreo que prefiere la seguridad del dosel, donde el sol incide con más fuerza y su plumaje turquesa brilla con toda su intensidad.",
+        "COTINGA_BODY_5": "Contemplar a un macho posado en la copa de un árbol emergente, con su garganta de un púrpura profundo resaltando sobre el turquesa, es asistir a un pequeño milagro biológico. Encarna a la vez la fragilidad y la resiliencia: un fragmento de cielo que ha descendido para vivir entre las hojas. En su figura se resume una historia evolutiva de millones de años, en la que la selección ha esculpido formas y colores que desafían la imaginación humana.",
+        "COTINGA_BODY_6": "Sin embargo, la persistencia de este destello azul depende por completo de la integridad de su hogar. La fragmentación del hábitat y la pérdida de bosque primario amenazan con apagar estas «lentejuelas» de las copas de los árboles. Proteger a la cotinga es, en esencia, preservar la paleta cromática de una selva de la que depende el equilibrio del planeta. Cada vez que una cotinga alza el vuelo, la Amazonía nos envía un mensaje de esperanza envuelto en plumas de zafiro y nos recuerda nuestra responsabilidad de mantener viva esta sinfonía visual.",
         "COTINGA_VIDEO_TITLE": "Video de la Especie",
         "COTINGA_SOUND_TITLE": "Canto Ave",
         "COTINGA_MAP_TITLE": "Distribución Amazónica",
@@ -206,12 +207,12 @@
         "COTINGA_MAP_TYPE": "Bosque Tropical / Ríos",
         "TANGARA": "Tangara Paraíso",
         "TANGARA_SCI": "Tangara chilensis",
-        "TANGARA_BODY_1": "El <strong>Tangara Paraíso (Tangara chilensis)</strong> es, sin duda, una de las joyas vivientes más deslumbrantes de la cuenca amazónica. Miembro de la familia Thraupidae, esta pequeña ave de unos trece centímetros de longitud parece desafiar las leyes de la sobriedad natural. Su plumaje es un lienzo vibrante donde convergen el verde manzana fluorescente de su rostro, el azul eléctrico de su pecho y un rojo carmesí profundo en la rabadilla, creando un contraste que parece más una expresión artística que un producto de la evolución.",
-        "TANGARA_BODY_2": "Habitante de los estratos más altos del bosque, este pájaro transcurre su vida en el dosel forestal, ese techo verde y denso donde la luz del sol golpea con mayor intensidad. Es allí, a menudo a más de treinta metros de altura, donde el Tangara Paraíso cumple su función ecológica como un activo dispersor de semillas. Su dieta es predominantemente frugívora, aunque no desprecia pequeños insectos que captura con agilidad entre el follaje, moviéndose con una energía frenética que simboliza la vitalidad inagotable de la selva tropical.",
-        "TANGARA_BODY_3": "Desde una perspectiva científica, su coloración no es solo un capricho estético, sino un prodigio de la biofísica estructural. A diferencia de otros pigmentos que absorben y reflejan la luz, los tonos azules de su pecho se deben a la microestructura de sus plumas, que dispersan la luz solar para crear una iridiscencia casi irreal.",
-        "TANGARA_BODY_4": "Su comportamiento social es igualmente fascinante. El Tangara Paraíso es un ave gregaria que entiende la seguridad en la colectividad; al integrarse en grupos diversos, optimiza la búsqueda de alimento y minimiza el riesgo ante depredadores. Sus llamados son agudos y rápidos, una suerte de lenguaje cifrado que mantiene al grupo cohesionado mientras navegan por el océano de hojas. En este sentido, la especie no es solo un habitante del Amazonas, sino una nota musical necesaria en la compleja sinfonía de biodiversidad que define a esta región.",
-        "TANGARA_BODY_5": "Finalmente, el Tangara Paraíso actúa como un recordatorio silencioso de la fragilidad de su ecosistema. Aunque su belleza invita a la contemplación poética, su supervivencia depende estrictamente de la integridad de las selvas primarias y secundarias que habita. Proteger su hogar es asegurar que las futuras generaciones aún puedan maravillarse con esta \"pincelada de paraíso\".",
-        "TANGARA_QUOTE": "\"Una pincelada de paraíso que, tras millones de años de adaptación, continúa surcando los cielos de la mayor reserva de vida del planeta.\"",
+        "TANGARA_BODY_1": "<strong>La tangara paraíso (Tangara chilensis)</strong> es, sin duda, una de las joyas vivientes más deslumbrantes de la cuenca amazónica. Miembro de la familia Thraupidae, esta pequeña ave de unos trece centímetros parece desafiar la sobriedad de la naturaleza. Su plumaje es un lienzo vibrante en el que conviven el verde manzana de la cabeza, el azul turquesa y violeta del pecho y un rojo intenso en la rabadilla, en un contraste que parece más propio de una obra de arte que de la evolución.",
+        "TANGARA_BODY_2": "Pasa la mayor parte de su vida en el dosel forestal, ese techo verde y denso donde la luz solar incide con mayor intensidad. Allí, a menudo a más de treinta metros de altura, cumple su función ecológica como activa dispersora de semillas. Su dieta es predominantemente frugívora, aunque también captura pequeños insectos entre el follaje, con una energía incesante que refleja la vitalidad de la selva tropical.",
+        "TANGARA_BODY_3": "Desde el punto de vista científico, su coloración no es un simple capricho estético, sino un prodigio de la física de la luz. A diferencia de los pigmentos, que absorben y reflejan determinadas longitudes de onda, los tonos azules de su pecho se deben a la microestructura de las plumas, que dispersa la luz solar y genera una iridiscencia casi irreal.",
+        "TANGARA_BODY_4": "Su comportamiento social resulta igualmente fascinante. Es un ave gregaria que se integra en bandadas mixtas con otras especies, lo que le permite optimizar la búsqueda de alimento y reducir el riesgo de depredación. Sus reclamos, agudos y rápidos, funcionan como un lenguaje cifrado que mantiene unido al grupo mientras recorre el océano de hojas. En este sentido, la especie es una nota necesaria en la compleja sinfonía de biodiversidad que define a la región.",
+        "TANGARA_BODY_5": "Por último, la tangara paraíso es un recordatorio silencioso de la fragilidad de su ecosistema. Aunque su belleza invita a la contemplación poética, su supervivencia depende de la integridad de las selvas primarias y secundarias que habita. Proteger su hogar es garantizar que las futuras generaciones puedan seguir maravillándose con esta «pincelada de paraíso».",
+        "TANGARA_QUOTE": "«Una pincelada de paraíso que, tras millones de años de evolución, sigue surcando los cielos de la mayor reserva de vida del planeta.»",
         "TANGARA_VIDEO_TITLE": "Video de la Especie",
         "TANGARA_SOUND_TITLE": "Canto Ave",
         "TANGARA_MAP_TITLE": "Distribución Amazónica",
@@ -233,15 +234,15 @@
             "TITLE": "Especies de Aves",
             "WINGSPAN_LABEL": "Envergadura",
             "TOUCAN": {
-                "DESCRIPTION": "El Tucán Vitelado es un emblema viviente de la Amazonía, destacando por su garganta amarillo intenso y la base azulada de su pico. Este 'arquitecto de la selva' es un eficiente dispersor de semillas que habita el dosel superior, donde su vocalización característica marca el ritmo de la mañana tropical.",
+                "DESCRIPTION": "El tucán vitelado es un emblema viviente de la Amazonía, inconfundible por su garganta de un amarillo intenso y la base azulada de su pico. Eficaz dispersor de semillas, habita el dosel superior, donde su canto característico marca el ritmo de la mañana tropical.",
                 "WINGSPAN": "100 cm"
             },
             "COTINGA": {
-                "DESCRIPTION": "El Cotinga de Lentejuelas es la máxima expresión estética del Amazonas. Su plumaje azul turquesa vibrante posee una luminiscencia propia gracias a su coloración estructural. Maestro del misterio y 'jardinero' del bosque, dispersa semillas silenciosamente desde lo más alto del dosel.",
+                "DESCRIPTION": "La cotinga de lentejuelas es la máxima expresión estética de la Amazonía. Su plumaje turquesa parece brillar con luz propia gracias a la coloración estructural de sus plumas. Discreta y esquiva, actúa como «jardinera» del bosque al dispersar semillas desde lo más alto del dosel.",
                 "WINGSPAN": "35 cm"
             },
             "TANGARA": {
-                "DESCRIPTION": "La Tangara Paraíso es una de las joyas vivientes más deslumbrantes de la cuenca. Con su rostro verde manzana y pecho azul eléctrico, este pequeño pájaro gregario desafía la sobriedad natural mientras surca el dosel en grupos mixtos, asegurando la dispersión vital de las semillas.",
+                "DESCRIPTION": "La tangara paraíso es una de las joyas vivientes más deslumbrantes de la cuenca. Con su cabeza verde manzana y su pecho azul turquesa, esta pequeña ave gregaria recorre el dosel en bandadas mixtas y contribuye de forma decisiva a la dispersión de semillas.",
                 "WINGSPAN": "22 cm"
             }
         },
@@ -260,32 +261,32 @@
                 "UNA_DE_GATO": {
                     "TITLE": "Uña de Gato",
                     "USAGE": "Inmune",
-                    "DESCRIPTION": "La uña de gato es una liana amazónica que escala hacia el sol mediante espinas en forma de garra. Reconocida por sus alcaloides oxindólicos, actúa como un potente inmunomodulador y antiinflamatorio natural de amplio espectro. Es, en esencia, un escudo biológico que transmuta la vitalidad de la selva en medicina, protegiendo la integridad del organismo con la tenacidad de un guardián ancestral."
+                    "DESCRIPTION": "La uña de gato es una liana amazónica que trepa hacia la luz aferrándose a los árboles con espinas en forma de garra. Sus alcaloides oxindólicos le confieren propiedades inmunomoduladoras y antiinflamatorias reconocidas por la investigación. Para los pueblos de la selva es un escudo natural que protege y fortalece el organismo."
                 },
                 "SANGRE_DE_GRADO": {
                     "TITLE": "Sangre de Grado",
                     "USAGE": "Cura",
-                    "DESCRIPTION": "La sangre de grado es un árbol amazónico que, al ser herido, exhala un denso látex rojizo de asombrosa capacidad regenerativa. Rica en taspina y proantocianidinas, esta resina actúa como un potente cicatrizante y antiséptico natural, sellando tejidos con una barrera protectora instantánea. Es, en esencia, una lágrima escarlata de la selva que transmuta el dolor del árbol en medicina, restaurando la piel."
+                    "DESCRIPTION": "La sangre de grado es un árbol amazónico que, al herirse su corteza, exuda un látex rojo intenso de notable poder cicatrizante. Rica en taspina y proantocianidinas, esta resina actúa como cicatrizante y antiséptico natural y forma sobre la piel una película protectora casi instantánea: una lágrima escarlata de la selva convertida en medicina."
                 },
                 "AYAHUASCA": {
                     "TITLE": "Ayahuasca",
                     "USAGE": "Ritual",
-                    "DESCRIPTION": "La ayahuasca es la \"liana del alma\", planta maestra y eje ritual para la limpieza espiritual y la conexión con el espíritu de la selva. Rica en beta-carbolinas, su farmacología permite una profunda purga y expansión de la conciencia. Es un puente visionario que funde el ser con el pulso de la selva, descorriendo el velo de lo invisible con sabiduría milenaria."
+                    "DESCRIPTION": "La ayahuasca, la «liana del alma», es una planta maestra y eje ritual de la medicina tradicional amazónica. Rica en betacarbolinas, es la base de un brebaje ceremonial empleado para la purga, la introspección y la conexión con el mundo espiritual. Hoy es, además, objeto de una intensa investigación científica."
                 }
             },
             "UNA_DE_GATO": {
                 "TITLE": "Uña de Gato",
-                "BODY_1": "La <strong>Uncaria tomentosa</strong>, conocida como uña de gato, es una liana trepadora de la familia de las rubiáceas originaria de las selvas vírgenes del Perú. Su nombre proviene de las espinas curvadas que crecen a lo largo del tallo y que utiliza para sujetarse a los árboles.",
-                "BODY_2": "Reconocida mundialmente por sus potentes alcaloides oxindólicos, esta planta actúa como un inmunomodulador y antiinflamatorio natural de amplio espectro. Es considerada por las comunidades indígenas como un escudo biológico que protege la integridad del organismo.",
-                "BODY_3": "Desde hace siglos, los Asháninca y otras etnias amazónicas han utilizado la corteza y las raíces para tratar diversas dolencias, desde dolores articulares hasta problemas digestivos. Hoy en día, es una de las plantas medicinales más estudiadas y apreciadas en la fitoterapia moderna.",
-                "BODY_4": "Su presencia en el sotobosque es un recordatorio de la farmacia viviente que es la Amazonía. Cada liana que se eleva hacia el sol es un vínculo entre la tierra y la salud, una promesa de bienestar tejida en la madera de la selva.",
-                "POEM": "\"Sus garras vegetales no hieren, sino que sostienen la vida, transmutando la fuerza de la selva en medicina para el alma y el cuerpo.\"",
-                "VIDEO_TITLE": "¿PARA QUE SIRVE LA UÑA DE GATO? ¿QUE PROPIEDADES TIENE Y CÓMO TOMAR?",
+                "BODY_1": "<strong>Uncaria tomentosa</strong>, conocida como uña de gato, es una liana trepadora de la familia de las rubiáceas que crece en las selvas de la Amazonía, especialmente en Perú. Su nombre procede de las espinas curvas que brotan a lo largo del tallo y con las que se sujeta a los árboles para ascender hacia la luz.",
+                "BODY_2": "Es conocida internacionalmente por sus alcaloides oxindólicos, a los que se atribuyen efectos inmunomoduladores y antiinflamatorios. Las comunidades indígenas la consideran un escudo natural que protege la integridad del organismo.",
+                "BODY_3": "Desde hace siglos, los asháninkas y otros pueblos amazónicos emplean su corteza y sus raíces para tratar dolencias que van desde los dolores articulares hasta los trastornos digestivos. Hoy es una de las plantas medicinales amazónicas más estudiadas y apreciadas por la fitoterapia moderna.",
+                "BODY_4": "Su presencia en el sotobosque recuerda que la Amazonía es una inmensa farmacia viva. Cada liana que se eleva hacia el sol es un vínculo entre la tierra y la salud, una promesa de bienestar tejida en la madera de la selva.",
+                "POEM": "«Sus garras vegetales no hieren: sostienen la vida y transforman la fuerza de la selva en medicina para el cuerpo y el alma.»",
+                "VIDEO_TITLE": "¿Para qué sirve la uña de gato? Propiedades y formas de consumo",
                 "PROPERTIES_TITLE": "Propiedades Medicinales",
                 "PROPERTIES_CARDS": [
                     {
                         "TITLE": "Reducción del dolor en la osteoartritis",
-                        "DESC": "Ayuda a disminuir el dolor articular provocado por el desgaste del cartílago durante el movimiento.",
+                        "DESC": "Contribuye a reducir el dolor articular asociado al desgaste del cartílago durante el movimiento.",
                         "EVIDENCE": "5/5",
                         "SOURCE": "NIH - National Center for Complementary and Integrative Health."
                     },
@@ -297,25 +298,25 @@
                     },
                     {
                         "TITLE": "Alivio de la artritis reumatoide",
-                        "DESC": "Se utiliza como tratamiento complementario para reducir la hinchazón y la rigidez matutina.",
+                        "DESC": "Se emplea como tratamiento complementario para reducir la inflamación y la rigidez matutina.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Journal of Rheumatology."
                     },
                     {
                         "TITLE": "Propiedades antioxidantes y reparación del ADN",
-                        "DESC": "Podría ayudar a las células a recuperarse del daño oxidativo, aunque se necesitan más pruebas en humanos.",
+                        "DESC": "Podría ayudar a las células a recuperarse del daño oxidativo, aunque faltan más ensayos en humanos.",
                         "EVIDENCE": "3/5",
                         "SOURCE": "Phytomedicine Journal."
                     },
                     {
                         "TITLE": "Tratamiento de problemas digestivos (gastritis)",
-                        "DESC": "Uso común para limpiar el tracto digestivo, pero la evidencia clínica es aún limitada.",
+                        "DESC": "De uso tradicional frecuente para aliviar el aparato digestivo, aunque la evidencia clínica todavía es limitada.",
                         "EVIDENCE": "2/5",
                         "SOURCE": "World Journal of Gastroenterology."
                     }
                 ],
-                "PROPERTIES_AMAZON_USE": "Los habitantes locales la consumen principalmente en decocción (té) de la corteza. Se usa como un tónico general para \"limpiar la sangre\", tratar inflamaciones urinarias y como un preventivo contra enfermedades cuando se sienten débiles o agotados.",
-                "PROPERTIES_PHARMA_USE": "Es un éxito de ventas en el mercado de suplementos dietéticos. Se procesa en cápsulas, extractos líquidos y pomadas. Aunque hay patentes sobre sus alcaloides específicos, su uso principal sigue siendo como fitofármaco coadyuvante en terapias antiinflamatorias.",
+                "PROPERTIES_AMAZON_USE": "Los habitantes de la región la consumen principalmente en decocción de la corteza. Se toma como tónico general para «limpiar la sangre», tratar inflamaciones de las vías urinarias y prevenir enfermedades en épocas de debilidad o agotamiento.",
+                "PROPERTIES_PHARMA_USE": "Es uno de los productos más vendidos en el mercado de los complementos alimenticios, en forma de cápsulas, extractos líquidos y pomadas. Aunque existen patentes sobre algunos de sus alcaloides, su uso principal sigue siendo el de fitoterápico coadyuvante en tratamientos antiinflamatorios.",
                 "EVIDENCE_LABEL": "Evidencia:",
                 "SOURCE_LABEL": "Fuente:",
                 "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
@@ -327,17 +328,17 @@
             },
             "SANGRE_DE_GRADO": {
                 "TITLE": "Sangre de Grado",
-                "BODY_1": "El <strong>Croton lechleri</strong>, popularmente conocido como sangre de grado o sangre de drago, es un árbol de la familia de las euforbiáceas que puede alcanzar los 20 metros de altura. Su característica más distintiva es el látex de color rojo intenso que brota de su corteza cuando es herida.",
-                "BODY_2": "Este látex es una joya de la farmacopea amazónica, rico en taspina y proantocianidinas. Su capacidad para acelerar la cicatrización de heridas y actuar como un potente antiséptico natural lo convierte en un elemento indispensable para la salud en la selva.",
-                "BODY_3": "Utilizado tradicionalmente para tratar úlceras, hemorragias y diversas infecciones cutáneas, el látex crea una barrera protectora instantánea sobre la piel, funcionando como una \"venda líquida\". Es, en esencia, una lágrima escarlata que el árbol ofrece para restaurar la vida.",
-                "BODY_4": "La sangre de grado es un símbolo de resiliencia y generosidad de la naturaleza. Al igual que el árbol sana sus propias incisiones, nos enseña que en el corazón de la selva reside el bálsamo para nuestras propias heridas, tanto físicas como espirituales.",
-                "POEM": "\"Una gota carmesí que brota del corazón de la madera, sellando la piel y el destino con la fuerza regeneradora de la tierra.\"",
+                "BODY_1": "<strong>Croton lechleri</strong>, conocido popularmente como sangre de grado o sangre de drago, es un árbol de la familia de las euforbiáceas que puede alcanzar los veinte metros de altura. Su rasgo más distintivo es el látex de color rojo intenso que brota de la corteza cuando esta se hiere.",
+                "BODY_2": "Este látex, rico en taspina y proantocianidinas, es una joya de la farmacopea amazónica. Su capacidad para acelerar la cicatrización y su acción antiséptica lo convierten en un recurso indispensable para la salud en la selva.",
+                "BODY_3": "Utilizado tradicionalmente para tratar úlceras, hemorragias y diversas infecciones cutáneas, el látex forma sobre la piel una barrera protectora casi inmediata que actúa como un «vendaje líquido». Es, en esencia, una lágrima escarlata que el árbol ofrece para restaurar la vida.",
+                "BODY_4": "La sangre de grado es un símbolo de la resiliencia y la generosidad de la naturaleza. Del mismo modo que el árbol sana sus propias heridas, nos recuerda que en el corazón de la selva se encuentra el bálsamo para muchas de las nuestras.",
+                "POEM": "«Una gota carmesí que brota del corazón de la madera y sella la piel con la fuerza regeneradora de la tierra.»",
                 "VIDEO_TITLE": "Las propiedades medicinales de la sangre de grado | Salud Verde",
                 "PROPERTIES_TITLE": "Virtudes Curativas",
                 "PROPERTIES_CARDS": [
                     {
                         "TITLE": "Cicatrización acelerada de heridas",
-                        "DESC": "El alcaloide taspina estimula la migración de fibroblastos para cerrar cortes y quemaduras rápidamente.",
+                        "DESC": "La taspina estimula la migración de fibroblastos y favorece el cierre rápido de cortes y quemaduras.",
                         "EVIDENCE": "5/5",
                         "SOURCE": "Journal of Natural Products."
                     },
@@ -349,25 +350,25 @@
                     },
                     {
                         "TITLE": "Efecto antiviral contra el Herpes",
-                        "DESC": "Aplicada tópicamente, reduce el tiempo de vida de las lesiones por herpes simple.",
+                        "DESC": "Aplicada por vía tópica, acorta la duración de las lesiones causadas por el herpes simple.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Phytomedicine Journal."
                     },
                     {
                         "TITLE": "Protección contra úlceras gástricas",
-                        "DESC": "Forma una película protectora sobre la mucosa del estómago, ayudando a la regeneración.",
+                        "DESC": "Forma una película protectora sobre la mucosa gástrica que favorece su regeneración.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Digestive Diseases and Sciences."
                     },
                     {
                         "TITLE": "Tratamiento de picaduras de insectos",
-                        "DESC": "Neutraliza las toxinas de la picadura y reduce la inflamación y el picor de forma casi inmediata.",
+                        "DESC": "Alivia de forma casi inmediata la inflamación y el picor causados por las picaduras.",
                         "EVIDENCE": "3/5",
                         "SOURCE": "Journal of Ethnopharmacology."
                     }
                 ],
-                "PROPERTIES_AMAZON_USE": "Es el \"primer auxilio\" por excelencia. Los pobladores llevan siempre un frasco con la resina líquida. Se aplica directamente sobre cualquier corte o picadura de insecto; al secarse, forma una costra rojiza que actúa como una venda natural e impermeable.",
-                "PROPERTIES_PHARMA_USE": "Es el ejemplo más exitoso de transición de la selva a la farmacia moderna. El medicamento Crofelemer (Mytesi) es un fármaco aprobado por la FDA extraído directamente de esta planta, utilizado para tratar la diarrea crónica en pacientes bajo tratamiento antirretroviral.",
+                "PROPERTIES_AMAZON_USE": "Es el primer auxilio por excelencia. Muchos habitantes de la selva llevan siempre consigo un frasco de resina, que aplican directamente sobre cortes y picaduras; al secarse, forma una costra rojiza que actúa como un vendaje natural e impermeable.",
+                "PROPERTIES_PHARMA_USE": "Es uno de los ejemplos más logrados del paso de la selva a la farmacia moderna. El crofelemer (comercializado como Mytesi), un fármaco aprobado por la FDA y obtenido de esta planta, se utiliza para tratar la diarrea no infecciosa en pacientes con VIH en tratamiento antirretroviral.",
                 "EVIDENCE_LABEL": "Evidencia:",
                 "SOURCE_LABEL": "Fuente:",
                 "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
@@ -379,47 +380,47 @@
             },
             "AYAHUASCA": {
                 "TITLE": "Ayahuasca",
-                "BODY_1": "La <strong>Banisteriopsis caapi</strong>, conocida como ayahuasca o \"liana del alma\", es la planta maestra por excelencia del Amazonas. Esta liana gigante es la base de un brebaje sagrado que ha sido utilizado durante milenios por los pueblos indígenas para la sanación espiritual y la conexión con el cosmos.",
-                "BODY_2": "Su farmacología es fascinante: rica en beta-carbolinas como la harmina y la tetrahidroharmina, actúa permitiendo que otros compuestos visionarios sean procesados por el organismo. Es, en esencia, la llave que abre las puertas de la percepción y la introspección profunda.",
-                "BODY_3": "Más que un fármaco, la ayahuasca es considerada un ser sintiente, un espíritu guía que facilita la purga de toxinas físicas y emocionales. Las ceremonias dirigidas por los maestros curanderos buscan restaurar el equilibrio entre el ser humano, la naturaleza y lo invisible.",
-                "BODY_4": "Su presencia en la selva estructura el mapa espiritual de la Amazonía. Es un puente viviente que nos recuerda nuestra interconexión con todo lo que respira, un espejo que refleja la inmensidad del universo dentro de nosotros mismos.",
-                "POEM": "\"La cuerda que une el cielo y la tierra, descorriendo el velo de lo invisible para revelar la sinfonía eterna de la selva.\"",
+                "BODY_1": "<strong>Banisteriopsis caapi</strong>, conocida como ayahuasca o «liana del alma», es la planta maestra por excelencia de la Amazonía. Esta gran liana es la base de un brebaje sagrado que numerosos pueblos indígenas preparan desde hace siglos con fines de sanación espiritual y de conexión con el mundo invisible.",
+                "BODY_2": "Su farmacología es fascinante. Rica en betacarbolinas como la harmina y la tetrahidroharmina, inhibe la enzima monoaminooxidasa, lo que permite que el organismo absorba la DMT presente en otras plantas con las que suele combinarse, como la chacruna (<em>Psychotria viridis</em>). De esta combinación nacen sus profundos efectos sobre la percepción y la introspección.",
+                "BODY_3": "Más que una sustancia, la ayahuasca es considerada por sus usuarios tradicionales un ser con espíritu propio, un guía que facilita la purga física y emocional. Las ceremonias, dirigidas por curanderos experimentados, buscan restablecer el equilibrio entre el ser humano, la naturaleza y lo invisible.",
+                "BODY_4": "Su uso estructura buena parte del mapa espiritual de la Amazonía. Es un puente vivo que recuerda nuestra interdependencia con todo lo que respira. Conviene subrayar, no obstante, que su consumo entraña riesgos médicos y psicológicos y debe abordarse siempre con información rigurosa y en contextos seguros.",
+                "POEM": "«La cuerda que une el cielo y la tierra y descorre el velo de lo invisible para revelar la sinfonía eterna de la selva.»",
                 "VIDEO_TITLE": "Documental Ayahuasca, \"La medicina del alma\"",
                 "PROPERTIES_TITLE": "Propiedades Etnobotánicas",
                 "PROPERTIES_CARDS": [
                     {
                         "TITLE": "Tratamiento de la depresión resistente",
-                        "DESC": "Produce una mejora rápida y duradera en los síntomas de depresión que no responden a fármacos convencionales.",
+                        "DESC": "Los estudios preliminares apuntan a una mejora rápida de los síntomas en depresiones resistentes a los tratamientos convencionales.",
                         "EVIDENCE": "5/5",
                         "SOURCE": "Scientific Reports - Nature."
                     },
                     {
                         "TITLE": "Terapia para el Trastorno de Estrés Postraumático (TEPT)",
-                        "DESC": "Facilita el procesamiento de recuerdos traumáticos al permitir una perspectiva emocional distinta.",
+                        "DESC": "Podría facilitar el procesamiento de recuerdos traumáticos al favorecer una perspectiva emocional distinta.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Frontiers in Pharmacology."
                     },
                     {
                         "TITLE": "Recuperación de adicciones (Sustancias)",
-                        "DESC": "Ayuda a reducir el ansia de consumo (craving) en pacientes con dependencia al alcohol o la cocaína.",
+                        "DESC": "Se investiga su capacidad para reducir el deseo de consumo en personas con dependencia del alcohol o la cocaína.",
                         "EVIDENCE": "3/5",
                         "SOURCE": "Current Drug Abuse Reviews."
                     },
                     {
                         "TITLE": "Estimulación de la neuroplasticidad",
-                        "DESC": "Compuestos como la dimetiltriptamina (N,N-DMT) fomentan el crecimiento de nuevas neuronas.",
+                        "DESC": "En estudios de laboratorio, compuestos como la DMT y la harmina han estimulado la formación de nuevas neuronas.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Translational Psychiatry."
                     },
                     {
                         "TITLE": "Regulación emocional y autoconciencia",
-                        "DESC": "Mejora la capacidad de introspección y la aceptación emocional a través de la modificación de redes neuronales.",
+                        "DESC": "Se asocia a una mayor capacidad de introspección y aceptación emocional, vinculada a cambios en la actividad de ciertas redes neuronales.",
                         "EVIDENCE": "4/5",
                         "SOURCE": "Journal of Psychopharmacology."
                     }
                 ],
-                "PROPERTIES_AMAZON_USE": "Para las tribus como los Shipibo o los Asháninka, es una medicina sagrada. No se usa para \"curar\" síntomas aislados, sino para limpiar el espíritu, recibir guía de los ancestros y permitir que el chamán diagnostique la raíz espiritual de una dolencia física.",
-                "PROPERTIES_PHARMA_USE": "Actualmente está en el centro de una revolución psiquiátrica. Varias empresas de biotecnología (como ATAI Life Sciences) están realizando ensayos clínicos para sintetizar sus compuestos y crear medicamentos estandarizados que ofrezcan los beneficios terapéuticos sin necesariamente pasar por la experiencia psicodélica prolongada.",
+                "PROPERTIES_AMAZON_USE": "Para pueblos como los shipibo-konibo o los asháninkas es una medicina sagrada. No se emplea para tratar síntomas aislados, sino para limpiar el espíritu, recibir la guía de los ancestros y permitir que el chamán identifique la raíz espiritual de una dolencia física.",
+                "PROPERTIES_PHARMA_USE": "Hoy se encuentra en el centro de un renovado interés de la psiquiatría. Diversas empresas biotecnológicas realizan ensayos clínicos con sus principios activos con el objetivo de desarrollar fármacos estandarizados que ofrezcan sus posibles beneficios terapéuticos con menos riesgos y sin la experiencia psicodélica prolongada.",
                 "EVIDENCE_LABEL": "Evidencia:",
                 "SOURCE_LABEL": "Fuente:",
                 "AMAZON_USE_LABEL": "Uso actual en el Amazonas",
@@ -436,15 +437,15 @@
         "WAORANI": {
             "TITLE": "Waorani",
             "SUBTITLE": "Tribu Waorani",
-            "DESCRIPTION": "En el corazón indómito del Yasuní, los Waorani se erigen como uno de los últimos bastiones de resistencia cultural. Conocidos por su linaje de maestros cazadores y su lengua única, el Wao Terero, luchan por preservar su equilibrio con la tierra frente a las presiones externas, protegiendo la libertad de sus parientes en aislamiento voluntario.",
+            "DESCRIPTION": "En el corazón del Yasuní, los waorani son uno de los últimos bastiones de resistencia cultural de la Amazonía. Herederos de un linaje de grandes cazadores y hablantes de una lengua única, el wao terero, defienden el equilibrio con su territorio frente a las presiones externas y protegen la libertad de sus parientes en aislamiento voluntario.",
             "REGION": "Yasuní",
             "PAGE": {
                 "HERO_TITLE": "Waorani",
-                "HERO_BODY_1": "En el corazón indómito del <strong>Yasuní</strong>, los <strong>Waorani</strong> se erigen como uno de los últimos bastiones de resistencia cultural en la cuenca amazónica. Aunque la historia oficial los sitúa como el último pueblo contactado del Ecuador tras el complejo encuentro misionero de 1958, su linaje guarda un secreto aún más profundo: la existencia de los Tagaeri y Taromenane, parientes que hasta el día de hoy han decidido permanecer en aislamiento voluntario, protegiendo su libertad en la espesura.",
-                "HERO_BODY_2": "En la penumbra del bosque, los Waorani se desplazan con una agilidad casi espectral, consolidándose como maestros cazadores que dominan el arte del sigilo. Utilizan la cerbatana y el curare para alcanzar con precisión quirúrgica a presas como el mono aullador en lo alto del dosel, mientras que sus lanzas de madera de pambil se reservan para el rastreo en tierra de animales mayores como el <a href=\"/amazonia/animales/mamiferos-terrestres/pecari\" class=\"highlight-link\">pecarí de collar</a>, simbolizando la fuerza de un pueblo que respeta profundamente el espíritu de cada ser que habita su territorio.",
-                "HERO_BODY_3": "Su vestimenta tradicional es una declaración de sencillez y dignidad que desafía la mirada externa. El hombre Waorani viste únicamente el <strong>komi</strong>, un cordón de fibra vegetal atado a la cintura que sujeta su miembro, una prenda que para ellos simboliza madurez, protección y el paso a la vida adulta. En un mundo que hoy los presiona con la explotación petrolera y la deforestación, los Waorani luchan por preservar este estilo de vida, recordándonos que la verdadera riqueza no reside en lo que poseemos, sino en el equilibrio que mantenemos con la tierra que pisamos.",
-                "HERO_BODY_4": "Finalmente, la verdadera esencia de los Waorani reside en su lengua, el <strong>Wao Terero</strong>, un idioma «aislado» sin parientes conocidos en el mundo, que actúa como el cofre de una cosmovisión donde el hombre y la naturaleza son uno solo. Se consideran herederos espirituales del jaguar y el águila harpía, figuras que pueblan sus cantos y relatos.",
-                "HERO_QUOTATION": "\"Herederos espirituales del jaguar y el águila harpía, donde el hombre y la naturaleza son uno solo.\"",
+                "HERO_BODY_1": "En el corazón del <strong>Yasuní</strong>, los <strong>waorani</strong> constituyen uno de los últimos bastiones de resistencia cultural de la cuenca amazónica. Aunque la historia oficial los presenta como el último gran pueblo contactado de Ecuador, tras el complejo encuentro con los misioneros a partir de 1958, su linaje guarda una realidad aún más profunda: la de los tagaeri y los taromenane, grupos emparentados que han decidido permanecer en aislamiento voluntario para proteger su libertad en la espesura.",
+                "HERO_BODY_2": "En la penumbra del bosque, los waorani se desplazan con una agilidad casi espectral; son cazadores consumados que dominan el arte del sigilo. Con la cerbatana y los dardos impregnados de curare alcanzan con precisión a presas como el mono aullador en lo alto del dosel, mientras reservan sus lanzas de madera de chonta para rastrear en tierra animales de mayor tamaño, como el <a href=\"/amazonia/animales/mamiferos-terrestres/pecari\" class=\"highlight-link\">pecarí</a>. Su forma de cazar refleja un profundo respeto por el espíritu de cada ser que habita su territorio.",
+                "HERO_BODY_3": "Su vestimenta tradicional es una declaración de sencillez y dignidad. El hombre waorani vestía únicamente el <strong>komi</strong>, un cordón de fibra vegetal atado a la cintura que, para ellos, simboliza la madurez, la protección y el paso a la vida adulta. Hoy, presionados por la explotación petrolera y la deforestación, los waorani luchan por preservar su modo de vida y nos recuerdan que la verdadera riqueza no reside en lo que poseemos, sino en el equilibrio que mantenemos con la tierra que pisamos.",
+                "HERO_BODY_4": "La esencia más honda de los waorani reside en su lengua, el <strong>wao terero</strong>, considerada una lengua aislada, sin parentesco conocido con ninguna otra. En ella se custodia una cosmovisión en la que el ser humano y la naturaleza forman una unidad. Los waorani se consideran herederos espirituales del jaguar y del águila arpía, figuras que pueblan sus cantos y relatos.",
+                "HERO_QUOTATION": "«Herederos espirituales del jaguar y del águila arpía, en un mundo donde el ser humano y la naturaleza son uno solo.»",
                 "TABS": {
                     "VIDEO": "Video",
                     "INFO": "Características",
@@ -459,23 +460,23 @@
                     "TRAITS": {
                         "LANGUAGE": {
                             "TITLE": "Idioma Único",
-                            "DESC": "Hablan Wao Terero, una lengua aislada que no tiene parentesco con ningún otro idioma del mundo."
+                            "DESC": "Hablan wao terero, una lengua aislada que no guarda parentesco conocido con ningún otro idioma."
                         },
                         "MASTERS": {
                             "TITLE": "Maestros de la Selva",
-                            "DESC": "Poseen un conocimiento botánico y zoológico excepcional, identificando cientos de plantas y animales."
+                            "DESC": "Poseen un conocimiento botánico y zoológico excepcional, capaz de identificar cientos de plantas y animales."
                         },
                         "HUNTERS": {
                             "TITLE": "Cazadores Silenciosos",
-                            "DESC": "Expertos en el uso de cerbatanas con dardos bañados en curare para cazar sin alertar al entorno."
+                            "DESC": "Son expertos en el uso de la cerbatana, con dardos impregnados de curare que permiten cazar sin alertar al entorno."
                         },
                         "HOUSING": {
                             "TITLE": "Vivienda Colectiva",
-                            "DESC": "Viven en casas comunales llamadas \"nanicabo\", donde conviven varias generaciones de una familia."
+                            "DESC": "Viven en grupos familiares extensos, los «nanicabo», que comparten una casa comunal y en los que conviven varias generaciones."
                         },
                         "RESISTANCE": {
                             "TITLE": "Resistencia y Territorio",
-                            "DESC": "Mantienen una defensa histórica de su territorio contra amenazas externas y presiones mineras."
+                            "DESC": "Mantienen una defensa histórica de su territorio frente a las amenazas externas y a la presión de las industrias extractivas."
                         }
                     }
                 },
@@ -484,17 +485,17 @@
                 },
                 "LANGUAGE_SECTION": {
                     "TITLE": "Wao Terero",
-                    "HERO_TEXT": "La lengua de la nacionalidad Waorani es un <strong>enigma lingüístico</strong> aislado, sin relación con ninguna otra familia en el mundo. Define su cosmovisión, donde la palabra, el territorio (<em>ome</em>) y la familia (<em>nanicabo</em>) deciden quién es \"gente verdadera\" (<em>wao</em>) y quién es un visitante o extraño (<em>cowode</em>).",
+                    "HERO_TEXT": "La lengua de la nacionalidad waorani es un <strong>enigma lingüístico</strong>: una lengua aislada, sin relación con ninguna otra familia conocida. Define su cosmovisión, en la que la palabra, el territorio (<em>ome</em>) y la familia (<em>nanicabo</em>) determinan quién es «gente verdadera» (<em>wao</em>) y quién es un extraño (<em>cowode</em>).",
                     "MODULE_1": {
                         "HEADER": "Estatus Sociolingüístico",
                         "CARD_1_TITLE": "Oralidad Ancestral",
-                        "CARD_1_DESC": "Un sistema de preservación de la memoria a través de la palabra hablada originaria. Mediante el canto y las historias, milenios de mitos, botánica y técnicas de supervivencia se han transmitido intactos entre las familias.",
+                        "CARD_1_DESC": "Un sistema de preservación de la memoria basado en la palabra hablada. A través del canto y del relato, generaciones de mitos, saberes botánicos y técnicas de supervivencia se han transmitido de forma oral dentro de las familias.",
                         "CARD_2_TITLE": "Escritura Emergente",
-                        "CARD_2_DESC": "Iniciada en los años 50 con el ILV. Mientras los ancianos (<em>pikenani</em>) protegen y respetan la oralidad, las nuevas generaciones aplican un sistema bilingüe basado en el alfabeto latino como mediación cultural."
+                        "CARD_2_DESC": "Se inició en la década de 1950 con el Instituto Lingüístico de Verano. Mientras los ancianos (<em>pikenani</em>) custodian la tradición oral, las nuevas generaciones utilizan un sistema bilingüe basado en el alfabeto latino como herramienta de mediación cultural."
                     },
                     "MODULE_2": {
                         "HEADER": "Estructura Fonológica",
-                        "SUBTITLE": "Economía de sonidos y gran fluidez para comunicarse auditivamente en el bosque denso de forma precisa.",
+                        "SUBTITLE": "Una economía de sonidos y una gran fluidez que permiten comunicarse con precisión en la espesura del bosque.",
                         "TAGS": {
                             "T1": {
                                 "TITLE": "V. Orales",
@@ -551,62 +552,62 @@
                         "HEADER": "Léxico de Supervivencia: La Cerbatana",
                         "SUBTITLE": "La <em>ömë</em> no es solo un arma, es ingeniería, física empírica y botánica.",
                         "ITEMS": {
-                            "I1": "<strong>Ömë</strong>: Cerbatana principal, elaborada de palma de <em>Iriartea deltoidea</em>.",
+                            "I1": "<strong>Ömë</strong>: cerbatana principal, elaborada con madera de la palma <em>Iriartea deltoidea</em>.",
                             "I2": "<strong>Nënë</strong>: Dardos meticulosamente tallados en madera de chonta.",
-                            "I3": "<strong>Omi</strong>: Curare; neurotoxina para inmovilizar músculos extraída de varias mezclas de <em>Strychnos</em>.",
-                            "I4": "<strong>Wii</strong>: Algodón de ceibo, recolectado para asegurar el sello de presión de aire.",
-                            "I5": "<strong>Bëi</strong>: Mandíbula de piraña sagrada, herramienta principal para muescar y afilar el dardo.",
-                            "I6": "<strong>Nënë tewe</strong>: Carcaj protector tejido para un entorno húmedo en espeso bambú (<em>Dowe</em>)."
+                            "I3": "<strong>Omi</strong>: curare, un veneno paralizante elaborado a partir de diversas mezclas vegetales, entre ellas especies de <em>Strychnos</em>.",
+                            "I4": "<strong>Wii</strong>: fibra algodonosa de ceibo, que se enrolla en el dardo para lograr el sellado necesario del soplo.",
+                            "I5": "<strong>Bëi</strong>: mandíbula de piraña, herramienta esencial para muescar y afilar la punta del dardo.",
+                            "I6": "<strong>Nënë tewe</strong>: carcaj de bambú (<em>dowe</em>) que protege los dardos de la humedad."
                         }
                     },
                     "MODULE_5": {
                         "HEADER": "Perspectiva del Mundo y Contacto",
                         "CARDS": {
                             "C1_TITLE": "Tiempo no Lineal",
-                            "C1_DESC": "Dividido en <strong>Tiempos de Guerra</strong> (escasez, movilidad en defensa) y <strong>Tiempos de Paz</strong> (cosechas y fiestas o alianzas en la maloca del <em>nanicabo</em>).",
+                            "C1_DESC": "Se divide en <strong>tiempos de guerra</strong> (escasez y movilidad defensiva) y <strong>tiempos de paz</strong> (cosechas, fiestas y alianzas en la casa comunal del <em>nanicabo</em>).",
                             "C2_TITLE": "El Espacio (Ome)",
-                            "C2_DESC": "El bosque no tiene fronteras de mapas occidentales trazadas, se define por la memoria sagrada marcada por los abuelos y hasta los sutiles sonidos del viento."
+                            "C2_DESC": "El bosque no se rige por las fronteras de los mapas occidentales: se define por la memoria sagrada de los abuelos e incluso por los sutiles sonidos del viento."
                         },
                         "TIMELINE": {
                             "T1_TITLE": "Época Misionera y del Caucho",
                             "T1_DESC": "Violencia externa, esclavitud y defensa de la soberanía.",
                             "T2_TITLE": "Protectorado e ILV (1950s)",
-                            "T2_DESC": "Época de sedentarización impuesta y alteración forzada hacia el modelo nuclear perdiendo los términos antiguos.",
+                            "T2_DESC": "Época de sedentarización impuesta y de transformación forzada hacia el modelo de familia nuclear, con la pérdida de numerosos términos antiguos.",
                             "T3_TITLE": "Era Petrolera",
-                            "T3_DESC": "Introducción de economías basadas en moneda y la lucha ambiental en las reservas frente a la explotación.",
+                            "T3_DESC": "Llegada de la economía monetaria y comienzo de la lucha ambiental en las reservas frente a la explotación petrolera.",
                             "T4_TITLE": "Autogestión de la Nacionalidad",
-                            "T4_DESC": "Ejercicio pleno de derechos para resistir bioprospección y unificar territorios bajo organizaciones y la \"Veeduría Waorani\"."
+                            "T4_DESC": "Ejercicio pleno de sus derechos para resistir la bioprospección y unificar territorios a través de sus organizaciones y de la «Veeduría Waorani»."
                         }
                     },
-                    "CONCLUSION": "En un mundo donde el peligro rodea su silencio natural, mientras el <strong>Wao Terero</strong> siga vivo... los <strong>Waorani</strong> podrán seguir definiéndose como \"gente verdadera\", manteniendo así el control ancestral sobre todos sus mitos de origen, botánica y vida en lo más recóndito y virgen de la Amazonía profunda.<br><br>Su oralidad es su mayor templo y defensa."
+                    "CONCLUSION": "En un mundo que amenaza su silencio natural, mientras el <strong>wao terero</strong> siga vivo los <strong>waorani</strong> podrán seguir definiéndose como «gente verdadera» y conservar el control de sus mitos de origen, de su saber botánico y de su forma de vida en lo más recóndito de la Amazonía.<br><br>Su oralidad es, a la vez, su mayor templo y su mejor defensa."
                 }
             }
         },
         "SHUAR": {
             "TITLE": "Shuar",
             "SUBTITLE": "Pueblo de las Cascadas Sagradas",
-            "DESCRIPTION": "Los Shuar son conocidos históricamente por ser uno de los pocos pueblos que ni el Imperio Inca ni los conquistadores lograron someter, liderando una de las rebeliones más exitosas contra la corona española. Su místico ritual de las cabezas reducidas o \"Tzantza\" no era un simple trofeo, sino una ceremonia para capturar el espíritu del enemigo y restablecer el equilibrio espiritual.",
+            "DESCRIPTION": "Los shuar son conocidos históricamente por ser uno de los pocos pueblos que ni el Imperio inca ni los conquistadores españoles lograron someter; en 1599 protagonizaron una de las rebeliones más exitosas contra la Corona. Su ritual de las cabezas reducidas, o <em>tsantsa</em>, no era un simple trofeo de guerra, sino una ceremonia destinada a neutralizar el espíritu vengativo del enemigo y restablecer el equilibrio espiritual.",
             "REGION": "Amazonía"
         },
         "COFAN": {
             "TITLE": "Cofán",
             "SUBTITLE": "Hombres Jaguar",
-            "DESCRIPTION": "Los Cofán son un pueblo ancestral del norte de la Amazonía ecuatoriana, conocidos como los \"hombres jaguar\" y hablantes del A'ingae, una lengua única en el mundo. Su cultura se centra en la conexión espiritual con la selva a través del Yagé y en una histórica defensa de su territorio frente a la explotación petrolera. Como guardianes de la biodiversidad, han logrado victorias legales clave para proteger sus tierras sagradas, manteniendo un equilibrio vital entre sus tradiciones milenarias y la resistencia moderna.",
+            "DESCRIPTION": "Los cofanes son un pueblo ancestral del norte de la Amazonía ecuatoriana y del sur de Colombia, hablantes del a'ingae, una lengua considerada aislada. Su cultura gira en torno a la conexión espiritual con la selva a través del yagé y a una defensa histórica de su territorio frente a la explotación petrolera. Como guardianes de la biodiversidad, han obtenido victorias judiciales decisivas para proteger sus tierras, en un equilibrio constante entre sus tradiciones milenarias y la resistencia contemporánea.",
             "REGION": "Norte Amazonía"
         },
         "KAYAPO": {
             "TITLE": "Kayapó",
             "SUBTITLE": "Guardianes de la Selva",
-            "DESCRIPTION": "La identidad del pueblo Kayapó se articula a través de una cosmovisión donde lo social y lo espiritual convergen en ritos ancestrales de gran calado simbólico. Para esta comunidad, la pertenencia comienza con el Bemp, un ritual de nombramiento que otorga riqueza social al vincular al niño con su linaje, y se consolida mediante ritos de pasaje que marcan la madurez y la responsabilidad colectiva. Su estrecho vínculo con el entorno amazónico se manifiesta en el Ritual del Jaguar, tótem de fuerza y protección de la selva, mientras que las danzas de máscaras (Kokô) actúan como un canal de comunicación para invocar a los espíritus y héroes de sus mitos, preservando así una herencia cultural profundamente conectada con sus raíces y su evolución social.",
+            "DESCRIPTION": "La identidad del pueblo kayapó se articula en torno a una cosmovisión en la que lo social y lo espiritual convergen en ritos ancestrales de gran carga simbólica. La pertenencia a la comunidad comienza con las ceremonias de nombramiento, que vinculan al niño con su linaje y le otorgan prestigio social, y se consolida mediante ritos de paso que marcan la madurez y la responsabilidad colectiva. Su estrecho vínculo con la selva se expresa en el simbolismo del jaguar, emblema de fuerza y protección, mientras que las danzas de máscaras actúan como un canal de comunicación con los espíritus y los héroes de sus mitos.",
             "REGION": "Trascendencia",
             "PAGE": {
                 "HERO_TITLE": "Mebêngôkre-Kayapó",
-                "HERO_BODY_1": "La nación Mebêngôkre, conocidos por el mundo como Kayapó, no son solo habitantes de la selva, sino sus arquitectos y defensores más feroces. Autodenominados \"Gente del pozo de agua\", su identidad está tejida con los ríos Iriri y Xingu, en un territorio que se extiende por millones de hectáreas de selva tropical y sabana. Para ellos, la supervivencia no es un acto pasivo; es una resistencia continua que fusiona la memoria de sus ancestros con una visión de vanguardia sobre la protección de la vida en la Tierra.",
-                "HERO_BODY_2": "El diseño circular de sus aldeas es un espejo del cosmos, donde cada hogar se dispone en armonía con el movimiento del sol y la luna. En el corazón de esta estructura late la \"Casa de los Guerreros\" (ngà-be), el núcleo de la vida política y ritual donde se forja el destino de la comunidad. Esta disposición espacial honra un equilibrio vital: mientras el centro es el dominio de la oratoria y la asamblea masculina, el anillo exterior es el santuario de las mujeres, quienes bajo un sistema matrilocal sostienen la continuidad del linaje y la estabilidad del hogar.",
-                "HERO_BODY_3": "Para un Mebêngôkre, el cuerpo es un lienzo de sabiduría y el lenguaje una forma de arte. Se enorgullecen de ser quienes \"hablan bellamente\" (Kaben mei), valorando la oratoria como la máxima expresión de estatus y humanidad. Esta búsqueda de la belleza se extiende a la piel, decorada con patrones geométricos en negro de jenipapo y rojo de urucum que imitan la perfección de los insectos y animales de la selva. Cada trazo y cada pluma en sus tocados es una declaración de su conexión indestructible con el espíritu que habita en todas las cosas.",
-                "HERO_BODY_4": "Su relación con la naturaleza trasciende la mera subsistencia; es una ingeniería ecológica llena de propósito. Mediante la creación de apêtê o \"islas de bosque\", los Kayapó han demostrado que la mano humana puede enriquecer la biodiversidad en lugar de destruirla, transportando nutrientes y semillas para crear oasis de medicina y alimento en la sabana abierta. Este conocimiento ancestral, que identifica cientos de plantas medicinales y gestiona el suelo con precisión milimétrica, posiciona a su cultura como un modelo global de bioeconomía sostenible.",
-                "HERO_BODY_5": "La historia contemporánea de los Kayapó es una crónica de invencibilidad frente a las amenazas del progreso desmedido. Liderados por figuras legendarias como el Jefe Raoni Metuktire y la Cacique Tuíre Kayapó, han llevado el clamor de la Amazonía a los foros internacionales, transformando su cultura guerrera en un activismo político que protege el clima del planeta entero. Su legado nos recuerda que proteger la selva es proteger la raíz misma de nuestra humanidad.",
-                "HERO_QUOTATION": "\"Guardianes del Pulso de la Amazonía, donde la verdadera riqueza reside en la capacidad de vivir en simbiosis con el mundo natural.\"",
+                "HERO_BODY_1": "El pueblo mebêngôkre, conocido en el mundo como kayapó, no se limita a habitar la selva: es uno de sus arquitectos y defensores más decididos. Su nombre propio suele traducirse como «la gente del agujero de agua», y su identidad está entretejida con los ríos Iriri y Xingu, en un territorio de millones de hectáreas de selva tropical y sabana. Para ellos, la supervivencia no es un acto pasivo, sino una resistencia continua que une la memoria de sus antepasados con una visión pionera sobre la protección de la vida en la Tierra.",
+                "HERO_BODY_2": "El trazado circular de sus aldeas es un reflejo del cosmos, con las viviendas dispuestas en armonía con el recorrido del sol y la luna. En el centro se alza la «Casa de los Hombres» (<em>ngà-be</em>), núcleo de la vida política y ritual donde se decide el destino de la comunidad. Esta organización del espacio responde a un equilibrio esencial: mientras el centro es el ámbito de la oratoria y la asamblea masculina, el anillo exterior es el dominio de las mujeres, que, en un sistema matrilocal, garantizan la continuidad del linaje y la estabilidad del hogar.",
+                "HERO_BODY_3": "Para los mebêngôkre, el cuerpo es un lienzo de sabiduría y la palabra, una forma de arte. Se enorgullecen de «hablar bellamente» y consideran la oratoria la máxima expresión de prestigio y humanidad. Esa búsqueda de la belleza se extiende a la piel, decorada con motivos geométricos en negro de jenipapo y rojo de urucum que evocan los diseños de los animales de la selva. Cada trazo y cada pluma de sus tocados expresan su vínculo indestructible con el espíritu que habita en todas las cosas.",
+                "HERO_BODY_4": "Su relación con la naturaleza va mucho más allá de la mera subsistencia: es una auténtica ingeniería ecológica. Diversos estudios etnobotánicos describen los <em>apêtê</em>, o «islas de bosque», que los kayapó enriquecen con semillas y nutrientes hasta crear oasis de alimento y medicina en plena sabana. Este conocimiento ancestral, capaz de identificar cientos de plantas útiles y de gestionar el suelo con gran precisión, sitúa su cultura como un referente mundial de bioeconomía sostenible.",
+                "HERO_BODY_5": "La historia contemporánea de los kayapó es la crónica de una resistencia tenaz frente a las amenazas del desarrollismo. Liderados por figuras legendarias como el jefe Raoni Metuktire y la cacica Tuíre Kayapó, han llevado la voz de la Amazonía a los foros internacionales y han transformado su tradición guerrera en un activismo político que protege el clima de todo el planeta. Su legado nos recuerda que proteger la selva es proteger la raíz misma de nuestra humanidad.",
+                "HERO_QUOTATION": "«Guardianes del pulso de la Amazonía, para quienes la verdadera riqueza reside en vivir en simbiosis con el mundo natural.»",
                 "PHOTOS_SECTION": {
                     "TITLE": "Galería de Imágenes"
                 },
@@ -617,7 +618,7 @@
                 },
                 "LIFECYCLE_SECTION": {
                     "TITLE": "El Ciclo Sagrado de la Vida y los Ritos",
-                    "DESC": "La vida de los Mebêngôkre es un flujo constante de ceremonias que marcan el crecimiento del alma y la conexión con el plano espiritual, celebrando la transición de cada individuo dentro de la gran comunidad.",
+                    "DESC": "La vida de los mebêngôkre es una sucesión de ceremonias que acompañan el crecimiento de la persona y su conexión con el plano espiritual, y que celebran el lugar de cada individuo dentro de la comunidad.",
                     "TABLE": {
                         "H1": "Ceremonia / Ritual",
                         "H2": "Propósito Espiritual",
@@ -638,7 +639,7 @@
                 },
                 "BIOECONOMY_SECTION": {
                     "TITLE": "Bioeconomía y Sustentabilidad Territorial",
-                    "DESC": "A través de un modelo de aprovechamiento respetuoso, los Kayapó generan bienestar para sus comunidades sin comprometer la integridad de la selva, convirtiéndose en referentes de la economía del bosque en pie.",
+                    "DESC": "Mediante un aprovechamiento respetuoso de los recursos, los kayapó generan bienestar para sus comunidades sin comprometer la integridad de la selva y se han convertido en un referente de la economía del bosque en pie.",
                     "TABLE": {
                         "H1": "Recurso",
                         "H2": "Temporada de Cosecha",
@@ -666,16 +667,16 @@
         "MEHINAKU": {
             "TITLE": "Mehinaku",
             "SUBTITLE": "Hijos del Camino del Sol",
-            "DESCRIPTION": "Los Mehinaku son un pilar esencial del Alto Xingu, conocidos por sus aldeas circulares que reflejan su cosmología y una vida social de transparencia radical. Como maestros en la gestión de lo público y lo sagrado, preservan su identidad Arawak a través de rituales ancestrales y una profunda conexión con el ciclo celestial.",
+            "DESCRIPTION": "Los mehinaku son uno de los pilares del Alto Xingu, conocidos por sus aldeas circulares, reflejo de su cosmología, y por una vida social de transparencia radical. Expertos en conjugar lo público y lo sagrado, preservan su identidad arawak a través de rituales ancestrales y de una profunda conexión con el ciclo celeste.",
             "REGION": "Alto Xingu",
             "PAGE": {
                 "HERO_TITLE": "Mehinaku",
-                "HERO_BODY_1": "Los <strong>Mehinaku</strong>, pertenecientes a la familia lingüística Arawak, conforman un pilar esencial del complejo multiétnico del <strong>Alto Xingu</strong> en el Mato Grosso brasileño. Su historia se inscribe en la geografía de los ríos Tuatuari y Kurisevo, donde sus aldeas circulares actúan como una materialización de su cosmología. El diseño de la comunidad no es azaroso; el denominado \"camino del sol\" cruza la aldea de oriente a occidente, dividiendo el espacio en un eje sagrado que garantiza que la vida cotidiana transcurra en armonía con el ciclo celestial.",
-                "HERO_BODY_2": "La vida social de esta etnia se define por una <strong>transparencia radical</strong>, descrita con frecuencia como un teatro circular donde la privacidad es un concepto casi inexistente. En el interior de las casas comunales, la ausencia de muros convierte cada acto en una representación compartida, mientras que en el exterior, la capacidad de los aldeanos para identificar a cada miembro por sus huellas plantares elimina cualquier rastro de anonimato. Esta visibilidad forzada ha forjado una cultura experta en la gestión de la impresión pública.",
-                "HERO_BODY_3": "La subsistencia Mehinaku se fundamenta en una división sexual del trabajo estrictamente complementaria, donde el matrimonio constituye la unidad básica de supervivencia económica. Mientras los hombres se ocupan de la pesca y el desmonte de la selva para los jardines de mandioca, las mujeres asumen la laboriosa tarea de procesar el tubérculo para producir el <strong>beiju</strong>, el pan que sostiene la vida. Sin embargo, esta interdependencia convive con un antagonismo ritualizado y una política del secreto centrada en las <strong>flautas sagradas</strong>, instrumentos que las mujeres tienen prohibido ver.",
-                "HERO_BODY_4": "En su cosmovisión, el universo está saturado de agencia y habitado por los <strong>apapaatai</strong>, espíritus poderosos que pueden traer tanto la enfermedad como la curación. El ritual del <strong>Kwarup</strong> representa la culminación de esta espiritualidad, un momento en el que troncos de madera bellamente adornados personifican a los ancestros fallecidos para cerrar los ciclos de luto. Bajo el fragor de la lucha huka-huka y el humo del tabaco chamánico, los Mehinaku conectan el mundo visible con el de las sombras.",
-                "HERO_BODY_5": "En la actualidad, los Mehinaku enfrentan con pragmatismo los desafíos de la globalización y el cambio climático dentro de los límites del Parque Indígena del Xingu. A pesar de que la deforestación externa y la contaminación de las aguas amenazan recursos vitales como el pequi y los peces, la tribu ha demostrado una resiliencia notable al integrar la economía de mercado y las nuevas tecnologías sin sacrificar sus fundamentos ontológicos. Su capacidad para proteger sus ritos de pasaje y su lengua ancestral asegura que el \"camino del sol\" siga guiando a una sociedad soberana.",
-                "HERO_QUOTATION": "\"Donde la arquitectura terrestre se convierte en un espejo del firmamento, anclando la identidad a un territorio sagrado desde tiempos míticos.\"",
+                "HERO_BODY_1": "Los <strong>mehinaku</strong>, pertenecientes a la familia lingüística arawak, son uno de los pilares del complejo multiétnico del <strong>Alto Xingu</strong>, en el estado brasileño de Mato Grosso. Su historia está ligada a los ríos Tuatuari y Kurisevo, donde sus aldeas circulares materializan su cosmología. Nada en su trazado es casual: el llamado «camino del sol» atraviesa la aldea de este a oeste y la divide mediante un eje sagrado que garantiza que la vida cotidiana transcurra en armonía con el ciclo celeste.",
+                "HERO_BODY_2": "La vida social de este pueblo se caracteriza por una <strong>transparencia radical</strong>, descrita a menudo como un teatro circular en el que la intimidad apenas existe. En el interior de las casas comunales, la ausencia de tabiques convierte cada gesto en una escena compartida; en el exterior, la capacidad de los vecinos para reconocer a cada persona por sus huellas elimina cualquier anonimato. Esta visibilidad constante ha forjado una cultura experta en la gestión de la propia imagen pública.",
+                "HERO_BODY_3": "La subsistencia de los mehinaku se basa en una división sexual del trabajo estrictamente complementaria, en la que el matrimonio constituye la unidad económica básica. Mientras los hombres pescan y desbrozan la selva para cultivar la mandioca, las mujeres asumen la laboriosa tarea de procesar el tubérculo para elaborar el <strong>beiju</strong>, el pan que sostiene la vida en la aldea. Esta interdependencia convive, sin embargo, con un antagonismo ritualizado y con una política del secreto centrada en las <strong>flautas sagradas</strong>, instrumentos que las mujeres tienen prohibido ver.",
+                "HERO_BODY_4": "En su cosmovisión, el universo está lleno de fuerzas con voluntad propia y habitado por los <strong>apapaatai</strong>, espíritus poderosos capaces de causar la enfermedad y también de curarla. El ritual del <strong>kwarup</strong> representa la culminación de esta espiritualidad: troncos de madera ricamente adornados personifican a los difuntos ilustres para cerrar el ciclo del duelo. Entre el fragor de la lucha <em>huka-huka</em> y el humo del tabaco chamánico, los mehinaku unen el mundo visible con el de los espíritus.",
+                "HERO_BODY_5": "En la actualidad, los mehinaku afrontan con pragmatismo los desafíos de la globalización y del cambio climático dentro del Territorio Indígena del Xingu. Aunque la deforestación de su entorno y la contaminación de las aguas amenazan recursos vitales como el pequi y la pesca, han demostrado una notable capacidad para incorporar la economía de mercado y las nuevas tecnologías sin renunciar a los fundamentos de su cultura. La protección de sus ritos de paso y de su lengua garantiza que el «camino del sol» siga guiando a una sociedad soberana.",
+                "HERO_QUOTATION": "«Donde la arquitectura de la tierra se convierte en espejo del firmamento y ancla la identidad a un territorio sagrado desde los tiempos míticos.»",
                 "PHOTOS_SECTION": {
                     "TITLE": "Galería de Imágenes"
                 },
@@ -687,7 +688,7 @@
                 },
                 "ALDEA_SECTION": {
                     "TITLE": "Estructura de la Aldea y Visibilidad",
-                    "DESC": "La aldea Mehinaku, <strong>Uyapiyuku</strong>, está diseñada como un microcosmos que refleja la arquitectura del cielo. Su disposición circular se organiza en torno al <strong>\"camino del sol\"</strong>, un eje este-oeste que conecta los ríos Kurisevo y Tuatuari. En el centro exacto se sitúa la Casa de los Hombres, dividiendo la ruta solar y sirviendo como epicentro de la vida pública y ritual.",
+                    "DESC": "La aldea mehinaku, <strong>Uyapiyuku</strong>, está concebida como un microcosmos que reproduce la arquitectura del cielo. Su planta circular se organiza en torno al <strong>«camino del sol»</strong>, un eje este-oeste que conecta los ríos Kurisevo y Tuatuari. En el centro exacto se sitúa la Casa de los Hombres, que divide la ruta solar y actúa como epicentro de la vida pública y ritual.",
                     "TABLE": {
                         "H1": "Elemento Espacial",
                         "H2": "Función y Significado",
@@ -698,36 +699,36 @@
                         "R3_C1": "Plaza (Wenekutaku)",
                         "R3_C2": "\"Lugar a menudo usado\": escenario de discursos, luchas rituales y ceremonias colectivas.",
                         "R4_C1": "Viviendas",
-                        "R4_C2": "Estructuras comunales sin muros internos que albergan entre 10 y 12 personas, eliminando la privacidad."
+                        "R4_C2": "Estructuras comunales sin tabiques interiores que albergan entre diez y doce personas, lo que reduce la intimidad al mínimo."
                     }
                 },
                 "DRAMA_SECTION": {
                     "TITLE": "Drama de la Vida Diaria: Sociología y Comportamiento",
-                    "DESC_1": "La vida Mehinaku es descrita como un <strong>\"teatro circular\"</strong> debido a la extrema visibilidad de los actos individuales. Al no existir muros internos en las casas y ser capaces de reconocer las huellas plantares de cada vecino, el anonimato es virtualmente imposible. Esta falta de privacidad ha convertido a los individuos en maestros de la <strong>\"gestión de la impresión\"</strong>.",
-                    "DESC_2": "Bajo este sistema, los Mehinaku proyectan públicamente una imagen de generosidad y ciudadanía ejemplar mientras desarrollan complejas estrategias de ocultamiento para sus asuntos privados. El chisme y la observación constante actúan como mecanismos de control social, obligando a los habitantes a interpretar sus roles con suma cautela para proteger su estatus en la comunidad.",
+                    "DESC_1": "La vida mehinaku se ha descrito como un <strong>«teatro circular»</strong> debido a la extrema visibilidad de los actos individuales. Sin tabiques en las casas y con la capacidad de reconocer las huellas de cada vecino, el anonimato es prácticamente imposible. Esta falta de intimidad ha convertido a sus miembros en maestros de la <strong>«gestión de la impresión»</strong>.",
+                    "DESC_2": "En este contexto, los mehinaku proyectan en público una imagen de generosidad y ciudadanía ejemplar, al tiempo que desarrollan complejas estrategias para preservar sus asuntos privados. El rumor y la observación constante actúan como mecanismos de control social y obligan a cada habitante a desempeñar su papel con cautela para proteger su posición en la comunidad.",
                     "CARD1_TITLE": "Teatro Circular",
-                    "CARD1_DESC": "Sin muros ni anonimato, cada acto cotidiano se convierte en una actuación pública ante toda la aldea.",
+                    "CARD1_DESC": "Sin paredes ni anonimato, cada acto cotidiano se convierte en una representación ante toda la aldea.",
                     "CARD2_TITLE": "Gestión de la Impresión",
-                    "CARD2_DESC": "Los individuos proyectan generosidad y virtud en público mientras gestionan estrategias de ocultamiento para su vida privada.",
+                    "CARD2_DESC": "Cada persona proyecta generosidad y virtud en público mientras gestiona con discreción su vida privada.",
                     "CARD3_TITLE": "Control Social",
-                    "CARD3_DESC": "El chisme y la observación constante funcionan como mecanismos de orden que regulan el estatus y el comportamiento de cada miembro."
+                    "CARD3_DESC": "El rumor y la observación constante funcionan como mecanismos de orden que regulan el prestigio y la conducta de cada miembro."
                 },
                 "GENERO_SECTION": {
                     "TITLE": "Antagonismo de Género y Política del Secreto",
-                    "DESC": "La sociedad Mehinaku se rige por una <strong>\"cultura de la exclusión\"</strong> que separa tajantemente los dominios de poder masculino y femenino. El pilar de esta estructura es el secreto de las <strong>flautas sagradas</strong>, custodiadas en la Casa de los Hombres, cuya visión está terminantemente prohibida a las mujeres bajo amenaza de sanciones rituales históricamente severas.",
+                    "DESC": "La sociedad mehinaku se rige por una <strong>«cultura de la exclusión»</strong> que separa de forma tajante los ámbitos de poder masculino y femenino. El pilar de esta estructura es el secreto de las <strong>flautas sagradas</strong>, custodiadas en la Casa de los Hombres y cuya contemplación está terminantemente prohibida a las mujeres, bajo la amenaza de sanciones rituales históricamente muy severas.",
                     "TABLE": {
                         "H1": "Concepto Clave",
                         "H2": "Descripción y Significado",
                         "R1_C1": "Flautas Sagradas",
-                        "R1_C2": "Instrumentos que simbolizan el dominio político de los hombres; prohibidas a la vista femenina.",
+                        "R1_C2": "Instrumentos que simbolizan el dominio político masculino y que las mujeres no pueden ver.",
                         "R2_C1": "Mito del Matriarcado",
-                        "R2_C2": "Relato fundacional que justifica el orden social alegando que las mujeres perdieron el poder en el tiempo mítico.",
+                        "R2_C2": "Relato fundacional que justifica el orden social: en el tiempo mítico, las mujeres habrían poseído y perdido el poder.",
                         "R3_C1": "Makatsiki",
-                        "R3_C2": "Concepto de \"pérdida de fuerza masculina\" por contaminación sexual femenina; sustenta los rituales de purificación.",
+                        "R3_C2": "Creencia en la «pérdida de fuerza masculina» por el contacto con lo femenino, que sustenta los rituales de purificación.",
                         "R4_C1": "Geografía de Género",
-                        "R4_C2": "División espacial: la plaza y la Casa de los Hombres frente al ámbito doméstico y los jardines femeninos."
+                        "R4_C2": "División espacial entre la plaza y la Casa de los Hombres, por un lado, y el ámbito doméstico y los huertos femeninos, por otro."
                     },
-                    "CONCLUSION": "Esta división genera una profunda <strong>ansiedad sexual masculina</strong>, donde el deseo convive con el temor a la contaminación por fluidos femeninos, lo que refuerza los rituales de purificación y el aislamiento en la Casa de los Hombres."
+                    "CONCLUSION": "Esta división genera una profunda <strong>ansiedad sexual masculina</strong>, en la que el deseo convive con el temor a la contaminación ritual atribuida a lo femenino, lo que refuerza los ritos de purificación y el retiro en la Casa de los Hombres."
                 }
             },
             "CAPTION_BOOK_TITLE": "Mujer de la tribu Mehinaku",
@@ -743,21 +744,21 @@
             "CAPTION_BOOK_TITLE": "Los hombres de Orellana. Grabado",
             "CAPTION_BOOK_AUTHOR": "grabado de Theodor de Bry",
             "CAPTION_BOOK_URL": "https://es.wikipedia.org/wiki/Theodor_de_Bry",
-            "ORELLANA_STORY_1": "En febrero de 1542, lo que comenzó como una desesperada búsqueda de comida se convirtió en el viaje más extraordinario jamás realizado en el Nuevo Mundo. <strong>Francisco de Orellana</strong>, junto a 57 hombres y el fraile <strong>Gaspar de Carvajal</strong>, se separó de la expedición principal de Gonzalo Pizarro para adentrarse en las entrañas de una selva que nadie había cartografiado. No buscaban gloria, buscaban sobrevivir; pero el destino les tenía reservada la eternidad.",
+            "ORELLANA_STORY_1": "En febrero de 1542, lo que comenzó como una búsqueda desesperada de alimento acabó convirtiéndose en uno de los viajes más extraordinarios de la historia de las exploraciones. <strong>Francisco de Orellana</strong>, al frente de unos cincuenta y siete hombres y acompañado por el fraile dominico <strong>Gaspar de Carvajal</strong>, se separó de la expedición principal de Gonzalo Pizarro para adentrarse en una selva que nadie había cartografiado. No buscaban la gloria, sino sobrevivir; pero el destino les reservaba un lugar en la historia.",
             "SUBTITLE_HUNGER": "El Hambre y la Madera: El Nacimiento del \"Victoria\"",
-            "CARVAJAL_CHRONICLE": "La crónica de Carvajal, <em>Relación del nuevo descubrimiento del famoso río Grande</em>, nos narra la crudeza de los primeros días. Los hombres, debilitados por el hambre, llegaron a comerse el cuero de sus zapatos y las suelas de sus vainas cocidas con hierbas desconocidas.",
-            "INGENUITY_VICTORIA": "En un alarde de ingenio y voluntad, en medio de la nada, construyeron un bergantín: el <strong>San Pedro</strong>, y más tarde el <strong>Victoria</strong>. Sin fraguas, sin clavos y con la madera húmeda de la selva, Orellana lideró una obra de ingeniería imposible que les permitiría navegar la corriente de un río que parecía no tener fin.",
+            "CARVAJAL_CHRONICLE": "La crónica de Carvajal, <em>Relación del nuevo descubrimiento del famoso río Grande</em>, narra con crudeza aquellos primeros días. Debilitados por el hambre, los hombres llegaron a comerse el cuero de sus zapatos y de sus cinturones, cocido con hierbas desconocidas.",
+            "INGENUITY_VICTORIA": "En un alarde de ingenio y tenacidad, en mitad de la selva, construyeron primero el bergantín <strong>San Pedro</strong> y, más tarde, el <strong>Victoria</strong>. Sin apenas herramientas, forjando sus propios clavos y trabajando con madera húmeda, Orellana dirigió una obra de ingeniería casi imposible que les permitiría navegar por un río que parecía no tener fin.",
             "SUBTITLE_WARRIORS": "El Encuentro con las Guerreras: El Mito del Amazonas",
-            "WARRIORS_STORY": "El nombre del río no nació en un despacho de España, sino en el fragor de la batalla. El 24 de junio de 1542, Carvajal relata un encuentro que cambiaría la historia. Los expedicionarios fueron atacados por una tribu liderada por mujeres de gran estatura, piel blanca y cabello largo trenzado, que luchaban con una ferocidad superior a la de cualquier hombre que hubieran visto.",
-            "QUOTATION_WOMEN": "\"Hacían tanta guerra que no parecía sino que cada una de ellas valía por diez indios\" — anotó Carvajal.",
-            "NAME_BAPTISM": "Inspirado por el mito griego de las Amazonas, Orellana bautizó así al río que inicialmente llamó \"Río de Orellana\". Aquellas mujeres eran reales, y su resistencia grabó el nombre del río en el mapa del mundo para siempre.",
+            "WARRIORS_STORY": "El nombre del río no nació en un despacho de la Corte, sino en el fragor del combate. El 24 de junio de 1542, Carvajal relata un enfrentamiento que cambiaría la historia: los expedicionarios fueron atacados por un pueblo en el que combatían mujeres de gran estatura, piel clara y largos cabellos trenzados, que luchaban con una fiereza superior a la de cualquier guerrero que hubieran conocido.",
+            "QUOTATION_WOMEN": "«Hacían tanta guerra que no parecía sino que cada una de ellas valía por diez indios», anotó Carvajal.",
+            "NAME_BAPTISM": "Inspirados por el mito griego de las amazonas, los cronistas dieron ese nombre al río que inicialmente se había llamado «río de Orellana». Fueran o no aquellas guerreras tal como las describió Carvajal, su resistencia grabó para siempre el nombre del río en el mapa del mundo.",
             "SUBTITLE_ROUTE": "De la Selva al Océano: La Ruta",
             "ALT_MAP": "Mapa de la expedición de Orellana",
-            "CAPTION_MAP": "Ruta de casi 5.000 kilómetros seguida por Francisco de Orellana a través del cauce del Amazonas.",
-            "JOURNEY_DISTANCE": "Durante siete meses y medio, recorrieron casi 5.000 kilómetros de cauce. Navegaron por un \"Mar Dulce\" donde las orillas a veces desaparecían de la vista por la inmensidad del caudal. Soportaron flechas envenenadas, tormentas tropicales y el aislamiento absoluto.",
-            "END_OF_JOURNEY": "Finalmente, el 26 de agosto de 1542, el agua dulce se mezcló con la salada del Atlántico. Orellana y sus hombres habían cruzado el continente por su arteria más salvaje, demostrando que el Amazonas no era solo un río, sino un sistema de vida colosal que conectaba los Andes con el océano.",
+            "CAPTION_MAP": "Ruta de casi 5.000 kilómetros recorrida por Francisco de Orellana a lo largo del cauce del Amazonas.",
+            "JOURNEY_DISTANCE": "Durante siete meses y medio recorrieron cerca de 5.000 kilómetros de río. Navegaron por un «mar dulce» en el que, a veces, las orillas desaparecían de la vista por la inmensidad del caudal, y soportaron flechas envenenadas, tormentas tropicales y un aislamiento absoluto.",
+            "END_OF_JOURNEY": "Finalmente, el 26 de agosto de 1542, el agua dulce se mezcló con la salada del Atlántico. Orellana y sus hombres habían atravesado el continente por su arteria más salvaje y demostrado que el Amazonas no era solo un río, sino un sistema colosal que unía los Andes con el océano.",
             "SUBTITLE_WHY_ALIVE": "¿Por qué esta historia sigue viva?",
-            "LEGACY": "La expedición de Orellana no fue solo una conquista territorial; fue el primer encuentro documentado con la complejidad de las civilizaciones amazónicas. A través de los ojos de Carvajal, hoy sabemos que el Amazonas que ellos vieron no estaba vacío, sino poblado por grandes señoríos y culturas vibrantes que hoy intentamos proteger.",
+            "LEGACY": "La expedición de Orellana no fue solo una empresa de conquista: constituye el primer testimonio escrito sobre la complejidad de las sociedades amazónicas. Gracias a la mirada de Carvajal sabemos que la Amazonía que ellos recorrieron no estaba vacía, sino poblada por grandes cacicazgos y culturas vibrantes, cuya herencia hoy tratamos de comprender y proteger.",
             "FINAL_QUOTE": "Orellana no buscaba el Amazonas, pero tuvo el valor de no darle la espalda cuando el río decidió llevárselo."
         }
     },
@@ -766,15 +767,15 @@
             "PAGE": {
                 "HERO_TITLE": "Conservación",
                 "HERO_SUBTITLE": "Deforestación en la Amazonía",
-                "HERO_DESC": "La Amazonía ha atravesado una década (2016-2026) que define su supervivencia. Este bioma, esencial para la estabilidad climática global, muestra hoy una pérdida de cobertura del <strong>18%</strong>, mientras que un <strong>38% adicional</strong> padece algún grado de degradación. No se trata solo de la desaparición de árboles, sino de una erosión profunda de su integridad ecológica y sociocultural que afecta a más de <strong>47 millones de personas</strong>.",
+                "HERO_DESC": "La Amazonía ha atravesado una década decisiva para su supervivencia (2016-2026). Este bioma, esencial para la estabilidad climática global, ha perdido ya en torno al <strong>18 %</strong> de su cobertura original, y un <strong>38 % adicional</strong> sufre algún grado de degradación. No se trata solo de la desaparición de árboles, sino de una erosión profunda de su integridad ecológica y sociocultural que afecta a más de <strong>47 millones de personas</strong>.",
                 "IMAGE_CAPTION": "Deforestación e incendios en la cuenca del Amazonas (2024)",
                 "SECTION_1_TITLE": "El Ocaso de la Selva — Una Década de Fragmentación (2016–2026)",
-                "BODY_1": "Durante los últimos diez años, el patrón de destrucción ha mutado hacia una forma más difícil de rastrear: la degradación progresiva alimentada por incendios. Mientras que históricamente la tala rasa era la preocupación central, el fuego —raramente natural en selvas húmedas— ahora erosiona la biomasa desde el sotobosque, debilitando la resiliencia del sistema incluso si el dosel forestal parece intacto desde los satélites.",
-                "BODY_2": "El año 2024 se convirtió en un hito de fragilidad sistémica. Una sequía extrema, exacerbada por el cambio climático, transformó las quemas agrícolas en un desastre ecológico que impactó <strong>4.5 millones de hectáreas</strong> de bosque primario en toda la cuenca. Las emisiones derivadas de estos fuegos alcanzaron los <strong>791 millones de toneladas de CO₂</strong>, igualando la huella de carbono anual de Alemania.",
-                "BODY_3": "La industria ganadera continúa siendo la fuerza dominante, responsable del <strong>78%</strong> de la deforestación vinculada a productos básicos. Con <strong>122 millones de hectáreas</strong> ya convertidas en pastizales, este modelo extensivo agota la fertilidad del suelo e impulsa la frontera económica hacia áreas que hasta hace poco eran refugios vírgenes de biodiversidad.",
-                "BODY_4": "La soja ha introducido una presión indirecta pero devastadora. En Bolivia, este fenómeno se manifestó con crudeza en 2024, con un incremento del <strong>200%</strong> en la pérdida de bosque primario debido a políticas de expansión agrícola agresivas que alimentan la demanda global de granos.",
-                "BODY_5": "Por otro lado, la minería ha generado una crisis de contaminación silenciosa que fluye por los ríos. Las investigaciones académicas revelan un \"efecto halo\" donde el impacto ambiental se extiende hasta <strong>70 km</strong> de las concesiones oficiales. Para 2026, se proyecta que más de 2,000 sitios estarán afectados, vertiendo anualmente <strong>4,500 toneladas de mercurio</strong> que amenazan la salud de más de 300 comunidades indígenas.",
-                "BODY_6": "La fragmentación se ve acelerada por proyectos como la carretera <strong>BR-319</strong>. Más del <strong>70%</strong> de la tala histórica ocurre en un radio de 50 km alrededor de las vías pavimentadas. Esta degradación ha provocado que la Amazonía pierda su capacidad de \"reciclar\" agua, acercando peligrosamente el sistema a un <strong>punto de no retorno</strong> —situado entre el 20% y el 25% de pérdida forestal— tras el cual el bosque colapsaría para convertirse en sabana seca.",
+                "BODY_1": "En los últimos diez años, el patrón de destrucción ha evolucionado hacia una forma más difícil de detectar: la degradación progresiva alimentada por los incendios. Si históricamente la tala rasa era la principal preocupación, hoy el fuego —que rara vez es natural en las selvas húmedas— consume la biomasa desde el sotobosque y debilita la resiliencia del sistema, aunque el dosel parezca intacto en las imágenes de satélite.",
+                "BODY_2": "El año 2024 marcó un récord de fragilidad. Una sequía extrema, agravada por el cambio climático, convirtió las quemas agrícolas en un desastre ecológico que afectó a <strong>4,5 millones de hectáreas</strong> de bosque primario en toda la cuenca. Las emisiones de estos incendios alcanzaron los <strong>791 millones de toneladas de CO₂</strong>, una cifra equivalente a la huella de carbono anual de Alemania.",
+                "BODY_3": "La ganadería sigue siendo el principal motor de la destrucción: es responsable del <strong>78 %</strong> de la deforestación vinculada a materias primas. Con <strong>122 millones de hectáreas</strong> ya convertidas en pastos, este modelo extensivo agota la fertilidad del suelo y empuja la frontera agropecuaria hacia zonas que hasta hace poco eran refugios intactos de biodiversidad.",
+                "BODY_4": "La soja ejerce una presión indirecta, pero devastadora. En Bolivia, el fenómeno se manifestó con especial crudeza en 2024, con un aumento del <strong>200 %</strong> en la pérdida de bosque primario, impulsado por políticas de expansión agrícola orientadas a abastecer la demanda mundial de granos.",
+                "BODY_5": "La minería, por su parte, ha desencadenado una crisis de contaminación silenciosa que fluye por los ríos. Diversas investigaciones describen un «efecto halo» por el que el impacto ambiental se extiende hasta <strong>70 km</strong> más allá de las concesiones. Las proyecciones para 2026 apuntan a más de 2.000 enclaves afectados y a vertidos anuales de unas <strong>4.500 toneladas de mercurio</strong>, que amenazan la salud de más de 300 comunidades indígenas.",
+                "BODY_6": "Proyectos de infraestructura como la carretera <strong>BR-319</strong> aceleran la fragmentación del bosque: más del <strong>70 %</strong> de la deforestación histórica se concentra en una franja de 50 km a ambos lados de las vías asfaltadas. Esta degradación merma la capacidad de la Amazonía para reciclar el agua de lluvia y acerca peligrosamente el sistema a un <strong>punto de no retorno</strong> —situado por los científicos entre el 20 % y el 25 % de pérdida forestal—, a partir del cual amplias zonas de selva podrían transformarse en sabana degradada.",
                 "TABLE_1": {
                     "TITLE": "Impactos Industriales y Fenómenos Críticos",
                     "DESC": "Análisis de las presiones industriales en la Amazonía.",
@@ -814,12 +815,12 @@
                 },
                 "SECTION_2_TITLE": "Arquitecturas de Esperanza",
                 "SECTION_2_SUBTITLE": "Hacia una Selva en Pie",
-                "BODY_7": "Frente a este escenario, la última década también ha forjado respuestas institucionales de una escala sin precedentes. El programa <strong>ARPA</strong> (Áreas Protegidas de la Amazonía) se ha consolidado como la mayor iniciativa de conservación del mundo, salvaguardando más de <strong>62 millones de hectáreas</strong>. Su éxito demuestra que la gestión efectiva y el apoyo financiero sostenido pueden blindar los ecosistemas frente a las presiones externas, habiendo evitado la emisión de 104 millones de toneladas de CO₂.",
-                "BODY_8": "En el terreno, la organización <strong>JungleKeepers</strong>, liderada por Paul Rosolie y Juan Julio Durand, ofrece un modelo de acción directa y profunda humanidad. Su estrategia consiste en comprar concesiones madereras antes de que sean destruidas y transformar a los antiguos madereros y mineros en guardabosques. Este enfoque reconoce que la protección de la selva requiere alternativas económicas dignas para quienes viven en su frontera.",
-                "BODY_9": "La labor de JungleKeepers ha logrado una reducción superior al <strong>90%</strong> en la tala ilegal dentro de su zona de acción en Madre de Dios, Perú. Actualmente protegen <strong>135,000 acres</strong> de bosque primario virgen, asegurando la supervivencia de especies críticas como el jaguar y el águila arpía, además de salvaguardar los territorios de pueblos aislados como los Mashco Piro frente a las invasiones externas.",
-                "BODY_10": "Este esfuerzo local se ve reforzado por el renacimiento del <strong>Fundo Amazônia</strong>, que en 2025 cuadruplicó sus aprobaciones de proyectos tras un periodo de inactividad política. Con un apoyo total que supera los 1,200 millones de dólares y el financiamiento de 144 proyectos, el fondo ha sido un pilar para que Brasil registre en 2025 su tasa de deforestación más baja en 11 años, revirtiendo la tendencia destructiva previa.",
-                "BODY_11": "La esperanza también se cultiva mediante la bioeconomía indígena, donde la <strong>Red de Semillas de Xingu</strong> destaca por su impacto regenerativo. Involucrando a casi 1,000 familias, esta red ha recolectado más de 390 toneladas de semillas nativas, facilitando la restauración de <strong>27 millones de árboles</strong> en tierras degradadas. Es la prueba de que el conocimiento ancestral puede integrarse en cadenas de valor que enriquecen a las comunidades sin talar un solo árbol.",
-                "BODY_12": "Finalmente, la ciencia moderna ha validado la sabiduría originaria: los territorios indígenas son el escudo de salud pública más eficaz del planeta. Un estudio de 2025 demostró que estos bosques protegidos previenen anualmente unos <strong>15 millones de casos</strong> de enfermedades respiratorias y cardiovasculares. Proteger la Amazonía es, por tanto, un acto de amor y supervivencia colectiva que ya cuenta con los planos y las voluntades para prevalecer.",
+                "BODY_7": "Frente a este escenario, la última década también ha dado lugar a respuestas institucionales de una escala sin precedentes. El programa <strong>ARPA</strong> (Áreas Protegidas de la Amazonía) se ha consolidado como una de las mayores iniciativas de conservación de bosques tropicales del mundo, con más de <strong>62 millones de hectáreas</strong> protegidas. Su éxito demuestra que una gestión eficaz y una financiación sostenida pueden blindar los ecosistemas frente a las presiones externas: se estima que ha evitado la emisión de 104 millones de toneladas de CO₂.",
+                "BODY_8": "Sobre el terreno, la organización <strong>JungleKeepers</strong>, liderada por Paul Rosolie y Juan Julio Durand, propone un modelo de acción directa con una profunda dimensión humana: adquirir concesiones madereras antes de que sean taladas y convertir a antiguos madereros y mineros en guardabosques. Este enfoque parte de una idea clave: proteger la selva exige ofrecer alternativas económicas dignas a quienes viven en su frontera.",
+                "BODY_9": "La labor de JungleKeepers ha reducido en más de un <strong>90 %</strong> la tala ilegal en su zona de actuación, en Madre de Dios (Perú). Actualmente protege unos <strong>135.000 acres</strong> (cerca de 55.000 hectáreas) de bosque primario, lo que asegura la supervivencia de especies como el jaguar y el águila arpía y ayuda a salvaguardar los territorios de pueblos en aislamiento, como los mashco piro, frente a las invasiones.",
+                "BODY_10": "Este esfuerzo local se ve reforzado por la reactivación del <strong>Fundo Amazônia</strong>, que en 2025 cuadruplicó sus aprobaciones de proyectos tras un periodo de parálisis política. Con más de 1.200 millones de dólares en apoyos y 144 proyectos financiados, el fondo ha sido uno de los pilares que han permitido a Brasil registrar en 2025 su menor tasa de deforestación en once años.",
+                "BODY_11": "La esperanza también se cultiva mediante la bioeconomía indígena, en la que destaca la <strong>Red de Semillas del Xingu</strong> por su impacto regenerativo. Con la participación de casi un millar de familias, la red ha recolectado más de 390 toneladas de semillas nativas, que han permitido restaurar con <strong>27 millones de árboles</strong> tierras degradadas. Es la prueba de que el conocimiento ancestral puede integrarse en cadenas de valor que enriquecen a las comunidades sin talar un solo árbol.",
+                "BODY_12": "Por último, la ciencia ha confirmado lo que la sabiduría indígena sostenía desde siempre: los territorios indígenas son uno de los escudos de salud pública más eficaces del planeta. Un estudio de 2025 estimó que los bosques que protegen evitan cada año unos <strong>15 millones de casos</strong> de enfermedades respiratorias y cardiovasculares. Proteger la Amazonía es, por tanto, un acto de responsabilidad colectiva que ya cuenta con las herramientas y las voluntades necesarias para prevalecer.",
                 "TABLE_3": {
                     "TITLE": "Iniciativas de Preservación y Resultados",
                     "H1": "Proyecto / Iniciativa",
@@ -843,36 +844,36 @@
         "EMPTY_FOREST": {
             "TITLE": "El Síndrome de la Selva Vacía",
             "SUBTITLE": "El silencio oculto de la Amazonía",
-            "PARA_1": "A simple vista, el verde infinito de la Amazonía puede engañarnos. Un bosque con árboles gigantescos y hojas exuberantes parece el pináculo de la vida salvaje. Sin embargo, el ornitólogo José Álvarez Alonso, tras vivir casi tres décadas en la selva peruana, documenta un fenómeno silencioso y alarmante.",
-            "PARA_2": "A este fenómeno se le conoce como el \"síndrome de la selva vacía\". Consiste en que, debido a la caza indiscriminada y la sobreexplotación, los animales han desaparecido casi por completo en vastas regiones. Aunque la flora parezca intacta, estos bosques sufren una extinción ecológica y económica, ya que han perdido la fauna que los mantiene vivos y que alimenta a las comunidades locales.",
+            "PARA_1": "A simple vista, el verde infinito de la Amazonía puede resultar engañoso. Un bosque de árboles gigantescos y follaje exuberante parece la máxima expresión de la vida salvaje. Sin embargo, el ornitólogo José Álvarez Alonso, que ha vivido casi tres décadas en la selva peruana, documenta un fenómeno silencioso y alarmante.",
+            "PARA_2": "Se trata del llamado «síndrome de la selva vacía»: a causa de la caza indiscriminada y la sobreexplotación, los animales han desaparecido casi por completo de vastas regiones. Aunque la vegetación parezca intacta, estos bosques sufren una extinción ecológica y económica, pues han perdido la fauna que los mantiene vivos y que alimenta a las comunidades locales.",
             "SUBTITLE_FRUITS": "¿Por qué se pudren los frutos en el paraíso?",
-            "PARA_3": "En 1984, durante una expedición en la comunidad indígena de Intuto, el investigador notó miles de frutos de <em>shimbillo</em> pudriéndose en el suelo del bosque. Intrigado, le preguntó a su guía achuar la razón de este desperdicio. La respuesta del guía resumió el colapso ecológico en una frase:",
+            "PARA_3": "En 1984, durante una expedición a la comunidad indígena de Intuto, el investigador reparó en miles de frutos de <em>shimbillo</em> que se pudrían en el suelo del bosque. Intrigado, preguntó a su guía achuar por qué nadie los aprovechaba. La respuesta resumió el colapso ecológico en una sola frase:",
             "QUOTE": "\"Porque no hay monos que lo coman... nos los hemos comido toditos. Por este monte yo solito he baleado cantidad de monos y sajinos... Ahora ya no queda nada.\"",
             "LIST_INTRO_1": "La ausencia de estos animales detona una reacción en cadena catastrófica:",
-            "ITEM_1_1": "<strong>Pérdida de sembradores naturales:</strong> Más de tres cuartas partes de los árboles amazónicos dependen de los animales para dispersar sus semillas.",
+            "ITEM_1_1": "<strong>Pérdida de los sembradores naturales:</strong> más de tres cuartas partes de los árboles amazónicos dependen de los animales para dispersar sus semillas.",
             "ITEM_1_2_BEFORE": "<strong>Cambios en el ecosistema:</strong> Especies clave como el",
             "ITEM_1_2_LINK": "tapir",
-            "ITEM_1_2_AFTER": ", los pecaríes y los grandes monos son los jardineros del bosque. Sin ellos, los árboles de semillas grandes (como el cedro y la caoba) no pueden reproducirse frente a especies invasivas de crecimiento rápido.",
+            "ITEM_1_2_AFTER": ", los pecaríes y los grandes primates son los jardineros del bosque. Sin ellos, los árboles de semillas grandes, como el cedro o la caoba, no logran reproducirse y ceden terreno a especies de crecimiento rápido.",
             "SUBTITLE_WATER": "El drama del agua: El misterio de las \"Cochas Muertas\"",
-            "PARA_4": "El impacto no se limita a la tierra firme; los ecosistemas acuáticos también están muriendo. Los grandes lagos amazónicos (conocidos como <em>cochas</em>) dependen de herbívoros gigantes. Un solo manatí amazónico puede devorar hasta 40 kg de vegetación acuática al día, fertilizando además el agua con sus desechos.",
-            "ITEM_2_1": "<strong>¿Qué pasa cuando desaparecen el manatí y las tortugas acuáticas?</strong> El agua se asfixia.",
-            "ITEM_2_2": "Miles de hectáreas se cubren por una alfombra densa de plantas flotantes que bloquea la luz solar y el oxígeno.",
-            "ITEM_2_3": "El resultado son las <strong>\"cochas muertas\"</strong>, cuerpos de agua donde la productividad colapsa y los peces desaparecen por completo.",
+            "PARA_4": "El impacto no se limita a la tierra firme: los ecosistemas acuáticos también agonizan. Los grandes lagos amazónicos, conocidos como <em>cochas</em>, dependen de los grandes herbívoros. Un solo manatí amazónico puede consumir hasta 40 kilos de vegetación acuática al día y, además, fertiliza el agua con sus excrementos.",
+            "ITEM_2_1": "<strong>¿Qué ocurre cuando desaparecen el manatí y las tortugas acuáticas?</strong> El agua se asfixia.",
+            "ITEM_2_2": "Miles de hectáreas quedan cubiertas por una densa alfombra de plantas flotantes que bloquea el paso de la luz y del oxígeno.",
+            "ITEM_2_3": "El resultado son las <strong>«cochas muertas»</strong>: masas de agua en las que la productividad se desploma y los peces desaparecen por completo.",
             "SUBTITLE_ABUNDANCE": "De la abundancia histórica a la fiebre extractiva",
-            "PARA_5": "Es difícil imaginar esta escasez cuando revisamos las crónicas del siglo XVI. Exploradores como Francisco de Orellana o Cristóbal de Acuña describían una abundancia incalculable: miles de tortugas <em>charapas</em>, manatíes y peces que garantizaban alimento de sobra para cientos de personas durante años. En el siglo XIX, se llegaron a recolectar hasta cinco millones de huevos de tortuga en una sola playa para exportar su aceite a Europa.",
-            "PARA_6": "Sin embargo, las fiebres extractivas modernas cambiaron la historia. La caza comercial masacró a la fauna amazónica para abastecer mercados globales de pieles y cueros.",
-            "ITEM_3_1": "Solo desde Perú se exportaron más de <strong>5.5 millones de pieles</strong> entre 1965 y 1976 (incluyendo jaguares, caimanes negros y ocelotes).",
-            "ITEM_3_2": "Para cazar un solo jaguar, los furtivos utilizaban pecaríes o monos enteros como cebo, multiplicando la matanza.",
+            "PARA_5": "Cuesta imaginar esta escasez al leer las crónicas de los siglos XVI y XVII. Exploradores como Francisco de Orellana o Cristóbal de Acuña describían una abundancia incalculable: miles de tortugas <em>charapa</em>, manatíes y peces capaces de alimentar holgadamente a cientos de personas durante años. Todavía en el siglo XIX llegaron a recolectarse hasta cinco millones de huevos de tortuga en una sola playa para exportar su aceite a Europa.",
+            "PARA_6": "Las fiebres extractivas modernas, sin embargo, cambiaron la historia. La caza comercial diezmó la fauna amazónica para abastecer los mercados internacionales de pieles y cueros.",
+            "ITEM_3_1": "Solo desde Perú se exportaron más de <strong>5,5 millones de pieles</strong> entre 1965 y 1976, entre ellas de jaguares, caimanes negros y ocelotes.",
+            "ITEM_3_2": "Para cazar un solo jaguar, los furtivos utilizaban como cebo pecaríes o monos enteros, lo que multiplicaba la matanza.",
             "SUBTITLE_GUARDIANS": "Las tribus indígenas: Los nuevos guardianes",
-            "PARA_7": "A pesar de este panorama sombrío, hay un rayo de esperanza para la biodiversidad. En los lugares donde existen áreas protegidas y territorios gestionados eficazmente, se aplica un modelo de \"fuente-sumidero\": los animales se refugian y reproducen en zonas seguras, repoblando gradualmente las áreas adyacentes.",
-            "PARA_8": "Las comunidades indígenas y campesinas que viven en zonas remotas, donde gestionan bionegocios y organizan labores de vigilancia contra madereros ilegales, están logrando recuperar notoriamente la fauna local. Para ellos, un bosque lleno de vida vuelve a ser un activo invaluable que vale la pena proteger con su vida.",
-            "FOOTER": "<em>* Nota de transparencia y autoría: Este artículo es una adaptación divulgativa publicada con la autorización expresa del investigador y ornitólogo José Álvarez Alonso. Los datos históricos y biológicos provienen de su investigación original \"El síndrome de la selva vacía\", publicado en la revista Argutorio. Puedes consultar el estudio completo aquí: </em>",
+            "PARA_7": "Pese a este panorama sombrío, existe un motivo para la esperanza. Allí donde hay áreas protegidas y territorios bien gestionados se produce un efecto «fuente-sumidero»: los animales se refugian y se reproducen en las zonas seguras y, poco a poco, repueblan las áreas vecinas.",
+            "PARA_8": "Las comunidades indígenas y campesinas de zonas remotas que gestionan bionegocios y organizan la vigilancia frente a madereros ilegales están logrando una recuperación notable de la fauna local. Para ellas, un bosque lleno de vida vuelve a ser un patrimonio de valor incalculable que merece la pena defender.",
+            "FOOTER": "<em>* Nota de transparencia y autoría: este artículo es una adaptación divulgativa publicada con la autorización expresa del investigador y ornitólogo José Álvarez Alonso. Los datos históricos y biológicos proceden de su investigación original, «El síndrome de la selva vacía», publicada en la revista Argutorio. Puedes consultar el estudio completo aquí: </em>",
             "FOOTER_LINK_TEXT": "Descargar investigación original (PDF)"
         }
     },
     "CONTACT_PAGE": {
         "TITLE": "Conecta con la <span class=\"highlight\">Selva</span>",
-        "SUBTITLE": "Esta es una plataforma open source, sin ánimo de lucro. Una wiki 2.0 creada para compartir conocimiento, inspirar, concienciar y disfrutar de uno de los lugares más mágicos del mundo.",
+        "SUBTITLE": "Esta es una plataforma de código abierto y sin ánimo de lucro: una wiki 2.0 creada para compartir conocimiento, inspirar y concienciar sobre uno de los lugares más extraordinarios del planeta.",
         "FORM": {
             "FULL_NAME": "Nombre Completo *",
             "NAME_PLACEHOLDER": "Ej: Maria Silva",
@@ -928,37 +929,38 @@
     "LAYOUT": {
         "FOOTER": {
             "COPYRIGHT": "Todos los derechos reservados.",
-            "SUBTITLE": "Bio-diseñado para la inmersión total en la naturaleza.",
+            "SUBTITLE": "Una enciclopedia visual, abierta y colaborativa sobre la Amazonía.",
             "NAV_MISION": "Misión",
             "NAV_COLABORADORES": "Colaboradores"
-        }
+        },
+        "SKIP_TO_CONTENT": "Saltar al contenido principal"
     },
     "MISION": {
         "BADGE": "PROYECTO OPEN SOURCE · SIN ÁNIMO DE LUCRO",
         "TITLE": "Nuestra Misión",
-        "SUBTITLE": "Construir la enciclopedia visual más completa y bella sobre la selva amazónica y todos sus seres vivos.",
-        "CORE_STATEMENT": "Somos una <strong>Wikipedia 2.0</strong> sobre el Amazonas: <em>moderna, audiovisual y colaborativa</em>. Un proyecto que nace del amor por la naturaleza y el compromiso de preservar el conocimiento sobre el ecosistema más biodiverso del planeta.",
+        "SUBTITLE": "Construir la enciclopedia visual más completa y cuidada sobre la selva amazónica y todos los seres que la habitan.",
+        "CORE_STATEMENT": "Somos una <strong>Wikipedia 2.0</strong> sobre la Amazonía: <em>moderna, audiovisual y colaborativa</em>. Un proyecto nacido del amor por la naturaleza y del compromiso de preservar y difundir el conocimiento sobre el ecosistema más biodiverso del planeta.",
         "PILLARS_TITLE": "Tres pilares que nos definen",
         "PILLAR_OPENSOURCE_TITLE": "Open Source",
         "PILLAR_OPENSOURCE_DESC": "Todo el código es abierto y accesible para cualquier persona. Creemos en la transparencia y en la colaboración sin barreras.",
         "PILLAR_NONPROFIT_TITLE": "Sin ánimo de lucro",
-        "PILLAR_NONPROFIT_DESC": "Este proyecto no persigue beneficio económico. Nació para compartir conocimiento libre y gratuito sobre el Amazonas con el mundo.",
+        "PILLAR_NONPROFIT_DESC": "El proyecto no persigue beneficio económico. Nació para compartir con el mundo un conocimiento libre y gratuito sobre la Amazonía.",
         "PILLAR_COLLABORATIVE_TITLE": "Proyecto colaborativo",
-        "PILLAR_COLLABORATIVE_DESC": "Biólogos, diseñadores, desarrolladores, fotógrafos y exploradores trabajando juntos para construir algo único.",
+        "PILLAR_COLLABORATIVE_DESC": "Biólogos, diseñadores, desarrolladores, fotógrafos y exploradores trabajan juntos para construir algo único.",
         "VISION_LABEL": "LA VISIÓN",
         "VISION_TITLE": "Una Wikipedia moderna, bella y audiovisual",
-        "VISION_BODY_1": "Wikipedia revolucionó el acceso al conocimiento. Nosotros queremos dar ese mismo salto para la selva amazónica: crear una enciclopedia que sea tan impresionante visualmente como rigurosa científicamente.",
-        "VISION_BODY_2": "El Amazonas alberga cerca de una de cada diez especies conocidas en la Tierra. Merece un espacio digital a la altura de su grandeza: con vídeo, sonido, mapas interactivos y textos escritos por expertos.",
+        "VISION_BODY_1": "Wikipedia revolucionó el acceso al conocimiento. Nosotros queremos dar ese mismo salto en torno a la selva amazónica: crear una enciclopedia tan impactante en lo visual como rigurosa en lo científico.",
+        "VISION_BODY_2": "La Amazonía alberga cerca de una de cada diez especies conocidas de la Tierra. Merece un espacio digital a la altura de su grandeza, con vídeo, sonido, mapas interactivos y textos elaborados y revisados por especialistas.",
         "FEATURE_AUDIOVISUAL_TITLE": "Audiovisual",
         "FEATURE_AUDIOVISUAL_DESC": "Vídeos, sonidos y galerías fotográficas de cada especie, no solo texto.",
         "FEATURE_COMPLETE_TITLE": "Completa",
-        "FEATURE_COMPLETE_DESC": "Todos los tipos de seres vivos: mamíferos, aves, reptiles, insectos, plantas, hongos, tribus...",
+        "FEATURE_COMPLETE_DESC": "Todas las formas de vida y de cultura: mamíferos, aves, reptiles, insectos, plantas, hongos y pueblos indígenas.",
         "FEATURE_MODERN_TITLE": "Moderna y bella",
-        "FEATURE_MODERN_DESC": "Un diseño que hace justicia a la belleza del Amazonas. No una enciclopedia gris.",
+        "FEATURE_MODERN_DESC": "Un diseño que hace justicia a la belleza de la Amazonía, lejos de la enciclopedia gris y estática.",
         "FEATURE_SCIENCE_TITLE": "Científicamente rigurosa",
-        "FEATURE_SCIENCE_DESC": "Fuentes verificadas, nombres científicos y revisión por expertos en biología y ecología.",
+        "FEATURE_SCIENCE_DESC": "Fuentes verificadas, nombres científicos y revisión por especialistas en biología, ecología y antropología.",
         "CTA_TITLE": "¿Quieres ser parte de esto?",
-        "CTA_BODY": "Buscamos colaboradores apasionados por la naturaleza y la tecnología. Cualquier talento tiene cabida en este proyecto.",
+        "CTA_BODY": "Buscamos colaboradores apasionados por la naturaleza y la tecnología. Todo talento tiene cabida en este proyecto.",
         "TAG_BIOLOGISTS": "Biólogos",
         "TAG_DEVELOPERS": "Desarrolladores",
         "TAG_DESIGNERS": "Diseñadores",
@@ -966,5 +968,273 @@
         "TAG_EXPLORERS": "Exploradores",
         "TAG_RESEARCHERS": "Investigadores",
         "CTA_BUTTON": "Contáctanos"
+    },
+    "SEARCH": {
+        "MAIN_NAV": "Menú principal",
+        "OPEN": "Abrir el buscador",
+        "MENU": "Abrir el menú principal",
+        "PLACEHOLDER": "Buscar páginas, especies o pueblos…",
+        "FIELD": "Buscar en el sitio",
+        "CLEAR": "Borrar la búsqueda",
+        "GO": "Ir",
+        "GO_TITLE": "Ir a la página seleccionada",
+        "CLOSE": "Cerrar el buscador (Esc)",
+        "HINT_NAV": "Navegar por los resultados",
+        "HINT_GO": "Abrir la página",
+        "HINT_CLOSE": "Cerrar",
+        "NO_RESULTS": "No se han encontrado resultados para",
+        "SWITCH_LANG": "Cambiar idioma: English"
+    },
+    "RESOURCES": {
+        "BREADCRUMB": "Ruta de navegación",
+        "RELATED": "Sigue explorando",
+        "SOURCES": "Fuentes y referencias",
+        "FACT_SHEET": "Ficha",
+        "KEY_FACTS": "Datos clave",
+        "WATCH_ON_YOUTUBE": "Ver en YouTube",
+        "FIELDS": {
+            "ORIGINAL_TITLE": "Título original",
+            "DIRECTOR": "Dirección",
+            "PRODUCERS": "Producción",
+            "YEAR": "Año",
+            "DURATION": "Duración",
+            "COUNTRIES": "Países",
+            "PREMIERE": "Estreno mundial",
+            "WHERE": "Dónde verla",
+            "EXPLORER": "Explorador",
+            "ORIGIN": "Origen",
+            "EXPEDITION": "Expedición",
+            "DATE": "Fecha",
+            "ROUTE": "Recorrido",
+            "RECORDS": "Récords",
+            "SERIES": "Serie documental",
+            "TYPE": "Naturaleza",
+            "FOUNDED": "Fundación",
+            "MEMBERS": "Integrantes fundadores",
+            "PARTNERS": "Alianzas",
+            "AMAZON_LINK": "Vínculo amazónico"
+        },
+        "HUB": {
+            "EYEBROW": "Biblioteca abierta",
+            "TITLE": "Recursos",
+            "LEAD": "Una selección cuidada de documentales, expediciones y proyectos de investigación que ayudan a comprender la Amazonía desde miradas complementarias: la ciencia, el periodismo, la exploración y el arte. Cada ficha resume el contexto, los datos esenciales y las fuentes para profundizar.",
+            "DOCS_DESC": "Películas y series que documentan, desde el terreno, la vida en la selva y la defensa de sus territorios.",
+            "RESEARCH_DESC": "Iniciativas que generan conocimiento sobre el bosque y sus ecosistemas, y lo comparten con la sociedad.",
+            "SOON_TITLE": "Próximamente",
+            "SOON_DESC": "Seguimos ampliando la biblioteca. Si conoces una obra imprescindible, escríbenos desde la página de contacto.",
+            "SOON_LABEL": "En preparación",
+            "SOON_TEXT": "Estamos seleccionando y reseñando los títulos más relevantes sobre la Amazonía.",
+            "READ_MORE": "Leer la ficha"
+        },
+        "YANUNI": {
+            "EYEBROW": "Documental · 2025",
+            "TITLE": "Yanuni",
+            "SUBTITLE": "La lucha de Juma Xipaia por la Amazonía, en un documental producido por Leonardo DiCaprio",
+            "LEAD": "Dirigido por el cineasta austriaco <strong>Richard Ladkani</strong> y producido por <strong>Leonardo DiCaprio</strong>, <em>Yanuni</em> acompaña durante varios años a <strong>Juma Xipaia</strong>, cacica del pueblo xipaya, en su enfrentamiento con la minería ilegal de oro, el acaparamiento de tierras y los grandes intereses económicos que presionan la cuenca del río Xingu, en el estado brasileño de Pará.",
+            "CHIPS": [
+                "Richard Ladkani",
+                "Leonardo DiCaprio",
+                "112 minutos",
+                "Preseleccionado al Óscar"
+            ],
+            "PLAY_TRAILER": "Reproducir el tráiler de Yanuni",
+            "TRAILER_CAPTION": "Tráiler oficial de «Yanuni». El vídeo se carga desde YouTube solo al pulsar reproducir.",
+            "FILM_TITLE": "La película",
+            "FILM_PARAS": [
+                "<em>Yanuni</em> sigue la trayectoria de Juma Xipaia desde su aldea, en la Tierra Indígena Xipaya, hasta los foros políticos donde hoy se decide el futuro del clima. La cámara de Ladkani registra con igual atención la intimidad de la vida comunitaria y la tensión de las operaciones contra los garimpeiros, los mineros ilegales que envenenan los ríos con mercurio y abren cicatrices profundas en el bosque.",
+                "El documental entrelaza la historia de Juma con la de su compañero, <strong>Hugo Loss</strong>, vinculado a la fiscalización ambiental en Brasil. Juntos encarnan dos caras de una misma resistencia: la defensa de la tierra desde dentro de la comunidad y la aplicación de la ley en uno de los territorios más vigilados —y más amenazados— del planeta. Su vida en pareja aporta a la película una dimensión íntima y humana que va más allá de la denuncia.",
+                "La película se estrenó como gala de clausura del <strong>Festival de Tribeca</strong> de 2025 y, tras su recorrido por festivales y salas, puede verse de forma gratuita en el canal de YouTube de Leonardo DiCaprio desde el 5 de septiembre de 2026, coincidiendo con el Día de la Amazonía."
+            ],
+            "QUOTE": "La defensa de la Amazonía tiene rostro, nombre y apellidos: el de quienes arriesgan su vida para que el bosque siga en pie.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "JUMA_TITLE": "¿Quién es Juma Xipaia?",
+            "JUMA_PARAS": [
+                "Juma Xipaia es una líder indígena brasileña del pueblo xipaya, cuyo territorio se extiende a orillas del río Iriri, afluente del Xingu. Fue la primera mujer en ejercer como cacica de su pueblo y lidera la aldea Kaarimã. Desde muy joven denunció los impactos de la central hidroeléctrica de Belo Monte y el avance de la minería ilegal sobre las tierras indígenas.",
+                "Su activismo le ha costado caro: ha sobrevivido a <strong>seis intentos de asesinato</strong>. Lejos de silenciarla, esas amenazas la llevaron a ampliar su voz desde la aldea hasta los espacios institucionales y las cumbres internacionales sobre el clima, donde defiende que los pueblos indígenas son los guardianes más eficaces de la selva."
+            ],
+            "WHY_TITLE": "Por qué recomendamos verla",
+            "WHY_ITEMS": [
+                "<strong>Muestra la Amazonía desde dentro:</strong> el relato se construye con la mirada y la voz de una protagonista indígena, no como un paisaje exótico visto desde fuera.",
+                "<strong>Explica amenazas reales y actuales:</strong> la minería de oro, el mercurio en los ríos, la deforestación y la violencia contra los defensores ambientales, temas que también abordamos en nuestra sección de <a href=\"/amazonia/conservacion/deforestacion-mineria\">deforestación y minería</a>.",
+                "<strong>Es accesible para todo el mundo:</strong> está disponible gratuitamente en YouTube, lo que la convierte en un recurso idóneo para centros educativos, asociaciones y cineclubes."
+            ],
+            "AWARDS_TITLE": "Reconocimientos",
+            "AWARDS_PARAS": [
+                "<em>Yanuni</em> formó parte de la lista de preseleccionados al <strong>Óscar al mejor largometraje documental</strong> en la edición de 2026. A lo largo de su recorrido ha recibido, entre otros, los premios a la mejor dirección y al mejor documental en el Festival de Cine de Savannah, una mención especial en el Festival Internacional de Cine de Palm Springs y una mención de honor en los premios de la International Documentary Association (IDA)."
+            ],
+            "SHEET": {
+                "PRODUCERS": "Leonardo DiCaprio, Juma Xipaia y Malaika Pictures, entre otros",
+                "COUNTRIES": "Austria, Brasil, Estados Unidos, Canadá y Alemania",
+                "PREMIERE": "Festival de Tribeca (Nueva York), junio de 2025",
+                "WHERE": "Gratis en YouTube, en el canal de Leonardo DiCaprio"
+            },
+            "CTA_TRAILER": "Ver el tráiler en YouTube",
+            "CTA_CHANNEL": "Buscar la película completa",
+            "CARD": "La cacica Juma Xipaia se enfrenta a la minería ilegal en el río Xingu. Documental de Richard Ladkani producido por Leonardo DiCaprio, con tráiler y ficha técnica."
+        },
+        "ASH_DYKES": {
+            "EYEBROW": "Exploración · Serie documental",
+            "TITLE": "Ash Dykes",
+            "SUBTITLE": "Uncharted Amazon: el primer descenso del río Coppename, en la Amazonía de Surinam, desde su nacimiento hasta el mar",
+            "LEAD": "El explorador galés <strong>Ash Dykes</strong> se ha ganado una reputación mundial por completar travesías que nadie había logrado antes. En 2024 llevó ese espíritu a la Amazonía de Surinam, uno de los rincones más remotos y peor cartografiados del continente, para localizar el nacimiento del <strong>río Coppename</strong> y seguir su curso, a pie y en kayak, hasta el océano Atlántico.",
+            "STATS": [
+                {
+                    "VALUE": "≈ 600 km",
+                    "LABEL": "de recorrido por el río Coppename (373 millas)"
+                },
+                {
+                    "VALUE": "37 días",
+                    "LABEL": "desde el nacimiento del río hasta el Atlántico"
+                },
+                {
+                    "VALUE": "2",
+                    "LABEL": "récords Guinness obtenidos en la expedición"
+                },
+                {
+                    "VALUE": "5",
+                    "LABEL": "récords Guinness en su trayectoria"
+                }
+            ],
+            "WHO_TITLE": "¿Quién es Ash Dykes?",
+            "WHO_PARAS": [
+                "Ash Dykes es un explorador, atleta de resistencia, escritor y conferenciante originario del norte de Gales. Su carrera se ha construido sobre expediciones de larga duración, a menudo en solitario y sin asistencia, que combinan la exigencia física con una profunda curiosidad por los territorios y las culturas que atraviesa.",
+                "Antes de llegar a la Amazonía ya había recorrido Mongolia a pie, había atravesado Madagascar de punta a punta y se había convertido en la primera persona en caminar toda la longitud del río Yangtsé, en China. Esas hazañas le valieron varios récords Guinness y una audiencia internacional que sigue con interés cada uno de sus proyectos."
+            ],
+            "AMAZON_TITLE": "La expedición Uncharted Amazon",
+            "AMAZON_PARAS": [
+                "A finales de agosto de 2024, Dykes y su equipo se adentraron en el interior de la selva surinamesa, en una región sin caminos donde ni siquiera era sencillo encontrar un claro para que aterrizara el helicóptero. Tras días de avance entre vegetación cerrada, lograron <strong>identificar y cartografiar el nacimiento del Coppename</strong>, uno de los grandes ríos del país.",
+                "Desde allí comenzaron un descenso de unos 600 kilómetros, alternando tramos a pie con la navegación en kayak por rápidos, meandros y zonas de bosque inundado. El reto no era solo físico: el equipo convivió con la presencia de jaguares, nubes de insectos y la humedad constante de una selva prácticamente intacta. A comienzos de octubre de 2024 alcanzaron la desembocadura en el Atlántico, tras 37 días de travesía.",
+                "En el transcurso de la expedición, el equipo coronó además el <strong>Julianatop</strong>, la montaña más alta de Surinam, con el ascenso más rápido registrado. Tanto el descenso completo del Coppename como esa ascensión han sido reconocidos por Guinness World Records."
+            ],
+            "QUOTE": "Incluso en la era de los satélites, la Amazonía conserva ríos cuyo nacimiento nadie había documentado.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "STAGES_TITLE": "Las etapas de la travesía",
+            "STAGES": [
+                {
+                    "WHEN": "Agosto de 2024",
+                    "TITLE": "Entrada en la selva",
+                    "TEXT": "Aproximación en helicóptero al interior de Surinam y búsqueda de un punto de acceso seguro en plena selva primaria."
+                },
+                {
+                    "WHEN": "Primera semana",
+                    "TITLE": "El nacimiento del Coppename",
+                    "TEXT": "Tras varios días abriendo camino a machete, el equipo localiza y documenta las fuentes del río."
+                },
+                {
+                    "WHEN": "Primeros días",
+                    "TITLE": "Cumbre del Julianatop",
+                    "TEXT": "Ascenso a la montaña más alta de Surinam en el menor tiempo registrado hasta la fecha."
+                },
+                {
+                    "WHEN": "Septiembre de 2024",
+                    "TITLE": "Descenso a pie y en kayak",
+                    "TEXT": "Cientos de kilómetros de rápidos, saltos de agua y bosque inundado, siguiendo el curso del río hacia la costa."
+                },
+                {
+                    "WHEN": "Octubre de 2024",
+                    "TITLE": "Llegada al Atlántico",
+                    "TEXT": "El equipo alcanza la desembocadura y completa el primer recorrido conocido del Coppename de su nacimiento al mar."
+                }
+            ],
+            "CAREER_TITLE": "Una trayectoria de primeras veces",
+            "CAREER": [
+                {
+                    "WHEN": "Mongolia",
+                    "TITLE": "Travesía en solitario y sin asistencia",
+                    "TEXT": "Recorrió el país a pie, arrastrando su propio equipo a través del Altái y el desierto del Gobi."
+                },
+                {
+                    "WHEN": "Madagascar",
+                    "TITLE": "La isla de punta a punta",
+                    "TEXT": "Atravesó la isla a lo largo de su eje montañoso, coronando sus cumbres principales."
+                },
+                {
+                    "WHEN": "China",
+                    "TITLE": "Toda la longitud del Yangtsé",
+                    "TEXT": "Se convirtió en la primera persona en caminar desde el nacimiento hasta la desembocadura del río más largo de Asia, unos 6.400 kilómetros."
+                },
+                {
+                    "WHEN": "Surinam",
+                    "TITLE": "Uncharted Amazon",
+                    "TEXT": "Primer descenso del río Coppename de su nacimiento al mar y ascenso más rápido al Julianatop."
+                }
+            ],
+            "WHY_TITLE": "Por qué es un recurso valioso",
+            "WHY_PARAS": [
+                "La serie documental <em>Uncharted Amazon with Ash Dykes</em> ofrece una ventana excepcional a un sector de la Amazonía que rara vez aparece en los medios: el escudo guayanés, con sus ríos de aguas negras, sus selvas sin carreteras y sus macizos graníticos. Más allá de la aventura, la expedición contribuyó a documentar el nacimiento de un río hasta entonces sin cartografiar.",
+                "Para quien se acerca a la selva por primera vez, la historia de Dykes es también una lección de humildad: incluso con tecnología satelital y un equipo preparado, la Amazonía impone su propio ritmo. Es un buen complemento a nuestra página sobre la <a href=\"/amazonia/exploracion/historia\">exploración histórica del Amazonas</a> con Francisco de Orellana."
+            ],
+            "SHEET": {
+                "ORIGIN": "Gales (Reino Unido)",
+                "DATE": "Agosto – octubre de 2024",
+                "ROUTE": "Río Coppename, del nacimiento al océano Atlántico (≈ 600 km)",
+                "RECORDS": "Primer descenso del Coppename de su nacimiento al mar · Ascenso más rápido al Julianatop"
+            },
+            "CTA_WEB": "Web oficial de Ash Dykes",
+            "CTA_SERIES": "Ver la serie documental",
+            "CARD": "El explorador galés recorrió por primera vez el río Coppename, en la Amazonía de Surinam, desde su nacimiento hasta el Atlántico. Expedición, récords y serie documental."
+        },
+        "VOZTERRA": {
+            "EYEBROW": "Proyecto sonoro · Colombia",
+            "TITLE": "VozTerra",
+            "SUBTITLE": "Paisajes sonoros para volver a escuchar la naturaleza",
+            "LEAD": "<strong>VozTerra</strong> es un colectivo multidisciplinar colombiano y una plataforma de audio que utiliza la grabación de paisajes sonoros, la música y la educación ambiental para despertar conciencia sobre la crisis climática y la pérdida de biodiversidad. Su propuesta parte de una idea sencilla y poderosa: aquello que aprendemos a escuchar, aprendemos también a cuidar.",
+            "WHAT_TITLE": "Qué es VozTerra",
+            "WHAT_PARAS": [
+                "El colectivo nació en agosto de 2019 de la mano de <strong>Lany Arévalo, Héctor Buitrago, Rafael Puyana, Diana Restrepo y Daniel Roa</strong>, en colaboración con el Museo para las Naciones Unidas – <strong>UN Live</strong>. Entre sus fundadores figura Héctor Buitrago, cofundador de la banda Aterciopelados y conocido activista medioambiental.",
+                "Su trabajo se organiza en capítulos: viajes de escucha a ecosistemas concretos en los que el equipo graba el sonido del agua, los animales y el viento, conversa con las comunidades que habitan esos lugares y transforma el material en álbumes, piezas artísticas y actividades pedagógicas. Hasta la fecha, VozTerra ha publicado varios álbumes con músicos de una decena de países."
+            ],
+            "AMAZON_TITLE": "El piedemonte amazónico del Caquetá",
+            "AMAZON_PARAS": [
+                "El segundo capítulo del proyecto llevó al colectivo al <strong>Caquetá</strong>, en el piedemonte amazónico colombiano, la franja donde los Andes descienden hacia la gran llanura selvática. Allí, guiados por el sonido, la naturaleza y la comunidad, visitaron <strong>seis ecosistemas</strong> distintos y documentaron su riqueza acústica.",
+                "El piedemonte es una zona de enorme valor ecológico: en ella se recargan ríos tan importantes como el Caquetá y el Putumayo, y conviven especies andinas y amazónicas. Es también una de las regiones más castigadas por la deforestación en Colombia. Registrar hoy su paisaje sonoro es, en cierto modo, levantar acta de un patrimonio vivo que podría perderse si no se protege."
+            ],
+            "QUOTE": "La selva no es silencio: es una conversación continua entre miles de especies. Aprender a escucharla es el primer paso para defenderla.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "CHAPTERS_TITLE": "Capítulos destacados",
+            "CHAPTERS_INTRO": "Cada capítulo combina grabación de campo, creación artística y trabajo con comunidades. Estos son algunos de los más representativos:",
+            "CHAPTERS": [
+                {
+                    "KICKER": "Capítulo 1 · 2020",
+                    "TITLE": "Reserva Van der Hammen y Humedal La Conejera",
+                    "TEXT": "El primer viaje de escucha, en dos ecosistemas estratégicos de Bogotá amenazados por la expansión urbana."
+                },
+                {
+                    "KICKER": "Capítulo 2",
+                    "TITLE": "Caquetá, piedemonte amazónico",
+                    "TEXT": "Seis ecosistemas del sur de Colombia recorridos y grabados junto a las comunidades que los habitan."
+                },
+                {
+                    "KICKER": "Capítulo 3",
+                    "TITLE": "Sonidos desde tu ventana",
+                    "TEXT": "Durante el confinamiento por la COVID-19, personas de todo el mundo grabaron la naturaleza que escuchaban desde casa."
+                },
+                {
+                    "KICKER": "Capítulo 5 · 2024",
+                    "TITLE": "Sounds Right",
+                    "TEXT": "Una visión que dio origen a la alianza global Sounds Right, impulsada junto a UN Live, que reconoce a la naturaleza como artista."
+                },
+                {
+                    "KICKER": "Capítulo 6",
+                    "TITLE": "Oídos al Bosque",
+                    "TEXT": "Educación ambiental y escucha consciente con 23 docentes, 12 colegios rurales de Bogotá y 982 estudiantes de 10 a 18 años."
+                }
+            ],
+            "WHY_TITLE": "Por qué lo incluimos en Recursos",
+            "WHY_PARAS": [
+                "La <strong>ecoacústica</strong> —el estudio del sonido de los ecosistemas— se ha convertido en una herramienta científica para medir la salud de los bosques: una selva sana suena distinta a una selva degradada o a una <a href=\"/amazonia/conservacion/selva-vacia\">selva vacía</a>, en la que la fauna ha desaparecido aunque los árboles sigan en pie. VozTerra traslada esa intuición al terreno cultural y educativo.",
+                "Sus grabaciones son un recurso excelente para docentes, divulgadores y cualquier persona que quiera experimentar la riqueza sonora de la Amazonía y de otros ecosistemas colombianos sin salir de casa. Recomendamos escucharlas con auriculares y en un entorno tranquilo."
+            ],
+            "SHEET": {
+                "TYPE": "Colectivo multidisciplinar y plataforma de audio",
+                "FOUNDED": "Agosto de 2019",
+                "ORIGIN": "Bogotá (Colombia)",
+                "PARTNERS": "Museo para las Naciones Unidas – UN Live",
+                "AMAZON": "Capítulo dedicado al piedemonte amazónico del Caquetá"
+            },
+            "CTA_WEB": "Visitar vozterra.com",
+            "CTA_LISTEN": "Escuchar la discografía",
+            "CARD": "Colectivo colombiano que graba paisajes sonoros, como los del piedemonte amazónico del Caquetá, para concienciar sobre la crisis climática y la biodiversidad."
+        }
     }
 }

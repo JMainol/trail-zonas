@@ -1,0 +1,108 @@
+<article class="resource" itemscope itemtype="https://schema.org/Organization">
+  <div class="resource__inner">
+
+    <div class="resource__topbar">
+      <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </button>
+      <ol class="breadcrumb" [attr.aria-label]="'RESOURCES.BREADCRUMB' | translate">
+        <li><a routerLink="/">{{ 'COMMON.HOME' | translate }}</a></li>
+        <li><a routerLink="/amazonia/recursos">{{ 'COMMON.RESOURCES' | translate }}</a></li>
+        <li>{{ 'COMMON.RESEARCH' | translate }}</li>
+        <li aria-current="page">VozTerra</li>
+      </ol>
+    </div>
+
+    <header class="resource__header">
+      <span class="eyebrow"><mat-icon aria-hidden="true">graphic_eq</mat-icon>{{ 'RESOURCES.VOZTERRA.EYEBROW' | translate }}</span>
+      <h1 class="resource__title" itemprop="name">{{ 'RESOURCES.VOZTERRA.TITLE' | translate }}</h1>
+      <p class="resource__subtitle">{{ 'RESOURCES.VOZTERRA.SUBTITLE' | translate }}</p>
+      <p class="resource__lead" itemprop="description" [innerHTML]="'RESOURCES.VOZTERRA.LEAD' | translate"></p>
+    </header>
+
+    <div class="soundwave" aria-hidden="true">
+      @for (h of bars; track $index) {
+        <span [style.height.%]="h"></span>
+      }
+    </div>
+
+    <div class="resource__grid">
+      <div class="prose">
+
+        <section aria-labelledby="vt-what">
+          <h2 id="vt-what">{{ 'RESOURCES.VOZTERRA.WHAT_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.VOZTERRA.WHAT_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section aria-labelledby="vt-amazon">
+          <h2 id="vt-amazon">{{ 'RESOURCES.VOZTERRA.AMAZON_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.VOZTERRA.AMAZON_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <blockquote class="pull-quote">
+          <p>{{ 'RESOURCES.VOZTERRA.QUOTE' | translate }}</p>
+          <cite>{{ 'RESOURCES.VOZTERRA.QUOTE_AUTHOR' | translate }}</cite>
+        </blockquote>
+
+        <section aria-labelledby="vt-chapters">
+          <h2 id="vt-chapters">{{ 'RESOURCES.VOZTERRA.CHAPTERS_TITLE' | translate }}</h2>
+          <p>{{ 'RESOURCES.VOZTERRA.CHAPTERS_INTRO' | translate }}</p>
+          <ul class="cards">
+            @for (c of ('RESOURCES.VOZTERRA.CHAPTERS' | translate); track $index) {
+              <li>
+                <span class="card__kicker">{{ c.KICKER }}</span>
+                <span class="card__title">{{ c.TITLE }}</span>
+                <p>{{ c.TEXT }}</p>
+              </li>
+            }
+          </ul>
+        </section>
+
+        <section aria-labelledby="vt-why">
+          <h2 id="vt-why">{{ 'RESOURCES.VOZTERRA.WHY_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.VOZTERRA.WHY_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section class="sources" aria-labelledby="vt-sources">
+          <h2 id="vt-sources">{{ 'RESOURCES.SOURCES' | translate }}</h2>
+          <ol>
+            <li><a href="https://www.vozterra.com/about-us.php" target="_blank" rel="noopener noreferrer">VozTerra — Acerca de</a></li>
+            <li><a href="https://www.vozterra.com/discografia.php" target="_blank" rel="noopener noreferrer">VozTerra — Discografía</a></li>
+            <li><a href="https://www.vozterra.com/capitulos/caqueta/florencia-ecosistema.php" target="_blank" rel="noopener noreferrer">VozTerra — Capítulo Caquetá, piedemonte amazónico</a></li>
+            <li><a href="https://www.fundaciongold.org/vozterra" target="_blank" rel="noopener noreferrer">Fundación Gold — VozTerra</a></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="aside" [attr.aria-label]="'RESOURCES.FACT_SHEET' | translate">
+        <div class="fact-sheet">
+          <h2>{{ 'RESOURCES.FACT_SHEET' | translate }}</h2>
+          <dl>
+            <div><dt>{{ 'RESOURCES.FIELDS.TYPE' | translate }}</dt><dd>{{ 'RESOURCES.VOZTERRA.SHEET.TYPE' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.FOUNDED' | translate }}</dt><dd itemprop="foundingDate">{{ 'RESOURCES.VOZTERRA.SHEET.FOUNDED' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.ORIGIN' | translate }}</dt><dd>{{ 'RESOURCES.VOZTERRA.SHEET.ORIGIN' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.MEMBERS' | translate }}</dt><dd>Lany Arévalo, Héctor Buitrago, Rafael Puyana, Diana Restrepo, Daniel Roa</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.PARTNERS' | translate }}</dt><dd>{{ 'RESOURCES.VOZTERRA.SHEET.PARTNERS' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.AMAZON_LINK' | translate }}</dt><dd>{{ 'RESOURCES.VOZTERRA.SHEET.AMAZON' | translate }}</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://www.vozterra.com/" target="_blank" rel="noopener noreferrer" itemprop="url">
+              <mat-icon aria-hidden="true">open_in_new</mat-icon>{{ 'RESOURCES.VOZTERRA.CTA_WEB' | translate }}
+            </a>
+            <a class="btn btn--ghost" href="https://www.vozterra.com/discografia.php" target="_blank" rel="noopener noreferrer">
+              <mat-icon aria-hidden="true">headphones</mat-icon>{{ 'RESOURCES.VOZTERRA.CTA_LISTEN' | translate }}
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <app-resource-related current="vozterra" />
+  </div>
+</article>
