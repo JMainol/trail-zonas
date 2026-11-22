@@ -1,0 +1,1 @@
+import"./chunk-IMPBB4AK.js";var e=[{path:"",title:"Contacto y colaboraci\xF3n",data:{description:"Colabora con Selva Amazonas 2.0, la enciclopedia abierta de la Amazon\xEDa: bi\xF3logos, desarrolladores, dise\xF1adores, fot\xF3grafos e investigadores."},loadComponent:()=>import("./chunk-BFE4YIYF.js").then(o=>o.ContactoComponent)}];export{e as CONTACTO_ROUTES};
