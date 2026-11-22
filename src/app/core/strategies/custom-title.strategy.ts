@@ -1,50 +1,91 @@
-import { Injectable } from '@angular/core';
-import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
+import { Injectable, inject } from '@angular/core';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, TitleStrategy } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../services/seo.service';
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  SeoService,
+} from '../services/seo.service';
 
+/**
+ * Estrategia de títulos que, además del <title>, sincroniza en cada navegación:
+ * descripción, Open Graph/Twitter, URL canónica, directiva robots y JSON-LD
+ * (WebPage o el tipo indicado en `data.schemaType`, más su BreadcrumbList).
+ */
 @Injectable({ providedIn: 'root' })
 export class CustomTitleStrategy extends TitleStrategy {
-  constructor(
-    private readonly title: Title,
-    private readonly seoService: SeoService
-  ) {
-    super();
-  }
+  private readonly title = inject(Title);
+  private readonly seoService = inject(SeoService);
 
-  override updateTitle(routerState: RouterStateSnapshot) {
+  override updateTitle(routerState: RouterStateSnapshot): void {
     const title = this.buildTitle(routerState);
-    const fullTitle = title !== undefined ? `${title} | Amazonas Jungle` : 'Amazonas Jungle';
-    
+    const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} · Enciclopedia visual de la Amazonía`;
     this.title.setTitle(fullTitle);
 
-    // Attempt to extract description and image from the deepest route data
+    // Ruta más profunda y cadena de rutas para las migas de pan
+    const chain: ActivatedRouteSnapshot[] = [];
     let route = routerState.root;
+    chain.push(route);
     while (route.firstChild) {
       route = route.firstChild;
+      chain.push(route);
     }
 
-    const description = route.data['description'] || 'Explora la Amazonía: su increíble fauna, flora medicinal, pueblos originarios y reservas naturales.';
-    const ogImage = route.data['ogImage'] || 'https://selva-amazonas.com/assets/images/og-image.jpg';
+    const data = route.data ?? {};
+    const description: string = data['description'] || DEFAULT_DESCRIPTION;
+    const ogImage: string = data['ogImage'] || DEFAULT_OG_IMAGE;
+    const path = routerState.url.split(/[?#]/)[0];
+    const canonicalUrl = `${SITE_URL}${path === '/' ? '/' : path.replace(/\/$/, '')}`;
 
-    // Meta tags
     this.seoService.updateMetaTags(fullTitle, description, ogImage);
-
-    // Canonical URL
-    const canonicalUrl = `https://selva-amazonas.com${routerState.url.split('?')[0]}`;
     this.seoService.updateCanonicalUrl(canonicalUrl);
+    this.seoService.setIndexable(!data['noindex']);
 
-    // JSON-LD (WebPage schema)
+    const breadcrumbs = this.buildBreadcrumbs(chain);
+    const page: Record<string, unknown> = {
+      '@type': data['schemaType'] || 'WebPage',
+      name: title || SITE_NAME,
+      headline: title || SITE_NAME,
+      description,
+      url: canonicalUrl,
+      image: ogImage,
+      inLanguage: 'es',
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+      publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+      ...(data['jsonLd'] || {}),
+    };
+
     this.seoService.setJsonLd({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": fullTitle,
-      "description": description,
-      "url": canonicalUrl,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Amazonas Jungle"
-      }
+      '@context': 'https://schema.org',
+      '@graph': breadcrumbs.length > 1 ? [page, this.breadcrumbSchema(breadcrumbs)] : [page],
     });
+  }
+
+  private buildBreadcrumbs(chain: ActivatedRouteSnapshot[]): { name: string; url: string }[] {
+    const crumbs: { name: string; url: string }[] = [{ name: 'Inicio', url: `${SITE_URL}/` }];
+    let url = '';
+    for (const snap of chain) {
+      const segment = snap.url.map((s) => s.path).join('/');
+      if (segment) url += `/${segment}`;
+      const name = snap.routeConfig?.title;
+      if (segment && typeof name === 'string' && !crumbs.some((c) => c.name === name)) {
+        crumbs.push({ name, url: `${SITE_URL}${url}` });
+      }
+    }
+    return crumbs;
+  }
+
+  private breadcrumbSchema(crumbs: { name: string; url: string }[]) {
+    return {
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    };
   }
 }

@@ -21,7 +21,7 @@ interface SearchResult {
    standalone: true,
    imports: [RouterLink, RouterLinkActive, CommonModule, MatIconModule, TranslateModule, FormsModule],
    template: `
-    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" aria-label="Menú Principal">
+    <nav class="sticky top-0 z-[1000] w-full bg-[#020617]/80 backdrop-blur-xl border-b border-[#1e293b] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" [attr.aria-label]="'SEARCH.MAIN_NAV' | translate">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           
@@ -33,16 +33,18 @@ interface SearchResult {
           </div>
           
           <!-- Desktop Menu -->
-          <div class="hidden md:flex items-center justify-between flex-grow ml-10">
-            <ul class="flex items-center justify-center space-x-2">
+          <div class="hidden xl:flex items-center justify-between flex-grow ml-4 2xl:ml-10">
+            <ul class="flex items-center justify-center gap-0 2xl:gap-1">
               
               <!-- Generador de Secciones -->
               <ng-container *ngFor="let section of menuItems">
                 <li class="relative group" (mouseenter)="section.items ? onMouseEnter(section.id) : null" (mouseleave)="onMouseLeave()">
                     
                     <!-- Si tiene ítems (Dropdown) -->
-                    <button *ngIf="section.items" class="nav-item group-hover:glow-cyan focus:outline-none"
+                    <button *ngIf="section.items" type="button" class="nav-item group-hover:glow-cyan"
+                            aria-haspopup="true"
                             [attr.aria-expanded]="activeDropdown() === section.id"
+                            (focus)="onMouseEnter(section.id)"
                             [class.nav-disabled]="section.disabled">
                         {{ section.label | translate }}
                         <mat-icon class="icon transition-transform duration-300 group-hover:rotate-180">expand_more</mat-icon>
@@ -71,7 +73,7 @@ interface SearchResult {
 
                                     <!-- Nested Dropdown Item -->
                                     <div *ngIf="item.items" class="relative has-nested-dropdown" [class.nav-disabled]="item.disabled">
-                                        <div class="dropdown-item flex items-center gap-[10px] cursor-pointer group/nested">
+                                        <div class="dropdown-item flex items-center gap-[10px] cursor-pointer group/nested" [attr.tabindex]="item.link ? null : 0" aria-haspopup="true">
                                             <a *ngIf="item.link" [routerLink]="item.disabled ? null : item.link" routerLinkActive="dropdown-active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-cyan-400 transition-colors">
                                                 {{ item.label | translate }}
                                             </a>
@@ -107,16 +109,16 @@ interface SearchResult {
                 class="search-icon-btn"
                 (click)="toggleSearch()"
                 [class.active]="isSearchOpen()"
-                title="Buscar paginas"
-                aria-label="Abrir buscador"
+                [title]="'SEARCH.OPEN' | translate"
+                [attr.aria-label]="'SEARCH.OPEN' | translate"
               >
                 <mat-icon>search</mat-icon>
               </button>
 
               <!-- Language Switcher Desktop -->
-              <div class="language-switcher group/lang" (mouseenter)="langDropdownOpen = true" (mouseleave)="langDropdownOpen = false">
+              <div class="language-switcher group/lang" (mouseenter)="langDropdownOpen = true" (mouseleave)="langDropdownOpen = false" (focusin)="langDropdownOpen = true" (focusout)="onLangFocusOut($event)" (keydown.escape)="langDropdownOpen = false">
                 <!-- Active language pill -->
-                <button class="lang-active-btn" [attr.aria-expanded]="langDropdownOpen" aria-haspopup="listbox">
+                <button type="button" class="lang-active-btn" [attr.aria-expanded]="langDropdownOpen" aria-haspopup="listbox">
                   <span class="lang-flag">{{ currentLanguage().flag }}</span>
                   <span class="lang-label">{{ currentLanguage().label }}</span>
                   <mat-icon class="lang-chevron" [class.rotated]="langDropdownOpen">expand_more</mat-icon>
@@ -125,6 +127,8 @@ interface SearchResult {
                 <!-- Dropdown Panel -->
                 <div class="lang-dropdown-panel" role="listbox" [class.open]="langDropdownOpen">
                   <button
+                    type="button"
+                    [attr.lang]="lang.code"
                     *ngFor="let lang of languages"
                     class="lang-dropdown-item"
                     [class.active]="currentLang() === lang.code"
@@ -145,9 +149,9 @@ interface SearchResult {
           </div>
 
           <!-- Mobile Controls (Language + Search + Hamburger) -->
-          <div class="flex md:hidden items-center gap-1.5 sm:gap-2">
+          <div class="flex xl:hidden items-center gap-1.5 sm:gap-2">
              <!-- Language Switcher Mobile -->
-             <button (click)="toggleLanguage()" class="mobile-lang-btn" [attr.aria-label]="'Idioma: ' + currentLanguage().label">
+             <button type="button" (click)="toggleLanguage()" class="mobile-lang-btn" [attr.aria-label]="'SEARCH.SWITCH_LANG' | translate">
                 {{ currentLanguage().flag }} {{ currentLanguage().abbr }}
              </button>
 
@@ -156,15 +160,15 @@ interface SearchResult {
                class="search-icon-btn search-icon-btn--mobile"
                (click)="toggleSearch()"
                [class.active]="isSearchOpen()"
-               title="Buscar paginas"
-               aria-label="Abrir buscador"
+               [title]="'SEARCH.OPEN' | translate"
+               [attr.aria-label]="'SEARCH.OPEN' | translate"
              >
                <mat-icon>search</mat-icon>
              </button>
 
             <!-- Hamburger Button -->
             <button (click)="toggleMobileMenu()" type="button" class="mobile-menu-btn" aria-controls="mobile-menu" [attr.aria-expanded]="isMobileMenuOpen()">
-              <span class="sr-only">Abrir menú principal</span>
+              <span class="sr-only">{{ 'SEARCH.MENU' | translate }}</span>
               <mat-icon>{{ isMobileMenuOpen() ? 'close' : 'menu' }}</mat-icon>
             </button>
           </div>
@@ -172,7 +176,7 @@ interface SearchResult {
       </div>
 
       <!-- Mobile Menu Panel -->
-      <div class="md:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen()" [class.max-h-screen]="isMobileMenuOpen()" [class.opacity-0]="!isMobileMenuOpen()" [class.overflow-hidden]="!isMobileMenuOpen()" id="mobile-menu">
+      <div class="xl:hidden transition-all duration-500 ease-in-out bg-[#020617] border-t border-[#1e293b]" [class.max-h-0]="!isMobileMenuOpen()" [class.max-h-screen]="isMobileMenuOpen()" [class.opacity-0]="!isMobileMenuOpen()" [class.overflow-hidden]="!isMobileMenuOpen()" id="mobile-menu">
         <div class="px-4 pt-4 pb-8 space-y-2">
             <div *ngFor="let section of menuItems" class="space-y-1">
                 <!-- Si tiene ítems (Mobile Dropdown) -->
@@ -273,18 +277,18 @@ interface SearchResult {
                 id="search-input"
                 type="text"
                 class="search-field"
-                placeholder="Buscar paginas..."
+                [placeholder]="'SEARCH.PLACEHOLDER' | translate"
                 [value]="searchQuery()"
                 (input)="onQueryChange($any($event.target).value)"
                 (keydown)="onKeyDown($event)"
                 autocomplete="off"
-                aria-label="Campo de busqueda"
+                [attr.aria-label]="'SEARCH.FIELD' | translate"
               />
               <button
                 *ngIf="searchQuery()"
                 class="search-clear-btn"
                 (click)="clearSearch()"
-                title="Limpiar busqueda"
+                [title]="'SEARCH.CLEAR' | translate" [attr.aria-label]="'SEARCH.CLEAR' | translate"
               >
                 <mat-icon>close</mat-icon>
               </button>
@@ -295,23 +299,23 @@ interface SearchResult {
               class="search-go-btn"
               [disabled]="filteredResults().length === 0"
               (click)="navigateToSelected()"
-              title="Ir a la pagina seleccionada"
+              [title]="'SEARCH.GO_TITLE' | translate"
             >
               <mat-icon>arrow_forward</mat-icon>
-              <span>Ir</span>
+              <span>{{ 'SEARCH.GO' | translate }}</span>
             </button>
 
             <!-- Close button -->
-            <button class="search-close-btn" (click)="closeSearch()" title="Cerrar buscador (Esc)">
+            <button class="search-close-btn" (click)="closeSearch()" [title]="'SEARCH.CLOSE' | translate" [attr.aria-label]="'SEARCH.CLOSE' | translate">
               <mat-icon>close</mat-icon>
             </button>
           </div>
 
           <!-- Keyboard hint -->
           <p class="search-hint">
-            <kbd>&uarr;&darr;</kbd> Navegar resultados &nbsp;&middot;&nbsp;
-            <kbd>Enter</kbd> Ir a la pagina &nbsp;&middot;&nbsp;
-            <kbd>Esc</kbd> Cerrar
+            <kbd>&uarr;&darr;</kbd> {{ 'SEARCH.HINT_NAV' | translate }} &nbsp;&middot;&nbsp;
+            <kbd>Enter</kbd> {{ 'SEARCH.HINT_GO' | translate }} &nbsp;&middot;&nbsp;
+            <kbd>Esc</kbd> {{ 'SEARCH.HINT_CLOSE' | translate }}
           </p>
 
           <!-- Results -->
@@ -320,7 +324,7 @@ interface SearchResult {
             <!-- No results -->
             <div *ngIf="filteredResults().length === 0" class="search-no-results">
               <mat-icon>search_off</mat-icon>
-              <span>No se encontraron resultados para <strong>"{{ searchQuery() }}"</strong></span>
+              <span>{{ 'SEARCH.NO_RESULTS' | translate }} <strong>"{{ searchQuery() }}"</strong></span>
             </div>
 
             <!-- Result list -->
@@ -359,6 +363,13 @@ export class NavMenuComponent {
 
    /** Controla la visibilidad del dropdown de idiomas en desktop */
    langDropdownOpen = false;
+
+   /** Cierra el desplegable de idiomas cuando el foco del teclado sale de él */
+   onLangFocusOut(event: FocusEvent) {
+      const container = event.currentTarget as HTMLElement | null;
+      const next = event.relatedTarget as Node | null;
+      if (!container || !next || !container.contains(next)) this.langDropdownOpen = false;
+   }
 
    // Search state
    readonly isSearchOpen = signal(false);
@@ -430,6 +441,15 @@ export class NavMenuComponent {
       // Conservación
       { title: 'Conservación, Deforestación en la Amazonía', enTitle: 'Conservation, Deforestation in the Amazon', link: '/amazonia/conservacion/deforestacion-mineria' },
       { title: 'El Síndrome de la Selva Vacía, Conservación', enTitle: 'The Empty Forest Syndrome, Conservation', link: '/amazonia/conservacion/selva-vacia' },
+
+      // Recursos
+      { title: 'Recursos: documentales, libros e investigación', enTitle: 'Resources: documentaries, books and research', link: '/amazonia/recursos' },
+      { title: 'Yanuni, documental producido por Leonardo DiCaprio', enTitle: 'Yanuni, documentary produced by Leonardo DiCaprio', link: '/amazonia/recursos/documentales/yanuni' },
+      { title: 'Ash Dykes, explorador · Uncharted Amazon', enTitle: 'Ash Dykes, explorer · Uncharted Amazon', link: '/amazonia/recursos/documentales/ash-dykes' },
+      { title: 'VozTerra, paisajes sonoros y escucha de la naturaleza', enTitle: 'VozTerra, soundscapes and nature listening', link: '/amazonia/recursos/investigacion/vozterra' },
+
+      // Misión
+      { title: 'Misión del proyecto', enTitle: 'Project mission', link: '/mision' },
 
       // Contacto
       { title: 'Contacto', enTitle: 'Contact', link: '/amazonia/contacto' },
@@ -560,10 +580,22 @@ export class NavMenuComponent {
          id: 'recursos',
          label: 'COMMON.RESOURCES',
          items: [
+            { label: 'COMMON.RESOURCES_ALL', link: '/amazonia/recursos', icon: 'format_list_bulleted' },
+            {
+               label: 'COMMON.DOCUMENTARIES',
+               items: [
+                  { label: 'Yanuni', link: '/amazonia/recursos/documentales/yanuni', icon: 'movie' },
+                  { label: 'Ash Dykes', link: '/amazonia/recursos/documentales/ash-dykes', icon: 'explore' }
+               ]
+            },
+            {
+               label: 'COMMON.RESEARCH',
+               items: [
+                  { label: 'VozTerra', link: '/amazonia/recursos/investigacion/vozterra', icon: 'graphic_eq' }
+               ]
+            },
             { label: 'COMMON.BOOKS', link: '/amazonia/recursos/libros', disabled: true },
-            { label: 'COMMON.DOCUMENTARIES', link: '/amazonia/recursos/documentales', disabled: true },
-            { label: 'COMMON.MOVIES', link: '/amazonia/recursos/peliculas', disabled: true },
-            { label: 'COMMON.RESEARCH', link: '/amazonia/recursos/investigacion', disabled: true }
+            { label: 'COMMON.MOVIES', link: '/amazonia/recursos/peliculas', disabled: true }
          ]
       },
       {

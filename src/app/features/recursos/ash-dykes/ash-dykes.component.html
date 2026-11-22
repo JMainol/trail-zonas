@@ -1,0 +1,124 @@
+<article class="resource" itemscope itemtype="https://schema.org/Person">
+  <div class="resource__inner">
+
+    <div class="resource__topbar">
+      <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </button>
+      <ol class="breadcrumb" [attr.aria-label]="'RESOURCES.BREADCRUMB' | translate">
+        <li><a routerLink="/">{{ 'COMMON.HOME' | translate }}</a></li>
+        <li><a routerLink="/amazonia/recursos">{{ 'COMMON.RESOURCES' | translate }}</a></li>
+        <li>{{ 'COMMON.DOCUMENTARIES' | translate }}</li>
+        <li aria-current="page">Ash Dykes</li>
+      </ol>
+    </div>
+
+    <header class="resource__header">
+      <span class="eyebrow"><mat-icon aria-hidden="true">explore</mat-icon>{{ 'RESOURCES.ASH_DYKES.EYEBROW' | translate }}</span>
+      <h1 class="resource__title" itemprop="name">{{ 'RESOURCES.ASH_DYKES.TITLE' | translate }}</h1>
+      <p class="resource__subtitle">{{ 'RESOURCES.ASH_DYKES.SUBTITLE' | translate }}</p>
+      <p class="resource__lead" itemprop="description" [innerHTML]="'RESOURCES.ASH_DYKES.LEAD' | translate"></p>
+    </header>
+
+    <ul class="stats" [attr.aria-label]="'RESOURCES.KEY_FACTS' | translate">
+      @for (stat of ('RESOURCES.ASH_DYKES.STATS' | translate); track $index) {
+        <li>
+          <span class="stat__value">{{ stat.VALUE }}</span>
+          <span class="stat__label">{{ stat.LABEL }}</span>
+        </li>
+      }
+    </ul>
+
+    <div class="resource__grid">
+      <div class="prose">
+
+        <section aria-labelledby="ash-who">
+          <h2 id="ash-who">{{ 'RESOURCES.ASH_DYKES.WHO_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.ASH_DYKES.WHO_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section aria-labelledby="ash-amazon">
+          <h2 id="ash-amazon">{{ 'RESOURCES.ASH_DYKES.AMAZON_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.ASH_DYKES.AMAZON_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <blockquote class="pull-quote">
+          <p>{{ 'RESOURCES.ASH_DYKES.QUOTE' | translate }}</p>
+          <cite>{{ 'RESOURCES.ASH_DYKES.QUOTE_AUTHOR' | translate }}</cite>
+        </blockquote>
+
+        <section aria-labelledby="ash-stages">
+          <h2 id="ash-stages">{{ 'RESOURCES.ASH_DYKES.STAGES_TITLE' | translate }}</h2>
+          <ol class="timeline">
+            @for (stage of ('RESOURCES.ASH_DYKES.STAGES' | translate); track $index) {
+              <li>
+                <span class="timeline__year">{{ stage.WHEN }}</span>
+                <span class="timeline__title">{{ stage.TITLE }}</span>
+                <p>{{ stage.TEXT }}</p>
+              </li>
+            }
+          </ol>
+        </section>
+
+        <section aria-labelledby="ash-career">
+          <h2 id="ash-career">{{ 'RESOURCES.ASH_DYKES.CAREER_TITLE' | translate }}</h2>
+          <ol class="timeline">
+            @for (stage of ('RESOURCES.ASH_DYKES.CAREER' | translate); track $index) {
+              <li>
+                <span class="timeline__year">{{ stage.WHEN }}</span>
+                <span class="timeline__title">{{ stage.TITLE }}</span>
+                <p>{{ stage.TEXT }}</p>
+              </li>
+            }
+          </ol>
+        </section>
+
+        <section aria-labelledby="ash-why">
+          <h2 id="ash-why">{{ 'RESOURCES.ASH_DYKES.WHY_TITLE' | translate }}</h2>
+          @for (p of ('RESOURCES.ASH_DYKES.WHY_PARAS' | translate); track $index) {
+            <p [innerHTML]="p"></p>
+          }
+        </section>
+
+        <section class="sources" aria-labelledby="ash-sources">
+          <h2 id="ash-sources">{{ 'RESOURCES.SOURCES' | translate }}</h2>
+          <ol>
+            <li><a href="https://ashdykes.com/expeditions" target="_blank" rel="noopener noreferrer">ashdykes.com — Expeditions</a></li>
+            <li><a href="https://www.viasat.com/perspectives/enterprise/2024/connecting-explorers-in-uncharted-amazon/" target="_blank" rel="noopener noreferrer">Viasat — Connecting explorers in the uncharted Amazon (2024)</a></li>
+            <li><a href="https://www.bomanbridge.tv/programme/1382/uncharted-amazon-with-ash-dykes" target="_blank" rel="noopener noreferrer">Bomanbridge — Uncharted Amazon with Ash Dykes</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Ash_Dykes" target="_blank" rel="noopener noreferrer">Wikipedia — Ash Dykes</a></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="aside" [attr.aria-label]="'RESOURCES.FACT_SHEET' | translate">
+        <div class="fact-sheet">
+          <h2>{{ 'RESOURCES.FACT_SHEET' | translate }}</h2>
+          <dl>
+            <div><dt>{{ 'RESOURCES.FIELDS.EXPLORER' | translate }}</dt><dd>Ash Dykes</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.ORIGIN' | translate }}</dt><dd itemprop="nationality">{{ 'RESOURCES.ASH_DYKES.SHEET.ORIGIN' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.EXPEDITION' | translate }}</dt><dd>Uncharted Amazon · Suriname</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.DATE' | translate }}</dt><dd>{{ 'RESOURCES.ASH_DYKES.SHEET.DATE' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.ROUTE' | translate }}</dt><dd>{{ 'RESOURCES.ASH_DYKES.SHEET.ROUTE' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.RECORDS' | translate }}</dt><dd>{{ 'RESOURCES.ASH_DYKES.SHEET.RECORDS' | translate }}</dd></div>
+            <div><dt>{{ 'RESOURCES.FIELDS.SERIES' | translate }}</dt><dd>Uncharted Amazon with Ash Dykes</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://ashdykes.com/" target="_blank" rel="noopener noreferrer" itemprop="url">
+              <mat-icon aria-hidden="true">open_in_new</mat-icon>{{ 'RESOURCES.ASH_DYKES.CTA_WEB' | translate }}
+            </a>
+            <a class="btn btn--ghost" href="https://tv.apple.com/show/uncharted-amazon-with-ash-dykes/umc.cmc.6z6s96nhk01784646br17jlf1" target="_blank" rel="noopener noreferrer">
+              <mat-icon aria-hidden="true">live_tv</mat-icon>{{ 'RESOURCES.ASH_DYKES.CTA_SERIES' | translate }}
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <app-resource-related current="ash-dykes" />
+  </div>
+</article>

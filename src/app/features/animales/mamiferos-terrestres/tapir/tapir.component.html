@@ -1,7 +1,7 @@
 <section class="hero-section">
     <div class="back-nav-container">
-        <button class="back-btn" (click)="goBack()">
-            <svg viewBox="0 0 24 24">
+        <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
             </svg>
         </button>
@@ -14,7 +14,7 @@
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/mammals/tapir/tapir.png" alt="Tapirus terrestris - Tapir Brasileño" class="animal-image">
+            <img decoding="async" src="assets/mammals/tapir/tapir.webp" alt="Tapirus terrestris - Tapir Brasileño" class="animal-image">
         </div>
     </div>
 
@@ -95,7 +95,7 @@
                         </button>
 
                         <div class="main-photo-view">
-                            <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                            <img loading="lazy" decoding="async" [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
                             <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
                         </div>
 
@@ -112,7 +112,7 @@
                     <div class="thumbnails-track">
                         @for (img of galleryImages; track img.url; let i = $index) {
                         <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
-                            <img [src]="img.url" alt="Thumbnail">
+                            <img loading="lazy" decoding="async" [src]="img.url" alt="Thumbnail">
                         </div>
                         }
                     </div>

@@ -16,7 +16,7 @@
 
 <IfModule mod_deflate.c>
   # Habilitar compresión GZIP para archivos de texto
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml
+  AddOutputFilterByType DEFLATE application/manifest+json text/html text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -28,10 +28,27 @@
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/pdf "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType application/x-javascript "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType audio/mpeg "access plus 1 year"
+  # Los JS/CSS llevan hash en el nombre: pueden cachearse un año sin riesgo
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  # El HTML debe revalidarse para que los despliegues se vean al instante
+  ExpiresByType text/html "access plus 0 seconds"
   ExpiresDefault "access plus 2 days"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/webp .webp
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

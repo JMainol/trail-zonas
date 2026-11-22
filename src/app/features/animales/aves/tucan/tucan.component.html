@@ -1,7 +1,7 @@
 <section class="hero-section">
     <div class="back-nav-container">
-        <button class="back-btn" (click)="goBack()">
-            <svg viewBox="0 0 24 24">
+        <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
             </svg>
         </button>
@@ -14,7 +14,7 @@
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
             <!-- Mobile: Static Image con prioridad de carga -->
-            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.png" width="810" height="1440" priority
+            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.webp" width="810" height="1440" priority
                 alt="Ramphastos vitellinus - {{ 'BIRDS.TOUCAN' | translate }}"
                 class="toucan-image mobile-only">
 
@@ -34,11 +34,11 @@
                 </app-media-caption>
             </div>
             } @placeholder {
-            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.png" width="810" height="1440" priority
+            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.webp" width="810" height="1440" priority
                 alt="Cargando..." class="toucan-image desktop-only">
             }
             } @else {
-            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.png" width="810" height="1440" priority
+            <img ngSrc="assets/images/birds/tucan/tucan_vitelado.webp" width="810" height="1440" priority
                 alt="Ramphastos vitellinus - {{ 'BIRDS.TOUCAN' | translate }}"
                 class="toucan-image desktop-only">
             }
@@ -167,7 +167,7 @@
                 <div class="multimedia-item map-container-tab" [class.tab-hidden]="activeTab() !== 'map'">
                     <h3>{{ 'BIRDS.TOUCAN_MAP_TITLE' | translate }}</h3>
                     <div class="map-container">
-                        <img src="assets/images/birds/tucan/mapa-toucan-vitelado.png" alt="Mapa de probabilidad de Ramphastos vitellinus"
+                        <img loading="lazy" decoding="async" src="assets/images/birds/tucan/mapa-toucan-vitelado.webp" alt="Mapa de probabilidad de Ramphastos vitellinus"
                             class="habitat-map">
                         <div class="map-legend">
                             <div class="legend-title">{{ 'BIRDS.TOUCAN_MAP_LEGEND_TITLE' | translate }}</div>
@@ -202,7 +202,7 @@
                         </button>
 
                         <div class="main-photo-view">
-                            <img [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
+                            <img loading="lazy" decoding="async" [src]="galleryImages[currentPhotoIndex()].url" alt="Subspecies" class="gallery-img">
                             <div class="img-counter">{{ currentPhotoIndex() + 1 }} / {{ galleryImages.length }}</div>
                         </div>
 
@@ -219,7 +219,7 @@
                     <div class="thumbnails-track">
                         @for (img of galleryImages; track img.url; let i = $index) {
                         <div class="thumb" [class.active]="i === currentPhotoIndex()" (click)="currentPhotoIndex.set(i)">
-                            <img [src]="img.url" alt="Thumbnail">
+                            <img loading="lazy" decoding="async" [src]="img.url" alt="Thumbnail">
                         </div>
                         }
                     </div>
