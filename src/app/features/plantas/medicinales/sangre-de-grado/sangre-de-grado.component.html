@@ -1,7 +1,7 @@
 <section class="hero-section">
     <div class="back-nav-container">
-        <button class="back-btn" (click)="goBack()">
-            <svg viewBox="0 0 24 24">
+        <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
             </svg>
         </button>
@@ -10,7 +10,7 @@
 
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
-            <img src="assets/plants/sangre-de-grado.png" [alt]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TITLE' | translate" class="plant-image">
+            <img decoding="async" src="assets/plants/sangre-de-grado.webp" [alt]="'PLANTS.MEDICINAL.SANGRE_DE_GRADO.TITLE' | translate" class="plant-image">
         </div>
         <app-media-caption 
             [title]="'BIRDS.AI_CAPTION_TEXT' | translate"

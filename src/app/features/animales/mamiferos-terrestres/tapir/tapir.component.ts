@@ -50,17 +50,17 @@ export class TapirComponent implements OnInit {
     // Gallery Slider
     protected galleryImages = [
         {
-            url: 'assets/mammals/tapir/malayan-tapir.jpg',
+            url: 'assets/mammals/tapir/malayan-tapir.webp',
             nameKey: 'MAMMALS.TAPIR.SUBSPECIES_1_NAME',
             sciKey: 'MAMMALS.TAPIR.SUBSPECIES_1_SCI'
         },
         {
-            url: 'assets/mammals/tapir/malayan-tapir-baby.jpg',
+            url: 'assets/mammals/tapir/malayan-tapir-baby.webp',
             nameKey: 'MAMMALS.TAPIR.SUBSPECIES_2_NAME',
             sciKey: 'MAMMALS.TAPIR.SUBSPECIES_2_SCI'
         },
         {
-            url: 'assets/mammals/tapir/malayan-tapir-with-baby.png',
+            url: 'assets/mammals/tapir/malayan-tapir-with-baby.webp',
             nameKey: 'MAMMALS.TAPIR.SUBSPECIES_3_NAME',
             sciKey: 'MAMMALS.TAPIR.SUBSPECIES_3_SCI'
         }

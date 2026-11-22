@@ -1,0 +1,33 @@
+.soundwave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 96px;
+  margin: 0 0 3rem;
+  padding: 0 1.25rem;
+  border-radius: 18px;
+  border: 1px solid var(--accent-line);
+  background: linear-gradient(90deg, rgba(167, 139, 250, 0.08), rgba(45, 212, 191, 0.06));
+  overflow: hidden;
+
+  span {
+    flex: 1 1 0;
+    min-width: 2px;
+    border-radius: 999px;
+    background: linear-gradient(to top, #2dd4bf, var(--accent));
+    opacity: 0.85;
+    transform-origin: center;
+    animation: wave 2.4s ease-in-out infinite;
+  }
+
+  @for $i from 1 through 28 {
+    span:nth-child(#{$i}) {
+      animation-delay: #{-0.09 * $i}s;
+    }
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.55); }
+  50% { transform: scaleY(1); }
+}

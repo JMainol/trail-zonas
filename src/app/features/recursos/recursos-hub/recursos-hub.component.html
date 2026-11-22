@@ -1,0 +1,71 @@
+<section class="resource">
+  <div class="resource__inner">
+
+    <div class="resource__topbar">
+      <ol class="breadcrumb" [attr.aria-label]="'RESOURCES.BREADCRUMB' | translate">
+        <li><a routerLink="/">{{ 'COMMON.HOME' | translate }}</a></li>
+        <li aria-current="page">{{ 'COMMON.RESOURCES' | translate }}</li>
+      </ol>
+    </div>
+
+    <header class="resource__header">
+      <span class="eyebrow"><mat-icon aria-hidden="true">auto_stories</mat-icon>{{ 'RESOURCES.HUB.EYEBROW' | translate }}</span>
+      <h1 class="resource__title">{{ 'RESOURCES.HUB.TITLE' | translate }}</h1>
+      <p class="resource__lead">{{ 'RESOURCES.HUB.LEAD' | translate }}</p>
+    </header>
+
+    <section class="group" aria-labelledby="hub-docs">
+      <h2 class="group__title" id="hub-docs"><mat-icon aria-hidden="true">movie</mat-icon>{{ 'COMMON.DOCUMENTARIES' | translate }}</h2>
+      <p class="group__desc">{{ 'RESOURCES.HUB.DOCS_DESC' | translate }}</p>
+      <ul class="tiles">
+        @for (r of documentaries; track r.slug) {
+          <li>
+            <a class="tile" [routerLink]="r.link" [style.--tile-accent]="r.accent">
+              <span class="tile__icon"><mat-icon aria-hidden="true">{{ r.icon }}</mat-icon></span>
+              <span class="tile__kicker">{{ r.categoryKey | translate }}</span>
+              <h3 class="tile__title">{{ r.titleKey | translate }}</h3>
+              <p class="tile__text">{{ r.summaryKey | translate }}</p>
+              <span class="tile__more">{{ 'RESOURCES.HUB.READ_MORE' | translate }}<mat-icon aria-hidden="true">arrow_forward</mat-icon></span>
+            </a>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="group" aria-labelledby="hub-research">
+      <h2 class="group__title" id="hub-research"><mat-icon aria-hidden="true">science</mat-icon>{{ 'COMMON.RESEARCH' | translate }}</h2>
+      <p class="group__desc">{{ 'RESOURCES.HUB.RESEARCH_DESC' | translate }}</p>
+      <ul class="tiles">
+        @for (r of research; track r.slug) {
+          <li>
+            <a class="tile" [routerLink]="r.link" [style.--tile-accent]="r.accent">
+              <span class="tile__icon"><mat-icon aria-hidden="true">{{ r.icon }}</mat-icon></span>
+              <span class="tile__kicker">{{ r.categoryKey | translate }}</span>
+              <h3 class="tile__title">{{ r.titleKey | translate }}</h3>
+              <p class="tile__text">{{ r.summaryKey | translate }}</p>
+              <span class="tile__more">{{ 'RESOURCES.HUB.READ_MORE' | translate }}<mat-icon aria-hidden="true">arrow_forward</mat-icon></span>
+            </a>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="group" aria-labelledby="hub-soon">
+      <h2 class="group__title" id="hub-soon"><mat-icon aria-hidden="true">schedule</mat-icon>{{ 'RESOURCES.HUB.SOON_TITLE' | translate }}</h2>
+      <p class="group__desc">{{ 'RESOURCES.HUB.SOON_DESC' | translate }}</p>
+      <ul class="tiles">
+        @for (u of upcoming; track u.labelKey) {
+          <li>
+            <div class="tile tile--soon" [style.--tile-accent]="'#94a3b8'">
+              <span class="tile__icon"><mat-icon aria-hidden="true">{{ u.icon }}</mat-icon></span>
+              <span class="tile__kicker">{{ 'RESOURCES.HUB.SOON_LABEL' | translate }}</span>
+              <h3 class="tile__title">{{ u.labelKey | translate }}</h3>
+              <p class="tile__text">{{ 'RESOURCES.HUB.SOON_TEXT' | translate }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+    </section>
+
+  </div>
+</section>

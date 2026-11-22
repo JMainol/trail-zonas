@@ -78,7 +78,8 @@
         "HISTORY": "História",
         "SURVIVAL": "Sobrevivência",
         "CONTACT": "Contato",
-        "CAPTION_BY": "por"
+        "CAPTION_BY": "por",
+        "RESOURCES_ALL": "Todos os recursos"
     },
     "RESERVES_MAP": {
         "TITLE": "Amazonas",
@@ -931,7 +932,8 @@
             "SUBTITLE": "Bio-projetado para a imersão total na natureza.",
             "NAV_MISION": "Missão",
             "NAV_COLABORADORES": "Colaboradores"
-        }
+        },
+        "SKIP_TO_CONTENT": "Pular para o conteúdo principal"
     },
     "MISION": {
         "BADGE": "PROJETO OPEN SOURCE · SEM FINS LUCRATIVOS",
@@ -966,5 +968,273 @@
         "TAG_EXPLORERS": "Exploradores",
         "TAG_RESEARCHERS": "Pesquisadores",
         "CTA_BUTTON": "Contate-nos"
+    },
+    "SEARCH": {
+        "MAIN_NAV": "Menu principal",
+        "OPEN": "Abrir a busca",
+        "MENU": "Abrir o menu principal",
+        "PLACEHOLDER": "Buscar páginas, espécies ou povos…",
+        "FIELD": "Buscar no site",
+        "CLEAR": "Limpar a busca",
+        "GO": "Ir",
+        "GO_TITLE": "Ir para a página selecionada",
+        "CLOSE": "Fechar a busca (Esc)",
+        "HINT_NAV": "Navegar pelos resultados",
+        "HINT_GO": "Abrir a página",
+        "HINT_CLOSE": "Fechar",
+        "NO_RESULTS": "Nenhum resultado encontrado para",
+        "SWITCH_LANG": "Mudar idioma"
+    },
+    "RESOURCES": {
+        "BREADCRUMB": "Trilha de navegação",
+        "RELATED": "Continue explorando",
+        "SOURCES": "Fontes e referências",
+        "FACT_SHEET": "Ficha",
+        "KEY_FACTS": "Dados principais",
+        "WATCH_ON_YOUTUBE": "Assistir no YouTube",
+        "FIELDS": {
+            "ORIGINAL_TITLE": "Título original",
+            "DIRECTOR": "Direção",
+            "PRODUCERS": "Produção",
+            "YEAR": "Ano",
+            "DURATION": "Duração",
+            "COUNTRIES": "Países",
+            "PREMIERE": "Estreia mundial",
+            "WHERE": "Onde assistir",
+            "EXPLORER": "Explorador",
+            "ORIGIN": "Origem",
+            "EXPEDITION": "Expedição",
+            "DATE": "Data",
+            "ROUTE": "Percurso",
+            "RECORDS": "Recordes",
+            "SERIES": "Série documental",
+            "TYPE": "Natureza",
+            "FOUNDED": "Fundação",
+            "MEMBERS": "Membros fundadores",
+            "PARTNERS": "Parcerias",
+            "AMAZON_LINK": "Vínculo amazônico"
+        },
+        "HUB": {
+            "EYEBROW": "Biblioteca aberta",
+            "TITLE": "Recursos",
+            "LEAD": "Uma seleção cuidadosa de documentários, expedições e projetos de pesquisa que ajudam a compreender a Amazônia a partir de olhares complementares: a ciência, o jornalismo, a exploração e a arte. Cada ficha resume o contexto, os dados essenciais e as fontes para se aprofundar.",
+            "DOCS_DESC": "Filmes e séries que documentam, a partir do território, a vida na floresta e a defesa de seus territórios.",
+            "RESEARCH_DESC": "Iniciativas que geram conhecimento sobre a floresta e seus ecossistemas e o compartilham com a sociedade.",
+            "SOON_TITLE": "Em breve",
+            "SOON_DESC": "Continuamos ampliando a biblioteca. Se você conhece uma obra imprescindível, escreva para nós pela página de contato.",
+            "SOON_LABEL": "Em preparação",
+            "SOON_TEXT": "Estamos selecionando e resenhando os títulos mais relevantes sobre a Amazônia.",
+            "READ_MORE": "Ler a ficha"
+        },
+        "YANUNI": {
+            "EYEBROW": "Documentário · 2025",
+            "TITLE": "Yanuni",
+            "SUBTITLE": "A luta de Juma Xipaia pela Amazônia, em um documentário produzido por Leonardo DiCaprio",
+            "LEAD": "Dirigido pelo cineasta austríaco <strong>Richard Ladkani</strong> e produzido por <strong>Leonardo DiCaprio</strong>, <em>Yanuni</em> acompanha durante vários anos <strong>Juma Xipaia</strong>, cacica do povo Xipaya, em seu enfrentamento contra o garimpo ilegal de ouro, a grilagem de terras e os grandes interesses econômicos que pressionam a bacia do rio Xingu, no estado do Pará.",
+            "CHIPS": [
+                "Richard Ladkani",
+                "Leonardo DiCaprio",
+                "112 minutos",
+                "Pré-selecionado ao Oscar"
+            ],
+            "PLAY_TRAILER": "Reproduzir o trailer de Yanuni",
+            "TRAILER_CAPTION": "Trailer oficial de «Yanuni». O vídeo só é carregado do YouTube quando você clica em reproduzir.",
+            "FILM_TITLE": "O filme",
+            "FILM_PARAS": [
+                "<em>Yanuni</em> acompanha a trajetória de Juma Xipaia desde sua aldeia, na Terra Indígena Xipaya, até os fóruns políticos onde hoje se decide o futuro do clima. A câmera de Ladkani registra com a mesma atenção a intimidade da vida comunitária e a tensão das operações contra os garimpeiros, que envenenam os rios com mercúrio e abrem cicatrizes profundas na floresta.",
+                "O documentário entrelaça a história de Juma com a de seu companheiro, <strong>Hugo Loss</strong>, ligado à fiscalização ambiental no Brasil. Juntos, eles encarnam duas faces de uma mesma resistência: a defesa da terra a partir de dentro da comunidade e a aplicação da lei em um dos territórios mais vigiados — e mais ameaçados — do planeta. A vida a dois traz ao filme uma dimensão íntima e humana que vai além da denúncia.",
+                "O filme estreou como gala de encerramento do <strong>Festival de Tribeca</strong> de 2025 e, depois de seu percurso por festivais e salas, pode ser assistido gratuitamente no canal de Leonardo DiCaprio no YouTube desde 5 de setembro de 2026, coincidindo com o Dia da Amazônia."
+            ],
+            "QUOTE": "A defesa da Amazônia tem rosto, nome e sobrenome: o de quem arrisca a vida para que a floresta continue de pé.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "JUMA_TITLE": "Quem é Juma Xipaia?",
+            "JUMA_PARAS": [
+                "Juma Xipaia é uma liderança indígena brasileira do povo Xipaya, cujo território se estende às margens do rio Iriri, afluente do Xingu. Foi a primeira mulher a exercer o cargo de cacica de seu povo e lidera a aldeia Kaarimã. Desde muito jovem, denunciou os impactos da usina hidrelétrica de Belo Monte e o avanço do garimpo ilegal sobre as terras indígenas.",
+                "Seu ativismo teve um preço alto: ela sobreviveu a <strong>seis tentativas de assassinato</strong>. Longe de silenciá-la, essas ameaças a levaram a ampliar sua voz da aldeia para os espaços institucionais e as cúpulas internacionais sobre o clima, onde defende que os povos indígenas são os guardiões mais eficazes da floresta."
+            ],
+            "WHY_TITLE": "Por que recomendamos assistir",
+            "WHY_ITEMS": [
+                "<strong>Mostra a Amazônia por dentro:</strong> a narrativa é construída com o olhar e a voz de uma protagonista indígena, e não como uma paisagem exótica vista de fora.",
+                "<strong>Explica ameaças reais e atuais:</strong> o garimpo de ouro, o mercúrio nos rios, o desmatamento e a violência contra os defensores ambientais, temas que também abordamos em nossa seção sobre <a href=\"/amazonia/conservacion/deforestacion-mineria\">desmatamento e mineração</a>.",
+                "<strong>É acessível para todos:</strong> está disponível gratuitamente no YouTube, o que o torna um recurso ideal para escolas, associações e cineclubes."
+            ],
+            "AWARDS_TITLE": "Reconhecimentos",
+            "AWARDS_PARAS": [
+                "<em>Yanuni</em> fez parte da lista de pré-selecionados ao <strong>Oscar de melhor longa-metragem documentário</strong> na edição de 2026. Ao longo de seu percurso, recebeu, entre outros, os prêmios de melhor direção e melhor documentário no Festival de Cinema de Savannah, uma menção especial no Festival Internacional de Cinema de Palm Springs e uma menção honrosa nos prêmios da International Documentary Association (IDA)."
+            ],
+            "SHEET": {
+                "PRODUCERS": "Leonardo DiCaprio, Juma Xipaia e Malaika Pictures, entre outros",
+                "COUNTRIES": "Áustria, Brasil, Estados Unidos, Canadá e Alemanha",
+                "PREMIERE": "Festival de Tribeca (Nova York), junho de 2025",
+                "WHERE": "Grátis no YouTube, no canal de Leonardo DiCaprio"
+            },
+            "CTA_TRAILER": "Ver o trailer no YouTube",
+            "CTA_CHANNEL": "Procurar o filme completo",
+            "CARD": "A cacica Juma Xipaia enfrenta o garimpo ilegal no rio Xingu. Documentário de Richard Ladkani produzido por Leonardo DiCaprio, com trailer e ficha técnica."
+        },
+        "ASH_DYKES": {
+            "EYEBROW": "Exploração · Série documental",
+            "TITLE": "Ash Dykes",
+            "SUBTITLE": "Uncharted Amazon: a primeira descida do rio Coppename, na Amazônia do Suriname, da nascente até o mar",
+            "LEAD": "O explorador galês <strong>Ash Dykes</strong> conquistou uma reputação mundial ao completar travessias que ninguém havia conseguido antes. Em 2024, levou esse espírito à Amazônia do Suriname, um dos cantos mais remotos e menos mapeados do continente, para localizar a nascente do <strong>rio Coppename</strong> e seguir seu curso, a pé e de caiaque, até o oceano Atlântico.",
+            "STATS": [
+                {
+                    "VALUE": "≈ 600 km",
+                    "LABEL": "de percurso pelo rio Coppename (373 milhas)"
+                },
+                {
+                    "VALUE": "37 dias",
+                    "LABEL": "da nascente do rio até o Atlântico"
+                },
+                {
+                    "VALUE": "2",
+                    "LABEL": "recordes Guinness obtidos na expedição"
+                },
+                {
+                    "VALUE": "5",
+                    "LABEL": "recordes Guinness em sua trajetória"
+                }
+            ],
+            "WHO_TITLE": "Quem é Ash Dykes?",
+            "WHO_PARAS": [
+                "Ash Dykes é um explorador, atleta de resistência, escritor e palestrante natural do norte do País de Gales. Sua carreira foi construída com expedições de longa duração, muitas vezes solitárias e sem apoio, que combinam a exigência física com uma profunda curiosidade pelos territórios e culturas que atravessa.",
+                "Antes de chegar à Amazônia, ele já havia percorrido a Mongólia a pé, atravessado Madagascar de ponta a ponta e se tornado a primeira pessoa a caminhar toda a extensão do rio Yangtzé, na China. Esses feitos lhe renderam vários recordes Guinness e um público internacional que acompanha com interesse cada um de seus projetos."
+            ],
+            "AMAZON_TITLE": "A expedição Uncharted Amazon",
+            "AMAZON_PARAS": [
+                "No fim de agosto de 2024, Dykes e sua equipe adentraram o interior da floresta surinamesa, em uma região sem estradas onde nem mesmo era fácil encontrar uma clareira para o pouso do helicóptero. Depois de dias avançando pela vegetação fechada, conseguiram <strong>identificar e mapear a nascente do Coppename</strong>, um dos grandes rios do país.",
+                "Dali, iniciaram uma descida de cerca de 600 quilômetros, alternando trechos a pé com a navegação de caiaque por corredeiras, meandros e áreas de floresta alagada. O desafio não era apenas físico: a equipe conviveu com a presença de onças-pintadas, nuvens de insetos e a umidade constante de uma floresta praticamente intacta. No início de outubro de 2024, chegaram à foz no Atlântico, após 37 dias de travessia.",
+                "Durante a expedição, a equipe também conquistou o <strong>Julianatop</strong>, a montanha mais alta do Suriname, com a subida mais rápida já registrada. Tanto a descida completa do Coppename quanto essa ascensão foram reconhecidas pelo Guinness World Records."
+            ],
+            "QUOTE": "Mesmo na era dos satélites, a Amazônia guarda rios cuja nascente ninguém havia documentado.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "STAGES_TITLE": "As etapas da travessia",
+            "STAGES": [
+                {
+                    "WHEN": "Agosto de 2024",
+                    "TITLE": "Entrada na floresta",
+                    "TEXT": "Aproximação de helicóptero ao interior do Suriname e busca de um ponto de acesso seguro em plena floresta primária."
+                },
+                {
+                    "WHEN": "Primeira semana",
+                    "TITLE": "A nascente do Coppename",
+                    "TEXT": "Depois de vários dias abrindo caminho a facão, a equipe localiza e documenta as nascentes do rio."
+                },
+                {
+                    "WHEN": "Primeiros dias",
+                    "TITLE": "Cume do Julianatop",
+                    "TEXT": "Subida à montanha mais alta do Suriname no menor tempo registrado até hoje."
+                },
+                {
+                    "WHEN": "Setembro de 2024",
+                    "TITLE": "Descida a pé e de caiaque",
+                    "TEXT": "Centenas de quilômetros de corredeiras, quedas-d'água e floresta alagada, seguindo o curso do rio em direção à costa."
+                },
+                {
+                    "WHEN": "Outubro de 2024",
+                    "TITLE": "Chegada ao Atlântico",
+                    "TEXT": "A equipe alcança a foz e completa o primeiro percurso conhecido do Coppename da nascente ao mar."
+                }
+            ],
+            "CAREER_TITLE": "Uma trajetória de primeiras vezes",
+            "CAREER": [
+                {
+                    "WHEN": "Mongólia",
+                    "TITLE": "Travessia solitária e sem apoio",
+                    "TEXT": "Percorreu o país a pé, arrastando o próprio equipamento pelo Altai e pelo deserto de Gobi."
+                },
+                {
+                    "WHEN": "Madagascar",
+                    "TITLE": "A ilha de ponta a ponta",
+                    "TEXT": "Atravessou a ilha ao longo de seu eixo montanhoso, conquistando seus principais cumes."
+                },
+                {
+                    "WHEN": "China",
+                    "TITLE": "Toda a extensão do Yangtzé",
+                    "TEXT": "Tornou-se a primeira pessoa a caminhar da nascente até a foz do rio mais longo da Ásia, cerca de 6.400 quilômetros."
+                },
+                {
+                    "WHEN": "Suriname",
+                    "TITLE": "Uncharted Amazon",
+                    "TEXT": "Primeira descida do rio Coppename da nascente ao mar e subida mais rápida ao Julianatop."
+                }
+            ],
+            "WHY_TITLE": "Por que é um recurso valioso",
+            "WHY_PARAS": [
+                "A série documental <em>Uncharted Amazon with Ash Dykes</em> oferece uma janela excepcional para um setor da Amazônia que raramente aparece na mídia: o escudo das Guianas, com seus rios de águas pretas, suas florestas sem estradas e seus maciços graníticos. Além da aventura, a expedição contribuiu para documentar a nascente de um rio até então não mapeada.",
+                "Para quem se aproxima da floresta pela primeira vez, a história de Dykes é também uma lição de humildade: mesmo com tecnologia de satélite e uma equipe preparada, a Amazônia impõe seu próprio ritmo. É um bom complemento à nossa página sobre a <a href=\"/amazonia/exploracion/historia\">exploração histórica do Amazonas</a> com Francisco de Orellana."
+            ],
+            "SHEET": {
+                "ORIGIN": "País de Gales (Reino Unido)",
+                "DATE": "Agosto – outubro de 2024",
+                "ROUTE": "Rio Coppename, da nascente ao oceano Atlântico (≈ 600 km)",
+                "RECORDS": "Primeira descida do Coppename da nascente ao mar · Subida mais rápida ao Julianatop"
+            },
+            "CTA_WEB": "Site oficial de Ash Dykes",
+            "CTA_SERIES": "Assistir à série documental",
+            "CARD": "O explorador galês percorreu pela primeira vez o rio Coppename, na Amazônia do Suriname, da nascente até o Atlântico. Expedição, recordes e série documental."
+        },
+        "VOZTERRA": {
+            "EYEBROW": "Projeto sonoro · Colômbia",
+            "TITLE": "VozTerra",
+            "SUBTITLE": "Paisagens sonoras para voltar a escutar a natureza",
+            "LEAD": "<strong>VozTerra</strong> é um coletivo multidisciplinar colombiano e uma plataforma de áudio que usa a gravação de paisagens sonoras, a música e a educação ambiental para despertar a consciência sobre a crise climática e a perda de biodiversidade. Sua proposta parte de uma ideia simples e poderosa: aquilo que aprendemos a escutar, aprendemos também a cuidar.",
+            "WHAT_TITLE": "O que é VozTerra",
+            "WHAT_PARAS": [
+                "O coletivo nasceu em agosto de 2019 pelas mãos de <strong>Lany Arévalo, Héctor Buitrago, Rafael Puyana, Diana Restrepo e Daniel Roa</strong>, em colaboração com o Museu para as Nações Unidas – <strong>UN Live</strong>. Entre seus fundadores está Héctor Buitrago, cofundador da banda Aterciopelados e conhecido ativista ambiental.",
+                "Seu trabalho se organiza em capítulos: viagens de escuta a ecossistemas específicos, nas quais a equipe grava o som da água, dos animais e do vento, conversa com as comunidades que habitam esses lugares e transforma o material em álbuns, peças artísticas e atividades pedagógicas. Até hoje, a VozTerra publicou vários álbuns com músicos de uma dezena de países."
+            ],
+            "AMAZON_TITLE": "O piemonte amazônico do Caquetá",
+            "AMAZON_PARAS": [
+                "O segundo capítulo do projeto levou o coletivo ao <strong>Caquetá</strong>, no piemonte amazônico colombiano, a faixa onde os Andes descem em direção à grande planície florestal. Lá, guiados pelo som, pela natureza e pela comunidade, visitaram <strong>seis ecossistemas</strong> diferentes e documentaram sua riqueza acústica.",
+                "O piemonte é uma zona de enorme valor ecológico: nele se recarregam rios tão importantes como o Caquetá e o Putumayo, e convivem espécies andinas e amazônicas. É também uma das regiões mais afetadas pelo desmatamento na Colômbia. Registrar hoje sua paisagem sonora é, de certo modo, deixar registrado um patrimônio vivo que poderia se perder se não for protegido."
+            ],
+            "QUOTE": "A floresta não é silêncio: é uma conversa contínua entre milhares de espécies. Aprender a escutá-la é o primeiro passo para defendê-la.",
+            "QUOTE_AUTHOR": "Selva Amazonas 2.0",
+            "CHAPTERS_TITLE": "Capítulos em destaque",
+            "CHAPTERS_INTRO": "Cada capítulo combina gravação de campo, criação artística e trabalho com comunidades. Estes são alguns dos mais representativos:",
+            "CHAPTERS": [
+                {
+                    "KICKER": "Capítulo 1 · 2020",
+                    "TITLE": "Reserva Van der Hammen e Humedal La Conejera",
+                    "TEXT": "A primeira viagem de escuta, em dois ecossistemas estratégicos de Bogotá ameaçados pela expansão urbana."
+                },
+                {
+                    "KICKER": "Capítulo 2",
+                    "TITLE": "Caquetá, piemonte amazônico",
+                    "TEXT": "Seis ecossistemas do sul da Colômbia percorridos e gravados junto às comunidades que os habitam."
+                },
+                {
+                    "KICKER": "Capítulo 3",
+                    "TITLE": "Sons da sua janela",
+                    "TEXT": "Durante o confinamento pela COVID-19, pessoas do mundo todo gravaram a natureza que ouviam de casa."
+                },
+                {
+                    "KICKER": "Capítulo 5 · 2024",
+                    "TITLE": "Sounds Right",
+                    "TEXT": "Uma visão que deu origem à aliança global Sounds Right, impulsionada junto ao UN Live, que reconhece a natureza como artista."
+                },
+                {
+                    "KICKER": "Capítulo 6",
+                    "TITLE": "Ouvidos à Floresta",
+                    "TEXT": "Educação ambiental e escuta consciente com 23 professores, 12 escolas rurais de Bogotá e 982 estudantes de 10 a 18 anos."
+                }
+            ],
+            "WHY_TITLE": "Por que o incluímos em Recursos",
+            "WHY_PARAS": [
+                "A <strong>ecoacústica</strong> — o estudo do som dos ecossistemas — tornou-se uma ferramenta científica para medir a saúde das florestas: uma floresta saudável soa diferente de uma floresta degradada ou de uma <a href=\"/amazonia/conservacion/selva-vacia\">floresta vazia</a>, na qual a fauna desapareceu embora as árvores continuem de pé. A VozTerra leva essa intuição para o campo cultural e educativo.",
+                "Suas gravações são um excelente recurso para professores, divulgadores e qualquer pessoa que queira experimentar a riqueza sonora da Amazônia e de outros ecossistemas colombianos sem sair de casa. Recomendamos escutá-las com fones de ouvido e em um ambiente tranquilo."
+            ],
+            "SHEET": {
+                "TYPE": "Coletivo multidisciplinar e plataforma de áudio",
+                "FOUNDED": "Agosto de 2019",
+                "ORIGIN": "Bogotá (Colômbia)",
+                "PARTNERS": "Museu para as Nações Unidas – UN Live",
+                "AMAZON": "Capítulo dedicado ao piemonte amazônico do Caquetá"
+            },
+            "CTA_WEB": "Visitar vozterra.com",
+            "CTA_LISTEN": "Ouvir a discografia",
+            "CARD": "Coletivo colombiano que grava paisagens sonoras, como as do piemonte amazônico do Caquetá, para conscientizar sobre a crise climática e a biodiversidade."
+        }
     }
 }

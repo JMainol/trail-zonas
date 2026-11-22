@@ -10,6 +10,7 @@
 
 .ps-container {
     position: absolute;
+    left: 0; // evita el desbordamiento horizontal causado por el padding del contenedor padre
     width: 100%;
     height: calc(100vh - 81px);
     overflow: hidden;

@@ -30,7 +30,7 @@ export class EtniasComponent implements AfterViewInit {
             scientificName: 'TRIBES.WAORANI.SUBTITLE',
             description: 'TRIBES.WAORANI.DESCRIPTION',
             weight: 'TRIBES.WAORANI.REGION',
-            image: 'assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.jpg',
+            image: 'assets/images/tribes/waorani/waorani_hombre_mayor_hombre_joven.webp',
             link: 'waorani'
         },
         {
@@ -38,7 +38,7 @@ export class EtniasComponent implements AfterViewInit {
             scientificName: 'TRIBES.SHUAR.SUBTITLE',
             description: 'TRIBES.SHUAR.DESCRIPTION',
             weight: 'TRIBES.SHUAR.REGION',
-            image: 'assets/images/tribes/shuar/shuar_dos_hombre_una_mujer.png',
+            image: 'assets/images/tribes/shuar/shuar_dos_hombre_una_mujer.webp',
             link: 'shuar',
             disabled: true
         },
@@ -47,7 +47,7 @@ export class EtniasComponent implements AfterViewInit {
             scientificName: 'TRIBES.COFAN.SUBTITLE',
             description: 'TRIBES.COFAN.DESCRIPTION',
             weight: 'TRIBES.COFAN.REGION',
-            image: 'assets/images/tribes/cofan/hombre_tribu_cofan.png',
+            image: 'assets/images/tribes/cofan/hombre_tribu_cofan.webp',
             link: 'cofan',
             disabled: true
         },

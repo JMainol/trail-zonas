@@ -1,7 +1,7 @@
 <section class="history-section">
     <div class="back-nav-container">
-        <button class="back-btn" (click)="goBack()">
-            <svg viewBox="0 0 24 24">
+        <button type="button" class="back-btn" (click)="goBack()" [attr.aria-label]="'COMMON.BACK' | translate">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
             </svg>
         </button>
@@ -12,7 +12,7 @@
     <div class="hero-visual">
         <div class="parallax-container" [style.transform]="parallaxTransform()">
             <div class="book-container">
-                <img src="assets/images/history/pintura_Orellana_y_sus_hombres.jpg"
+                <img decoding="async" src="assets/images/history/pintura_Orellana_y_sus_hombres.jpg"
                     [alt]="'EXPLORATION.HISTORY.ALT_BOOK' | translate" class="book-image">
                 <app-media-caption 
                     [title]="'EXPLORATION.HISTORY.CAPTION_BOOK_TITLE' | translate"
@@ -53,7 +53,7 @@
             <div class="map-container hero-column-full">
                 <h3 class="section-subtitle text-center mb-4"
                     [innerHTML]="'EXPLORATION.HISTORY.SUBTITLE_ROUTE' | translate"></h3>
-                <img src="assets/images/history/mapa_expedicion_Franciso_de_Orellana.png"
+                <img loading="lazy" decoding="async" src="assets/images/history/mapa_expedicion_Franciso_de_Orellana.webp"
                     [alt]="'EXPLORATION.HISTORY.ALT_MAP' | translate" class="expedition-map">
                 <p class="caption" [innerHTML]="'EXPLORATION.HISTORY.CAPTION_MAP' | translate"></p>
             </div>
