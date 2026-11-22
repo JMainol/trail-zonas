@@ -4,7 +4,7 @@
 :host {
     display: block;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 81px); // 80px de cabecera + 1px de borde
     overflow: hidden;
 }
 

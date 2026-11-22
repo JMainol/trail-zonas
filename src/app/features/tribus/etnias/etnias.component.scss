@@ -3,8 +3,12 @@
 
 :host {
     display: block;
-    width: 100%;
-    height: calc(100vh - 80px);
+    // El contenedor padre (app-tribus) envuelve las rutas en un div.p-6. Se anula ese
+    // padding para que el slider empiece justo bajo la cabecera y ocupe toda la altura
+    // visible; si no, se desplaza 24px hacia abajo, se cortan las miniaturas de
+    // navegación y aparecen dos franjas oscuras arriba y abajo.
+    margin: -1.5rem;
+    height: calc(100vh - 81px); // 80px de cabecera + 1px de borde
     overflow: hidden;
 }
 

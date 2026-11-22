@@ -352,13 +352,16 @@
       opacity: 0;
       transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                   opacity 0.3s ease;
-      border-top: 1px solid transparent;
+      // Sin borde mientras está cerrado: con max-height 0 el borde seguía ocupando 1px
+      // y la cabecera medía 82px en lugar de 81px (80px + borde inferior).
+      border-top: 0 solid transparent;
       background: rgba(2, 6, 23, 0.97);
       backdrop-filter: blur(20px);
 
       &--open {
         max-height: 600px;
         opacity: 1;
+        border-top-width: 1px;
         border-top-color: rgba(0, 242, 255, 0.15);
       }
     }
